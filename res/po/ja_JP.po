@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "フォルダ名を入力してください。"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "ドキュメント"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "標準音"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "ファイル名が正しくありません。"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "通話中は再生できません。"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "一部のアイテムが存在しないため、追加できません。"
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "標準通知音"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "アイテムを選択"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "無効な文字が入力されました。再度実行してください。"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "サイレント"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "%dアイテムまで選択できます。"
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "削除しますか？"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "外部SDカード"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "システムメモリ(本体)"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "再生できません。エラーが発生しました。"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "完了"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "キャンセル"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "最大ファイルサイズ(%dMB)を超えました。"
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "ファイルの最大サイズを超えました。"
+

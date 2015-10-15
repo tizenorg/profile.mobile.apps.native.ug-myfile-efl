@@ -1,0 +1,1268 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+
+
+#define GENLIST_PADDING_SIZE_DEFAULT            16
+#define GENLIST_PADDING_SIZE_LEFT               26
+#define GENLIST_PADDING_SIZE_RIGHT              26
+#define GENLIST_ICON_STAR_SIZE            45
+#define GENLIST_PART_LIST_LINE_HEIGHT     1
+#define GENLIST_TREESIZE_DEFAULT          26
+
+#define GENLIST_HEIGHT_2LINE_MAIN         57
+#define GENLIST_HEIGHT_MULTILINE_SUB      38
+#define GENLIST_LIST_SUB_TEXT_SIZE                          32
+#define GENLIST_ICON_SMALL_SIZE           45
+
+#define GENLIST_PADDING_SIZE_TOP                5
+#define GENLIST_PADDING_SIZE_BOTTOM             5
+
+#define GENLIST_PART_MATCH_TAG_COLOR                    "+ color=#FF5400"
+
+#define STYLE_TAG \
+      tag:  "br" "\n";\
+      tag:  "ps" "ps";\
+      tag:  "tab" "\t";\
+      tag:  "b" "+ font_weight=Bold";
+
+#define STYLE_TAG_MATCH \
+      tag:  "match" GENLIST_PART_MATCH_TAG_COLOR;
+styles
+{
+
+	style { name: "genlist_style_list_sub_text_default_wrap";
+		base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color=#ffffff color_class=T024 text_class=T024 wrap=mixed";
+		STYLE_TAG
+		STYLE_TAG_MATCH
+	}
+	style { name: "genlist_style_list_sub_text_default_dim_wrap";
+		base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color=#ffffff color_class=T024D text_class=T024D wrap=mixed";
+		STYLE_TAG
+		STYLE_TAG_MATCH
+	}
+	style { name: "genlist_style_list_sub_text_default_press_wrap";
+		base: "font=Tizen:style=Bold font_size="GENLIST_LIST_SUB_TEXT_SIZE" color=#ffffff color_class=T024P text_class=T024P wrap=mixed";
+		STYLE_TAG
+		STYLE_TAG_MATCH
+	}
+}
+
+ #define DESC_FROM_L( PARAM ) \
+   description { state: "default" 0.0;\
+      fixed: 1 0; \
+      align: 0.0 0.5; \
+      rel2.relative: 0.0 1.0; \
+      PARAM\
+   }
+
+// ------------------
+//         HERE <-- |
+// ------------------
+ #define DESC_FROM_R( PARAM ) \
+   description { state: "default" 0.0;\
+      fixed: 1 0; \
+      align: 1.0 0.5; \
+      rel1.relative: 1 0; \
+      PARAM\
+   }
+
+#define DESC_FROM_B( PARAM ) \
+  description { state: "default" 0.0;\
+     fixed: 0 1; \
+     rel1.relative: 0.0 1.0; \
+     align: 0.5 1.0; \
+     PARAM\
+  }
+
+#define DESC_FROM_T( PARAM ) \
+  description { state: "default" 0.0;\
+     fixed: 0 1; \
+     align: 0.5 0.0; \
+     rel2.relative: 1.0 0.0; \
+     PARAM\
+  }
+
+
+#define DESC_LRT( LEFT, RIGHT, TOP, PARAM ) \
+   description { state: "default" 0.0;\
+      align: 0.5 0;\
+      rel1 { \
+         relative: 1 1; \
+         to_x: LEFT; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 0 1;\
+         to_x: RIGHT;\
+         to_y: TOP;\
+      }\
+      PARAM\
+   }
+
+
+#define DESC_L( LEFT, PARAM ) \
+   description { state: "default" 0.0;\
+      align: 0 0.5; \
+      fixed: 1 0; \
+      rel1 { \
+         relative: 1 0; \
+         to_x: LEFT; \
+      }\
+      rel2 { \
+         relative: 1 1;\
+         to_x: LEFT; \
+      }\
+      PARAM\
+   }
+
+
+#define PART_LIST_BG_NORMAL \
+   PART(RECT, "bg_clip", \
+      description { state: "default" 0.0; \
+         visible: 1; \
+      } \
+      description { state: "decorate" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+      description { state: "reorder" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+      description { state: "decorate_reorder" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+   ) \
+   PART(RECT, "bg", \
+      clip_to: "bg_clip"; \
+      description { state: "default" 0.0; \
+         color_class: "B011"; \
+      } \
+      description { state: "pressed" 0.0; \
+         inherit: "default" 0.0; \
+         color_class: "B041P"; \
+      } \
+      description { state: "disabled" 0.0; \
+         inherit: "default" 0.0; \
+      } \
+   ) \
+   PART(RECT, "bg_reorder_clip", \
+      description { state: "default" 0.0; \
+         visible: 0; \
+      } \
+      description { state: "decorate" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+      description { state: "reorder" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 1; \
+      } \
+      description { state: "decorate_reorder" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+      description { state: "reorder_flip" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+   ) \
+   PART(SPACER, "bg_reorder_left", \
+      DESC_FROM_L( \
+         min: 16 0; \
+         max: 16 -1; \
+      ) \
+   ) \
+   PART(SPACER, "bg_reorder_right", \
+      DESC_FROM_R( \
+         min: 16 0; \
+         max: 16 -1; \
+      ) \
+   ) \
+   PART(SPACER, "bg_reorder_top", \
+      DESC_FROM_T( \
+         min: 0 2; \
+         max: -1 2; \
+      ) \
+   ) \
+   PART(SPACER, "bg_reorder_bottom", \
+      DESC_FROM_B( \
+         min: 0 2; \
+         max: -1 2; \
+      ) \
+   ) \
+   PART(IMAGE, "bg_reorder", \
+      clip_to: "bg_reorder_clip"; \
+      DESC_LRTB("bg_reorder_left", "bg_reorder_right", \
+         "bg_reorder_top", "bg_reorder_bottom", \
+         image { \
+            normal: "00_list_group_bg.#.png"; \
+         } \
+         color_class: "B0217L1"; \
+      ) \
+      description { state: "pressed" 0.0; \
+         inherit: "default"; \
+         color_class: "B041P"; \
+      } \
+      description { state: "flipped" 0.0; \
+         inherit: "default"; \
+         visible: 0; \
+      } \
+   ) \
+   PART(IMAGE, "bg_reorder_ef", \
+      clip_to: "bg_reorder_clip"; \
+      DESC_LRTB("bg_reorder_left", "bg_reorder_right", \
+         "bg_reorder_top", "bg_reorder_bottom", \
+         image { \
+            normal: "00_list_group_bg_ef.#.png"; \
+         } \
+         color_class: "B0217L2"; \
+      ) \
+      description { state: "pressed" 0.0; \
+         inherit: "default"; \
+      } \
+      description { state: "flipped" 0.0; \
+         inherit: "default"; \
+         visible: 0; \
+      } \
+   )
+
+#define PART_LIST_BOTTOMLINE \
+   PART(RECT, "bottom_line_clip", \
+      description { state: "default" 0.0; \
+      } \
+      description { state: "decorate" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+      description { state: "reorder" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+      description { state: "decorate_reorder" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+      description { state: "hide" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+   ) \
+   PART(RECT, "bottom_line", \
+      mouse_events: 0; \
+      clip_to: "bottom_line_clip"; \
+      description { state: "default" 0.0; \
+         min: 0 GENLIST_PART_LIST_LINE_HEIGHT; \
+         max: -1 GENLIST_PART_LIST_LINE_HEIGHT; \
+         fixed: 0 1; \
+         align: 0.5 1; \
+	color_class: "B0621L2"; \
+         rel1.offset: -1 -1; \
+      } \
+      description { state: "flipped" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+      description { state: "hidden" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 0; \
+      } \
+   )
+
+#define DESC_LIST_PADDINGS \
+   description { state: "decorate" 0.0; \
+      inherit: "default" 0.0; \
+      min: 0 0; \
+      max: 0 0; \
+   } \
+   description { state: "decorate_reorder" 0.0; \
+      inherit: "default" 0.0; \
+      min: 0 0; \
+      max: 0 0; \
+   } \
+   description { state: "reorder" 0.0; \
+      inherit: "default" 0.0; \
+      min: 32 0; \
+      max: 32 -1; \
+   }
+
+
+#define PART_LIST_PADDINGS(LEFT_SIZE, RIGHT_SIZE, TOP_SIZE, BOTTOM_SIZE) \
+   PART(SWALLOW, "elm.swallow.pad", \
+      mouse_events: 0; \
+      DESC_FROM_L( ; ) \
+   ) \
+   PART(SWALLOW, "elm.swallow.colorbar", \
+      mouse_events: 0; \
+      DESC_L("elm.swallow.pad", ) \
+   ) \
+   PART(SPACER, "elm.padding.left", \
+      DESC_L("elm.swallow.pad", \
+         min: LEFT_SIZE 0; \
+         max: LEFT_SIZE -1; \
+      ) \
+      DESC_LIST_PADDINGS \
+   ) \
+   PART(SPACER, "elm.padding.right", \
+      DESC_FROM_R( \
+         min: RIGHT_SIZE 0; \
+         max: RIGHT_SIZE -1; \
+      ) \
+      DESC_LIST_PADDINGS \
+   ) \
+   PART(SPACER, "elm.padding.top", \
+      DESC_FROM_T( \
+         min: 0 TOP_SIZE; \
+         max: -1 TOP_SIZE; \
+      ) \
+      DESC_LIST_PADDINGS \
+   ) \
+   PART(SPACER, "elm.padding.bottom", \
+      DESC_FROM_B( \
+         min: 0 BOTTOM_SIZE; \
+         max: -1 BOTTOM_SIZE; \
+      ) \
+      DESC_LIST_PADDINGS \
+   )
+
+#define GENLIST_PART_BASE_SIZE(HEIGHT) \
+         part { name: "base"; \
+            type: RECT; \
+            mouse_events: 0; \
+            scale: 1; \
+            description { state: "default" 0.0; \
+               color: 0 0 0 0; \
+               min: 0 HEIGHT; \
+            } \
+         } \
+         part { name: "state"; \
+            type: RECT; \
+            mouse_events: 0; \
+            scale: 1; \
+            description { state: "default" 0.0; \
+               color: 0 0 0 0; \
+            } \
+            description { state: "decorate" 0.0; \
+               inherit: "default"; \
+            } \
+            description { state: "reorder" 0.0; \
+               inherit: "default"; \
+            } \
+            description { state: "decorate_reorder" 0.0; \
+               inherit: "default"; \
+            } \
+         }
+
+#define GENLIST_PART_BASE \
+         GENLIST_PART_BASE_SIZE(0)
+
+
+#define GENLIST_NAME(NAME) \
+      name: "elm/genlist/item/"NAME;
+
+#define PART(TYPE, NAME, DESCRIPION) \
+   part { name: NAME; \
+      scale: 1; \
+      type: TYPE; \
+      DESCRIPION \
+   }
+
+#define DESC_LRTB( LEFT, RIGHT, TOP, BOTTOM, PARAM ) \
+   description { state: "default" 0.0;\
+      rel1 { \
+         relative: 1 1; \
+         to_x: LEFT; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 0 0;\
+         to_x: RIGHT;\
+         to_y: BOTTOM;\
+      }\
+      PARAM\
+   }
+
+#define DESC_RTB( RIGHT, TOP, BOTTOM, PARAM ) \
+   description { state: "default" 0.0;\
+      align: 1 0.5;\
+      rel1 { \
+         relative: 0 1; \
+         to_x: RIGHT; \
+         to_y: TOP; \
+      }\
+      rel2 {\
+         relative: 0 0;\
+         to_x: RIGHT;\
+         to_y: BOTTOM;\
+      }\
+      PARAM\
+   }
+
+#define GENLIST_PARAM_SUBITEM_DEFAULT_TB_WRAP \
+   text { \
+      min: 0 1; \
+      style: "genlist_style_list_sub_text_default_wrap"; \
+   }
+
+#define GENLIST_DESCRIPTION_SUBITEM_DEFAULT_OTHERS_TB_WRAP \
+   description { state: "disabled" 0.0; \
+      inherit: "default" 0.0; \
+      text.style: "genlist_style_list_sub_text_default_dim_wrap"; \
+   } \
+   description { state: "pressed" 0.0; \
+      inherit: "default" 0.0; \
+      text.style: "genlist_style_list_sub_text_default_press_wrap"; \
+   }
+
+#define PROLOG_LIST \
+   data.item: "treesize" 0; \
+   data.item: "flips" "elm.flip.icon elm.flip.content"; \
+   data.item: "focus_highlight" "on";
+
+#define PROLOG_LIST_NORMAL \
+   PROLOG_LIST \
+   data.item: "treesize" GENLIST_TREESIZE_DEFAULT; \
+   images { \
+      image : "00_list_group_bg.#.png" COMP; \
+      image : "00_list_group_bg_ef.#.png" COMP; \
+	image : "00_focus_01.#.png" COMP; \
+   }
+
+#define GENLIST_DESCRIPTION_LISTITEM_OTHERS \
+   description { state: "disabled" 0.0; \
+      inherit: "default" 0.0; \
+      color_class: "T023D"; \
+   } \
+   description { state: "pressed" 0.0; \
+      inherit: "default" 0.0; \
+      color_class: "T023P"; \
+   }
+
+
+#define GENLIST_PART_LISTITEM(NAME, DESCRIPTION) \
+   PART(TEXT, NAME, \
+      DESCRIPTION \
+      GENLIST_DESCRIPTION_LISTITEM_OTHERS \
+   )
+
+#define GENLIST_PARAM_ICON_STAR \
+         min: GENLIST_ICON_STAR_SIZE GENLIST_ICON_STAR_SIZE; \
+         max: GENLIST_ICON_STAR_SIZE GENLIST_ICON_STAR_SIZE; \
+
+#define GENLIST_PARAM_LISTITEM \
+   color_class: "T023"; \
+   text { \
+      align: 0 0.5; \
+      min: 0 1; \
+      text_class: "T023"; \
+   }
+
+#define GENLIST_PART_ICON(NAME, DESCRIPION) \
+   part { name: NAME; \
+      scale: 1; \
+      type: SWALLOW; \
+      DESCRIPION \
+   }
+
+#define GENLIST_PART_ICON_STAR_RTB(NAME, RIGHT, TOP, BOTTOM) \
+   GENLIST_PART_ICON(NAME, \
+      DESC_RTB(RIGHT, TOP, BOTTOM, \
+         GENLIST_PARAM_ICON_STAR \
+         fixed: 1 1; \
+      ) \
+   )
+
+#define GENLIST_PART_PADDING_R( NAME, RIGHT ) \
+         PART(SPACER, NAME, \
+            description { state: "default" 0.0; \
+               fixed: 1 0; \
+               min: GENLIST_PADDING_SIZE_DEFAULT 0; \
+               max: GENLIST_PADDING_SIZE_DEFAULT -1; \
+               align: 1 0.5; \
+               rel1 { \
+                  relative: 0 0; \
+                  to_x: RIGHT; \
+               } \
+               rel2 { \
+                  relative: 0 1; \
+                  to_x: RIGHT; \
+               } \
+            } \
+         )
+
+
+#define GENLIST_PART_PADDING_T_SIZE( NAME, TOP, SIZE ) \
+         PART(SPACER, NAME, \
+            description { state: "default" 0.0; \
+               min: 0 SIZE; \
+               max: -1 SIZE; \
+               fixed: 0 1; \
+               align: 0.5 0; \
+               rel1 { \
+                  relative: 0 1; \
+                  to: TOP; \
+               } \
+               rel2 { \
+                  relative: 1 1; \
+                  to: TOP; \
+               } \
+            } \
+         )
+
+#define GENLIST_PART_FLIP \
+         PART(RECT, "elm.flip.bg", \
+            mouse_events: 0; \
+            description { state: "default" 0.0;\
+               rel2.offset: 0 -3; \
+               color_class: "B011"; \
+               visible: 0; \
+            } \
+            description { state: "flipped" 0.0; \
+               inherit: "default" 0.0; \
+               visible: 1; \
+            }\
+         ) \
+         PART(SPACER, "elm.flip.padding.right", \
+            description { state: "default" 0.0; \
+               min: 26 0; \
+               max: 26 -1; \
+               fixed: 1 0; \
+               align: 1 0.5; \
+               rel1.relative: 1 0; \
+            } \
+         ) \
+         GENLIST_PART_ICON("elm.flip.content", \
+            DESC_LRTB("elm.padding.left", "elm.flip.padding.icon.left",  \
+               "elm.padding.top", "elm.padding.bottom", \
+               visible: 1; /* FIXME: object(entry) should be visible when focused. if not, it will be unfocused immediately */ \
+               min: 0 96; \
+            ) \
+            description { state: "flipped" 0.0; \
+               inherit: "default" 0.0; \
+               visible: 1; \
+            } \
+         ) \
+         GENLIST_PART_PADDING_R("elm.flip.padding.icon.left", "elm.flip.icon") \
+         GENLIST_PART_ICON( "elm.flip.icon", \
+            DESC_RTB("elm.flip.padding.right", \
+               "elm.padding.top", "elm.padding.bottom", \
+               visible: 0; \
+               aspect: 1 1; \
+               align: 1 0.5; \
+               max: 158 74; \
+            ) \
+            description { state: "flipped" 0.0; \
+               inherit: "default" 0.0; \
+               visible: 1; \
+            } \
+         )
+
+#define GENLIST_PART_FOCUS \
+   PART(IMAGE, "focus_part", \
+      mouse_events: 0; \
+      description { state: "default" 0.0; \
+         visible: 0; \
+         image { \
+            normal: "00_focus_01.#.png"; \
+         } \
+         color_class: "W161"; \
+      } \
+      description { state: "focused" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 1; \
+      } \
+   ) \
+
+#define GENLIST_PART_FOCUS_REORDER \
+   PART(IMAGE, "focus_part_reorder", \
+      mouse_events: 0; \
+         description { state: "default" 0.0; \
+            rel1 { \
+               relative: 1 1; \
+               to_x: "bg_reorder_left"; \
+               to_y: "bg_reorder_top"; \
+            } \
+            rel2 { \
+               relative: 0 0; \
+               to_x: "bg_reorder_right"; \
+               to_y: "bg_reorder_bottom"; \
+            } \
+         visible: 0; \
+         image { \
+            normal: "00_focus_01.#.png"; \
+         } \
+         color_class: "W161"; \
+      } \
+      description { state: "focused" 0.0; \
+         inherit: "default" 0.0; \
+         visible: 1; \
+      } \
+   )
+
+#define GENLIST_PART_FOCUS_NORMAL \
+   GENLIST_PART_FOCUS \
+   GENLIST_PART_FOCUS_REORDER
+
+#define GENLIST_PROGRAM_DEFAULT( TARGET ) \
+         program { name: "default"; \
+            signal: "elm,state,default"; \
+            source: "elm"; \
+            action: STATE_SET "default" 0.0; \
+            TARGET \
+         } \
+
+#define GENLIST_PROGRAM_DISABLED( TARGET ) \
+		 program { name: "enabled"; \
+		    signal: "elm,state,enabled"; \
+		    source: "elm"; \
+		    action: STATE_SET "default" 0.0; \
+		    TARGET \
+		 } \
+		 program { name: "disabled"; \
+		    signal: "elm,state,disabled"; \
+		    source: "elm"; \
+		    action: STATE_SET "disabled" 0.0; \
+		    TARGET \
+		 }
+
+#define GENLIST_PROGRAM_BOTTOMLINE \
+      program { name : "hide_bottomline"; \
+         signal: "elm,state,bottomline,hide"; \
+         source: ""; \
+         action: STATE_SET "hidden" 0.0; \
+         target: "bottom_line"; \
+      } \
+      program { name : "show_bottomline"; \
+         signal: "elm,state,bottomline,show"; \
+         source: ""; \
+         action: STATE_SET "default" 0.0; \
+         target: "bottom_line"; \
+      }
+
+#define GENLIST_PROGRAM_FOCUS \
+      program { name: "focused"; \
+         signal: "elm,action,focus_highlight,show"; \
+         source: "elm"; \
+         action: STATE_SET "focused" 0.0; \
+         target: "focus_part"; \
+      } \
+      program { name: "unfocused"; \
+         signal: "elm,action,focus_highlight,hide"; \
+         source: "elm"; \
+         action: STATE_SET "default" 0.0; \
+         target: "focus_part"; \
+      }
+
+#define GENLIST_PROGRAM_FOCUS_NORMAL \
+      program { name: "focused"; \
+         signal: "elm,action,focus_highlight,show"; \
+         source: "elm"; \
+         script { \
+            new st[31]; \
+            new Float:vl; \
+            get_state(PART:"bg_reorder_clip", st, 30, vl); \
+            if (!strcmp(st, "reorder") || !strcmp(st, "decorate_reorder")) \
+               set_state(PART:"focus_part_reorder", "focused", 0.0); \
+            else \
+               set_state(PART:"focus_part", "focused", 0.0); \
+         } \
+      } \
+      program { name: "unfocused"; \
+         signal: "elm,action,focus_highlight,hide"; \
+         source: "elm"; \
+         action: STATE_SET "default" 0.0; \
+         target: "focus_part_reorder"; \
+         target: "focus_part"; \
+      }
+
+#define PROGRAM_LIST_SOUND \
+   program { name: "play_sound"; \
+      signal: "elm,state,clicked"; \
+      source: "elm"; \
+      action: RUN_PLUGIN "touch_sound";\
+   }
+
+#define GENLIST_PROGRAM_SELECT( TARGET ) \
+         program { name: "pressed"; \
+            signal: "elm,state,selected"; \
+            source: "elm"; \
+            action: STATE_SET "pressed" 0.0; \
+            TARGET \
+         } \
+         program { name: "unselected"; \
+            signal: "elm,state,unselected"; \
+            source: "elm"; \
+            action: STATE_SET "default" 0.0; \
+            TARGET \
+         }
+
+#define GENLIST_PROGRAM_REORDER( TARGET ) \
+         program { name: "reorder_enabled"; \
+            signal: "elm,state,reorder,mode_set"; \
+            source: "elm"; \
+            action: STATE_SET "reorder" 0.0; \
+            TARGET \
+         } \
+         program { name: "reorder_disabled"; \
+            signal: "elm,state,reorder,mode_unset"; \
+            source: "elm"; \
+            action: STATE_SET "default" 0.0; \
+            TARGET \
+         }
+
+#define GENLIST_PROGRAM_DECORATE_REORDER( NAME, TARGET ) \
+         program { name: "reorder_enabled"NAME; \
+            signal: "elm,state,reorder,mode_set"; \
+            source: "elm"; \
+            script { \
+               new st[31]; \
+               new Float:vl; \
+               get_state(PART:"state", st, 30, vl); \
+               if (!strcmp(st, "decorate") || !strcmp(st, "decorate_reorder")) { \
+                  run_program(PROGRAM:"decorate_reorder_set"NAME); \
+               } else { \
+                  run_program(PROGRAM:"reorder_set"NAME); \
+               } \
+            } \
+         } \
+         program { name: "reorder_disabled"NAME; \
+            signal: "elm,state,reorder,mode_unset"; \
+            source: "elm"; \
+            script { \
+               new st[31]; \
+               new Float:vl; \
+               get_state(PART:"state", st, 30, vl); \
+               if (!strcmp(st, "decorate") || !strcmp(st, "decorate_reorder")) { \
+                  run_program(PROGRAM:"decorate_set"NAME); \
+               } else { \
+                  run_program(PROGRAM:"default_set"NAME); \
+               } \
+            } \
+         } \
+         program { name: "decorate_enabled_effect"NAME; \
+            signal: "elm,state,decorate,enabled,effect";\
+            source: "elm";\
+            script { \
+               new st[31]; \
+               new Float:vl; \
+               get_state(PART:"state", st, 30, vl); \
+               if (!strcmp(st, "reorder") || !strcmp(st, "decorate_reorder")) { \
+                  run_program(PROGRAM:"decorate_reorder_set"NAME); \
+               } else { \
+                  run_program(PROGRAM:"decorate_set"NAME); \
+               } \
+            } \
+         }\
+         program { name: "decorate_disabled_effect"NAME;\
+            signal: "elm,state,decorate,disabled,effect";\
+            source: "elm";\
+            script { \
+               new st[31]; \
+               new Float:vl; \
+               get_state(PART:"state", st, 30, vl); \
+               if (!strcmp(st, "reorder") || !strcmp(st, "decorate_reorder")) { \
+                  run_program(PROGRAM:"reorder_set"NAME); \
+               } else { \
+                  run_program(PROGRAM:"default_set"NAME); \
+               } \
+            } \
+         }\
+         program { name: "decorate_enabled"NAME;\
+            signal: "elm,state,decorate,enabled";\
+            source: "elm";\
+            script { \
+               new st[31]; \
+               new Float:vl; \
+               get_state(PART:"state", st, 30, vl); \
+               if (!strcmp(st, "reorder") || !strcmp(st, "decorate_reorder")) { \
+                  run_program(PROGRAM:"decorate_reorder_set"NAME); \
+               } else { \
+                  run_program(PROGRAM:"decorate_set"NAME); \
+               } \
+            } \
+         }\
+         program { name: "decorate_disabled"NAME;\
+            signal: "elm,state,decorate,disabled";\
+            source: "elm";\
+            script { \
+               new st[31]; \
+               new Float:vl; \
+               get_state(PART:"state", st, 30, vl); \
+               if (!strcmp(st, "reorder") || !strcmp(st, "decorate_reorder")) { \
+                  run_program(PROGRAM:"reorder_set"NAME); \
+               } else { \
+                  run_program(PROGRAM:"default_set"NAME); \
+               } \
+            } \
+         } \
+         program { name: "default_set"NAME; \
+            action: STATE_SET "default" 0.0;\
+            target: "state"; \
+            TARGET \
+         } \
+         program { name: "decorate_set"NAME; \
+            action: STATE_SET "decorate" 0.0;\
+            target: "state"; \
+            TARGET \
+         } \
+         program { name: "reorder_set"NAME; \
+            action: STATE_SET "reorder" 0.0;\
+            target: "state"; \
+            TARGET \
+         } \
+         program { name: "decorate_reorder_set"NAME; \
+            action: STATE_SET "decorate_reorder" 0.0;\
+            target: "state"; \
+            TARGET \
+         }
+
+#define GENLIST_PROGRAM_FLIP \
+         program { name: "flip_enabled"; \
+            signal:  "elm,state,flip,enabled"; \
+            source:  "elm"; \
+            transition: DECELERATE 0.5; \
+            action:  STATE_SET "flipped" 0.0; \
+            target: "elm.flip.content"; \
+            target: "elm.flip.icon"; \
+         } \
+         program { name: "flip_disabled"; \
+            signal:  "elm,state,flip,disabled"; \
+            source:  "elm"; \
+            transition: DECELERATE 0.5; \
+            action:  STATE_SET "default" 0.0; \
+            target: "elm.flip.content"; \
+            target: "elm.flip.icon"; \
+         } \
+         program { name: "flip_enabled_bg"; \
+            signal:  "elm,state,flip,enabled"; \
+            source:  "elm"; \
+            action:  STATE_SET "flipped" 0.0; \
+            target: "elm.flip.bg"; \
+         } \
+         program { name: "flip_disabled_bg"; \
+            signal:  "elm,state,flip,disabled"; \
+            source:  "elm"; \
+            action:  STATE_SET "default" 0.0; \
+            target: "elm.flip.bg"; \
+         }
+
+#define GENLIST_PROGRAMS_NORMAL( TARGET ) \
+   programs { \
+      GENLIST_PROGRAM_DEFAULT( TARGET \
+         target: "bg"; \
+         target: "bg_clip"; \
+         target: "bottom_line"; \
+         target: "bottom_line_clip"; \
+         target: "bg_reorder"; \
+         target: "bg_reorder_ef"; \
+         target: "bg_reorder_clip"; \
+         target: "elm.padding.left"; \
+         target: "elm.padding.right"; \
+         target: "elm.padding.top"; \
+         target: "elm.padding.bottom"; \
+         target: "focus_part"; \
+         target: "focus_part_reorder"; \
+      ) \
+      GENLIST_PROGRAM_DISABLED( TARGET \
+         target: "bg"; \
+         target: "bg_reorder"; \
+         target: "bg_reorder_ef"; \
+      ) \
+      GENLIST_PROGRAM_BOTTOMLINE \
+      GENLIST_PROGRAM_FOCUS_NORMAL \
+      GENLIST_PROGRAM_SELECT( TARGET \
+         target: "bg"; \
+         target: "bg_reorder"; \
+         target: "bg_reorder_ef"; \
+      ) \
+      PROGRAM_LIST_SOUND \
+      GENLIST_PROGRAM_DECORATE_REORDER("normal", TARGET \
+         target: "bg_clip"; \
+         target: "bg_reorder_clip"; \
+         target: "bottom_line_clip"; \
+         target: "elm.padding.left"; \
+         target: "elm.padding.right"; \
+         target: "elm.padding.top"; \
+         target: "elm.padding.bottom"; \
+      ) \
+      GENLIST_PROGRAM_FLIP \
+   }
+
+#define GENLIST_PROGRAMS_NORMAL_SILENT( TARGET ) \
+   programs { \
+      GENLIST_PROGRAM_DEFAULT( TARGET \
+         target: "bg"; \
+         target: "bg_clip"; \
+         target: "bottom_line"; \
+         target: "bottom_line_clip"; \
+         target: "bg_reorder"; \
+         target: "bg_reorder_ef"; \
+         target: "bg_reorder_clip"; \
+         target: "elm.padding.left"; \
+         target: "elm.padding.right"; \
+         target: "elm.padding.top"; \
+         target: "elm.padding.bottom"; \
+         target: "focus_part"; \
+         target: "focus_part_reorder"; \
+      ) \
+      GENLIST_PROGRAM_DISABLED( TARGET \
+         target: "bg"; \
+         target: "bg_reorder"; \
+         target: "bg_reorder_ef"; \
+      ) \
+      GENLIST_PROGRAM_BOTTOMLINE \
+      GENLIST_PROGRAM_FOCUS_NORMAL \
+      GENLIST_PROGRAM_SELECT( TARGET \
+         target: "bg"; \
+         target: "bg_reorder"; \
+         target: "bg_reorder_ef"; \
+      ) \
+      GENLIST_PROGRAM_DECORATE_REORDER("normal", TARGET \
+         target: "bg_clip"; \
+         target: "bg_reorder_clip"; \
+         target: "bottom_line_clip"; \
+         target: "elm.padding.left"; \
+         target: "elm.padding.right"; \
+         target: "elm.padding.top"; \
+         target: "elm.padding.bottom"; \
+      ) \
+      GENLIST_PROGRAM_FLIP \
+   }
+
+#define GENLIST_PART_PADDING_L( NAME, LEFT ) \
+         PART(SPACER, NAME, \
+            description { state: "default" 0.0; \
+               fixed: 1 0; \
+               min: GENLIST_PADDING_SIZE_DEFAULT 0; \
+               max: GENLIST_PADDING_SIZE_DEFAULT -1; \
+               align: 0 0.5; \
+               rel1 { \
+                  relative: 1 0; \
+                  to_x: LEFT; \
+               } \
+               rel2 { \
+                  relative: 1 1; \
+                  to_x: LEFT; \
+               } \
+            } \
+         )
+
+#define DESC_LTB( LEFT, TOP, BOTTOM, PARAM ) \
+	   description { state: "default" 0.0;\
+	      align: 0 0.5;\
+	      rel1 { \
+		 relative: 1 1; \
+		 to_x: LEFT; \
+		 to_y: TOP; \
+	      }\
+	      rel2 {\
+		 relative: 1 0;\
+		 to_x: LEFT;\
+		 to_y: BOTTOM;\
+	      }\
+	      PARAM\
+	   }
+
+#define GENLIST_PARAM_ICON_SMALL \
+		 min: GENLIST_ICON_SMALL_SIZE GENLIST_ICON_SMALL_SIZE; \
+		 max: GENLIST_ICON_SMALL_SIZE GENLIST_ICON_SMALL_SIZE;
+
+#define GENLIST_ICON_MEDIUM_SIZE          81
+
+#define GENLIST_PARAM_ICON_MEDIUM \
+         min: GENLIST_ICON_MEDIUM_SIZE GENLIST_ICON_MEDIUM_SIZE; \
+         max: GENLIST_ICON_MEDIUM_SIZE GENLIST_ICON_MEDIUM_SIZE;
+
+#define GENLIST_PART_ICON_SMALL_LTB(NAME, LEFT, TOP, BOTTOM) \
+   GENLIST_PART_ICON(NAME, \
+      DESC_LTB(LEFT, TOP, BOTTOM, \
+         GENLIST_PARAM_ICON_MEDIUM \
+         fixed: 1 1; \
+      ) \
+   )
+
+#define GENLIST_PART_ICON_MEDIUM_L(NAME, LEFT) \
+   GENLIST_PART_ICON(NAME, \
+      DESC_LTB(LEFT, "elm.padding.top", "elm.padding.bottom", \
+         GENLIST_PARAM_ICON_MEDIUM \
+         fixed: 1 1; \
+      ) \
+   )
+
+#define GENLIST_POPUP_PADDING_SIZE_LEFT        47
+#define GENLIST_POPUP_PADDING_SIZE_RIGHT       47
+
+#define GENLIST_POPUP_STYLE(NAME) \
+	   group { GENLIST_NAME(NAME"/popup/default") \
+	      inherit: "elm/genlist/item/"NAME"/default"; \
+	      parts { \
+		 PART(RECT, "bg", \
+		    description { state: "default" 0.0; \
+		       color_class: "B061L1"; \
+		    } \
+		    description { state: "disabled" 0.0; \
+		       inherit: "default" 0.0; \
+		       color_class: "B061L1"; \
+		    } \
+		    description { state: "pressed" 0.0; \
+		       inherit: "default" 0.0; \
+		       color_class: "B061L41P"; \
+		    } \
+		 ) \
+		 PART(SPACER, "elm.padding.left", \
+		    DESC_L("elm.swallow.pad", \
+		       min: GENLIST_POPUP_PADDING_SIZE_LEFT 0; \
+		       max: GENLIST_POPUP_PADDING_SIZE_LEFT -1; \
+		    ) \
+		    DESC_LIST_PADDINGS \
+		 ) \
+		 PART(SPACER, "elm.padding.right", \
+		    DESC_FROM_R( \
+		       min: GENLIST_POPUP_PADDING_SIZE_RIGHT 0; \
+		       max: GENLIST_POPUP_PADDING_SIZE_RIGHT -1; \
+		    ) \
+		    DESC_LIST_PADDINGS \
+		 ) \
+		 PART(RECT, "bottom_line", \
+		    description { state: "default" 0.0; \
+		       color_class: "B0621L2"; \
+		       rel1.to_x: "bg"; \
+		       rel2.to_x: "bg"; \
+		       rel1.offset: 1 0; \
+		       rel2.offset: -2 5; \
+		    } \
+		    description { state: "disabled" 0.0; \
+		       inherit: "default" 0.0; \
+		       visible: 0; \
+		    } \
+		 ) \
+	      } \
+	   }
+
+#define GENLIST_PARAM_PROGRESS_MAIN \
+   color_class: "T0212"; \
+   text { \
+      align: 0 0.5; \
+      min: 0 1; \
+      text_class: "T0212"; \
+   }
+#define GENLIST_DESCRIPTION_PROGRESS_MAIN_OTHERS \
+   description { state: "disabled" 0.0; \
+      inherit: "default" 0.0; \
+      color_class: "T028D"; \
+   } \
+   description { state: "read" 0.0; \
+      inherit: "default" 0.0; \
+      color_class: "T028R"; \
+   } \
+   description { state: "read,disabled" 0.0; \
+      inherit: "default" 0.0; \
+      color_class: "T028RD"; \
+   } \
+   description { state: "pressed" 0.0; \
+      inherit: "default" 0.0; \
+      color_class: "T028P"; \
+   }
+
+group { GENLIST_NAME("myfile/recommendation_multiline_no_icon/default")
+
+   PROLOG_LIST_NORMAL
+   data.item: "texts" "elm.text.1";
+   data.item: "contents" "elm.swallow.progress";
+
+   parts {
+      GENLIST_PART_BASE
+      PART_LIST_BG_NORMAL
+      PART_LIST_BOTTOMLINE
+      PART_LIST_PADDINGS(
+	 GENLIST_PADDING_SIZE_LEFT, GENLIST_PADDING_SIZE_RIGHT, 16, 16
+      )
+
+      //GENLIST_PART_ICON_MEDIUM_L("elm.icon.1", "elm.padding.left")
+      //GENLIST_PART_PADDING_L("elm.padding.icon1.right", "elm.icon.1")
+      GENLIST_PART_LISTITEM("elm.text.1",
+	 DESC_LRT("elm.padding.left", "elm.padding.right",
+	    "elm.padding.top",
+	    min: 0 59;
+	    GENLIST_PARAM_LISTITEM
+	    fixed: 0 1;
+	 )
+	 GENLIST_DESCRIPTION_LISTITEM_OTHERS
+      )
+      GENLIST_PART_ICON("elm.swallow.progress",
+	 DESC_LRTB("elm.padding.left", "elm.padding.right", "elm.text.1", "elm.padding.bottom",
+	    min: 0 80;
+	 )
+      )
+      GENLIST_PART_FLIP
+      GENLIST_PART_FOCUS_NORMAL
+   }
+   GENLIST_PROGRAMS_NORMAL( target: "elm.text.1"; target: "elm.swallow.progress";)
+}
+
+group { GENLIST_NAME("myfile/recommendation_multiline/default")
+
+   PROLOG_LIST_NORMAL
+   data.item: "texts" "elm.text.1";
+   data.item: "contents" "elm.icon.1 elm.swallow.progress";
+
+   parts {
+      GENLIST_PART_BASE
+      PART_LIST_BG_NORMAL
+      PART_LIST_BOTTOMLINE
+      PART_LIST_PADDINGS(
+	 GENLIST_PADDING_SIZE_LEFT, GENLIST_PADDING_SIZE_RIGHT, 16, 16
+      )
+
+      GENLIST_PART_ICON_MEDIUM_L("elm.icon.1", "elm.padding.left")
+      GENLIST_PART_PADDING_L("elm.padding.icon1.right", "elm.icon.1")
+      GENLIST_PART_LISTITEM("elm.text.1",
+	 DESC_LRT("elm.padding.icon1.right", "elm.padding.right",
+	    "elm.padding.top",
+	    min: 0 59;
+	    GENLIST_PARAM_LISTITEM
+	    fixed: 0 1;
+	 )
+	 GENLIST_DESCRIPTION_LISTITEM_OTHERS
+      )
+      GENLIST_PART_ICON("elm.swallow.progress",
+	 DESC_LRTB("elm.padding.icon1.right", "elm.padding.right", "elm.text.1", "elm.padding.bottom",
+	    min: 0 80;
+	 )
+      )
+      GENLIST_PART_FLIP
+      GENLIST_PART_FOCUS_NORMAL
+   }
+   GENLIST_PROGRAMS_NORMAL( target: "elm.text.1"; target: "elm.icon.1"; target: "elm.swallow.progress";)
+}
+
+GENLIST_POPUP_STYLE("myfile/recommendation_multiline_no_icon")
+
+#define GENLIST_PART_TEXT(NAME, DESCRIPION) \
+    part { name: NAME; \
+      scale: 1; \
+      type: TEXT; \
+      repeat_events: 1; \
+      DESCRIPION \
+   }
+
+#define GENLIST_DESCRIPTION( left, right, top, bottom, param ) \
+      description { state: "default" 0.0;\
+         rel1 { \
+            relative: 1 1; \
+            to_x: left; \
+            to_y: top; \
+         }\
+         rel2 {\
+            relative: 0 0;\
+            to_x: right;\
+            to_y: bottom;\
+         }\
+         param\
+      }
+
+#define GENLIST_PART_LISTITEM_LR(NAME, HEIGHT, LEFT, RIGHT, PARAM) \
+   GENLIST_PART_TEXT(NAME, \
+      GENLIST_DESCRIPTION(LEFT, RIGHT, "elm.padding.top", "elm.padding.bottom", \
+         min: 0 HEIGHT; \
+         GENLIST_PARAM_LISTITEM \
+         PARAM \
+      ) \
+      GENLIST_DESCRIPTION_LISTITEM_OTHERS \
+   )
+
+#define GENLIST_DESCRIPTION_RTB( right, top, bottom, param ) \
+      description { state: "default" 0.0;\
+         align: 1 0.5;\
+         rel1 { \
+            relative: 0 1; \
+            to_x: right; \
+            to_y: top; \
+         }\
+         rel2 {\
+            relative: 0 0;\
+            to_x: right;\
+            to_y: bottom;\
+         }\
+         param\
+      }
+
+#define GENLIST_BTN_01_HEIGHT             74
+
+#define GENLIST_PARAM_ICON_BTN_01 \
+         min: 0 GENLIST_BTN_01_HEIGHT; \
+         max: -1 GENLIST_BTN_01_HEIGHT;
+
+#define GENLIST_PART_ICON_BTN_01_RTB(NAME, RIGHT, TOP, BOTTOM) \
+   GENLIST_PART_ICON(NAME, \
+      GENLIST_DESCRIPTION_RTB(RIGHT, TOP, BOTTOM,\
+         GENLIST_PARAM_ICON_BTN_01 \
+         fixed: 1 1; \
+      ) \
+   )
+
+#define GENLIST_HEIGHT_1LINE              104  // (114 - top/bottom padding)
+#define GENLIST_BTN_02_SIZE               72
+
+#define GENLIST_PARAM_ICON_BTN_02 \
+         min: GENLIST_BTN_02_SIZE GENLIST_BTN_02_SIZE; \
+         max: GENLIST_BTN_02_SIZE GENLIST_BTN_02_SIZE;
+
+#define GENLIST_PART_ICON_BTN_02_RTB(NAME, RIGHT, TOP, BOTTOM) \
+   GENLIST_PART_ICON(NAME, \
+      GENLIST_DESCRIPTION_RTB(RIGHT, TOP, BOTTOM,\
+         GENLIST_PARAM_ICON_BTN_02 \
+         fixed: 1 1; \
+      ) \
+   )
+
+group { GENLIST_NAME("1text.2icon/default")
+   PROLOG_LIST_NORMAL
+   data.item: "texts" "elm.text";
+   data.item: "contents" "elm.icon.1 elm.icon.2";
+
+   parts {
+      GENLIST_PART_BASE
+      PART_LIST_BG_NORMAL
+      PART_LIST_BOTTOMLINE
+      PART_LIST_PADDINGS(
+	 GENLIST_PADDING_SIZE_LEFT, GENLIST_PADDING_SIZE_RIGHT,
+	 GENLIST_PADDING_SIZE_TOP, GENLIST_PADDING_SIZE_BOTTOM
+      )
+
+      GENLIST_PART_ICON_MEDIUM_L( "elm.icon.1", "elm.padding.left")
+      GENLIST_PART_PADDING_L("elm.padding.icon1.right", "elm.icon.1")
+      GENLIST_PART_LISTITEM_LR("elm.text", GENLIST_HEIGHT_1LINE, "elm.padding.icon1.right", "elm.padding.icon2.left",)
+      GENLIST_PART_PADDING_R("elm.padding.icon2.left", "elm.icon.2")
+      GENLIST_PART_ICON_BTN_01_RTB("elm.icon.2", "elm.padding.right", "elm.padding.top", "elm.padding.bottom")
+      GENLIST_PART_FLIP
+      GENLIST_PART_FOCUS_NORMAL
+   }
+   GENLIST_PROGRAMS_NORMAL_SILENT( target: "elm.text"; target: "elm.icon.1"; target: "elm.icon.2"; )
+}
+
+group { GENLIST_NAME("myfile.1text.2icon.6/default")
+   inherit: "elm/genlist/item/1text.2icon/default";
+
+   parts {
+      GENLIST_PART_ICON_BTN_02_RTB("elm.icon.2", "elm.padding.right", "elm.padding.top", "elm.padding.bottom")
+
+   }
+}
+

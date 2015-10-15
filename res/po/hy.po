@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Մուտքագրեք թղթապանակի անունը:"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Փաստաթղթեր"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Լռելյայն զանգի մեղեդի"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Անվավեր ֆայլի անուն:"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Անհնար է վերարտադրել կանչի ընթացքում:"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Հնարավոր չէ ավելացնել: Որոշ տարրեր գոյություն չունեն:"
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Կանխադրված ծանուցման ձայն"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Ընտրել տարրեր"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Անվավեր նիշ է մուտքագրվել: Նորից փորձեք"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Անձայն"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Կարող եք ընտրել մինչև %d տարր:"
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Ջնջե՞լ"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD քարտ"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Սարքի հիշողություն"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Անհնար է նվագարկել. սխալ է տեղի ունեցել:"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ԱՐՎԱԾ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ԴԱԴԱՐԵՑՆԵԼ"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Ֆայլի առավելագույն չափը (%d ՄԲ) գերազանցվել է:"
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Ֆայլերի առավելագույն քանակը գերազանցվել է:"
+

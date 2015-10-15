@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Introduceţi numele folderului."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Documente"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Sonerie de apel implicită"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Nume fişier incorect"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Imposibil de redat în timpul unui apel"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Imposibil de adăugat. Unele elemente nu există."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Sunet de notific. implicit"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Selectare elemente"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Aţi introdus un caracter nevalid. Încercaţi din nou"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Silenţios"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Puteţi selecta maximum %d elemente."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Ştergeţi?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "Cartelă SD"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Memorie dispozitiv"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Imposibil de redat. A avut loc o eroare."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "EFECTUAT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANULARE"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "S-a depăşit dimensiunea maximă a fişierului (%d MO)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Dimensiune maximă de fişiere depăşită"
+

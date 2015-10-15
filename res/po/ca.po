@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Introduir nom de carpeta"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Documents"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Melodia predeterminada"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Nom de fitxer no vàlid"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "No es pot reproduir durant la trucada"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "No es pot afegir. Alguns elements no existeixen."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "So notificació predeter"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Seleccionar elements"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Caràcter introduït no vàlid. Torni-ho a intentar."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Silenci"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Pot seleccionar fins a %d elements"
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Esborrar?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "Targeta SD"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Memòria del dispositiu"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "No es pot reproduir. S'ha produït un error."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "REALITZAT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CANCEL·LAR"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "S'ha excedit la mida màxima de fitxer (%d MB)"
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "S'ha excedit la mida màxima de fitxers"
+

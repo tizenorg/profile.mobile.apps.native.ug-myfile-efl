@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "கோப்புறை பெயரை உள்ளிடுக."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "ஆவணங்கள்"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "டீஃபால்ட் ரிங்டோன்"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "தவறான கோப்பின் பெயர்."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "அழைப்பின்போது இயக்க இயலாது."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "சேர்க்க முடியவில்லை. சில உருப்படிகள் இல்லை."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "டீஃபால்ட் அறிவிப்பு ஒலி"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "உருப்படிகளை தேர்வுசெய்க"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "தவறான எழுத்து உள்ளிடப்பட்டது. மீண்டும் முயலுக."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "அமைதி"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "%d உருப்படிகள் வரை நீங்கள் தேர்வுசெய்யலாம்."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "நீக்கவா?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD அட்டை"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "சாதன நினைவகம்"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "இயக்க இயலாது. பிழை ஏற்பட்டுள்ளது."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "முடிந்தது"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ரத்துசெய்க"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "அதிகபட்ச கோப்பளவு (%d MB) கடந்துவிட்டது."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "அதிகபட்ச கோப்புகளின் அளவை தாண்டியது."
+

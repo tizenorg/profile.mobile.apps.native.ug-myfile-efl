@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "ಫೋಲ್ಡರ್ ಹೆಸರನ್ನು ನಮೂದಿಸಿ."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳು"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "ಡೀಫಾಲ್ಟ್ ರಿಂಗ್‌ಟೋನ್"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "ಅಸಿಂಧು ಫೈಲ್ ಹೆಸರು."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "ಕರೆಯ ಸಮಯದಲ್ಲಿ ಪ್ಲೇ ಮಾಡಲಾಗುತ್ತಿಲ್ಲ."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "ಸೇರಿಸಲಾಗುತ್ತಿಲ್ಲ. ಒಂದೇ ಐಟಂ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "ಡೀಫಾಲ್ಟ್ ಪ್ರಕಟಣೆ ಶಬ್ದ"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "ಅಂಶಗಳನ್ನು ಆರಿಸಿ"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "ಅಮಾನ್ಯ ಅಕ್ಷರ ನಮೂದಿಸಲಾಗಿದೆ. ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "ನಿಶ್ಯಬ್ದ"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "%d ಅಂಶಗಳ‌ವರೆಗೆ ನೀವು ಆರಿಸಬಹುದು."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "ಅಳಿಸಲೇ?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD ಕಾರ್ಡ್"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "ಸಾಧನ ಸ್ಮರಣೆ"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "ಪ್ಲೇ ಮಾಡಲು ಅಸಮರ್ಥ. ದೋಷ ಸಂಭವಿಸಿದೆ."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ಮುಗಿದಿದೆ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ರದ್ದುಮಾಡಿ"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "ಗರಿಷ್ಠ ಫೈಲ್ ಗಾತ್ರ (%d MB) ಮೀರಿದೆ."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "ಫೈಲ್‌ಗಳ ಗರಿಷ್ಠ ಗಾತ್ರ ಮೀರಿದೆ."
+

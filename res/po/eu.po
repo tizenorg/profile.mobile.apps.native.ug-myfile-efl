@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Idatzi karpetaren izena."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumentuak"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Dei doinu lehenetsia"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Fitxategi izen baliogabea"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Ezin da deian zehar erreproduzitu"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Ezin da gehitu. Elementu batzuk ez daude."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Jakinarazpenetarako lehenespenezko soinua"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Hautatu elementuak"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Karaktere baliogabea adierazi dituzu. Saiatu berriz."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Isila"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "%d elementu arte aukera ditzakezu"
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Ezabatu?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD txartela"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Gailuaren memoria"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Ezin da erreproduzitu. Errorea gertatu da."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "EGINA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "UTZI"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Fitxategiaren gehieneko neurria (%d MB) gaindituta"
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Fitxategien gehienezko neurria gaindituta"
+

@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Введіть назву папки"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Документи"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Стандартний звук дзвінка"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Хибна назва файла."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Неможливо відтворити під час виклику."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Неможливо додати. Деяких об’єктів не існує."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Стандартний звук"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Вибір об’єктів"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Введено хибний символ. Cпробуйте ще раз"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Без звуку"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Можна вибрати до %d об’єктів."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Видалити?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "Карта пам’яті"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Пам’ять пристрою"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Неможливо відтворити. Сталася помилка."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ГОТОВО"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "СКАСУВАТИ"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Перевищено максимальний розмір файла (%d МБ)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Перевищено максимальний розмір файлів."
+

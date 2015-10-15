@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Ange mappnamn."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokument"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Standardringsignal"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Ogiltigt filnamn."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Kan inte spela upp under samtal."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Det går inte att lägga till. En del objekt finns inte."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Standardljud"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Välj objekt"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Ogiltigt tecken har angivits. Försök igen."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Tyst"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Du kan välja upp till %d objekt."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Radera?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD-kort"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Enhetsminne"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Det går inte att spela upp. Ett fel inträffade."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "KLAR"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "AVBRYT"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Högsta tillåtna filstorlek (%d MB) har överskridits."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Högsta filstorlek överskreds."
+

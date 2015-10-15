@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Introduzir nome da pasta."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Documentos"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Tom de toque padrão"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Nome do ficheiro inválido."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Impossível tocar durante a chamada."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Impossível adicionar. Alguns itens não existem."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Som padrão p/ notificações"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Seleccionar itens"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Introduzidos caracteres inválidos. Tente novamente."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Silencioso"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Pode seleccionar até %d itens."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Eliminar?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "Cartão SD"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Memória do dispositivo"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Impossível reproduzir. Ocorreu um erro."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "CONCLUÍDO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CANCELAR"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Tamanho máximo de ficheiro (%d MB) excedido."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Tamanho máximo dos ficheiros excedido."
+

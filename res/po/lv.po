@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Ievadiet mapes nosaukumu."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumenti"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Noklusējuma zvana signāls"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Nederīgs faila nosaukums."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Sarunas laikā nevar veikt atskaņošanu."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Nevar pievienot. Daži objekti nepastāv."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Paziņojumu noklus. skaņa"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Objektu izvēle"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Ievadīta nederīga rakstzīme. Mēģiniet vēlreiz"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Klusums"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Varat izvēlēties līdz pat %d objektiem."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Vai dzēst?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD kartē"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Ierīces atmiņa"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Nevar atskaņot. Radās kļūda."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GATAVS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ATCELT"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Pārsniegts maksimālais faila lielums (%d MB)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Pārsniegts maksimālais failu lielums."
+

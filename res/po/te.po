@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "ఫోల్డర్ పేరును నమోదు చేయండి."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "పత్రాలు"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "డిఫాల్ట్ రింగ్‌టోన్"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "చెల్లని ఫైల్ పేరు."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "కాల్ సమయంలో ప్లే చేయడం సాధ్యం కాదు."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "జోడించడం సాధ్యం కాదు. కొన్ని ఐటెమ్‌లు లేవు."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "డిఫాల్ట్ నోటిఫికేషన్ ధ్వని"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "ఐటమ్‌లను ఎంచుకోండి"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "చెల్లని అక్షరం నమోదు చేయబడింది. మళ్లీ ప్రయత్నించండి."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "నిశ్శబ్దం"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "మీరు %d ఐటెమ్ల వరకు ఎంచుకోవచ్చు."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "తొలగించాలా?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD కార్డ్"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "పరికరం మెమరీ"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "ప్లే చేయడం సాధ్యం కాదు. లోపం ఏర్పడింది."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "పూర్తయింది"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "రద్దు చేయి"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "గరిష్ఠ ఫైల్ పరిమాణం (%d MB) మించిపోయింది."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "ఫైళ్ల యొక్క గరిష్ట సంఖ్యను మించిపోయారు."
+

@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Unesi ime foldera"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumenti"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Podrazumevani ton zvona"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Neispravan naziv fajla"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Nemoguće reprodukovati tokom poziva."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Nemoguće dodati. Neke stavke ne postoje."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Podrazumevani zvuk"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Izaberi stavke"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Unet je neispravan karakter. Pokušaj ponovo"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Nečujno"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Možete izabrati do %d stavki."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Obriši?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD kartica"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Memorija uređaja"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Nemoguće reprodukovati. Nastala je greška."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GOTOVO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "OTKAŽI"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Premašena je maksimalna veličina fajla (%d MB)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Pređena maksimalna veličina fajlova."
+

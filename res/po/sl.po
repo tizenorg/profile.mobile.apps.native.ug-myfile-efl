@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Vnesite ime mape."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumenti"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Privzeta melodija zvonjenja"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Neveljavno ime datoteke."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Ni mogoče predvajati med klicem."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Ni mogoče dodati. Nekateri predmeti ne obstajajo."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Privzeti zvok za obvestilo"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Izberite elemente"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Vnesli ste neveljaven znak. Poskusite znova"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Tiho"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Izberete lahko do %d elementov."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Izbrišem?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "Kartica SD"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Pomnilnik naprave"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Ni mogoče predvajati. Prišlo je do napake."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "KONČANO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "PREKLIČI"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Največja dovoljena velikost datoteke (%d MB) je presežena."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Največja dovoljena velikost datotek je presežena."
+

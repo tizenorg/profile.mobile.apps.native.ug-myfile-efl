@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "أدخل اسم المجلد."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "المستندات"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "نغمة الرنين الافتراضية"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "اسم الملف غير صالح."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "يتعذر التشغيل أثناء المكالمة."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "تتعذر الإضافة. بعض العناصر غير موجودة."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "صوت الإشعار الافتراضي"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "تحديد عناصر"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "تم إدخال حرف غير صالح. حاول مرة أخرى."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "صامت"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "يمكنك تحديد ما يصل إلى %d عناصر."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "مسح؟"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "بطاقة SD"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "ذاكرة الجهاز"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "تعذر التشغيل. حدث خطأ."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "تم"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "إلغاء"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "تم تجاوز الحد الأقصى لحجم الملف (%d ميجابايت)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "تم تجاوز الحد الأقصى لحجم الملفات."
+

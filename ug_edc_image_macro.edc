@@ -1,0 +1,159 @@
+/*
+* Copyright (c) 2000-2015 Samsung Electronics Co., Ltd All Rights Reserved
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+
+
+
+#define UG_DEFAULT_ICON				    "myfile_icon_etc.png"
+
+#define UG_TITLE_ICON_HOME              "myfile_controlbar_cion_home.png"
+#define UG_TITLE_ICON_HOME_PRESS	   	"myfile_controlbar_cion_home_press.png"
+#define UG_TITLE_ICON_UPPER	            "myfile_controlbar_cion_up_folder.png"
+#define UG_TITLE_ICON_UPPER_PRESS	   	"myfile_controlbar_cion_up_folder_press.png"
+#define UG_ICON_FOLDER				    "myfile_icon_folder.png"
+#define UG_TITLE_ICON_SELECT_ALL	    "myfile_icon_select_all.png"
+#define UG_TITLE_ICON_SELECT_ALL_PRESS  "myfile_icon_select_all_selected.png"
+
+#define UG_ICON_IMAGE           "myfile_icon_images.png"
+#define UG_ICON_VIDEO		    "myfile_icon_video.png"
+#define UG_ICON_MUSIC		    "myfile_icon_music.png"
+//#define UG_ICON_SOUND		    "myfile_icon_music.png"
+#define UG_ICON_PDF			    "myfile_icon_pdf.png"
+#define UG_ICON_DOC			    "myfile_icon_word.png"
+#define UG_ICON_PPT			    "myfile_icon_ppt.png"
+#define UG_ICON_EXCEL		    "myfile_icon_excel.png"
+//#define UG_ICON_VOICE		    "myfile_icon_music.png"
+#define UG_ICON_HTML		    "myfile_icon_html.png"
+#define UG_ICON_FLASH		    "myfile_icon_swf.png"
+#define UG_ICON_TXT			    "myfile_icon_text.png"
+#define UG_ICON_VCONTACT	    "myfile_icon_vcard.png"
+#define UG_ICON_VCALENDAR	    "myfile_icon_vcalender.png"
+//#define UG_ICON_VNOTE		    "myfile_icon_text.png"
+#define UG_ICON_RSS			    "myfile_icon_rss.png"
+#define UG_ICON_JAVA		    "myfile_icon_java.png"
+#define UG_ICON_TPK			    "myfile_icon_tpk.png"
+#define UG_ICON_SNB			    "myfile_icon_etc.png"
+#define UG_ICON_HWP			    "myfile_icon_hwp.png"
+#define UG_ICON_GUL			    "myfile_icon_etc.png"
+
+#define UG_ICON_MUSIC_PLAY_WHITE            "myfile_icon_control_play.png"
+#define UG_ICON_MUSIC_PAUSE_WHITE			"myfile_icon_control_pause.png"
+#define UG_ICON_MUSIC_PLAY_WHITE_PRESS		"myfile_icon_control_play_press.png"
+#define UG_ICON_MUSIC_PAUSE_WHITE_PRESS		"myfile_icon_control_pause_press.png"
+#define UG_ICON_ENTRY_FOLDER				"myfile_icon_entry_folder.png"
+#define UG_ICON_ENTRY_FOLDER_PRESS			"myfile_icon_entry_folder_press.png"
+#define UG_ICON_VIDEO_PLAY					"myfile_icon_video_play.png"
+
+//#define UG_ICON_ITEM_PHONE					"myfile_icon_folder.png"
+#define UG_ICON_ITEM_MMC					"myfile_icon_folder_sdcard.png"
+#define UG_ICON_MMC							"myfile_icon_grid_folder_card.png"
+#define UG_ICON_ITEM_SHORTCUT				"myfile_icon_folder_shortcut.png"
+#define UG_ICON_ITEM_ROOT_PHONE				"myfile_icon_root_folder_device_memory.png"
+#define UG_ICON_ITEM_ROOT_MMC				"myfile_icon_root_folder_sdcard.png"
+
+#define UG_ICON_ADD							"myfile_icon_add.png"
+#define UG_ICON_DELETE						"myfile_icon_delete.png"
+#define UG_ICON_CREATE_FOLDER				"myfile_icon_create_folder.png"
+#define UG_ICON_MULTI_NO_CONTENTS			"00_nocontents_multimedia.png"
+
+
+#define RESOURCE_IMAGE( FILE_NAME ) \
+   group { \
+      name: FILE_NAME; \
+      images.image: FILE_NAME COMP; \
+      parts { \
+         part { name: "image"; \
+            description { \
+               state: "default" 0.0; \
+               image.normal: FILE_NAME; \
+               aspect: 1 1; \
+               aspect_preference: BOTH; \
+            } \
+         } \
+      } \
+   }
+
+#define RESOURCE_IMAGE_LOSSY( FILE_NAME ) \
+   group { \
+      name: FILE_NAME; \
+      images.image: FILE_NAME LOSSY 85; \
+      parts { \
+         part { name: "image"; \
+            description { \
+               state: "default" 0.0; \
+               image.normal: FILE_NAME; \
+               aspect: 1 1; \
+               aspect_preference: BOTH; \
+            } \
+         } \
+      } \
+   }
+
+
+
+collections {
+	RESOURCE_IMAGE(UG_DEFAULT_ICON);
+	RESOURCE_IMAGE(UG_TITLE_ICON_HOME_PRESS);
+	RESOURCE_IMAGE(UG_TITLE_ICON_HOME);
+	RESOURCE_IMAGE(UG_TITLE_ICON_UPPER);
+	RESOURCE_IMAGE(UG_TITLE_ICON_UPPER_PRESS);
+	RESOURCE_IMAGE(UG_ICON_FOLDER);
+	RESOURCE_IMAGE(UG_TITLE_ICON_SELECT_ALL);
+	RESOURCE_IMAGE(UG_TITLE_ICON_SELECT_ALL_PRESS);
+
+
+	RESOURCE_IMAGE(UG_ICON_IMAGE);
+	RESOURCE_IMAGE(UG_ICON_VIDEO);
+	RESOURCE_IMAGE(UG_ICON_MUSIC);
+	//RESOURCE_IMAGE(UG_ICON_SOUND);
+	RESOURCE_IMAGE(UG_ICON_PDF);
+
+	RESOURCE_IMAGE(UG_ICON_DOC);
+	RESOURCE_IMAGE(UG_ICON_PPT);
+	RESOURCE_IMAGE(UG_ICON_EXCEL);
+	//RESOURCE_IMAGE(UG_ICON_VOICE);
+	RESOURCE_IMAGE(UG_ICON_HTML);
+
+	RESOURCE_IMAGE(UG_ICON_FLASH);
+	RESOURCE_IMAGE(UG_ICON_TXT);
+	RESOURCE_IMAGE(UG_ICON_VCONTACT);
+	RESOURCE_IMAGE(UG_ICON_VCALENDAR);
+	//RESOURCE_IMAGE(UG_ICON_VNOTE);
+
+	RESOURCE_IMAGE(UG_ICON_RSS);
+	RESOURCE_IMAGE(UG_ICON_JAVA);
+	RESOURCE_IMAGE(UG_ICON_MUSIC_PLAY_WHITE);
+	RESOURCE_IMAGE(UG_ICON_MUSIC_PAUSE_WHITE);
+	RESOURCE_IMAGE(UG_ICON_MUSIC_PLAY_WHITE_PRESS);
+	RESOURCE_IMAGE(UG_ICON_MUSIC_PAUSE_WHITE_PRESS);
+	RESOURCE_IMAGE(UG_ICON_ENTRY_FOLDER);
+	RESOURCE_IMAGE(UG_ICON_ENTRY_FOLDER_PRESS);
+	RESOURCE_IMAGE(UG_ICON_VIDEO_PLAY);
+	//RESOURCE_IMAGE(UG_ICON_ITEM_PHONE);
+	RESOURCE_IMAGE(UG_ICON_ITEM_MMC);
+	RESOURCE_IMAGE(UG_ICON_MMC);
+
+	RESOURCE_IMAGE(UG_ICON_HWP);
+	RESOURCE_IMAGE(UG_ICON_TPK);
+	RESOURCE_IMAGE(UG_ICON_ITEM_SHORTCUT);
+	RESOURCE_IMAGE(UG_ICON_ADD);
+	RESOURCE_IMAGE(UG_ICON_MULTI_NO_CONTENTS);
+	RESOURCE_IMAGE(UG_ICON_DELETE);
+	RESOURCE_IMAGE(UG_ICON_CREATE_FOLDER);
+	RESOURCE_IMAGE(UG_ICON_ITEM_ROOT_PHONE);
+	RESOURCE_IMAGE(UG_ICON_ITEM_ROOT_MMC);
+}
