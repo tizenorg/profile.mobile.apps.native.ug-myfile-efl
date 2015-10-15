@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Angi mappenavn."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumenter"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Standard ringetone"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Ugyldig filnavn."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Kan ikke spille av under samtale."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Kan ikke legge til. Noen elemeneter finnes ikke."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Standard varselslyd"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Velg elementer"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Ugyldig tegn angitt. Prøv på nytt."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Stille"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Du kan velge opptil %d elementer."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Slette?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD-kort"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Enhetsminne"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Kan ikke spille av. Det oppstod en feil."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "FULLFØRT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "AVBRYT"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Maksimal filstørrelse (%d MB) overskredet."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Maksimal filstørrelse oversteget."
+

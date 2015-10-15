@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "შეიყვანეთ საქაღალდის სახელი."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "დოკუმენტები"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "ავტომატურად შერჩეული ზარი"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "ფაილის არასწორი დასახელება."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "ვერ დაუკრავთ ზარის დროს."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "ვერ ემატება. ზოგიერთი ელემენტი არ არის."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "შეტყობინების საწყისი ხმა"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "ელემენტების არჩევა"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "აკრეფილია არასწორი სიმბოლო. კიდევ მოსინჯეთ"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "ჩუმი"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "მაქსიმუმ %d ელემენტის არჩევა შეგიძლიათ."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "წაიშალოს?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD ბარათი"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "აპარატის მეხსიერება"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "ვერ დაუკრავთ. შეცდომა მოხდა."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "მზადაა"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "გაუქმება"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "გადაჭარბებულია ფაილის მაქსიმალური ზომა (%d მბ)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "გადაჭარბებულია ფაილების მაქსიმალური ზომა."
+

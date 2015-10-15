@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Въведете име на папка."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Документи"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Тон на звънене по подразбиране"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Невалидно име на файл."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Не може да се възпроизведе по време на разговор."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Не може да се добави. Някои от елементите не съществуват."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Звук по подр. уведомявания"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Избор на елементи"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Въведен е невалиден знак. Опитайте отново"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Тих"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Можете да изберете до %d елемента."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Изтриване?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD карта"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Памет на устройството"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Не може да се възпроизведе. Възникна грешка."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ГОТОВО"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ОТКАЗ"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Надвишен е максималният размер на файла (%d MB)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Максималният размер на файловете е надхвърлен."
+

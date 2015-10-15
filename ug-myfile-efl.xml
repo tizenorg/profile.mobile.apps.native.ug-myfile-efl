@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="ug-myfile-efl" version="0.0.2" install-location="internal-only">
+	<label>My Files Appcontrol</label>
+		<label xml:lang="hy-am">My Files Appcontrol</label>
+		<label xml:lang="az-az">My Files Appcontrol</label>
+		<label xml:lang="eu-es">My Files Appcontrol</label>
+		<label xml:lang="bg-bg">My Files Appcontrol</label>
+		<label xml:lang="ca-es">My Files Appcontrol</label>
+		<label xml:lang="zh-cn">My Files Appcontrol</label>
+		<label xml:lang="zh-hk">My Files Appcontrol</label>
+		<label xml:lang="zh-tw">My Files Appcontrol</label>
+		<label xml:lang="hr-hr">My Files Appcontrol</label>
+		<label xml:lang="cs-cz">My Files Appcontrol</label>
+		<label xml:lang="da-dk">My Files Appcontrol</label>
+		<label xml:lang="nl-nl">My Files Appcontrol</label>
+		<label xml:lang="en-gb">My Files Appcontrol</label>
+		<label xml:lang="en-us">My Files Appcontrol</label>
+		<label xml:lang="et-ee">My Files Appcontrol</label>
+		<label xml:lang="fi-fi">My Files Appcontrol</label>
+		<label xml:lang="fr-fr">My Files Appcontrol</label>
+		<label xml:lang="gl-es">My Files Appcontrol</label>
+		<label xml:lang="ka-ge">My Files Appcontrol</label>
+		<label xml:lang="de-de">My Files Appcontrol</label>
+		<label xml:lang="el-gr">My Files Appcontrol</label>
+		<label xml:lang="hu-hu">My Files Appcontrol</label>
+		<label xml:lang="is-is">My Files Appcontrol</label>
+		<label xml:lang="ga-ie">My Files Appcontrol</label>
+		<label xml:lang="it-it">My Files Appcontrol</label>
+		<label xml:lang="ja-jp">My Files Appcontrol</label>
+		<label xml:lang="kk-kz">My Files Appcontrol</label>
+		<label xml:lang="ko-kr">My Files Appcontrol</label>
+		<label xml:lang="lv-lv">My Files Appcontrol</label>
+		<label xml:lang="lt-lt">My Files Appcontrol</label>
+		<label xml:lang="mk-mk">My Files Appcontrol</label>
+		<label xml:lang="nb-no">My Files Appcontrol</label>
+		<label xml:lang="pl-pl">My Files Appcontrol</label>
+		<label xml:lang="pt-pt">My Files Appcontrol</label>
+		<label xml:lang="pt-br">My Files Appcontrol</label>
+		<label xml:lang="ro-ro">My Files Appcontrol</label>
+		<label xml:lang="ru-ru">My Files Appcontrol</label>
+		<label xml:lang="sr-rs">My Files Appcontrol</label>
+		<label xml:lang="sk-sk">My Files Appcontrol</label>
+		<label xml:lang="sl-si">My Files Appcontrol</label>
+		<label xml:lang="es-es">My Files Appcontrol</label>
+		<label xml:lang="es-us">My Files Appcontrol</label>
+		<label xml:lang="sv-se">My Files Appcontrol</label>
+		<label xml:lang="tr-tr">My Files Appcontrol</label>
+		<label xml:lang="uk-ua">My Files Appcontrol</label>
+		<label xml:lang="uz-uz">My Files Appcontrol</label>
+		<label xml:lang="ar-ae">My Files Appcontrol</label>
+		<label xml:lang="zh-sg">My Files Appcontrol</label>
+		<label xml:lang="hi-in">My Files Appcontrol</label>
+		<label xml:lang="en-ph">My Files Appcontrol</label>
+		<label xml:lang="fr-ca">My Files Appcontrol</label>
+		<label xml:lang="es-mx">My Files Appcontrol</label>
+	<author email="gliang.wang@samsung.com" href="www.samsung.com">Guangliang Wang</author>
+	<description>Myfiles Application</description>
+	<ui-application appid="ug-myfile-efl" exec="/usr/ug/bin/myfile-efl" ui-gadget="true" nodisplay="true" multiple="true" type="capp" taskmanage="false" process-pool="true" launch_mode="caller">
+		<icon>/usr/share/icons/default/small/ug-myfile-efl.png</icon>
+		<label>My Files</label>
+		<label xml:lang="hy-am">Իմ Ֆայլերը</label>
+		<label xml:lang="az-az">Mənim fayllarım</label>
+		<label xml:lang="eu-es">Nire Fitxategiak</label>
+		<label xml:lang="bg-bg">Моите файлове</label>
+		<label xml:lang="ca-es">Els meus fitxers</label>
+		<label xml:lang="zh-cn">我的文件</label>
+		<label xml:lang="zh-hk">我的檔案</label>
+		<label xml:lang="zh-tw">我的檔案</label>
+		<label xml:lang="hr-hr">Moje datoteke</label>
+		<label xml:lang="cs-cz">Moje soubory</label>
+		<label xml:lang="da-dk">Mine filer</label>
+		<label xml:lang="nl-nl">Mijn bestanden</label>
+		<label xml:lang="en-gb">My Files</label>
+		<label xml:lang="en-us">My Files</label>
+		<label xml:lang="et-ee">Minu Failid</label>
+		<label xml:lang="fi-fi">Omat tiedostot</label>
+		<label xml:lang="fr-fr">Mes fichiers</label>
+		<label xml:lang="gl-es">Os Meus Arquivos</label>
+		<label xml:lang="ka-ge">ჩემი ფაილები</label>
+		<label xml:lang="de-de">Eigene Dateien</label>
+		<label xml:lang="el-gr">Τα Αρχεία Μου</label>
+		<label xml:lang="hu-hu">Saját fájlok</label>
+		<label xml:lang="is-is">Skrárnar mínar</label>
+		<label xml:lang="ga-ie">Mo Chomhaid</label>
+		<label xml:lang="it-it">Archivio</label>
+		<label xml:lang="ja-jp">マイ​ファイル</label>
+		<label xml:lang="kk-kz">Менің файлдарым</label>
+		<label xml:lang="ko-kr">내 파일</label>
+		<label xml:lang="lv-lv">Mani faili</label>
+		<label xml:lang="lt-lt">Mano failai</label>
+		<label xml:lang="mk-mk">Мои фајлови</label>
+		<label xml:lang="nb-no">Mine Filer</label>
+		<label xml:lang="pl-pl">Moje pliki</label>
+		<label xml:lang="pt-pt">Os Meus Ficheiros</label>
+		<label xml:lang="pt-br">Meus Arquivos</label>
+		<label xml:lang="ro-ro">Fişierele mele</label>
+		<label xml:lang="ru-ru">Мои файлы</label>
+		<label xml:lang="sr-rs">Moji fajlovi</label>
+		<label xml:lang="sk-sk">Moje súbory</label>
+		<label xml:lang="sl-si">Moje datoteke</label>
+		<label xml:lang="es-es">Mis archivos</label>
+		<label xml:lang="es-us">Mis Archivos</label>
+		<label xml:lang="sv-se">Mina filer</label>
+		<label xml:lang="tr-tr">Dosyalarım</label>
+		<label xml:lang="uk-ua">Мої файли</label>
+		<label xml:lang="uz-uz">Mening fayllarim</label>
+		<label xml:lang="ar-ae">ملفاتي</label>
+		<label xml:lang="zh-sg">我的文件</label>
+		<label xml:lang="hi-in">मेरी फाइलें</label>
+		<label xml:lang="en-ph">My Files</label>
+		<label xml:lang="fr-ca">Mes fichiers</label>
+		<label xml:lang="es-mx">Mis Archivos</label>
+	<application-service>
+		<operation name="http://tizen.org/appcontrol/operation/pick"/>
+	</application-service>
+	<application-service>
+		<operation name="http://tizen.org/appcontrol/operation/pick"/>
+		<mime name="image/*"/>
+		<mime name="video/*"/>
+	</application-service>
+
+	</ui-application>
+</manifest>

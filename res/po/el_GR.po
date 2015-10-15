@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Εισαγωγή ονόματος φακέλου."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Έγγραφα"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Προεπιλεγμένος ήχος κλήσης"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Μη έγκυρο όνομα αρχείου."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Δεν είναι δυνατή η αναπαραγωγή παιχνιδιού κατά την κλήση."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Αδύνατη η προσθήκη. Ορισμένα στοιχεία δεν υπάρχουν."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Προεπιλ. ήχος ειδοποιήσεων"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Επιλογή στοιχείων"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Καταχωρίστηκε μη έγκυρος χαρακτήρας. Δοκιμάστε ξανά"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Αθόρυβο"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Μπορείτε να επιλέξετε μέχρι και %d στοιχεία."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Διαγραφή;"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "Κάρτα SD"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Μνήμη συσκευής"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Δεν είναι δυνατή η αναπαραγωγή. Προέκυψε σφάλμα."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ΤΕΛΟΣ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ΑΚΥΡΟ"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Υπέρβαση μέγιστου μεγέθους αρχείων (%d MB)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Υπέρβαση μέγιστου μεγέθους αρχείων."
+

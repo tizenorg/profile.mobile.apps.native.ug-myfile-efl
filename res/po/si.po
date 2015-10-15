@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "ෆෝල්ඩර නාමය ඇතුල් කරන්න."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "ලේඛන"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "පෙරනිමි රිංග්ටෝනය"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "අවලංගු ගොනු නාමය."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "ඇමතුම අතරතුර වාදනය කළ නොහැක."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "එක් කළ නොහැක. ඇතැම් අයිතම නොපවතී."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "පෙරනිමි දැනුම්දීම් හඬ"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "අයිතම තෝරන්න"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "වැරදි අකුරු ඇතුල් කර තිබේ. නැවත උත්සාහ කරන්න."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "නිහඬ"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "ඔබට %d දක්වා අයිතම තේරිය හැකිය."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "මකන්නද?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD කාඩ්පත"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "උපාංග මතකය"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "ධාවනය කල නොහැක. දෝෂයක් හට ගැනිණි."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "නිමයි"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "අවලංගු කර."
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "උපරිම ඇමුණුම් ප්‍රමාණය (%d MB) ඉක්මවා ඇත."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "උපරිම ගොනු ප්‍රමාණය ඉක්මවිය."
+

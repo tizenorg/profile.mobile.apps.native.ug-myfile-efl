@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Mapnaam invoeren"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Documenten"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Standaardbeltoon"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Ongeldige bestandsnaam."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Niet mogelijk tijdens gesprek."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Kan niet toevoegen. Sommige items bestaan niet."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Standaardgeluid melding"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Items selecteren"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Ongeldig teken ingevoerd. Probeer het opnieuw."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Stil"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "U kunt maximaal %d items selecteren."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Verwijderen?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD-kaart"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Apparaatgeheugen"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Kan niet afspelen. Fout opgetreden."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GEREED"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANNULEREN"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Maximale bestandsgrootte (%d MB) overschreden."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Maximumgrootte van bestanden overschreden."
+

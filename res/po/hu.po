@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Adja meg a mappa nevét."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumentumok"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Alapértelmezett csengőhang"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Érvénytelen fájlnév"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Hívás közben nem lehet lejátszani."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Nem adható hozzá. Egyes tételek nem léteznek."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Alapért. értesítési hang"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Tételek kijelölése"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Érvénytelen karaktert vitt be. Próbálja újra"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Csendes"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Legfeljebb %d tételt jelölhet ki."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Törli?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD-kártya"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Eszközmemória"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Nem játszható le. Hiba történt."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "KÉSZ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "MÉGSE"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Túllépte a maximális fájlméretet (%d MB)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Túllépte a maximális fájlméretet."
+

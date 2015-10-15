@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Sisestage kausta nimi."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumendid"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Vaikimisi helin"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Vigane failinimi."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Kõne ajal ei saa esitada."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Ei saa lisada. Monesid uksuseid ei ole olemas."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Teavituse vaikeheli"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Vali üksused"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Sisestati vale tähemärk. Proovige uuesti"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Vaikne"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Te voite valida kuni %d uksust."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Kustutada?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD-kaart"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Seadme mälu"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Ei saa esitada. Ilmnes tõrge."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "VALMIS"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "TÜHISTA"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Faili maksimaalne suurus (%d MB) on ületatud."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Maksimaalne failide suurus on ületatud."
+

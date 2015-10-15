@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "ଫୋଲ୍ଡର୍ ନାମ ପ୍ରବେଶ କରନ୍ତୁ"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "ଡକ୍ୟୁମେଣ୍ଟଗୁଡିକ"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "ଡିଫଲ୍ଟ ରିଂଟୋନ୍"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "ଅବୈଧ ଫାଇଲ୍ ନାମ।"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "କଲ୍ ସମୟରେ ଧ୍ୱନି ଚାଳନ କରିବାକୁ ଅସମର୍ଥ ଅଟେ।"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "ଯୋଡିବାକୁ ଅସମର୍ଥ । କିଛି ଆଇଟମ୍‌ଗୁଡିକ ବିଦ୍ୟମାନ ନାହିଁ।"
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "ଡିଫଲ୍ଟ ବିଜ୍ଞପ୍ତି ଧ୍ୱନି"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "ଆଇଟମଗୁଡିକ ଚୟନ"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "ଅବୈଧ କମ୍‍ ପ୍ରବେଶ ହେଲା। ପୁନଃଚେଷ୍ଟା କରନ୍ତୁ।"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "ଶାନ୍ତ"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "ଆପଣ %dଟି ଆଇଟମ୍‌ ପର୍ଯ୍ୟନ୍ତ ଚୟନ କରିପାରିବେ।"
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "ବିଲୋପ କରିବେ?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD କାର୍ଡ୍"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "ଡିଭାଇସ୍ ମେମୋରୀ"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "ଚାଳନ କରିବାକୁ ଅସମର୍ଥ। ତ୍ରୁଟି ଘଟିଲା।"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ସମାପ୍ତ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ବାତିଲ୍"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "ସର୍ବାଧିକ ଫାଇଲ୍ ଆକାର (%d MB) ଅତିକ୍ରମ କରିଛି।"
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "ଫାଇଲ୍‌ଗୁଡିକର ସର୍ବାଧିକ ଆକାର ଅତିକ୍ରମ କରିଛି।"
+

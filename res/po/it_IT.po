@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Inserite nome cartella"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Documenti"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Suoneria predefinita"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Nome del file non valido."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Impossibile riprodurre durante una chiamata."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Impossibile aggiungere. Alcuni elementi non esistono."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Suoneria predef. notifica"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Seleziona elementi"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Carattere inserito non valido. Riprovate."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Silenzioso"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "È possibile selezionare fino a %d elementi."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Eliminare?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "Scheda SD"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Memoria dispositivo"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Impossibile riprodurre. Si è verificato un errore."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "FATTO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANNULLA"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "La dimensione massima del file (%d MB) è stata superata."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Dimensioni massime dei file superate."
+

@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Jild nomini kiriting."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Hujjatlar"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Birlamchi o'rnatilgan rington"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Noto‘g‘ri fayl nomi."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Qo‘ng‘iroq mobaynida o‘ynatib bo‘lmaydi."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Qo‘shib bo‘lmaydi. Ba’zi elementlar mavjud emas."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Bildir. birlamchi ohangi"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Elementlar tanlash"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Mumkin bo‘lmagan belgi kiritildi. Qayta urinib ko‘ring"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Ovozsiz"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Eng ko‘pi bilan %d element tanlashingiz mumkin."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "O'chirilsinmi?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD-karta"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Qurilma xotirasi"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "O‘ynatib bo‘lmaydi. Xato yuz berdi."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "BAJARILDI"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "BEKOR QILISH"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Fayl o‘lchami maksimal miqdordan (%d Mb) oshib ketdi."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Fayllar o‘lchami ruxsat etilgan maksimal qiymatdan oshdi."
+

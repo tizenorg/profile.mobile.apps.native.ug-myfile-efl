@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Wpisz nazwę katalogu."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumenty"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Domyślny dzwonek"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Nieprawidłowa nazwa pliku"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Niedozwolone podczas połączenia."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Nie można dodać. Niektóre elementy nie istnieją."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Domyślny dźwięk powiadom."
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Wybierz elementy"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Wpisano nieprawidłowy znak. Spróbuj ponownie"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Cichy"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Maksymalna liczba elementów, które można wybrać: %d."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Usunąć?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "Karta pamięci"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Pamięć urządzenia"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Nie można odtworzyć. Wystąpił błąd."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "GOTOWE"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANULUJ"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Przekroczono maksymalny rozmiar pliku (%d MB)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Przekroczono maksymalny rozmiar plików."
+

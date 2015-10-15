@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Қалта атын енгізңіз."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Құжаттар"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Әдепкі үн"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Файлдың аты  қате."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Сөйлесу барысында ойнатуға мүмкіндік жоқ."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Қосу мүмкін емес. Кейбір элементтер жоқ."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Әдепкі хабарлау дыбысы"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Элементтерді таңдау"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Қате таңба енгізілді. Әрекетті қайталаңыз"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Дыбыссыз"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "%d элементке дейін таңдауға болады."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Өшіресіз бе?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD картасы"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Құрылғы жады"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Ойнату мүмкін емес. Қате пайда болды."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ДАЙЫН"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "БАС ТАРТУ"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Ең үлкен файл өлшемінен (%d МБ) асып кетті."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Файлдардың ең үлкен өлшемінен асып кетті."
+

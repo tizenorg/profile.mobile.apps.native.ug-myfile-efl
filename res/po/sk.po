@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Zadajte názov priečinka."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumenty"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Predvolené zvonenie"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Neplatný názov súboru."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Počas hovoru sa nedá prehrávať."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Nedá sa pridať. Niektoré položky neexistujú."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Predvolený zvuk oznámení"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Vybrať položky"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Zadali ste neplatný znak. Skúste to znova"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Tichý"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Môžete vybrať maximálne %d položiek."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Odstrániť?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "Karta SD"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Pamäť zariadenia"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Nedá sa prehrať. Vyskytla sa chyba."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "HOTOVO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ZRUŠIŤ"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Prekročila sa maximálna veľkosť súboru (%d MB)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Prekročila sa maximálna veľkosť súborov."
+

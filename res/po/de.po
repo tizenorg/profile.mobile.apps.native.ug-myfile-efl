@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Ordnernamen eingeben"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumente"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Standardklingelton"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Dateiname ungültig"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Wiedergabe während Anruf nicht möglich"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Hinzufügen nicht möglich. Einige Elemente sind nicht vorhanden."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Standardton für Benachr."
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Elemente auswählen"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Ungültiges Zeichen eingegeben. Erneut versuchen."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Stumm"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Sie können bis zu %d Elemente auswählen."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Löschen?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD-Karte"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Gerätespeicher"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Datei kann nicht wiedergegeben werden. Fehler aufgetreten."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "FERTIG"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ABBRECHEN"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Maximale Dateigröße (%d MB) überschritten"
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Maximale Dateigröße überschritten"
+

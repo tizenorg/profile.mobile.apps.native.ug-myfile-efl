@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Saisir le nom de dossier."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Documents"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Sonnerie par défaut"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Nom de fichier incorrect."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Impossible de lire le message pendant un appel."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Ajout impossible. Certains éléments n'existent pas."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Son de notif. par défaut"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Sélectionner éléments"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Caractère non valide saisi. Réessayez"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Silencieux"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Vous pouvez sélectionner jusqu'à %d éléments."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Supprimer ?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "Carte SD"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Mémoire de l'appareil"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Lecture impossible. Une erreur s'est produite."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "OK"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANNULER"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Taille maximale de fichiers (%d Mo) dépassée."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Taille maximale des fichiers dépassée."
+

@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "输入文件夹名称"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "文档"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "默认铃声"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "文件名无效"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "通话中无法播放"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "无法添加。部分项目不存在。"
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "默认通知声音"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "选择项目"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "输入的字符无效。请重试。"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "静音"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "最多可选择%d个项目。"
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "删除？"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD卡"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "手机内存"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "无法播放。出错。"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "完成"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "取消"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "已超过最大文件大小（%d MB）。"
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "已达到文件最大尺寸。"
+

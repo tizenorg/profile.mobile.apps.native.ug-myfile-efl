@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="@PACKAGE_NAME@" version="@VERSION@" install-location="internal-only">
+    <label>ugmyfiletestapp</label>
+    <author email="PUT YOUR EMAIL" href="www.samsung.com">PUT YOUR NAME</author>
+    <description>ugmyfiletestapp</description>
+    <ui-application appid="@PACKAGE_NAME@" exec="@BINDIR@/@PROJECT_NAME@" nodisplay="false" multiple="false" type="capp" taskmanage="true">
+        <label>ugmyfiletestapp</label>
+        <icon>@DESKTOP_ICON@</icon>
+    </ui-application>
+</manifest>

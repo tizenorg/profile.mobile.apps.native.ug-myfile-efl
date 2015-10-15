@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "ਫੋਲਡਰ ਨਾਂ ਦਾਖ਼ਲ ਕਰੋ।"
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "ਦਸਤਾਵੇਜ਼"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "ਡਿਫਾੱਲਟ ਰਿੰਗਟੋਨ"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "ਅਵੈਧ ਫਾਈਲ ਨਾਂ।"
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "ਕਾੱਲ ਦੇ ਦੌਰਾਨ ਪਲੇ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ।"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "ਜੋੜਨ ਵਿੱਚ ਅਸਮਰੱਥ। ਕੁਝ ਆਈਟਮ ਮੌਜੂਦ ਨਹੀਂ ਹਨ।"
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "ਡਿਫਾੱਲਟ ਸੂਚਨਾ ਧੁਨੀ"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "ਆਈਟਮਸ ਚੁਣੋ"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "ਅਵੈਧ ਵਰਣ ਦਾਖ਼ਲ ਹੋਇਆ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "ਸ਼ਾਂਤ"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "ਤੁਸੀਂ %d ਤੱਕ ਆਈਟਮਸ ਚੁਣ ਸਕਦੇ ਹੋ।"
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "ਮਿਟਾਉਣਾ ਹੈ?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD ਕਾਰਡ"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "ਡਿਵਾਈਸ ਮੈਮਰੀ"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "ਪਲੇ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ। ਤਰੁੱਟੀ ਉਤਪੰਨ ਹੋਈ।"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ਪੂਰਨ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ਰੱਦ ਕਰੋ"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "ਅਧਿਕਤਮ ਫਾਈਲ ਆਕਾਰ (%d MB) ਵਧਾਇਆ ਗਿਆ।"
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "ਫਾਇਲਾਂ ਦਾ ਅਧਿਕਤਮ ਆਕਾਰ ਜ਼ਿਆਦਾ ਹੋ ਗਿਆ ਹੈ।"
+

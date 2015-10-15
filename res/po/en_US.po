@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Enter folder name."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Documents"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Default ringtone"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Invalid file name."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Unable to play during call."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Unable to add. Some items do not exist."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Default notification sound"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Select items"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Invalid character entered. Try again."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Silent"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "You can select up to %d items."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Delete?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD card"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Device memory"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Unable to play. Error occurred."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "DONE"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "CANCEL"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Maximum %d MB file size has been exceeded."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Maximum size of files exceeded."
+

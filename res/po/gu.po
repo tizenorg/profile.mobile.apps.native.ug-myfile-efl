@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "ફોલ્ડરનું નામ દાખલ કરો."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "દસ્તાવેજો"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "મૂળભૂત રિંગટોન"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "અમાન્ય ફાઇલ નામ."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "કૉલ દરમ્યાન ચલાવવામાં અક્ષમ."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "જોડવામાં અક્ષમ. કેટલીક વસ્તુઓ હાજર નથી."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "મૂળભૂત સૂચના ધ્વનિ"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "વસ્તુઓ પસંદ કરો"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "અમાન્ય અક્ષર દાખલ કર્યો છે. ફરી પ્રયાસ કરો."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "શાંત"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "તમે %d વસ્તુઓ સુધી પસંદ કરી શકો છો."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "કાઢી નાખવું?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD કાર્ડ"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "ઉપકરણ સ્મૃતિ"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "પ્લે કરવામાં અસમર્થ. ભૂલ થઈ છે."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "पूर्ण"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "रद्द करें
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "મહત્તમ ફાઇલ કદ (%d MB) વટાવ્યું."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "ફાઇલ્સની મહત્તમ કદ વટાવાઈ ગઈ."
+

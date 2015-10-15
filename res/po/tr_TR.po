@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Klasör adını girin."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Belgeler"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Varsayılan zil sesi"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Dosya adı geçersiz."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Görüşme sırasında çalınamaz."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Eklenemiyor. Bazı öğeler bulunamadı."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Varsayılan bildirim sesi"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Öğeleri seç"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Geçersiz karakter girildi. Yeniden deneyin."
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Sessiz"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "%d öğeye kadar seçebilirsiniz."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Sil?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD kart"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Cihaz hafızası"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Çalınamıyor. Hata meydana geldi."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "BİTTİ"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "İPTAL"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Maksimum dosya boyutu (%d MB) aşıldı."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Maksimum dosya boyutu aşıldı."
+

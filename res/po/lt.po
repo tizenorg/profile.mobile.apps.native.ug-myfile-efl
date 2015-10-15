@@ -1,0 +1,57 @@
+msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
+msgstr "Įrašyti aplanko pavadinimą."
+
+msgid "IDS_MF_BODY_DOCUMENTS"
+msgstr "Dokumentai"
+
+msgid "IDS_MF_OPT_DEFAULT_RINGTONE"
+msgstr "Numatytoji melodija"
+
+msgid "IDS_MF_POP_INVALID_FILE_NAME"
+msgstr "Neleistinas failo pavadinimas."
+
+msgid "IDS_MF_POP_UNABLE_TO_PLAY_DURING_CALL"
+msgstr "Negalima paleisti skambučio metu."
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
+msgstr "Nepavyko pridėti. Kai kurie elementai neegzistuoja."
+
+msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
+msgstr "Numatyto pranešimo garsas"
+
+msgid "IDS_MF_HEADER_SELECT_ITEMS"
+msgstr "Rinktis elementus"
+
+msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
+msgstr "Įvestas neteisingas simbolis. Bandykite vėl"
+
+msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
+msgstr "Tylusis"
+
+msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
+msgstr "Galite pasirinkti iki %d elementų."
+
+msgid "IDS_MF_POP_DELETE_Q"
+msgstr "Ar trinti?"
+
+msgid "IDS_MF_BODY_SD_CARD_ABB"
+msgstr "SD kortelė"
+
+msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
+msgstr "Įrenginio atmintis"
+
+msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
+msgstr "Neįmanoma paleisti. Įvyko klaida."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ATLIKTA"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ATŠAUKTI"
+
+msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
+msgstr "Viršytas didžiausias failo dydis (%d MB)."
+
+msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
+msgstr "Viršytas leistinas failų dydis."
+
