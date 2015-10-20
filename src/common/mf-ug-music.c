@@ -19,7 +19,6 @@
 
 
 #include <ui-gadget.h>
-//#include <Ecore_X.h>
 #include <app.h>
 
 #include "mf-ug-main.h"

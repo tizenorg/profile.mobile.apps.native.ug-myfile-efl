@@ -22,7 +22,6 @@
 
 #include <appsvc.h>
 #include <media_content.h>
-//#include <Ecore_X.h>
 #include <Elementary.h>
 #include <system_settings.h>
 
@@ -396,6 +395,7 @@ int __mf_ug_main_get_atoi(const char *number)
 	return (int)val;
 }
 
+#if 0//Tizen3.0 Build error
 static void __mf_ug_main_set_max_len_option(void *data, const char *number)
 {
 	UG_TRACE_BEGIN;
@@ -417,6 +417,7 @@ static void __mf_ug_main_set_max_len_option(void *data, const char *number)
 	}
 	ug_error("ugd->ug_UiGadget.ug_iMaxLength is [%d]", ugd->ug_UiGadget.ug_iMaxLength);
 }
+#endif
 
 static int __mf_ug_main_set_path_option(void *data, const char *path)
 {

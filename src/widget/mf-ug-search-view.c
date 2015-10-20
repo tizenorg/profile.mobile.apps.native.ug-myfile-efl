@@ -19,8 +19,6 @@
 
 
 #include <Eina.h>
-//#include <Ecore_X.h>
-
 #include "mf-ug-main.h"
 #include "mf-ug-util.h"
 #include "mf-ug-winset.h"

@@ -160,6 +160,7 @@ mf_tbl_s mf_tbl[MF_TABLE_NUM] = {
 	}
 };
 
+#if 0
 static int __mf_busy_handler(void *pData, int count)
 {
 	usleep(50000);
@@ -168,6 +169,7 @@ static int __mf_busy_handler(void *pData, int count)
 
 	return 100 - count;
 }
+#endif
 
 int mf_sqlite3_exec(
 		  sqlite3 *p_db,                                  /* An open database */

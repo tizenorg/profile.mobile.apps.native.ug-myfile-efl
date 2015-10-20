@@ -19,7 +19,6 @@
 #include <stdbool.h>
 
 #include <Elementary.h>
-//#include <Ecore_X.h>
 #include <runtime_info.h>
 
 #include "mf-ug-main.h"
