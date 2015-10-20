@@ -1537,7 +1537,7 @@ void mf_ug_select_all_cb(void *data, Evas_Object *obj, void *event_info)
 		total_item_size += stFileInfo.st_size;
 		if (ugd->limitsize > 0 && total_item_size > ugd->limitsize) {
 			char *noti = NULL;
-			noti = g_strdup_printf(mf_ug_widget_get_text(MF_UG_LABEL_MAXIMUM_SIZE));
+			noti = mf_ug_widget_get_text(MF_UG_LABEL_MAXIMUM_SIZE);
 			mf_ug_popup_indicator_popup(noti);
 			elm_check_state_set(ugd->ug_MainWindow.ug_pSelectAllCheckBox, false);
 			ugd->ug_Status.ug_iCheckedCount = prev_check_count;

@@ -285,7 +285,7 @@ static void __mf_ug_genlist_checkbox_cb(void *data, Evas_Object *obj, void *even
 		stat(itemData->ug_pItemName->str, &stFileInfo);
 		if (ugd->limitsize > 0 && ugd->selsize + stFileInfo.st_size > ugd->limitsize) {
 			char *noti = NULL;
-			noti = g_strdup_printf(mf_ug_widget_get_text(MF_UG_LABEL_MAXIMUM_SIZE));
+			noti = mf_ug_widget_get_text(MF_UG_LABEL_MAXIMUM_SIZE);
 			mf_ug_popup_indicator_popup(noti);
 			if (itemData->ug_bChecked == 0) {
 				itemData->ug_bChecked = 1;
@@ -1291,7 +1291,7 @@ void mf_ug_genlist_sel(void *data)
 					ugd->ug_Status.ug_iCheckedCount++;
 					if (ugd->limitsize > 0 && ugd->selsize + stFileInfo.st_size > ugd->limitsize) {
 						char *noti = NULL;
-						noti = g_strdup_printf(mf_ug_widget_get_text(MF_UG_LABEL_MAXIMUM_SIZE));
+						noti = mf_ug_widget_get_text(MF_UG_LABEL_MAXIMUM_SIZE);
 						mf_ug_popup_indicator_popup(noti);
 						if (selected->ug_bChecked == 0) {
 							selected->ug_bChecked = 1;
