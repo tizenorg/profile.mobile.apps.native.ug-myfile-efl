@@ -273,9 +273,9 @@ static void __mf_ug_util_get_marked_off_selected_items(void *data, Eina_List **s
 	char *name = NULL;
 
 	if (ugd->ug_Status.ug_bSelectAllChecked == true
-		&& (ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE
-		|| ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE
-		|| ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE)) {
+	        && (ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE
+	            || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE
+	            || ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE)) {
 
 		EINA_LIST_FOREACH(ugd->ug_UiGadget.ug_pSearchFileList, l, name) {
 			if (name) {
@@ -287,8 +287,8 @@ static void __mf_ug_util_get_marked_off_selected_items(void *data, Eina_List **s
 			ugListItemData *params = (ugListItemData *)elm_object_item_data_get(gli);
 			ug_mf_retm_if(params == NULL, "params is NULL");
 			if (ugd->ug_UiGadget.ug_iSelectMode == SINGLE_ALL_MODE
-			    || ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE
-			    || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE) {
+			        || ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE
+			        || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE) {
 				if (params->ug_pRadioBox) {
 					if (elm_radio_value_get(ugd->ug_MainWindow.ug_pRadioGroup) == params->ug_iGroupValue) {
 						*select_list = eina_list_append(*select_list, strdup(params->ug_pItemName->str));
@@ -296,10 +296,10 @@ static void __mf_ug_util_get_marked_off_selected_items(void *data, Eina_List **s
 					}
 				}
 			} else if (ugd->ug_UiGadget.ug_iSelectMode == MULTI_ALL_MODE ||
-				   ugd->ug_UiGadget.ug_iSelectMode == MULTI_FILE_MODE ||
-				   ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE ||
-				   ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE ||
-				   ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE) {
+			           ugd->ug_UiGadget.ug_iSelectMode == MULTI_FILE_MODE ||
+			           ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE ||
+			           ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE ||
+			           ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE) {
 				if (params->ug_pCheckBox) {
 					if (params->ug_bChecked == true) {
 						*select_list = eina_list_append(*select_list, strdup(params->ug_pItemName->str));
@@ -340,7 +340,7 @@ char *mf_ug_util_get_send_result(void *data)
 	char *pNode = NULL;
 
 	if (ugd->ug_UiGadget.ug_iMarkedMode == MARKED_ON
-	    && (ugd->ug_UiGadget.ug_iSelectMode == MULTI_FILE_MODE || ugd->ug_UiGadget.ug_iSelectMode == MULTI_ALL_MODE)) {
+	        && (ugd->ug_UiGadget.ug_iSelectMode == MULTI_FILE_MODE || ugd->ug_UiGadget.ug_iSelectMode == MULTI_ALL_MODE)) {
 		__mf_ug_util_get_marked_selected_items(ugd->ug_UiGadget.ug_pMultiSelectFileList, &selected_list);
 	} else {
 		__mf_ug_util_get_marked_off_selected_items(ugd, &selected_list);
@@ -362,8 +362,9 @@ char *mf_ug_util_get_send_result(void *data)
 		}
 	}
 	mf_ug_util_free_eina_list_data(&selected_list, NODE_TYPE_CHAR);
-	if (file_selected != NULL)
-	printf("a_count is [%d] file_list is [%d][%s]\n", a_count, strlen(file_selected), file_selected);
+	if (file_selected != NULL) {
+		printf("a_count is [%d] file_list is [%d][%s]\n", a_count, strlen(file_selected), file_selected);
+	}
 	UG_TRACE_END;
 	return file_selected;
 }
@@ -664,8 +665,9 @@ void mf_ug_util_storage_insert_action(void *data, char *pItemLabel)
 	if (ugd->ug_Status.ug_iViewType == mf_ug_view_root) {
 		if (ugd->ug_Status.ug_iMmcFlag) {
 			pNode = (ugFsNodeInfo *) malloc(sizeof(ugFsNodeInfo));
-			if (pNode == NULL)
+			if (pNode == NULL) {
 				return;
+			}
 			memset(pNode, 0, sizeof(ugFsNodeInfo));
 			/*set path */
 			pNode->path = g_strdup(STORAGE_PARENT);
@@ -856,8 +858,8 @@ int mf_ug_util_check_disk_space(void *data)
 		 */
 		if (free_space == 0) {
 			ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL,
-					   MF_UG_LABEL_NOT_ENOUGH_SPACE, MF_UG_LABEL_OK,
-					   NULL, NULL, mf_ug_cb_warning_popup_cb, ugd);
+			                                     MF_UG_LABEL_NOT_ENOUGH_SPACE, MF_UG_LABEL_OK,
+			                                     NULL, NULL, mf_ug_cb_warning_popup_cb, ugd);
 			return MYFILE_ERR_NO_FREE_SPACE;
 		}
 	}
@@ -872,7 +874,7 @@ void mf_ug_util_operation_alloc_failed(void *data)
 	ugData *ugd = (ugData *)data;
 
 	ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, MF_UG_LABEL_NOT_ENOUGH_SPACE,
-			   NULL, NULL, NULL, (Evas_Smart_Cb) elm_exit, NULL);
+	                                     NULL, NULL, NULL, (Evas_Smart_Cb) elm_exit, NULL);
 }
 
 long mf_ug_util_character_count_get(const char *original)
@@ -880,13 +882,13 @@ long mf_ug_util_character_count_get(const char *original)
 	ug_mf_retvm_if(original == NULL, 0, "input string is NULL");
 	long count = 0;
 	char *utf8_form = g_locale_to_utf8(original, -1, NULL, NULL, NULL);
-	if (utf8_form == NULL)
+	if (utf8_form == NULL) {
 		return count;
-	else {
-		  count = g_utf8_strlen(utf8_form, -1);
-		  free(utf8_form);
-		  ug_debug("utf8 count is %ld", count);
-		  return count;
+	} else {
+		count = g_utf8_strlen(utf8_form, -1);
+		free(utf8_form);
+		ug_debug("utf8 count is %ld", count);
+		return count;
 	}
 }
 
@@ -916,8 +918,9 @@ int mf_ug_util_generate_root_view_file_list(Eina_List **list, int storage_state)
 
 	ugFsNodeInfo *pNode = NULL;
 	pNode = (ugFsNodeInfo *) malloc(sizeof(ugFsNodeInfo));
-	if (pNode == NULL)
+	if (pNode == NULL) {
 		return -1;
+	}
 	memset(pNode, 0, sizeof(ugFsNodeInfo));
 	/*set path */
 	pNode->path = g_strdup(PHONE_PARENT);
@@ -928,8 +931,9 @@ int mf_ug_util_generate_root_view_file_list(Eina_List **list, int storage_state)
 
 	if (storage_state == MMC_ON) {
 		pNode = (ugFsNodeInfo *) malloc(sizeof(ugFsNodeInfo));
-		if (pNode == NULL)
+		if (pNode == NULL) {
 			return -1;
+		}
 		memset(pNode, 0, sizeof(ugFsNodeInfo));
 		/*set path */
 		pNode->path = g_strdup(STORAGE_PARENT);
@@ -1039,11 +1043,11 @@ bool mf_ug_util_is_unique_view(int mode)
 {
 	bool flag = false;
 	if (mode == IMPORT_MODE
-	    || mode == IMPORT_PATH_SELECT_MODE
-	    || mode == IMPORT_SINGLE
-	    || mode == DOCUMENT_SHARE
-	    || mode ==  SSM_DOCUMENT_SHARE
-	) {
+	        || mode == IMPORT_PATH_SELECT_MODE
+	        || mode == IMPORT_SINGLE
+	        || mode == DOCUMENT_SHARE
+	        || mode ==  SSM_DOCUMENT_SHARE
+	   ) {
 		flag = true;
 	}
 	return flag;
@@ -1053,11 +1057,11 @@ bool mf_ug_util_is_multi_select_mode(int mode)
 {
 	bool flag = false;
 	if (mode == MULTI_FILE_MODE
-		|| mode == MULTI_ALL_MODE
-		|| mode == IMPORT_PATH_SELECT_MODE
-		|| mode == IMPORT_MODE
-		|| mode ==  SSM_DOCUMENT_SHARE
-	) {
+	        || mode == MULTI_ALL_MODE
+	        || mode == IMPORT_PATH_SELECT_MODE
+	        || mode == IMPORT_MODE
+	        || mode ==  SSM_DOCUMENT_SHARE
+	   ) {
 		flag = true;
 	}
 	return flag;
@@ -1066,9 +1070,9 @@ bool mf_ug_util_is_single_select_mode(int mode)
 {
 	bool flag = false;
 	if (mode == SINGLE_FILE_MODE
-	   || mode == SINGLE_ALL_MODE
-	   || mode == IMPORT_SINGLE
-	) {
+	        || mode == SINGLE_ALL_MODE
+	        || mode == IMPORT_SINGLE
+	   ) {
 		flag = true;
 	}
 	return flag;
@@ -1076,14 +1080,14 @@ bool mf_ug_util_is_single_select_mode(int mode)
 
 bool mf_ug_util_is_import_mode(int mode)
 {
-		bool flag = false;
-		if (mode == IMPORT_MODE
-		   || mode == IMPORT_PATH_SELECT_MODE
-		   || mode == IMPORT_SINGLE
-		) {
-			flag = true;
-		}
-		return flag;
+	bool flag = false;
+	if (mode == IMPORT_MODE
+	        || mode == IMPORT_PATH_SELECT_MODE
+	        || mode == IMPORT_SINGLE
+	   ) {
+		flag = true;
+	}
+	return flag;
 
 }
 
@@ -1092,7 +1096,7 @@ static Eina_List *path_stack = NULL;
 void mf_ug_util_path_push(char *path, int view_type)
 {
 	mf_ug_view_node_s *view_node = calloc(1, sizeof(mf_ug_view_node_s));
-	
+
 	if (view_node != NULL) {
 		view_node->view_type = view_type;
 		view_node->path = g_strdup(path);
@@ -1103,7 +1107,7 @@ void mf_ug_util_path_push(char *path, int view_type)
 
 mf_ug_view_node_s *mf_ug_util_path_pop()
 {
-	
+
 	mf_ug_view_node_s *view_node = eina_list_nth(path_stack, 0);
 	path_stack = eina_list_remove(path_stack, view_node);
 	return view_node;
@@ -1134,7 +1138,7 @@ void mf_ug_util_path_stack_free()
 	if (path_stack) {
 		mf_ug_view_node_s *view_node = NULL;
 		Eina_List *l = NULL;
-		
+
 		EINA_LIST_FOREACH(path_stack, l, view_node) {
 			mf_ug_util_view_node_free(&view_node);
 		}

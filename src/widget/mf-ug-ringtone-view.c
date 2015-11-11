@@ -72,35 +72,35 @@ Evas_Object *mf_ug_ringtone_list_create(void *data)
 	bool exist_flag = true;
 	/*To fix P131210-01329 wangyan, check whether the passed file exists*/
 	if (ugd->ug_Status.mark_mode && mf_file_exists(ugd->ug_Status.mark_mode)) {
-	  if (g_strcmp0(ugd->ug_Status.mark_mode, DEFAULT_RINGTONE_MARK) && g_strcmp0(ugd->ug_Status.mark_mode, SILENT)) {
+		if (g_strcmp0(ugd->ug_Status.mark_mode, DEFAULT_RINGTONE_MARK) && g_strcmp0(ugd->ug_Status.mark_mode, SILENT)) {
 
-		if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_ringtone) {
-			exist_flag = mf_ug_db_handle_find_ringtone(ugd->ug_Status.mark_mode);
-		} else if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_alert) {
-			exist_flag = mf_ug_db_handle_find_alert(ugd->ug_Status.mark_mode);
-		}
-		if (!exist_flag) {
-			if (mf_ug_util_find_item_from_pnode_list(ugd->ug_UiGadget.ug_pFilterList, ugd->ug_Status.mark_mode) != false) {
-				exist_flag = true;
-			} else {
-				exist_flag = false;
-			}
-		}
-
-		if (!exist_flag) {
-			mf_ug_genlist_item_append(genlist, ugd->ug_Status.mark_mode, ugd, groupValue, &ugd->ug_Status.ug_1text2icon4_itc);
-			groupValue++;
-			/*To fix P131128-01215 by wangyan,phone>menu>call settings>Ringtone and keypad tones>Ringtones
-			>menu>delete setpath-> (not set but)back-> go to ringtone again ->delete menu is gray.
-			the ringtone or alert is not in db ,add it */
-			int location = mf_ug_fm_svc_wapper_get_location(ugd->ug_Status.mark_mode);
 			if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_ringtone) {
-				mf_ug_db_handle_add_ringtone(ugd->ug_Status.mark_mode, NULL, location);
+				exist_flag = mf_ug_db_handle_find_ringtone(ugd->ug_Status.mark_mode);
 			} else if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_alert) {
-				mf_ug_db_handle_add_alert(ugd->ug_Status.mark_mode, NULL, location);
+				exist_flag = mf_ug_db_handle_find_alert(ugd->ug_Status.mark_mode);
+			}
+			if (!exist_flag) {
+				if (mf_ug_util_find_item_from_pnode_list(ugd->ug_UiGadget.ug_pFilterList, ugd->ug_Status.mark_mode) != false) {
+					exist_flag = true;
+				} else {
+					exist_flag = false;
+				}
+			}
+
+			if (!exist_flag) {
+				mf_ug_genlist_item_append(genlist, ugd->ug_Status.mark_mode, ugd, groupValue, &ugd->ug_Status.ug_1text2icon4_itc);
+				groupValue++;
+				/*To fix P131128-01215 by wangyan,phone>menu>call settings>Ringtone and keypad tones>Ringtones
+				>menu>delete setpath-> (not set but)back-> go to ringtone again ->delete menu is gray.
+				the ringtone or alert is not in db ,add it */
+				int location = mf_ug_fm_svc_wapper_get_location(ugd->ug_Status.mark_mode);
+				if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_ringtone) {
+					mf_ug_db_handle_add_ringtone(ugd->ug_Status.mark_mode, NULL, location);
+				} else if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_alert) {
+					mf_ug_db_handle_add_alert(ugd->ug_Status.mark_mode, NULL, location);
+				}
 			}
 		}
-	  }
 	}
 	g_ug_bDefaultItem = true;
 	EINA_LIST_FOREACH(ugd->ug_UiGadget.ug_pFilterList, l, pNode) {
@@ -128,7 +128,7 @@ static Eina_Bool __selected_item_show(void *data)
 	Elm_Object_Item *defaultitem = NULL;
 
 	if (!ugd->ug_Status.ug_bNoContentFlag && (ugd->ug_Status.ug_iRadioOn > 1)) {
-		defaultitem  = elm_genlist_nth_item_get(ugd->ug_MainWindow.ug_pNaviGenlist, ugd->ug_Status.ug_iRadioOn-1);
+		defaultitem  = elm_genlist_nth_item_get(ugd->ug_MainWindow.ug_pNaviGenlist, ugd->ug_Status.ug_iRadioOn - 1);
 		if (NULL != defaultitem) {
 			ug_error("ugd->ug_Status.ug_iRadioOn = %d", ugd->ug_Status.ug_iRadioOn);
 			elm_genlist_item_show(defaultitem, ELM_GENLIST_ITEM_SCROLLTO_TOP);
@@ -180,7 +180,7 @@ void mf_ug_create_rintone_view(void *data)
 	pNaviLayout = mf_ug_navi_bar_create_layout(ugd->ug_MainWindow.ug_pNaviBar, UG_EDJ_NAVIGATIONBAR, UG_GRP_NAVI_VIEW);
 	ugd->ug_MainWindow.ug_pNaviLayout = pNaviLayout;
 	mf_ug_navi_bar_set_path_state(pNaviLayout, EINA_FALSE);
-		/*set content */
+	/*set content */
 	mf_ug_navi_bar_create_group_radio_box(ugd);
 
 	if (ugd->ug_UiGadget.title) {

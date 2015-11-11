@@ -92,7 +92,7 @@ int _mf_ug_indicator_state_set(ugData *ugd, bool flag_hide)
 		elm_win_indicator_mode_set(ugd->ug_MainWindow.ug_pWindow, ELM_WIN_INDICATOR_SHOW);
 		elm_win_indicator_opacity_set(ugd->ug_MainWindow.ug_pWindow, ELM_WIN_INDICATOR_OPAQUE);
 		elm_object_signal_emit(ugd->ug_MainWindow.ug_pConformant,
-				       "elm,state,indicator,nooverlap", "");
+		                       "elm,state,indicator,nooverlap", "");
 		evas_object_data_set(ugd->ug_MainWindow.ug_pConformant, "overlap", NULL);
 	} else {
 		elm_win_indicator_mode_set(ugd->ug_MainWindow.ug_pWindow, ELM_WIN_INDICATOR_SHOW);
@@ -107,7 +107,7 @@ int _mf_ug_reset_indicator(ugData *ugd)
 {
 	ug_mf_retvm_if(ugd == NULL, -1, "ugd is NULL");
 	ug_debug("indi_o_mode: %d, indi_mode: %d", indi_o_mode,
-		indi_mode);
+	         indi_mode);
 	ug_debug("overlap_mode: %d", overlap_mode);
 	/* Set old view's indicator */
 	elm_win_indicator_mode_set(ugd->ug_MainWindow.ug_pWindow, indi_mode);
@@ -116,7 +116,7 @@ int _mf_ug_reset_indicator(ugData *ugd)
 	    if layout is different with new view and needs starts from (0,60) */
 	if (!overlap_mode) {
 		elm_object_signal_emit(ugd->ug_MainWindow.ug_pConformant,
-				       "elm,state,indicator,nooverlap", "");
+		                       "elm,state,indicator,nooverlap", "");
 		evas_object_data_set(ugd->ug_MainWindow.ug_pConformant, "overlap", NULL);
 	} else {
 		elm_object_signal_emit(ugd->ug_MainWindow.ug_pConformant, "elm,state,indicator,overlap", "");
@@ -288,7 +288,7 @@ static void __mf_ug_main_free_evas_object(void *data)
 		evas_object_del(ugd->ug_MainWindow.ug_pContextPopup);
 		ugd->ug_MainWindow.ug_pContextPopup = NULL;
 	}
-    
+
 	UG_TRACE_END;
 }
 
@@ -437,9 +437,9 @@ static int __mf_ug_main_set_path_option(void *data, const char *path)
 			return MYFILE_ERR_ALLOCATE_FAIL;
 		}
 	} else if (strncmp(path, UG_SETTING_RINGTONE_PATH, strlen(UG_SETTING_RINGTONE_PATH)) == 0
-		   || strncmp(path, UG_SETTING_ALERTS_PATH, strlen(UG_SETTING_ALERTS_PATH)) == 0
-		   || strncmp(path, UG_SETTING_MSG_ALERTS_PATH, strlen(UG_SETTING_MSG_ALERTS_PATH)) == 0
-		   || strncmp(path, UG_SETTING_SMART_ALRAMS, strlen(UG_SETTING_SMART_ALRAMS)) == 0) {
+	           || strncmp(path, UG_SETTING_ALERTS_PATH, strlen(UG_SETTING_ALERTS_PATH)) == 0
+	           || strncmp(path, UG_SETTING_MSG_ALERTS_PATH, strlen(UG_SETTING_MSG_ALERTS_PATH)) == 0
+	           || strncmp(path, UG_SETTING_SMART_ALRAMS, strlen(UG_SETTING_SMART_ALRAMS)) == 0) {
 
 		/**check whether is setting ringtone or alerts path  */
 		entry_path = strdup(path);
@@ -476,10 +476,10 @@ static int __mf_ug_main_set_path_option(void *data, const char *path)
 		if (mf_file_exists(entry_path) == false) {
 
 			if (ugd->ug_UiGadget.ug_iSelectMode == EXPORT_MODE ||
-			    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE ||
-			    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE ||
-			    ugd->ug_UiGadget.ug_iSelectMode == SAVE_MODE ||
-			    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE) {
+			        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE ||
+			        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE ||
+			        ugd->ug_UiGadget.ug_iSelectMode == SAVE_MODE ||
+			        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE) {
 				error_code = mf_ug_fm_svc_wrapper_create_p(entry_path);
 				if (error_code != MYFILE_ERR_NONE) {
 					free(entry_path);
@@ -803,8 +803,9 @@ static void __mf_ug_main_set_option_status(void *data, app_control_h app_control
 	char *title = NULL;
 	char *domain = NULL;
 	char *key[UG_OPTION_COUNT] = { "path", "select_type", "file_type",
-					"marked_mode", "default ringtone",
-					"view_mode", "title", "domain"};
+	                               "marked_mode", "default ringtone",
+	                               "view_mode", "title", "domain"
+	                             };
 
 	char *operation = NULL;
 	app_control_get_operation(app_control, &operation);
@@ -819,7 +820,7 @@ static void __mf_ug_main_set_option_status(void *data, app_control_h app_control
 	app_control_get_extra_data(app_control, key[7], &domain);
 	app_control_get_mime(app_control, &mime_type);
 	SECURE_ERROR("path is [%s] select_mode is [%s] filter_mode is [%s] marked_mode is [%s] default_ringtone is [%s] view_mode is [%s] title is [%s] domain is [%s]",
-		path, select_mode, filter_mode, marked_mode, default_ringtone, view_mode, title, domain);
+	             path, select_mode, filter_mode, marked_mode, default_ringtone, view_mode, title, domain);
 
 	if (__mf_ug_main_set_view_mode(ugd, view_mode, path) != MYFILE_ERR_NONE) {
 		__mf_ug_main_set_path_option(ugd, path);
@@ -831,14 +832,15 @@ static void __mf_ug_main_set_option_status(void *data, app_control_h app_control
 	/* add indicator state for PLM P131108-02061, leo */
 	if (indicator) {
 		ug_debug("indicator: %s", indicator);
-		if (!strcasecmp(indicator, "hide"))
+		if (!strcasecmp(indicator, "hide")) {
 			b_hide_indicator = true;
+		}
 		UG_SAFE_FREE_CHAR(indicator);
 	}
-	
+
 	if (ugd->ug_UiGadget.ug_iSoundMode != mf_ug_sound_mode_none) {
-	
-		ugd->ug_Status.mark_mode = g_strdup(marked_mode);		
+
+		ugd->ug_Status.mark_mode = g_strdup(marked_mode);
 		if (default_ringtone) {
 			if (g_strcmp0(default_ringtone, MF_DEFAULT_RINGTONE_SHOW) == 0) {
 				if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_ringtone) {
@@ -1141,8 +1143,9 @@ static void on_start(ui_gadget_h ug, app_control_h app_control, void *priv)
 static void on_pause(ui_gadget_h ug, app_control_h app_control, void *priv)
 {
 	UG_TRACE_BEGIN;
-	if (!priv)
+	if (!priv) {
 		return;
+	}
 	ugData *ugd = (ugData *)priv;
 
 
@@ -1327,9 +1330,9 @@ static void __ug_language_changed_cb(void *user_data)
 		ug_error("locale is [%s]", locale);
 		elm_language_set(locale);
 		if (ugd->ug_UiGadget.ug_iSelectMode == MULTI_FILE_MODE ||
-				ugd->ug_UiGadget.ug_iSelectMode == MULTI_ALL_MODE ||
-				ugd->ug_UiGadget.ug_iSelectMode == MULTI_ALL_MODE ||
-				ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE) {
+		        ugd->ug_UiGadget.ug_iSelectMode == MULTI_ALL_MODE ||
+		        ugd->ug_UiGadget.ug_iSelectMode == MULTI_ALL_MODE ||
+		        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE) {
 			__mf_ug_subtitle_show(ugd);
 		}
 	}

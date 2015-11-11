@@ -95,8 +95,9 @@ inline static void __mf_ug_search_args_free(ms_args_t *args)
 			args->root_path = NULL;
 		}
 
-		if (args->needle)
+		if (args->needle) {
 			g_free(args->needle);
+		}
 
 		g_free(args);
 	}
@@ -128,12 +129,12 @@ inline static void __mf_ug_search_result_free(mf_search_result_t *result)
 #ifdef CHECK_RESTRICTED_PATH
 gboolean __mf_ug_search_check_licet_path(const char *path)
 {
-	return (gboolean) (strstr(path, ROOT_UMS) || strstr(path, ROOT_MMC));
+	return (gboolean)(strstr(path, ROOT_UMS) || strstr(path, ROOT_MMC));
 }
 #endif /*CHECK_RESTRICTED_PATH*/
 
 
- /*This function is for testing and should be revised for performance before applying*/
+/*This function is for testing and should be revised for performance before applying*/
 static inline gboolean __mf_ug_search_has_nonspacing_mark(const char *nstr)
 {
 	if (nstr) {
@@ -168,15 +169,16 @@ static gboolean __mf_ug_search_NFD_ext(const char *str, const char *needle)
 			return FALSE;
 		}
 	}
-	if (s_len < n_len)
+	if (s_len < n_len) {
 		return FALSE;
+	}
 	char *pdot = strrchr(str, '.');
 
 	if (!pdot) {
 		return FALSE;
 	} else if (pdot != str) {
 		char *ext = NULL;;
-		ext = g_strdup(pdot+1);
+		ext = g_strdup(pdot + 1);
 		if (g_strcmp0(ext, needle) == 0) {
 			g_free(ext);
 			ext = NULL;
@@ -232,7 +234,7 @@ static gboolean __mf_ug_search_NFD_multi_ext(const char *str, const char *needle
 			return FALSE;
 		} else if (pdot != str) {
 			char *ext = NULL;
-			ext = g_strdup(pdot+1);
+			ext = g_strdup(pdot + 1);
 
 			s_len = strlen(ext);
 
@@ -333,8 +335,9 @@ static gboolean __mf_ug_search_NFD_strstr(const char *str, const char *needle)
 		}
 	}
 
-	if (s_len < n_len)
+	if (s_len < n_len) {
 		return FALSE;
+	}
 
 	if (__mf_ug_search_has_nonspacing_mark(str)) {
 		const char *p_str = str;
@@ -375,15 +378,15 @@ next:
 			p_str = g_utf8_next_char(p_str);
 		}
 	} else {
-		return (gboolean) (!(!strstr(str, needle)));
+		return (gboolean)(!(!strstr(str, needle)));
 	}
 	return FALSE;
 }
 
 static GList *__mf_ug_search_do_find(const char *root,
-				const char *needle,
-				mf_search_option option,
-				ms_handle_t *handle)
+                                     const char *needle,
+                                     mf_search_option option,
+                                     ms_handle_t *handle)
 {
 	DIR *directory = NULL;
 	GList *candidate = NULL;
@@ -449,7 +452,7 @@ static GList *__mf_ug_search_do_find(const char *root,
 					if (handle->args->func) {
 						gchar *path = NULL;
 						gssize len = strlen(root) + strlen(entry->d_name) + APPEND_SIZE;	/* for null and slash*/
-						path = g_malloc(sizeof(gchar)*len);
+						path = g_malloc(sizeof(gchar) * len);
 						if (path) {
 							int category = handle->args->func(nor_str);
 							if (category == handle->args->category) {
@@ -473,7 +476,7 @@ static GList *__mf_ug_search_do_find(const char *root,
 							up_needle = NULL;
 							gchar *path = NULL;
 							gssize len = strlen(root) + strlen(entry->d_name) + APPEND_SIZE;	/* for null and slash*/
-							path = g_malloc(sizeof(gchar)*len);
+							path = g_malloc(sizeof(gchar) * len);
 							if (path) {
 								g_snprintf(path, len, "%s/%s", root, entry->d_name);
 
@@ -505,7 +508,7 @@ static GList *__mf_ug_search_do_find(const char *root,
 							up_needle = NULL;
 							gchar *path = NULL;
 							gssize len = strlen(root) + strlen(entry->d_name) + APPEND_SIZE;	/* for null and slash*/
-							path = g_malloc(sizeof(gchar)*len);
+							path = g_malloc(sizeof(gchar) * len);
 							if (path) {
 								g_snprintf(path, len, "%s/%s", root, entry->d_name);
 
@@ -523,7 +526,7 @@ static GList *__mf_ug_search_do_find(const char *root,
 							up_needle = NULL;
 							gchar *path = NULL;
 							gssize len = strlen(root) + strlen(entry->d_name) + APPEND_SIZE;	/* for null and slash*/
-							path = g_malloc(sizeof(gchar)*len);
+							path = g_malloc(sizeof(gchar) * len);
 							if (path) {
 								g_snprintf(path, len, "%s/%s", root, entry->d_name);
 
@@ -556,7 +559,7 @@ static GList *__mf_ug_search_do_find(const char *root,
 						up_needle = NULL;
 						gchar *path = NULL;
 						gssize len = strlen(root) + strlen(entry->d_name) + APPEND_SIZE;	/* for null and slash*/
-						path = g_malloc(sizeof(gchar)*len);
+						path = g_malloc(sizeof(gchar) * len);
 						if (path) {
 							g_snprintf(path, len, "%s/%s", root, entry->d_name);
 
@@ -586,13 +589,13 @@ static GList *__mf_ug_search_do_find(const char *root,
 				}
 				/* we are not going to search /opt/media/SLP_Debug folder */
 				if ((strlen(result->current_dir) == strlen(PHONE_FOLDER)) && (strcmp(result->current_dir, PHONE_FOLDER) == 0)
-				    && (strlen(entry->d_name) == strlen(DEBUG_FOLDER)) && (strcmp(entry->d_name, DEBUG_FOLDER) == 0)) {
+				        && (strlen(entry->d_name) == strlen(DEBUG_FOLDER)) && (strcmp(entry->d_name, DEBUG_FOLDER) == 0)) {
 					SECURE_DEBUG("[%s] is hidden folder. Skip it", entry->d_name);
 					continue;
 				}
 
 				len = strlen(root) + strlen(entry->d_name) + APPEND_SIZE;	/* for null and slash */
-				path = g_malloc(sizeof(gchar)*len);
+				path = g_malloc(sizeof(gchar) * len);
 				if (path) {
 					g_snprintf(path, len, "%s/%s", root, entry->d_name);
 					candidate = g_list_append(candidate, (gpointer) path);
@@ -753,13 +756,13 @@ int _mf_ug_search_init(ms_handle_t **handle)
 }
 
 int _mf_ug_search_start(ms_handle_t *handle,
-	const char **root_path,
-	unsigned int path_num,
-	const char *needle,
-	mf_search_option option,
-	void *user_data,
-	mf_search_filter_cb func,
-	int category)
+                        const char **root_path,
+                        unsigned int path_num,
+                        const char *needle,
+                        mf_search_option option,
+                        void *user_data,
+                        mf_search_filter_cb func,
+                        int category)
 {
 	ms_args_t *args = NULL;
 	mf_search_result_t *result = NULL;
@@ -816,8 +819,8 @@ int _mf_ug_search_start(ms_handle_t *handle,
 		}
 #endif /*CHECK_RESTRICTED_PATH*/
 		if (g_file_test(path, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_DIR)
-		    && ((l_opt & MF_SEARCH_OPT_HIDDEN) || strncmp(path, ".", 1))
-		    && TRUE) {
+		        && ((l_opt & MF_SEARCH_OPT_HIDDEN) || strncmp(path, ".", 1))
+		        && TRUE) {
 			gchar *new_path = NULL;
 			gssize len = strlen(path);
 
@@ -969,8 +972,8 @@ void _mf_ug_search_finalize(ms_handle_t **handle)
 	if (ms_handle->state == MF_SEARCH_STATE_SEARCH) {
 		mf_ug_search_stop((mf_search_handle)ms_handle);
 	}
-/*      __mf_ug_search_cmd_lock(ms_handle); */
-/*      __mf_ug_search_cmd_unlock(ms_handle); */
+	/*      __mf_ug_search_cmd_lock(ms_handle); */
+	/*      __mf_ug_search_cmd_unlock(ms_handle); */
 
 	g_mutex_clear(&ms_handle->cmd_lock);
 

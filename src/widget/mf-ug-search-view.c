@@ -122,8 +122,9 @@ Evas_Object *mf_widget_create_select_all_layout(Evas_Object *parent)
 
 	elm_object_style_set(btn, "naviframe/title_icon");
 
-	if (select_all_ic)
+	if (select_all_ic) {
 		elm_object_content_set(btn, select_all_ic);
+	}
 
 	evas_object_propagate_events_set(btn, EINA_FALSE);
 
@@ -326,7 +327,7 @@ static void __mf_ug_search_view_pipe_cb(void *data, void *buffer, unsigned int n
 		time(&searchtime_end);
 		int delay = (int)(searchtime_end - searchtime_begin);
 		ug_error("searchtime_end is [%d], searchtime_begin is [%d], delay is [%d]", searchtime_end, searchtime_begin, delay);
-		delay = (delay >= 2) ? 0 : (2-delay);
+		delay = (delay >= 2) ? 0 : (2 - delay);
 		ug_error("delay is [%d]", delay);
 
 		UG_SAFE_DEL_ECORE_TIMER(ugd->ug_Status.pSearchTimer);
@@ -346,8 +347,8 @@ int mf_ug_search_item_type_get(char *path)
 	mf_ug_file_attr_get_file_ext(path, &ext);
 	if (ext) {
 		if (strcasecmp("DOCM", ext) == 0
-		    || strcasecmp("XLT", ext) == 0
-		    || strcasecmp("XLSM", ext) == 0) {
+		        || strcasecmp("XLT", ext) == 0
+		        || strcasecmp("XLSM", ext) == 0) {
 			UG_SAFE_FREE_CHAR(ext);
 			return MF_SEARCH_CATEGORY_NONE;
 		}
@@ -406,8 +407,9 @@ static void __mf_ug_search_view_idle_search_start(void *data)
 		time(&searchtime_begin);
 	}
 
-	if (ugd->ug_UiGadget.ug_pExtension)
+	if (ugd->ug_UiGadget.ug_pExtension) {
 		text = g_strdup(ugd->ug_UiGadget.ug_pExtension);
+	}
 
 	int root_num = 0;
 	const char *SearchRoot[MF_SEARCH_ROOT_NUM] = {0};
@@ -430,8 +432,8 @@ static void __mf_ug_search_view_idle_search_start(void *data)
 			root_num++;
 		}
 	} else if (ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE
-		|| ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE
-		|| ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE) {
+	           || ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE
+	           || ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE) {
 		SearchRoot[root_num] = PHONE_FOLDER;
 		root_num++;
 
@@ -448,8 +450,8 @@ static void __mf_ug_search_view_idle_search_start(void *data)
 	if (ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE || ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE) {
 		if (text) {
 			if (!mf_ug_search_start(ugd->ug_Status.search_handler, SearchRoot, root_num, \
-					     /*((text) ? text : NULL), MF_SEARCH_OPT_FILE, (void *)ugd, mf_ug_search_item_type_get, MF_SEARCH_CATEGORY_DOCUMENT)) {*/
-						text, MF_SEARCH_OPT_MULTI_EXT, (void *)ugd, (mf_search_filter_cb)NULL, 0)) {
+			                        /*((text) ? text : NULL), MF_SEARCH_OPT_FILE, (void *)ugd, mf_ug_search_item_type_get, MF_SEARCH_CATEGORY_DOCUMENT)) {*/
+			                        text, MF_SEARCH_OPT_MULTI_EXT, (void *)ugd, (mf_search_filter_cb)NULL, 0)) {
 				ugd->ug_MainWindow.ug_pSearchPopup = mf_ug_popup_create_search(ugd, __mf_ug_search_view_stop_cb, ugd);
 				ug_debug("start success");
 			} else {
@@ -458,7 +460,7 @@ static void __mf_ug_search_view_idle_search_start(void *data)
 			}
 		} else {
 			if (!mf_ug_search_start(ugd->ug_Status.search_handler, SearchRoot, root_num, \
-					     text, MF_SEARCH_OPT_FILE, (void *)ugd, (mf_search_filter_cb)mf_ug_search_item_type_get, MF_SEARCH_CATEGORY_DOCUMENT)) {
+			                        text, MF_SEARCH_OPT_FILE, (void *)ugd, (mf_search_filter_cb)mf_ug_search_item_type_get, MF_SEARCH_CATEGORY_DOCUMENT)) {
 				ugd->ug_MainWindow.ug_pSearchPopup = mf_ug_popup_create_search(ugd, __mf_ug_search_view_stop_cb, ugd);
 				ug_debug("start success");
 			} else {
@@ -469,7 +471,7 @@ static void __mf_ug_search_view_idle_search_start(void *data)
 
 	} else {
 		if (!mf_ug_search_start(ugd->ug_Status.search_handler, SearchRoot, root_num, \
-				     ((text) ? text : NULL), MF_SEARCH_OPTION_DEF, (void *)ugd, (mf_search_filter_cb)NULL, 0)) {
+		                        ((text) ? text : NULL), MF_SEARCH_OPTION_DEF, (void *)ugd, (mf_search_filter_cb)NULL, 0)) {
 			ug_debug("start success");
 			/*generate the popup used to show search path
 			**it's sure that new_desc is not NULL even if original path is NULL*/
@@ -496,8 +498,9 @@ void mf_ug_search_view_enter_search_routine(void *data, Evas_Object * obj, void 
 
 	/*ugd->ug_Status.ug_iMore = UG_MORE_SEARCH;*/
 
-	if (ugd->ug_Status.search_handler > 0)
+	if (ugd->ug_Status.search_handler > 0) {
 		mf_ug_search_finalize(&ugd->ug_Status.search_handler);
+	}
 
 	int ret = mf_ug_search_init(&ugd->ug_Status.search_handler);
 	ug_mf_retm_if(ret < 0, "Fail to mf_ug_search_init()");

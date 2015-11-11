@@ -51,10 +51,12 @@ static sound_type_e __mf_ug_list_play_sound_type(const char *path)
 	}
 
 	sound_type_e type = SOUND_TYPE_RINGTONE;
-	if (g_strcmp0(path, UG_SETTING_MSG_ALERTS_PATH) == 0)
+	if (g_strcmp0(path, UG_SETTING_MSG_ALERTS_PATH) == 0) {
 		type = SOUND_TYPE_NOTIFICATION;
-	if (g_strcmp0(path, UG_SETTING_ALERTS_PATH) == 0 || g_strcmp0(path, UG_SETTING_SMART_ALRAMS) == 0)
+	}
+	if (g_strcmp0(path, UG_SETTING_ALERTS_PATH) == 0 || g_strcmp0(path, UG_SETTING_SMART_ALRAMS) == 0) {
 		type = SOUND_TYPE_ALARM;
+	}
 
 	return type;
 }
@@ -330,39 +332,44 @@ static void __mf_player_mgr_callback_pipe_handler(void *data, void *buffer, unsi
 	ug_mf_retm_if(g_player_cbs == NULL, "NULL");
 
 	switch (extra_data->cb_type) {
-	/*note: start callback and paused callback for player have been removed*/
-	/*case MF_PLAYER_CB_TYPE_STARTED:
-		if (g_player_cbs->started_cb)
-			g_player_cbs->started_cb(g_player_cbs->user_data[MF_PLAYER_CB_TYPE_STARTED]);
-		break;
+		/*note: start callback and paused callback for player have been removed*/
+		/*case MF_PLAYER_CB_TYPE_STARTED:
+			if (g_player_cbs->started_cb)
+				g_player_cbs->started_cb(g_player_cbs->user_data[MF_PLAYER_CB_TYPE_STARTED]);
+			break;
 
-	case MF_PLAYER_CB_TYPE_PAUSED:
-		if (g_player_cbs->paused_cb)
-			g_player_cbs->paused_cb(g_player_cbs->user_data[MF_PLAYER_CB_TYPE_PAUSED]);
-		break;*/
+		case MF_PLAYER_CB_TYPE_PAUSED:
+			if (g_player_cbs->paused_cb)
+				g_player_cbs->paused_cb(g_player_cbs->user_data[MF_PLAYER_CB_TYPE_PAUSED]);
+			break;*/
 
 	case MF_PLAYER_CB_TYPE_COMPLETED:
-		if (g_player_cbs->completed_cb)
+		if (g_player_cbs->completed_cb) {
 			g_player_cbs->completed_cb(g_player_cbs->user_data[MF_PLAYER_CB_TYPE_COMPLETED]);
+		}
 		break;
 
 	case MF_PLAYER_CB_TYPE_INTURRUPTED:
-		if (g_player_cbs->interrupted_cb)
+		if (g_player_cbs->interrupted_cb) {
 			g_player_cbs->interrupted_cb(extra_data->param.interrupted_code, g_player_cbs->user_data[MF_PLAYER_CB_TYPE_INTURRUPTED]);
+		}
 		break;
 
 	case MF_PLAYER_CB_TYPE_ERROR:
-		if (g_player_cbs->error_cb)
+		if (g_player_cbs->error_cb) {
 			g_player_cbs->error_cb(extra_data->param.error_code, g_player_cbs->user_data[MF_PLAYER_CB_TYPE_ERROR]);
+		}
 		break;
 
 	case MF_PLAYER_CB_TYPE_BUFFERING:
-		if (g_player_cbs->buffering_cb)
+		if (g_player_cbs->buffering_cb) {
 			g_player_cbs->buffering_cb(extra_data->param.percent, g_player_cbs->user_data[MF_PLAYER_CB_TYPE_BUFFERING]);
+		}
 		break;
 	case MF_PLAYER_CB_TYPE_PREPARE:
-		if (g_player_cbs->prepare_cb)
+		if (g_player_cbs->prepare_cb) {
 			g_player_cbs->prepare_cb(g_player_cbs->user_data[MF_PLAYER_CB_TYPE_PREPARE]);
+		}
 		break;
 
 	default:
@@ -421,7 +428,7 @@ static bool __mf_ug_list_play_set_uri(player_h player, const char *uri)
 
 	int ret = 0;
 	ret = player_set_uri(player, uri);
-    /*player_set_prelistening_mode(player, PLAYER_PRELISTENING_MODE_MEDIA);
+	/*player_set_prelistening_mode(player, PLAYER_PRELISTENING_MODE_MEDIA);
 	player_set_sound_type(ugd->ug_ListPlay.ug_Player, SOUND_TYPE_MEDIA);*/
 	if (ret != PLAYER_ERROR_NONE) {
 		ug_error(">>>>>>>>>>>>>g_err_name : %d\n", ret);
@@ -479,7 +486,7 @@ static bool __mf_ug_list_play_create_player_mgr(void *data, const char *path)
 	UG_TRACE_BEGIN;
 	ugData *ugd = (ugData *)data;
 	ug_mf_retvm_if(ugd == NULL, false, "ugd is NULL");
-	
+
 	if (mf_ug_main_is_background()) {
 		return false;
 	}
@@ -865,7 +872,7 @@ static bool __mf_ug_list_play_ready_new_file_play(void *data)
 {
 
 	UG_TRACE_BEGIN;
-	
+
 	if (mf_ug_main_is_background()) {
 		return false;
 	}
@@ -968,11 +975,11 @@ static bool __mf_ug_list_play_play(void *data)
 				if (err == PLAYER_ERROR_SOUND_POLICY) {
 					ug_error("PLAYER_ERROR_SOUND_POLICY error");
 					ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, MF_UG_LABEL_UNABLE_TO_PLAY_DURING_CALL, NULL,
-							   NULL, NULL, NULL, NULL);
+					                                     NULL, NULL, NULL, NULL);
 				} else {
 					ug_error("error is [%d]", err);
 					ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, MF_UG_LABEL_UNABLE_TO_PLAY_ERROR_OCCURRED, NULL,
-							   NULL, NULL, NULL, NULL);
+					                                     NULL, NULL, NULL, NULL);
 				}
 				ug_error("Error when _mp_player_mgr_play. err[%x]\n", err);
 				UG_TRACE_END;
@@ -1153,10 +1160,10 @@ static bool __mf_ug_list_play_play_current_file(void *data)
 	ug_mf_retvm_if(ugd == NULL, false, "ugd is NULL");
 	int err_code = 0;
 	player_state_e state = PLAYER_STATE_NONE;
-    
+
 	err_code = player_get_state(ugd->ug_ListPlay.ug_Player, &state);
 	ug_debug("state : [%d] , error code : [%d]", state, err_code);
-    
+
 	if (state != PLAYER_STATE_READY) {
 		UG_TRACE_END;
 		return false;
@@ -1211,11 +1218,11 @@ static bool __mf_ug_list_play_resume(void *data)
 				if (err == PLAYER_ERROR_SOUND_POLICY) {
 					ug_error("ERROR HERE !!!!!!!");
 					ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, MF_UG_LABEL_UNABLE_TO_PLAY_DURING_CALL, NULL,
-							   NULL, NULL, NULL, NULL);
+					                                     NULL, NULL, NULL, NULL);
 				} else {
 					ug_error("ERROR HERE !!!!!!!");
 					ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, MF_UG_LABEL_UNABLE_TO_PLAY_ERROR_OCCURRED, NULL,
-							   NULL, NULL, NULL, NULL);
+					                                     NULL, NULL, NULL, NULL);
 				}
 				ug_error("Error when _mp_player_mgr_play. err[%x]\n", err);
 				UG_TRACE_END;
@@ -1410,7 +1417,7 @@ void mf_ug_list_play_play_music_item(ugListItemData *data)
 			mf_ug_list_disable_play_itc(ugd, true);
 			if (!__mf_ug_list_play_play_new_file(itemData)) {
 				mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, MF_UG_LABEL_UNABLE_TO_PLAY_ERROR_OCCURRED,
-					NULL, NULL, NULL, NULL, NULL);
+				                   NULL, NULL, NULL, NULL, NULL);
 			}
 		} else {
 			/*/ playing the same file */
@@ -1420,7 +1427,7 @@ void mf_ug_list_play_play_music_item(ugListItemData *data)
 		mf_ug_list_disable_play_itc(ugd, false);
 		if (!__mf_ug_list_play_play_new_file(itemData)) {
 			mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, MF_UG_LABEL_UNABLE_TO_PLAY_ERROR_OCCURRED,
-				NULL, NULL, NULL, NULL, NULL);
+			                   NULL, NULL, NULL, NULL, NULL);
 		}
 	}
 
@@ -1491,9 +1498,9 @@ static void mf_ug_player_vol_type_set(mf_player_volume_type type)
 		g_init_current_type = current_type;
 		g_init_volume = volume;
 	}
-    
+
 	ug_debug("current type is [%d] volume is [%d] type is [%d]", current_type, volume, type);
-    
+
 	switch (type) {
 	case	MF_VOLUME_ALERT:
 		/*sound_manager_set_volume_key_type(VOLUME_KEY_TYPE_ALARM);*/
@@ -1517,8 +1524,9 @@ void mf_ug_player_vol_reset_default_value(void *data)
 	ug_mf_retm_if(data == NULL, "data is NULL");
 	ugData *ugd = (ugData *)data;
 
-	if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_none)
+	if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_none) {
 		return;
+	}
 
 	sound_type_e current_type;
 	current_type = mf_ug_player_get_sound_type();
@@ -1533,8 +1541,9 @@ void mf_ug_player_vol_set(void *data, const char *path)
 	ug_mf_retm_if(data == NULL, "data is NULL");
 	ugData *ugd = (ugData *)data;
 
-	if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_none)
+	if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_none) {
 		return;
+	}
 
 	if (g_strcmp0(path, UG_SETTING_MSG_ALERTS_PATH) == 0) {
 		mf_ug_player_vol_type_set(MF_VOLUME_NOTIFICATION);
@@ -1554,8 +1563,9 @@ bool mf_ug_is_default_ringtone(void *data, const char *path)
 	ugData *ugd = (ugData *)data;
 	ug_mf_retvm_if(ugd == NULL, false, "ugd is NULL");
 	if (ugd->ug_UiGadget.default_ringtone) {
-		if (g_strcmp0(MF_UG_LABEL_DEFAULT_RINGTONE, path) == 0)
+		if (g_strcmp0(MF_UG_LABEL_DEFAULT_RINGTONE, path) == 0) {
 			return true;
+		}
 	}
 
 	return false;
@@ -1568,8 +1578,9 @@ bool mf_ug_is_silent(void *data, const char *path)
 	ugData *ugd = (ugData *)data;
 	ug_mf_retvm_if(ugd == NULL, false, "ugd is NULL");
 	if (ugd->ug_UiGadget.default_ringtone) {
-		if (g_strcmp0(MF_UG_LABEL_SILENT, path) == 0)
+		if (g_strcmp0(MF_UG_LABEL_SILENT, path) == 0) {
 			return true;
+		}
 	}
 
 	return false;

@@ -203,8 +203,9 @@ int mf_ug_file_attr_media_has_video(const char *filename)
 	if (ret == METADATA_EXTRACTOR_ERROR_NONE && value) {
 		if (g_strcmp0(value, "1") == 0) {
 			ug_error("ret is [%d] value is [%s]", ret, "1");
-			if (handle)
+			if (handle) {
 				metadata_extractor_destroy(handle);
+			}
 
 			UG_SAFE_FREE_CHAR(value);
 			UG_TRACE_END;
@@ -214,15 +215,17 @@ int mf_ug_file_attr_media_has_video(const char *filename)
 	ug_error("ret is [%d] value is [%s]", ret, value);
 	UG_SAFE_FREE_CHAR(value);
 
-	if (handle)
+	if (handle) {
 		metadata_extractor_destroy(handle);
+	}
 
 	UG_TRACE_END;
 	return 0;
 
-      CATCH_ERROR:
-	if (handle)
+CATCH_ERROR:
+	if (handle) {
 		metadata_extractor_destroy(handle);
+	}
 
 	UG_TRACE_END;
 	return 0;
@@ -375,8 +378,9 @@ static mf_ug_fs_file_type __mf_ug_file_attr_get_category_by_file_ext(const char 
 			return UG_FILE_TYPE_SOUND;
 		}
 		if (strcasecmp("MP4", &file_ext[i]) == 0) {
-			if (mf_ug_file_attr_media_has_video(fullpath))
+			if (mf_ug_file_attr_media_has_video(fullpath)) {
 				return UG_FILE_TYPE_MP4_VIDEO;
+			}
 			return UG_FILE_TYPE_MP4_AUDIO;
 		}
 		if (strcasecmp("MPG", &file_ext[i]) == 0) {
@@ -637,8 +641,9 @@ int mf_ug_file_attr_get_parent_path(const char *path, char **parent_path)
 	ug_mf_retvm_if(parent_path == NULL, MYFILE_ERR_INVALID_ARG, "parent_path is NULL");
 
 	*parent_path = g_strdup(path);
-	if (*parent_path == NULL)
+	if (*parent_path == NULL) {
 		return MYFILE_ERR_ALLOCATE_FAIL;
+	}
 
 	const char *name = NULL;
 	name = mf_file_get(path);
@@ -649,8 +654,9 @@ int mf_ug_file_attr_get_parent_path(const char *path, char **parent_path)
 	**	strlen(parent_path) should large than strlen(name) normally.
 	**	to take exception like input path is "", we add a if condition
 	*/
-	if (strlen(*parent_path) > strlen(name))
+	if (strlen(*parent_path) > strlen(name)) {
 		(*parent_path)[strlen(*parent_path) - strlen(name) - 1] = '\0';
+	}
 
 	if (strlen(*parent_path) == 0) {
 		*parent_path = g_strdup("/");
@@ -927,7 +933,7 @@ static int __mf_ug_create_filter(filter_h *filter, ug_filter_s *condition)
 	}
 	if (condition->cond) {
 		ret = media_filter_set_condition(tmp_filter, condition->cond,
-						 condition->collate_type);
+		                                 condition->collate_type);
 		if (ret != MEDIA_CONTENT_ERROR_NONE) {
 			ug_debug("Fail to set condition");
 			goto ERROR;
@@ -936,8 +942,8 @@ static int __mf_ug_create_filter(filter_h *filter, ug_filter_s *condition)
 
 	if (condition->sort_keyword) {
 		ret = media_filter_set_order(tmp_filter, condition->sort_type,
-					     condition->sort_keyword,
-					     condition->collate_type);
+		                             condition->sort_keyword,
+		                             condition->collate_type);
 		if (ret != MEDIA_CONTENT_ERROR_NONE) {
 			ug_debug("Fail to set order");
 			goto ERROR;
@@ -945,9 +951,9 @@ static int __mf_ug_create_filter(filter_h *filter, ug_filter_s *condition)
 	}
 
 	if (condition->offset != -1 && condition->count != -1 &&
-	    condition->count > condition->offset) {
+	        condition->count > condition->offset) {
 		ret = media_filter_set_offset(tmp_filter, condition->offset,
-					      condition->count);
+		                              condition->count);
 		if (ret != MEDIA_CONTENT_ERROR_NONE) {
 			ug_debug("Fail to set offset");
 			goto ERROR;
@@ -955,8 +961,8 @@ static int __mf_ug_create_filter(filter_h *filter, ug_filter_s *condition)
 	}
 	*filter = tmp_filter;
 	return ret;
- ERROR:
- if (tmp_filter) {
+ERROR:
+	if (tmp_filter) {
 		media_filter_destroy(tmp_filter);
 		tmp_filter = NULL;
 	}
@@ -996,8 +1002,8 @@ int static __mf_ug_local_thumbnail_get(void *data, ug_filter_s *condition)
 
 
 	ret = media_info_foreach_media_from_db(filter,
-					       __mf_ug_local_data_get_media_thumbnail_cb,
-					       data);
+	                                       __mf_ug_local_data_get_media_thumbnail_cb,
+	                                       data);
 	if (ret != 0) {
 		ug_debug("media_info_foreach_media_from_db failed: %d", ret);
 	} else {
@@ -1066,24 +1072,24 @@ int mf_ug_file_attr_get_file_icon(char *file_path, int *error_code, char **thumb
 
 	switch (ftype) {
 	case UG_FILE_TYPE_IMAGE:
-	case UG_FILE_TYPE_VIDEO:
-		{
-			int err = 0;
-			ug_transfer_data_s tmp_data;
-			memset(&tmp_data, 0x00, sizeof(ug_transfer_data_s));
-			tmp_data.file_path = file_path;
-			tmp_data.media = media_info;
-			err = mf_ug_file_attr_get_thumbnail(&tmp_data);
-			if (err == 0) {
-				icon_path = g_strdup(tmp_data.thumbnail_path);
-				thumbnail_type = MF_UG_THUMBNAIL_TYPE_THUMBNAIL;
-			} else {
-				icon_path = NULL;
-				if (error_code)
-					*error_code = err;
+	case UG_FILE_TYPE_VIDEO: {
+		int err = 0;
+		ug_transfer_data_s tmp_data;
+		memset(&tmp_data, 0x00, sizeof(ug_transfer_data_s));
+		tmp_data.file_path = file_path;
+		tmp_data.media = media_info;
+		err = mf_ug_file_attr_get_thumbnail(&tmp_data);
+		if (err == 0) {
+			icon_path = g_strdup(tmp_data.thumbnail_path);
+			thumbnail_type = MF_UG_THUMBNAIL_TYPE_THUMBNAIL;
+		} else {
+			icon_path = NULL;
+			if (error_code) {
+				*error_code = err;
 			}
 		}
-		break;
+	}
+	break;
 	default:
 		icon_path = mf_ug_file_attr_default_icon_get_by_type(ftype);
 		thumbnail_type = MF_UG_THUMBNAIL_TYPE_DEFAULT;
@@ -1320,7 +1326,7 @@ mf_ug_fs_file_type mf_ug_file_attr_get_file_type_by_mime(const char *file_path)
 			return ftype;
 		}
 	}
-	
+
 	UG_SAFE_FREE_CHAR(mime);
 	return ftype;
 }

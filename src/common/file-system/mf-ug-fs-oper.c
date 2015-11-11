@@ -154,7 +154,7 @@ int mf_ug_fs_oper_read_dir(char *path, Eina_List **dir_list, Eina_List **file_li
 #ifdef	UG_DEBUG_FOLDER_OPTION
 		if ((ent->d_type & DT_DIR) != 0) {
 			if ((strlen(path) == strlen(PHONE_FOLDER)) && (strcmp(path, PHONE_FOLDER) == 0)
-			    && (strlen(ent->d_name) == strlen(DEBUG_FOLDER)) && (strcmp(ent->d_name, DEBUG_FOLDER) == 0)) {
+			        && (strlen(ent->d_name) == strlen(DEBUG_FOLDER)) && (strcmp(ent->d_name, DEBUG_FOLDER) == 0)) {
 				continue;
 			}
 		}
@@ -424,8 +424,9 @@ int mf_ug_fs_oper_list_filter_by_extension(Eina_List *in_list, Eina_List **out_l
 
 	char *seps = ";";
 	char *temp_ext = malloc(strlen(ext) + 1);
-	if (temp_ext == NULL)
+	if (temp_ext == NULL) {
 		return MYFILE_ERR_ALLOCATE_FAIL;
+	}
 
 	gchar **result = NULL;
 	gchar **params = NULL;
@@ -439,8 +440,9 @@ int mf_ug_fs_oper_list_filter_by_extension(Eina_List *in_list, Eina_List **out_l
 				continue;
 			}
 			for (params = result; *params; params++) {
-				if (data->ext == NULL)
+				if (data->ext == NULL) {
 					break;
+				}
 				if (strcasecmp(data->ext, *params) == 0) {
 					*out_list = eina_list_append(*out_list, data);
 					break;

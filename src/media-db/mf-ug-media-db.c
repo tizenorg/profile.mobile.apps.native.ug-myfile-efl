@@ -68,95 +68,99 @@
 #define MF_FIND_ALERT_TABLE				"SELECT * FROM %s WHERE %s = '%q';"
 
 typedef enum {
-	MF_TABLE_NONE = -1,
-	MF_TABLE_SHORTCUT,
-	MF_TABLE_RECENT_FILES,
-	MF_TABLE_RINGTONE,
-	MF_TABLE_ALERT,
-	MF_TABLE_NUM,
+    MF_TABLE_NONE = -1,
+    MF_TABLE_SHORTCUT,
+    MF_TABLE_RECENT_FILES,
+    MF_TABLE_RINGTONE,
+    MF_TABLE_ALERT,
+    MF_TABLE_NUM,
 } mf_tbl_name_e;
 
 typedef enum {
-	MF_FIELD_SHORTCUT_NONE		= -1,
-	MF_FIELD_SHORTCUT_PATH,
-	MF_FIELD_SHORTCUT_NAME,
-	MF_FIELD_SHORTCUT_STORAGE_TYPE,
-	MF_FIELD_SHORTCUT_NUM,
+    MF_FIELD_SHORTCUT_NONE		= -1,
+    MF_FIELD_SHORTCUT_PATH,
+    MF_FIELD_SHORTCUT_NAME,
+    MF_FIELD_SHORTCUT_STORAGE_TYPE,
+    MF_FIELD_SHORTCUT_NUM,
 } mf_field_shortcut_e;
 
 typedef enum {
-	MF_FIELD_RECENT_FILES_NONE		= -1,
-	MF_FIELD_RECENT_FILES_PATH,
-	MF_FIELD_RECENT_FILES_NAME,
-	MF_FIELD_RECENT_FILES_STORAGE_TYPE,
-	MF_FIELD_RECENT_FILES_THUMBNAIL,
-	MF_FIELD_RECENT_FILES_NUM,
+    MF_FIELD_RECENT_FILES_NONE		= -1,
+    MF_FIELD_RECENT_FILES_PATH,
+    MF_FIELD_RECENT_FILES_NAME,
+    MF_FIELD_RECENT_FILES_STORAGE_TYPE,
+    MF_FIELD_RECENT_FILES_THUMBNAIL,
+    MF_FIELD_RECENT_FILES_NUM,
 } mf_field_recent_files_e;
 
 typedef enum {
-	MF_FIELD_RINGTONE_NONE		= -1,
-	MF_FIELD_RINGTONE_PATH,
-	MF_FIELD_RINGTONE_NAME,
-	MF_FIELD_RINGTONE_STORAGE_TYPE,
-	MF_FIELD_RINGTONE_NUM,
+    MF_FIELD_RINGTONE_NONE		= -1,
+    MF_FIELD_RINGTONE_PATH,
+    MF_FIELD_RINGTONE_NAME,
+    MF_FIELD_RINGTONE_STORAGE_TYPE,
+    MF_FIELD_RINGTONE_NUM,
 } mf_field_ringtone_e;
 
 typedef enum {
-	MF_FIELD_ALERT_NONE		= -1,
-	MF_FIELD_ALERT_PATH,
-	MF_FIELD_ALERT_NAME,
-	MF_FIELD_ALERT_STORAGE_TYPE,
-	MF_FIELD_ALERT_NUM,
+    MF_FIELD_ALERT_NONE		= -1,
+    MF_FIELD_ALERT_PATH,
+    MF_FIELD_ALERT_NAME,
+    MF_FIELD_ALERT_STORAGE_TYPE,
+    MF_FIELD_ALERT_NUM,
 } mf_field_alert_e;
 
 typedef struct {
-	 char *field_name;
-	 char *field_type;
+	char *field_name;
+	char *field_type;
 } mf_tbl_field_s;
 
 typedef struct {
 	char *table_name;
-	mf_tbl_field_s mf_tbl_field[MF_FIELD_RECENT_FILES_NUM+1];
+	mf_tbl_field_s mf_tbl_field[MF_FIELD_RECENT_FILES_NUM + 1];
 } mf_tbl_s;
 
 mf_tbl_s mf_tbl[MF_TABLE_NUM] = {
-	{"shortcut", {
-			   {"path", ""}	/* PK */
-			   ,
-			   {"name", ""}	/* PK */
-			   ,
-			   {"storage_type", ""}	/* PK */
-		    }
+	{
+		"shortcut", {
+			{"path", ""}	/* PK */
+			,
+			{"name", ""}	/* PK */
+			,
+			{"storage_type", ""}	/* PK */
+		}
 	}
 	,
-	{"recent_files", {
-				  {"path", ""}	/* PK */
-				  ,
-				  {"name", ""}
-				  ,
-				  {"storage_type", ""}
-				  ,
-				  {"thumbnail_path", ""}
-			 }
+	{
+		"recent_files", {
+			{"path", ""}	/* PK */
+			,
+			{"name", ""}
+			,
+			{"storage_type", ""}
+			,
+			{"thumbnail_path", ""}
+		}
 
 	}
 	,
-	{"ringtone", {
-			   {"path", ""}	/* PK */
-			   ,
-			   {"name", ""}	/* PK */
-			   ,
-			   {"storage_type", ""}	/* PK */
-		    }
+	{
+		"ringtone", {
+			{"path", ""}	/* PK */
+			,
+			{"name", ""}	/* PK */
+			,
+			{"storage_type", ""}	/* PK */
+		}
 	}
 	,
-	{"alert", {
-			   {"path", ""}	/* PK */
-			   ,
-			   {"name", ""}	/* PK */
-			   ,
-			   {"storage_type", ""}	/* PK */
-		    }
+	{
+		"alert", {
+			{"path", ""}	/* PK */
+			,
+			{"name", ""}	/* PK */
+			,
+			{"storage_type", ""}	/* PK */
+		}
 	}
 };
 
@@ -172,11 +176,11 @@ static int __mf_busy_handler(void *pData, int count)
 #endif
 
 int mf_sqlite3_exec(
-		  sqlite3 *p_db,                                  /* An open database */
-		  const char *sql,                           /* SQL to be evaluated */
-		  int (*callback)(void*, int, char**, char**),  /* Callback function */
-		  void *params,                                    /* 1st argument to callback */
-		  char **errmsg                              /* Error msg written here */
+    sqlite3 *p_db,                                  /* An open database */
+    const char *sql,                           /* SQL to be evaluated */
+    int (*callback)(void*, int, char**, char**),  /* Callback function */
+    void *params,                                    /* 1st argument to callback */
+    char **errmsg                              /* Error msg written here */
 )
 {
 	ug_debug("mf_sqlite3_exec enter\n");
@@ -211,13 +215,14 @@ static int __mf_sqlite3_commit_trans(MFDHandle *mfd_handle)
 	if (SQLITE_OK != mf_sqlite3_exec(handle, "COMMIT;", NULL, NULL, &err_msg)) {
 		if (err_msg) {
 			ug_debug("Error:failed to end transaction: error=%s\n",
-				     err_msg);
+			         err_msg);
 			sqlite3_free(err_msg);
 		}
 		return MFD_ERROR_DB_INTERNAL;
 	}
-	if (err_msg)
+	if (err_msg) {
 		sqlite3_free(err_msg);
+	}
 	ug_debug("gm_sqlite3_commit_trans leave\n");
 	return 0;
 }
@@ -226,10 +231,11 @@ static int __mf_query_bind_text(sqlite3_stmt *stmt, int pos, const char *str)
 {
 	assert(NULL != stmt);
 
-	if (str)
+	if (str) {
 		return sqlite3_bind_text(stmt, pos, (const char *)str, strlen(str), SQLITE_STATIC);
-	else
+	} else {
 		return sqlite3_bind_null(stmt, pos);
+	}
 }
 
 static int __mf_query_bind_int(sqlite3_stmt *stmt, int pos, int num)
@@ -288,8 +294,9 @@ static int __mf_query_sql(MFDHandle *mfd_handle, char *query_str)
 		return MFD_ERROR_DB_INTERNAL;
 	}
 
-	if (err_msg)
+	if (err_msg) {
 		sqlite3_free(err_msg);
+	}
 	ug_debug("query success\n");
 
 	return err;
@@ -307,16 +314,17 @@ static int __mf_sqlite3_begin_trans(MFDHandle *mfd_handle)
 
 	ug_debug("gm_sqlite3_begin_trans enter\n");
 	if (SQLITE_OK !=
-	    mf_sqlite3_exec(handle, "BEGIN IMMEDIATE;", NULL, NULL, &err_msg)) {
+	        mf_sqlite3_exec(handle, "BEGIN IMMEDIATE;", NULL, NULL, &err_msg)) {
 		if (err_msg) {
 			ug_debug("Error:failed to begin transaction: error=%s\n",
-				     err_msg);
+			         err_msg);
 			sqlite3_free(err_msg);
 		}
 		return MFD_ERROR_DB_INTERNAL;
 	}
-	if (err_msg)
+	if (err_msg) {
 		sqlite3_free(err_msg);
+	}
 	ug_debug("gm_sqlite3_begin_trans leave\n");
 	return 0;
 }
@@ -333,16 +341,17 @@ static int __mf_sqlite3_rollback_trans(MFDHandle *mfd_handle)
 
 	ug_debug("gm_sqlite3_rollback_trans enter\n");
 	if (SQLITE_OK !=
-	    mf_sqlite3_exec(handle, "ROLLBACK;", NULL, NULL, &err_msg)) {
-	    if (err_msg) {
+	        mf_sqlite3_exec(handle, "ROLLBACK;", NULL, NULL, &err_msg)) {
+		if (err_msg) {
 			ug_debug("Error:failed to rollback transaction: error=%s\n",
-				     err_msg);
+			         err_msg);
 			sqlite3_free(err_msg);
-	    }
+		}
 		return MFD_ERROR_DB_INTERNAL;
 	}
-	if (err_msg)
+	if (err_msg) {
 		sqlite3_free(err_msg);
+	}
 	ug_debug("gm_sqlite3_rollback_trans leave\n");
 	return 0;
 }
@@ -374,8 +383,9 @@ static void __mf_foreach_recent_files_ritem_cb(mf_recent_files_item_cb callback,
 		MFRitem *ritem = NULL;
 		ritem = (MFRitem *)iter->data;
 
-		if (callback(ritem, user_data) == FALSE)
+		if (callback(ritem, user_data) == FALSE) {
 			break;
+		}
 	}
 }
 
@@ -476,8 +486,9 @@ static void __mf_foreach_shortcut_sitem_cb(mf_shortcut_item_cb callback, void *d
 		MFSitem *sitem = NULL;
 		sitem = (MFSitem *)iter->data;
 
-		if (callback(sitem, user_data) == FALSE)
+		if (callback(sitem, user_data) == FALSE) {
 			break;
+		}
 	}
 }
 
@@ -503,13 +514,13 @@ int mf_ug_update_shortcut(MFDHandle *mfd_handle, const char *new_name, char *old
 
 	query_string =
 	    sqlite3_mprintf(MF_UPDATE_FAVORATE_FILES_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    /*mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,*/
-			    mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,
-			    new_name,
-				mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,
-				old_name
-			    );
+	                    mf_tbl[field_seq].table_name,
+	                    /*mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,*/
+	                    mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,
+	                    new_name,
+	                    mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,
+	                    old_name
+	                   );
 
 	ug_error("Query : %s", query_string);
 
@@ -545,13 +556,13 @@ int mf_ug_insert_shortcut(MFDHandle *mfd_handle, const char *shortcut_path, cons
 
 	query_string =
 	    sqlite3_mprintf(MF_INSERT_INTO_SHORTCUT_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,
-			    mf_tbl_field[MF_FIELD_SHORTCUT_NAME].field_name,
-			    mf_tbl_field[MF_FIELD_SHORTCUT_STORAGE_TYPE].field_name,
-			    shortcut_path,
-			    shortcut_name,
-			    storage_type);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,
+	                    mf_tbl_field[MF_FIELD_SHORTCUT_NAME].field_name,
+	                    mf_tbl_field[MF_FIELD_SHORTCUT_STORAGE_TYPE].field_name,
+	                    shortcut_path,
+	                    shortcut_name,
+	                    storage_type);
 
 	ug_debug("Query : %s", query_string);
 
@@ -584,9 +595,9 @@ int mf_ug_delete_shortcut(MFDHandle *mfd_handle, const char *shortcut_path)
 
 	query_string =
 	    sqlite3_mprintf(MF_DELETE_FROM_SHORTCUT_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,
-			    shortcut_path);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,
+	                    shortcut_path);
 
 	ug_debug("Query : %s", query_string);
 
@@ -627,9 +638,9 @@ int mf_ug_delete_shortcut_by_type(MFDHandle *mfd_handle, int storage_type)
 
 	query_string =
 	    sqlite3_mprintf(MF_DELETE_BY_TYPE_FROM_SHORTCUT_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_SHORTCUT_STORAGE_TYPE].field_name,
-			    storage_type);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_SHORTCUT_STORAGE_TYPE].field_name,
+	                    storage_type);
 
 	ug_debug("Query : %s", query_string);
 
@@ -669,7 +680,7 @@ int mf_ug_foreach_shortcut_list(MFDHandle *mfd_handle, mf_shortcut_item_cb callb
 
 	query_string =
 	    sqlite3_mprintf(MF_SELECT_SHORTCUT_TABLE,
-			    mf_tbl[field_seq].table_name);
+	                    mf_tbl[field_seq].table_name);
 
 	ug_debug("Query : %s", query_string);
 
@@ -698,7 +709,7 @@ int mf_ug_foreach_shortcut_list(MFDHandle *mfd_handle, mf_shortcut_item_cb callb
 		sitem = (MFSitem *)calloc(1, sizeof(MFSitem));
 		if (!sitem) {
 			ug_debug("allocation failed");
-			return MFD_ERROR_DB_INTERNAL;					
+			return MFD_ERROR_DB_INTERNAL;
 		}
 		__mf_convert_shortcut_column_to_sitem(stmt, sitem);
 		shortcut_list = eina_list_append(shortcut_list, sitem);
@@ -731,7 +742,7 @@ int mf_ug_get_short_count(MFDHandle *mfd_handle, int *count)
 
 	query_string =
 	    sqlite3_mprintf(MF_SELECT_SHORTCUT_COUNT_TABLE,
-			    mf_tbl[field_seq].table_name);
+	                    mf_tbl[field_seq].table_name);
 
 	ug_debug("Query : %s", query_string);
 
@@ -772,7 +783,7 @@ int mf_ug_get_short_count(MFDHandle *mfd_handle, int *count)
 int mf_ug_insert_recent_file(MFDHandle *mfd_handle, const char *path, const char *name, int storage_type, const char *thumbnail_path)
 {
 	ug_debug("");
-	ug_mf_retvm_if (path == NULL, MFD_ERROR_INVALID_PARAMETER, "path is NULL");
+	ug_mf_retvm_if(path == NULL, MFD_ERROR_INVALID_PARAMETER, "path is NULL");
 	/*mf_retvm_if (name == NULL, MFD_ERROR_INVALID_PARAMETER, "path is NULL");
 	  mf_retvm_if (thumbnail_path == NULL, MFD_ERROR_INVALID_PARAMETER, "path is NULL");*/
 
@@ -787,11 +798,11 @@ int mf_ug_insert_recent_file(MFDHandle *mfd_handle, const char *path, const char
 	mf_tbl_field = mf_tbl[field_seq].mf_tbl_field;
 
 	snprintf(query_string, sizeof(query_string), MF_INSERT_INTO_RECENT_FILES_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_RECENT_FILES_PATH].field_name,
-			    mf_tbl_field[MF_FIELD_RECENT_FILES_NAME].field_name,
-			    mf_tbl_field[MF_FIELD_RECENT_FILES_STORAGE_TYPE].field_name,
-			    mf_tbl_field[MF_FIELD_RECENT_FILES_THUMBNAIL].field_name);
+	         mf_tbl[field_seq].table_name,
+	         mf_tbl_field[MF_FIELD_RECENT_FILES_PATH].field_name,
+	         mf_tbl_field[MF_FIELD_RECENT_FILES_NAME].field_name,
+	         mf_tbl_field[MF_FIELD_RECENT_FILES_STORAGE_TYPE].field_name,
+	         mf_tbl_field[MF_FIELD_RECENT_FILES_THUMBNAIL].field_name);
 
 	err = sqlite3_prepare_v2(mfd_handle, query_string, strlen(query_string), &stmt, NULL);
 	if (err != SQLITE_OK) {
@@ -839,9 +850,9 @@ int mf_ug_delete_recent_files(MFDHandle *mfd_handle, const char *path)
 
 	query_string =
 	    sqlite3_mprintf(MF_DELETE_FROM_RECENT_FILES_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_RECENT_FILES_PATH].field_name,
-			    path);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_RECENT_FILES_PATH].field_name,
+	                    path);
 
 	ug_debug("Query : %s", query_string);
 
@@ -882,9 +893,9 @@ int mf_ug_delete_recent_files_by_type(MFDHandle *mfd_handle, int storage_type)
 
 	query_string =
 	    sqlite3_mprintf(MF_DELETE_BY_TYPE_FROM_RECENT_FILES_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_RECENT_FILES_STORAGE_TYPE].field_name,
-			    storage_type);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_RECENT_FILES_STORAGE_TYPE].field_name,
+	                    storage_type);
 
 	ug_debug("Query : %s", query_string);
 
@@ -935,11 +946,11 @@ int mf_ug_update_recent_files_thumbnail(MFDHandle *mfd_handle, const char *thumb
 
 	query_string =
 	    sqlite3_mprintf(MF_UPDATE_SET_RECENT_FILES_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_RECENT_FILES_THUMBNAIL].field_name,
-			    new_thumbnail,
-			    mf_tbl_field[MF_FIELD_RECENT_FILES_THUMBNAIL].field_name,
-			    thumbnail);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_RECENT_FILES_THUMBNAIL].field_name,
+	                    new_thumbnail,
+	                    mf_tbl_field[MF_FIELD_RECENT_FILES_THUMBNAIL].field_name,
+	                    thumbnail);
 
 	ug_debug("Query : %s", query_string);
 
@@ -995,7 +1006,7 @@ int mf_ug_foreach_recent_files_list(MFDHandle *mfd_handle, mf_recent_files_item_
 		ritem = (MFRitem *)calloc(1, sizeof(MFRitem));
 		if (!ritem) {
 			ug_debug("allocation failed");
-			return MFD_ERROR_DB_INTERNAL;					
+			return MFD_ERROR_DB_INTERNAL;
 		}
 
 		__mf_convert_recent_files_column_to_citem(stmt, ritem);
@@ -1081,8 +1092,9 @@ static void __mf_foreach_ringtone_item_cb(mf_ringtone_item_cb callback, void *da
 		mfRingtone *ritem = NULL;
 		ritem = (mfRingtone *)iter->data;
 
-		if (callback(ritem, user_data) == FALSE)
+		if (callback(ritem, user_data) == FALSE) {
 			break;
+		}
 	}
 }
 
@@ -1108,13 +1120,13 @@ int mf_ug_update_ringtone(MFDHandle *mfd_handle, const char *new_name, char *old
 
 	query_string =
 	    sqlite3_mprintf(MF_UPDATE_FAVORATE_FILES_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    /*mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,*/
-			    mf_tbl_field[MF_FIELD_RINGTONE_PATH].field_name,
-			    new_name,
-				mf_tbl_field[MF_FIELD_RINGTONE_PATH].field_name,
-				old_name
-			    );
+	                    mf_tbl[field_seq].table_name,
+	                    /*mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,*/
+	                    mf_tbl_field[MF_FIELD_RINGTONE_PATH].field_name,
+	                    new_name,
+	                    mf_tbl_field[MF_FIELD_RINGTONE_PATH].field_name,
+	                    old_name
+	                   );
 
 	ug_error("Query : %s", query_string);
 
@@ -1150,13 +1162,13 @@ int mf_ug_insert_ringtone(MFDHandle *mfd_handle, const char *ringtone_path, cons
 
 	query_string =
 	    sqlite3_mprintf(MF_INSERT_INTO_RINGTONE_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_RINGTONE_PATH].field_name,
-			    mf_tbl_field[MF_FIELD_RINGTONE_NAME].field_name,
-			    mf_tbl_field[MF_FIELD_RINGTONE_STORAGE_TYPE].field_name,
-			    ringtone_path,
-			    ringtone_name,
-			    storage_type);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_RINGTONE_PATH].field_name,
+	                    mf_tbl_field[MF_FIELD_RINGTONE_NAME].field_name,
+	                    mf_tbl_field[MF_FIELD_RINGTONE_STORAGE_TYPE].field_name,
+	                    ringtone_path,
+	                    ringtone_name,
+	                    storage_type);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1189,9 +1201,9 @@ int mf_ug_delete_ringtone(MFDHandle *mfd_handle, const char *ringtone_path)
 
 	query_string =
 	    sqlite3_mprintf(MF_DELETE_FROM_RINGTONE_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_RINGTONE_PATH].field_name,
-			    ringtone_path);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_RINGTONE_PATH].field_name,
+	                    ringtone_path);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1233,9 +1245,9 @@ int mf_ug_find_ringtone(MFDHandle *mfd_handle, const char *ringtone_path)
 	int find = 0;
 	query_string =
 	    sqlite3_mprintf(MF_FIND_RINGTONE_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_RINGTONE_PATH].field_name,
-			    ringtone_path);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_RINGTONE_PATH].field_name,
+	                    ringtone_path);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1286,9 +1298,9 @@ int mf_ug_delete_ringtone_by_type(MFDHandle *mfd_handle, int storage_type)
 
 	query_string =
 	    sqlite3_mprintf(MF_DELETE_BY_TYPE_FROM_RINGTONE_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_RINGTONE_STORAGE_TYPE].field_name,
-			    storage_type);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_RINGTONE_STORAGE_TYPE].field_name,
+	                    storage_type);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1328,7 +1340,7 @@ int mf_ug_foreach_ringtone_list(MFDHandle *mfd_handle, mf_ringtone_item_cb callb
 
 	query_string =
 	    sqlite3_mprintf(MF_SELECT_RINGTONE_TABLE,
-			    mf_tbl[field_seq].table_name);
+	                    mf_tbl[field_seq].table_name);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1388,7 +1400,7 @@ int mf_ug_get_ringtone_count(MFDHandle *mfd_handle, int *count)
 
 	query_string =
 	    sqlite3_mprintf(MF_SELECT_RINGTONE_COUNT_TABLE,
-			    mf_tbl[field_seq].table_name);
+	                    mf_tbl[field_seq].table_name);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1440,13 +1452,13 @@ int mf_ug_update_alert(MFDHandle *mfd_handle, const char *new_name, char *old_na
 
 	query_string =
 	    sqlite3_mprintf(MF_UPDATE_FAVORATE_FILES_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    /*mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,*/
-			    mf_tbl_field[MF_FIELD_ALERT_PATH].field_name,
-			    new_name,
-				mf_tbl_field[MF_FIELD_ALERT_PATH].field_name,
-				old_name
-			    );
+	                    mf_tbl[field_seq].table_name,
+	                    /*mf_tbl_field[MF_FIELD_SHORTCUT_PATH].field_name,*/
+	                    mf_tbl_field[MF_FIELD_ALERT_PATH].field_name,
+	                    new_name,
+	                    mf_tbl_field[MF_FIELD_ALERT_PATH].field_name,
+	                    old_name
+	                   );
 
 	ug_error("Query : %s", query_string);
 
@@ -1482,13 +1494,13 @@ int mf_ug_insert_alert(MFDHandle *mfd_handle, const char *alert_path, const char
 
 	query_string =
 	    sqlite3_mprintf(MF_INSERT_INTO_ALERT_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_ALERT_PATH].field_name,
-			    mf_tbl_field[MF_FIELD_ALERT_NAME].field_name,
-			    mf_tbl_field[MF_FIELD_ALERT_STORAGE_TYPE].field_name,
-			    alert_path,
-			    alert_name,
-			    storage_type);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_ALERT_PATH].field_name,
+	                    mf_tbl_field[MF_FIELD_ALERT_NAME].field_name,
+	                    mf_tbl_field[MF_FIELD_ALERT_STORAGE_TYPE].field_name,
+	                    alert_path,
+	                    alert_name,
+	                    storage_type);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1521,9 +1533,9 @@ int mf_ug_delete_alert(MFDHandle *mfd_handle, const char *alert_path)
 
 	query_string =
 	    sqlite3_mprintf(MF_DELETE_FROM_ALERT_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_ALERT_PATH].field_name,
-			    alert_path);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_ALERT_PATH].field_name,
+	                    alert_path);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1565,9 +1577,9 @@ int mf_ug_find_alert(MFDHandle *mfd_handle, const char *alert_path)
 	int find = 0;
 	query_string =
 	    sqlite3_mprintf(MF_FIND_ALERT_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_ALERT_PATH].field_name,
-			    alert_path);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_ALERT_PATH].field_name,
+	                    alert_path);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1618,9 +1630,9 @@ int mf_ug_delete_alert_by_type(MFDHandle *mfd_handle, int storage_type)
 
 	query_string =
 	    sqlite3_mprintf(MF_DELETE_BY_TYPE_FROM_ALERT_TABLE,
-			    mf_tbl[field_seq].table_name,
-			    mf_tbl_field[MF_FIELD_ALERT_STORAGE_TYPE].field_name,
-			    storage_type);
+	                    mf_tbl[field_seq].table_name,
+	                    mf_tbl_field[MF_FIELD_ALERT_STORAGE_TYPE].field_name,
+	                    storage_type);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1660,7 +1672,7 @@ int mf_ug_foreach_alert_list(MFDHandle *mfd_handle, mf_ringtone_item_cb callback
 
 	query_string =
 	    sqlite3_mprintf(MF_SELECT_ALERT_TABLE,
-			    mf_tbl[field_seq].table_name);
+	                    mf_tbl[field_seq].table_name);
 
 	ug_debug("Query : %s", query_string);
 
@@ -1689,7 +1701,7 @@ int mf_ug_foreach_alert_list(MFDHandle *mfd_handle, mf_ringtone_item_cb callback
 		ritem = (mfRingtone *)calloc(1, sizeof(mfRingtone));
 		if (!ritem) {
 			ug_debug("allocation failed");
-			return MFD_ERROR_DB_INTERNAL;					
+			return MFD_ERROR_DB_INTERNAL;
 		}
 		__mf_convert_ringtone_column_to_ringtone_item(stmt, ritem);
 		alert_list = eina_list_append(alert_list, ritem);
@@ -1722,7 +1734,7 @@ int mf_ug_get_alert_count(MFDHandle *mfd_handle, int *count)
 
 	query_string =
 	    sqlite3_mprintf(MF_SELECT_ALERT_COUNT_TABLE,
-			    mf_tbl[field_seq].table_name);
+	                    mf_tbl[field_seq].table_name);
 
 	ug_debug("Query : %s", query_string);
 

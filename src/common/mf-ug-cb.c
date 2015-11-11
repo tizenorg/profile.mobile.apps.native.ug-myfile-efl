@@ -38,7 +38,7 @@
 #define UG_MAX_LEN_VIB_DURATION 0.5
 
 #ifdef UG_OPERATION_SELECT_MODE
-    #define RESULT_KEY  "http://tizen.org/appcontrol/data/selected"
+#define RESULT_KEY  "http://tizen.org/appcontrol/data/selected"
 #endif
 
 bool g_is_press_cancel_button = false;
@@ -112,8 +112,8 @@ bool mf_ug_cb_back_operation(void *data)
 		ugd->ug_Status.ug_pPath = g_string_new(view_node->path);
 		ugd->ug_Status.ug_iViewType = view_node->view_type;
 		ug_error("================= top path is [%s] view_type is [%d] ", ugd->ug_Status.ug_pPath->str, ugd->ug_Status.ug_iViewType);
-				mf_ug_navi_bar_create_default_view(ugd);
-			/*}   modify by wangyan
+		mf_ug_navi_bar_create_default_view(ugd);
+		/*}   modify by wangyan
 		}   modify by wangyan*/
 		mf_ug_navi_bar_set_ctrl_item_disable(ugd);
 		elm_naviframe_item_title_enabled_set(ugd->ug_MainWindow.ug_pNaviItem, EINA_TRUE, EINA_FALSE);
@@ -169,9 +169,9 @@ Eina_Bool mf_ug_cb_back_button_cb(void *data, Elm_Object_Item *it)
 		g_is_press_cancel_button = false;/*initiate it.*/
 		ug_error("is_exit_ug is [%d]", is_exit_ug);
 		if (is_exit_ug) {
-				/*Fix the P130910-01714 problem, when back from the UG, the other app will be crashed. need to communicate with other app, then apply the new code.
-				Fix the P131009-01740, and P130902-01617*/
-				if (!mf_ug_ringtone_present_del_result(ugd)) {
+			/*Fix the P130910-01714 problem, when back from the UG, the other app will be crashed. need to communicate with other app, then apply the new code.
+			Fix the P131009-01740, and P130902-01617*/
+			if (!mf_ug_ringtone_present_del_result(ugd)) {
 				app_control_h service = NULL;
 				int ret = app_control_create(&service);
 				if (ret == APP_CONTROL_ERROR_NONE) {
@@ -179,7 +179,7 @@ Eina_Bool mf_ug_cb_back_button_cb(void *data, Elm_Object_Item *it)
 					app_control_destroy(service);
 				}
 			}
-				ug_destroy_me(ugd->ug);
+			ug_destroy_me(ugd->ug);
 			ugd->ug = NULL;
 		}
 	}
@@ -243,8 +243,8 @@ static void __mf_ug_cb_ringtone_set(void *data)
 		ugd->ug = NULL;
 
 	}	else if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_alert
-			|| mf_ug_is_default_ringtone(ugd, file_path)
-			|| mf_ug_fm_svc_wapper_is_default_ringtone(ugd, file_path)/*Fixed P140612-01028, only support the added music file */) {
+	             || mf_ug_is_default_ringtone(ugd, file_path)
+	             || mf_ug_fm_svc_wapper_is_default_ringtone(ugd, file_path)/*Fixed P140612-01028, only support the added music file */) {
 		if (file_path) {
 			SECURE_DEBUG("result is [%s]", file_path);
 			if (mf_ug_is_default_ringtone(ugd, file_path)) {
@@ -551,13 +551,13 @@ void mf_ug_cb_upper_click_cb(void *data, Evas_Object * obj, void *event_info)
 	UG_TRACE_BEGIN;
 	ug_mf_retm_if(data == NULL, "data is NULL");
 	ugData *ugd = (ugData *)data;
-       if (ugd->ug_Status.ug_pPath != NULL) {
-	    if (mf_ug_fm_svc_wapper_is_root_path(ugd->ug_Status.ug_pPath->str)) {
-		ugd->ug_Status.ug_iViewType = mf_ug_view_root;
-	    }
+	if (ugd->ug_Status.ug_pPath != NULL) {
+		if (mf_ug_fm_svc_wapper_is_root_path(ugd->ug_Status.ug_pPath->str)) {
+			ugd->ug_Status.ug_iViewType = mf_ug_view_root;
+		}
 
 		if (g_strcmp0(ugd->ug_Status.ug_pPath->str, mf_ug_widget_get_text(MF_UG_LABEL_PHONE)) == 0
-		    || g_strcmp0(ugd->ug_Status.ug_pPath->str, mf_ug_widget_get_text(MF_UG_LABEL_MMC)) == 0) {
+		        || g_strcmp0(ugd->ug_Status.ug_pPath->str, mf_ug_widget_get_text(MF_UG_LABEL_MMC)) == 0) {
 			mf_ug_navi_bar_create_default_view(ugd);
 			return;
 		}
@@ -613,18 +613,18 @@ void mf_ug_cb_home_button_cb(void *data, Evas_Object * obj, void *event_info)
 
 	storage = mf_ug_fm_svc_wapper_get_location(ugd->ug_Status.ug_pPath->str);
 	switch (storage) {
-		case MF_UG_PHONE:
-			UG_SAFE_FREE_GSTRING(ugd->ug_Status.ug_pPath);
-			ugd->ug_Status.ug_pPath = g_string_new(PHONE_FOLDER);
-			mf_ug_util_set_current_state(ugd, STATE_PHONE);
-			break;
-		case MF_UG_MMC:
-			UG_SAFE_FREE_GSTRING(ugd->ug_Status.ug_pPath);
-			ugd->ug_Status.ug_pPath = g_string_new(MEMORY_FOLDER);
-			mf_ug_util_set_current_state(ugd, STATE_MEMORY);
-			break;
-		default:
-			return;
+	case MF_UG_PHONE:
+		UG_SAFE_FREE_GSTRING(ugd->ug_Status.ug_pPath);
+		ugd->ug_Status.ug_pPath = g_string_new(PHONE_FOLDER);
+		mf_ug_util_set_current_state(ugd, STATE_PHONE);
+		break;
+	case MF_UG_MMC:
+		UG_SAFE_FREE_GSTRING(ugd->ug_Status.ug_pPath);
+		ugd->ug_Status.ug_pPath = g_string_new(MEMORY_FOLDER);
+		mf_ug_util_set_current_state(ugd, STATE_MEMORY);
+		break;
+	default:
+		return;
 	}
 	ugd->ug_Status.ug_iCheckedCount = 0;
 
@@ -813,7 +813,7 @@ void mf_ug_cb_default_ringtone_changed_cb(system_settings_key_e key, void *data)
 	if ((retcode != SYSTEM_SETTINGS_ERROR_NONE)) {
 		ug_error("failed to get default_ringtone");
 	}
-	
+
 	if (default_ringtone) {
 		UG_SAFE_FREE_CHAR(ugd->ug_UiGadget.default_ringtone);
 		ugd->ug_UiGadget.default_ringtone = g_strdup(default_ringtone);
@@ -949,12 +949,12 @@ void mf_ug_cb_dir_pipe_cb(void *data, void *buffer, unsigned int nbyte)
 				}
 				if (file_type == UG_FILE_TYPE_DIR) {
 					if (ugd->ug_UiGadget.ug_iSelectMode == MULTI_FILE_MODE ||
-					    ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE ||
-					    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE ||
-					    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE ||
-					    ugd->ug_UiGadget.ug_iSelectMode == EXPORT_MODE ||
-					    ugd->ug_UiGadget.ug_iSelectMode == SAVE_MODE ||
-					    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE) {
+					        ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE ||
+					        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE ||
+					        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE ||
+					        ugd->ug_UiGadget.ug_iSelectMode == EXPORT_MODE ||
+					        ugd->ug_UiGadget.ug_iSelectMode == SAVE_MODE ||
+					        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE) {
 
 						mf_ug_genlist_item_append(ugd->ug_MainWindow.ug_pNaviGenlist, path, ugd, 0, &ugd->ug_Status.ug_1text1icon_itc);
 					} else {
@@ -1052,7 +1052,7 @@ void mf_ug_cb_dir_pipe_cb(void *data, void *buffer, unsigned int nbyte)
 			ugd->ug_Status.ug_pPath = parent;
 			mf_ug_navi_bar_create_default_view(ugd);
 		}
-			break;
+		break;
 		default:
 			ug_mf_error("Unknown event");
 			break;
@@ -1093,8 +1093,9 @@ void mf_ug_cb_create_new_folder(void *data, Evas_Object * obj, void *event_info)
 	ugData *ugd = (ugData *)data;
 	UG_SAFE_FREE_OBJ(ugd->ug_MainWindow.ug_pContextPopup);
 
-	if (ugd->ug_Status.ug_iMore == UG_MORE_CREATE_FOLDER)
+	if (ugd->ug_Status.ug_iMore == UG_MORE_CREATE_FOLDER) {
 		return;
+	}
 
 	int ret = 0;
 	ugd->ug_Status.ug_iMore = UG_MORE_CREATE_FOLDER;
@@ -1193,8 +1194,8 @@ static int __mf_ug_cb_ime_mkdir_cb(void *data, char *fileName)
 		if (strlen(g_strchug(test_space)) == 0) {
 			message = MF_UG_LABEL_NAME_INVALID;	/*TODO */
 			ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, message,
-					   NULL, NULL, NULL,
-					   __mf_ug_popup_show_vk, ugd);
+			                                     NULL, NULL, NULL,
+			                                     __mf_ug_popup_show_vk, ugd);
 
 			g_string_free(fullpathdir, TRUE);
 			fullpathdir = NULL;
@@ -1213,8 +1214,8 @@ static int __mf_ug_cb_ime_mkdir_cb(void *data, char *fileName)
 
 			message = MF_UG_LABEL_ILLEGAL_CHAR;
 			ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, message,
-					   NULL, NULL, NULL,
-					   __mf_ug_popup_show_vk, ugd);
+			                                     NULL, NULL, NULL,
+			                                     __mf_ug_popup_show_vk, ugd);
 			g_string_free(fullpathdir, TRUE);
 			fullpathdir = NULL;
 			g_string_free(fullpathname, TRUE);
@@ -1252,8 +1253,8 @@ static int __mf_ug_cb_ime_mkdir_cb(void *data, char *fileName)
 
 			message = MF_UG_LABEL_MAX_CHARACTER_REACHED;
 			ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, message,
-					   NULL, NULL, NULL,
-					   __mf_ug_popup_show_vk, ugd);
+			                                     NULL, NULL, NULL,
+			                                     __mf_ug_popup_show_vk, ugd);
 			g_string_free(fullpathdir, TRUE);
 			fullpathdir = NULL;
 			g_string_free(fullpathname, TRUE);
@@ -1264,8 +1265,8 @@ static int __mf_ug_cb_ime_mkdir_cb(void *data, char *fileName)
 		else if (mf_ug_file_attr_is_duplicated_name(ugd->ug_Status.ug_pPath->str, fileName) == MYFILE_ERR_DUPLICATED_NAME) {
 			message = MF_UG_LABEL_DUP_NAME;
 			ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, message,
-					   NULL, NULL, NULL,
-					   __mf_ug_popup_show_vk, ugd);/*fixe P131022-06134*/
+			                                     NULL, NULL, NULL,
+			                                     __mf_ug_popup_show_vk, ugd);/*fixe P131022-06134*/
 
 			g_string_free(fullpathdir, TRUE);
 			fullpathdir = NULL;
@@ -1298,8 +1299,8 @@ static int __mf_ug_cb_ime_mkdir_cb(void *data, char *fileName)
 		message = mf_ug_widget_get_text(MF_UG_LABEL_EMPTY_FOLDER_NAME);
 
 		ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, message,
-				   NULL, NULL, NULL,
-				   __mf_ug_popup_show_vk, ugd);
+		                                     NULL, NULL, NULL,
+		                                     __mf_ug_popup_show_vk, ugd);
 		ret = MYFILE_ERR_DIR_CREATE_FAIL;
 	}
 	return ret;
@@ -1322,8 +1323,9 @@ void mf_ug_cb_save_cb(void *data, Evas_Object *obj, void *event_info)
 		/*hide IMF*/
 		if (ugd->ug_MainWindow.ug_pEntry != NULL) {
 			Ecore_IMF_Context *imf_context = elm_entry_imf_context_get(ugd->ug_MainWindow.ug_pEntry);
-			if (imf_context != NULL)
+			if (imf_context != NULL) {
 				ecore_imf_context_hide(imf_context);
+			}
 		}
 
 		entry_data = elm_entry_entry_get(ugd->ug_MainWindow.ug_pEntry);
@@ -1333,13 +1335,14 @@ void mf_ug_cb_save_cb(void *data, Evas_Object *obj, void *event_info)
 		} else {
 			message = MF_UG_LABEL_GET_NAME_FAILED;
 			ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL, message,
-					   NULL, NULL, NULL,
-					   NULL, NULL);
+			                                     NULL, NULL, NULL,
+			                                     NULL, NULL);
 			return;
 		}
 
-		if (name == NULL)
+		if (name == NULL) {
 			return;
+		}
 
 		ret = __mf_ug_cb_ime_mkdir_cb(ugd, name);
 		if (ret == 0) {
@@ -1482,7 +1485,7 @@ bool mf_ug_cb_create_thumbnail(void *data, media_thumbnail_completed_cb callback
 	int ret = -1;
 
 	ret = media_info_create_thumbnail(pListData->media, callback,
-					  pListData);
+	                                  pListData);
 	if (ret != MEDIA_CONTENT_ERROR_NONE) {
 		ug_debug("Failed to create thumbnail! ret is [%d]", ret);
 		return -1;
@@ -1513,7 +1516,7 @@ void mf_ug_select_all_cb(void *data, Evas_Object *obj, void *event_info)
 	if (elm_check_state_get(obj) == 1) {
 		ugd->ug_Status.ug_iCheckedCount = eina_list_count(ugd->ug_UiGadget.ug_pFilterList);
 	} else {
-		ugd->ug_Status.ug_iCheckedCount=0;
+		ugd->ug_Status.ug_iCheckedCount = 0;
 	}
 	long long int total_item_size = 0;
 	struct stat stFileInfo;
@@ -1548,7 +1551,7 @@ void mf_ug_select_all_cb(void *data, Evas_Object *obj, void *event_info)
 		}
 		it = elm_genlist_item_next_get(it);
 	}
-	if(state){
+	if (state) {
 		ugd->selsize = total_item_size;
 		it = elm_genlist_first_item_get(ugd->ug_MainWindow.ug_pNaviGenlist);
 		while (it) {

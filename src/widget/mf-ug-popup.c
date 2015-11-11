@@ -132,7 +132,7 @@ Evas_Object *mf_ug_popup_create_search(void *data, Evas_Smart_Cb back_func, void
 	Evas_Object *popup;
 	Evas_Object *progressbar;
 	Evas_Object *layout;
-	
+
 	popup = elm_popup_add(ugd->ug_MainWindow.ug_pMainLayout);
 	layout = elm_layout_add(popup);
 	elm_layout_file_set(layout, UG_EDJ_NAVIGATIONBAR, "popup_processingview_1button");
@@ -158,12 +158,12 @@ Evas_Object *mf_ug_popup_create_search(void *data, Evas_Smart_Cb back_func, void
 	elm_object_content_set(popup, layout);
 	if (back_func) {
 		Evas_Object *btn1 = mf_ug_widget_create_button(popup,
-								"popup_button/default",
-								MF_UG_LABEL_CANCEL,
-								NULL,
-								back_func,
-								back_param,
-								EINA_FALSE);
+		                    "popup_button/default",
+		                    MF_UG_LABEL_CANCEL,
+		                    NULL,
+		                    back_func,
+		                    back_param,
+		                    EINA_FALSE);
 		elm_object_part_content_set(popup, "button1", btn1);
 		eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK, back_func, back_param);
 	} else {
@@ -191,7 +191,7 @@ void mf_ug_popup_del_by_timeout(void *data, Evas_Object *obj, void *event_info)
 }
 
 Evas_Object *mf_ug_popup_create(void *data, mf_ug_popup_mode popupMode, char *title, const char *context, const char *first_btn_text, const char *second_btn_text,
-			const char *third_btn_text, Evas_Smart_Cb func, void *param)
+                                const char *third_btn_text, Evas_Smart_Cb func, void *param)
 {
 	Evas_Object *popup;
 	ugData *ugd = (ugData *)data;
@@ -224,41 +224,41 @@ Evas_Object *mf_ug_popup_create(void *data, mf_ug_popup_mode popupMode, char *ti
 	case UG_POPMODE_TITLE_TEXT_TWO_BTN:
 
 		btn1 = mf_ug_widget_create_button(popup,
-						  MF_UG_POPUP_BTN_STYLE,
-						  first_btn_text,
-						  NULL,
-						  func,
-						  param,
-						  EINA_FALSE);
+		                                  MF_UG_POPUP_BTN_STYLE,
+		                                  first_btn_text,
+		                                  NULL,
+		                                  func,
+		                                  param,
+		                                  EINA_FALSE);
 		btn2 = mf_ug_widget_create_button(popup,
-						  MF_UG_POPUP_BTN_STYLE,
-						  second_btn_text,
-						  NULL,
-						  func,
-						  param,
-						  EINA_FALSE);
+		                                  MF_UG_POPUP_BTN_STYLE,
+		                                  second_btn_text,
+		                                  NULL,
+		                                  func,
+		                                  param,
+		                                  EINA_FALSE);
 		elm_object_part_content_set(popup, "button1", btn1);
 		elm_object_part_content_set(popup, "button2", btn2);
 		break;
 	case UG_POPMODE_TEXT_BTN:
 	case UG_POPMODE_TITLE_TEXT_BTN:
 		btn1 = mf_ug_widget_create_button(popup,
-						  MF_UG_POPUP_BTN_STYLE,
-						  MF_UG_LABEL_OK,
-						  NULL,
-						  func,
-						  param,
-						  EINA_TRUE);
+		                                  MF_UG_POPUP_BTN_STYLE,
+		                                  MF_UG_LABEL_OK,
+		                                  NULL,
+		                                  func,
+		                                  param,
+		                                  EINA_TRUE);
 		elm_object_part_content_set(popup, "button1", btn1);
 		break;
 	case UG_POPMODE_SEARCH:
 		btn1 = mf_ug_widget_create_button(popup,
-						  MF_UG_POPUP_BTN_STYLE,
-						  MF_UG_LABEL_CANCEL,
-						  NULL,
-						  func,
-						  param,
-						  EINA_TRUE);
+		                                  MF_UG_POPUP_BTN_STYLE,
+		                                  MF_UG_LABEL_CANCEL,
+		                                  NULL,
+		                                  func,
+		                                  param,
+		                                  EINA_TRUE);
 		elm_object_part_content_set(popup, "button1", btn1);
 		break;
 	default:
@@ -290,15 +290,15 @@ static void _move_more_ctxpopup(void *data, Evas_Object *win, Evas_Object *ctxpo
 	elm_win_screen_size_get(win, NULL, NULL, &w, &h);
 	pos = elm_win_rotation_get(win);
 	switch (pos) {
-		case 0:
-		case 180:
-			evas_object_move(ctxpopup, 0, h);
-			break;
-		case 90:
-			evas_object_move(ctxpopup, 0, w);
-			break;
-		case 270:
-			evas_object_move(ctxpopup, h, w);
+	case 0:
+	case 180:
+		evas_object_move(ctxpopup, 0, h);
+		break;
+	case 90:
+		evas_object_move(ctxpopup, 0, w);
+		break;
+	case 270:
+		evas_object_move(ctxpopup, h, w);
 		break;
 	}
 }
@@ -311,7 +311,7 @@ static void __mf_ctxpopup_hide_cb(void *data, Evas_Object *obj, void *ei)
 	ugData *ugd = (ugData *)data;
 
 	bool ct_rotate = (bool)evas_object_data_get(obj,
-						    MF_CTXPOPUP_OBJ_ROTATE_KEY);
+	                 MF_CTXPOPUP_OBJ_ROTATE_KEY);
 
 	if (!ct_rotate) {
 		ug_debug("ctxpopup is dismissed");
@@ -322,7 +322,7 @@ static void __mf_ctxpopup_hide_cb(void *data, Evas_Object *obj, void *ei)
 		/* when "dismissed" cb is called next time,
 		  * ctxpopup should be dismissed if device is not rotated. */
 		evas_object_data_set(obj, MF_CTXPOPUP_OBJ_ROTATE_KEY,
-				     (void *)false);
+		                     (void *)false);
 		/* If ctxpopup is not dismissed, then it must be shown again.
 		  * Otherwise "dismissed" cb will be called one more time. */
 		if (ugd->ug_MainWindow.ug_pContextPopup) {
@@ -333,12 +333,12 @@ static void __mf_ctxpopup_hide_cb(void *data, Evas_Object *obj, void *ei)
 }
 
 static void __mf_ctxpopup_parent_resize_cb(void *data, Evas *e,
-					   Evas_Object *obj, void *ei)
+        Evas_Object *obj, void *ei)
 {
 	UG_TRACE_BEGIN;
 	ug_mf_retm_if(!data, "data is NULL");
 	evas_object_data_set((Evas_Object *)data, MF_CTXPOPUP_OBJ_ROTATE_KEY,
-			     (void *)true);
+	                     (void *)true);
 }
 /*
 static void __mf_ctxpopup_items_update_cb(void *data, Evas_Object *obj, void *ei)
@@ -383,18 +383,18 @@ static void __mf_ctxpopup_del_cb(void *data, Evas *e, Evas_Object *obj, void *ei
 	evas_object_data_del(ctxpopup, MF_CTXPOPUP_OBJ_MORE_BTN_KEY);
 	evas_object_data_del(ctxpopup, MF_CTXPOPUP_OBJ_ROTATE_KEY);
 	evas_object_smart_callback_del(ctxpopup, "dismissed",
-				       __mf_ctxpopup_hide_cb);
+	                               __mf_ctxpopup_hide_cb);
 	evas_object_event_callback_del(ctxpopup, EVAS_CALLBACK_DEL,
-				       __mf_ctxpopup_del_cb);
+	                               __mf_ctxpopup_del_cb);
 	evas_object_event_callback_del(ugd->ug_MainWindow.ug_pWindow,
-				       EVAS_CALLBACK_RESIZE,
-				       __mf_ctxpopup_parent_resize_cb);
+	                               EVAS_CALLBACK_RESIZE,
+	                               __mf_ctxpopup_parent_resize_cb);
 	/*evas_object_smart_callback_del(ugd->maininfo.naviframe,
 				       "ctxpopup,items,update",
 				       __mf_ctxpopup_items_update_cb);*/
 	evas_object_smart_callback_del(elm_object_top_widget_get(ctxpopup),
-				       "rotation,changed",
-				       __mf_ctxpopup_rotate_cb);
+	                               "rotation,changed",
+	                               __mf_ctxpopup_rotate_cb);
 
 	ug_debug("done");
 }
@@ -410,19 +410,19 @@ static int __mf_ctxpopup_add_callbacks(void *data, Evas_Object *ctxpopup)
 	evas_object_event_callback_add(ugd->ug_MainWindow.ug_pWindow, EVAS_CALLBACK_RESIZE, (Evas_Object_Event_Cb)mf_ug_resize_more_ctxpopup_cb, ugd);*/
 
 	evas_object_smart_callback_add(ctxpopup, "dismissed",
-				       __mf_ctxpopup_hide_cb, data);
+	                               __mf_ctxpopup_hide_cb, data);
 	evas_object_event_callback_add(ctxpopup, EVAS_CALLBACK_DEL,
-				       __mf_ctxpopup_del_cb, data);
+	                               __mf_ctxpopup_del_cb, data);
 	evas_object_event_callback_add(ugd->ug_MainWindow.ug_pWindow,
-				       EVAS_CALLBACK_RESIZE,
-				       __mf_ctxpopup_parent_resize_cb,
-				       ctxpopup);
+	                               EVAS_CALLBACK_RESIZE,
+	                               __mf_ctxpopup_parent_resize_cb,
+	                               ctxpopup);
 	/*evas_object_smart_callback_add(ugd->ug_MainWindow.ug_pWindow,
 				       "ctxpopup,items,update",
 				       __mf_ctxpopup_items_update_cb, ctxpopup);*/
 	evas_object_smart_callback_add(elm_object_top_widget_get(ctxpopup),
-				       "rotation,changed",
-				       __mf_ctxpopup_rotate_cb, data);
+	                               "rotation,changed",
+	                               __mf_ctxpopup_rotate_cb, data);
 	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK, eext_ctxpopup_back_cb, NULL);
 	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_MORE, eext_ctxpopup_back_cb, NULL);
 	ug_debug("done");
@@ -442,9 +442,9 @@ void mf_ug_context_popup_create_more(void *data, Evas_Object *parent)
 	elm_object_style_set(ctxpopup, "more/default");
 
 	elm_ctxpopup_direction_priority_set(ctxpopup, ELM_CTXPOPUP_DIRECTION_UP,
-					 ELM_CTXPOPUP_DIRECTION_UNKNOWN,
-					 ELM_CTXPOPUP_DIRECTION_UNKNOWN,
-					 ELM_CTXPOPUP_DIRECTION_UNKNOWN);
+	                                    ELM_CTXPOPUP_DIRECTION_UNKNOWN,
+	                                    ELM_CTXPOPUP_DIRECTION_UNKNOWN,
+	                                    ELM_CTXPOPUP_DIRECTION_UNKNOWN);
 	UG_TRACE_END;
 	ugd->ug_MainWindow.ug_pContextPopup = ctxpopup;
 	Elm_Object_Item *it = NULL;
@@ -521,11 +521,11 @@ static Evas_Object *__mf_ug_popup_entry_create(Evas_Object *parent)
 	elm_entry_scrollable_set(en, EINA_TRUE);
 	elm_entry_select_all(en);
 	elm_scroller_policy_set(en, ELM_SCROLLER_POLICY_OFF,
-						ELM_SCROLLER_POLICY_AUTO);
+	                        ELM_SCROLLER_POLICY_AUTO);
 
 	elm_entry_single_line_set(en, EINA_TRUE);
 	evas_object_size_hint_weight_set(en, EVAS_HINT_EXPAND,
-					 EVAS_HINT_EXPAND);
+	                                 EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(en, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_show(en);
 
@@ -539,34 +539,34 @@ static char *__new_folder_text_get(void *data)
 	ugData *ugd = (ugData *)data;
 	ug_mf_retvm_if(ugd == NULL, NULL, "ugd is NULL");
 
-		char *fileName = NULL;
-		char *fullpath = (char *)malloc(sizeof(char)*MYFILE_FILE_PATH_LEN_MAX);
-		if (fullpath == NULL) {
-			return NULL;
-		}
-		GString *dest_fullpath = NULL;
+	char *fileName = NULL;
+	char *fullpath = (char *)malloc(sizeof(char) * MYFILE_FILE_PATH_LEN_MAX);
+	if (fullpath == NULL) {
+		return NULL;
+	}
+	GString *dest_fullpath = NULL;
 
-		memset(fullpath, 0, MYFILE_FILE_PATH_LEN_MAX);
-		fileName = elm_entry_markup_to_utf8(mf_ug_widget_get_text(MF_UG_LABEL_FOLDER));
-		snprintf(fullpath, (MYFILE_FILE_PATH_LEN_MAX), "%s/%s", (char *)ugd->ug_Status.ug_pPath->str, fileName);
+	memset(fullpath, 0, MYFILE_FILE_PATH_LEN_MAX);
+	fileName = elm_entry_markup_to_utf8(mf_ug_widget_get_text(MF_UG_LABEL_FOLDER));
+	snprintf(fullpath, (MYFILE_FILE_PATH_LEN_MAX), "%s/%s", (char *)ugd->ug_Status.ug_pPath->str, fileName);
 
-		dest_fullpath = g_string_new(fullpath);
+	dest_fullpath = g_string_new(fullpath);
 
 
-		if (mf_ug_fm_svc_wrapper_detect_duplication(dest_fullpath)) {
-			mf_ug_fm_svc_wrapper_file_auto_rename(ugd, dest_fullpath, FILE_NAME_WITH_BRACKETS, &dest_fullpath);
-			memset(fullpath, 0, strlen(fullpath));
-			int len = strlen(ugd->ug_Status.ug_pPath->str) + 1;
-			strncpy(fullpath, dest_fullpath->str + len, MYFILE_FILE_PATH_LEN_MAX);
-			/*memset(fileName,0,strlen(fileName));*/
+	if (mf_ug_fm_svc_wrapper_detect_duplication(dest_fullpath)) {
+		mf_ug_fm_svc_wrapper_file_auto_rename(ugd, dest_fullpath, FILE_NAME_WITH_BRACKETS, &dest_fullpath);
+		memset(fullpath, 0, strlen(fullpath));
+		int len = strlen(ugd->ug_Status.ug_pPath->str) + 1;
+		strncpy(fullpath, dest_fullpath->str + len, MYFILE_FILE_PATH_LEN_MAX);
+		/*memset(fileName,0,strlen(fileName));*/
 
-			UG_SAFE_FREE_CHAR(fileName);
-			fileName = elm_entry_markup_to_utf8(fullpath);
-		}
-		/*elm_entry_entry_set(entry, ecore_file_file_get(params->m_ItemName->str));*/
-		UG_SAFE_FREE_CHAR(fullpath);
-		UG_SAFE_FREE_GSTRING(dest_fullpath);
-		return fileName;
+		UG_SAFE_FREE_CHAR(fileName);
+		fileName = elm_entry_markup_to_utf8(fullpath);
+	}
+	/*elm_entry_entry_set(entry, ecore_file_file_get(params->m_ItemName->str));*/
+	UG_SAFE_FREE_CHAR(fullpath);
+	UG_SAFE_FREE_GSTRING(dest_fullpath);
+	return fileName;
 }
 
 static void __mf_ug_popup_show_vk_cb(void *data, Evas_Object *obj, void *event_info)
@@ -606,16 +606,17 @@ static void __mf_ug_popup_create_folder_imf_changed_cb(void *data, Evas_Object *
 	SECURE_DEBUG("name is [%s]", name);
 	if (mf_ug_file_attr_is_valid_name(name) != MYFILE_ERR_NONE) {
 		strncpy(new_str, name, MYFILE_FILE_NAME_LEN_MAX - 1);
-		if (strlen(name) > 0)
+		if (strlen(name) > 0) {
 			new_str[strlen(name) - 1] = '\0';
+		}
 		elm_entry_entry_set(ugd->ug_MainWindow.ug_pEntry, new_str);
 		elm_entry_cursor_end_set(ugd->ug_MainWindow.ug_pEntry);
 		elm_object_focus_set(ugd->ug_MainWindow.ug_pEntry, EINA_FALSE);
 
 		UG_SAFE_FREE_OBJ(ugd->ug_MainWindow.ug_pNormalPopup);
 		ugd->ug_MainWindow.ug_pNormalPopup = mf_ug_popup_create(ugd, UG_POPMODE_TEXT, NULL,
-														MF_UG_LABEL_ILLEGAL_CHAR, NULL, NULL,
-														NULL, __mf_ug_popup_show_vk_cb, ugd);
+		                                     MF_UG_LABEL_ILLEGAL_CHAR, NULL, NULL,
+		                                     NULL, __mf_ug_popup_show_vk_cb, ugd);
 	}
 
 	UG_SAFE_FREE_CHAR(name);
@@ -652,7 +653,7 @@ Evas_Object *mf_ug_popup_create_new_folder_popup(void *data, char *context)
 	UG_SAFE_FREE_CHAR(text);
 
 	elm_entry_markup_filter_append(en, elm_entry_filter_limit_size,
-					      &limit_filter_data);
+	                               &limit_filter_data);
 	elm_object_part_content_set(layout, "elm.swallow.content", en);
 	mf_ug_widget_object_text_set(popup, context, "title,text");
 
@@ -668,19 +669,19 @@ Evas_Object *mf_ug_popup_create_new_folder_popup(void *data, char *context)
 	Evas_Object *btn2 = NULL;
 
 	btn1 = mf_ug_widget_create_button(popup,
-					  MF_UG_POPUP_BTN_STYLE,
-					  MF_UG_LABEL_CANCEL,
-					  NULL,
-					  mf_ug_cb_cancel_new_folder_cb,
-					  ugd,
-					  EINA_FALSE);
+	                                  MF_UG_POPUP_BTN_STYLE,
+	                                  MF_UG_LABEL_CANCEL,
+	                                  NULL,
+	                                  mf_ug_cb_cancel_new_folder_cb,
+	                                  ugd,
+	                                  EINA_FALSE);
 	btn2 = mf_ug_widget_create_button(popup,
-					  MF_UG_POPUP_BTN_STYLE,
-					  MF_UG_LABEL_OK,
-					  NULL,
-					  mf_ug_cb_save_cb,
-					  ugd,
-					  EINA_FALSE);
+	                                  MF_UG_POPUP_BTN_STYLE,
+	                                  MF_UG_LABEL_OK,
+	                                  NULL,
+	                                  mf_ug_cb_save_cb,
+	                                  ugd,
+	                                  EINA_FALSE);
 
 	elm_object_part_content_set(popup, "button1", btn1);
 	elm_object_part_content_set(popup, "button2", btn2);
@@ -694,9 +695,9 @@ Evas_Object *mf_ug_popup_create_new_folder_popup(void *data, char *context)
 }
 
 Evas_Object *mf_popup_center_processing(Evas_Object *parent,
-				   const char *context,
-				   Evas_Smart_Cb func,
-				   void *param)
+                                        const char *context,
+                                        Evas_Smart_Cb func,
+                                        void *param)
 {
 	Evas_Object *popup;
 	Evas_Object *progressbar;

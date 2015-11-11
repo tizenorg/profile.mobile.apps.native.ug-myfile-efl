@@ -319,7 +319,9 @@ void mf_ug_select_all_layout_mouse_down_cb(void *data, Evas_Object *obj, void *e
 Evas_Object *__mf_ug_navibar_btn_create(Evas_Object *parent, const char *text)
 {
 	Evas_Object *btn = elm_button_add(parent);
-	if (!btn) return NULL;
+	if (!btn) {
+		return NULL;
+	}
 	elm_object_style_set(btn, "naviframe/title_text");
 	mf_ug_widget_object_text_set(btn, text, NULL);
 	return btn;
@@ -381,12 +383,12 @@ void mf_ug_navi_bar_title_set(void *data)
 		elm_image_resizable_set(home_ic, EINA_TRUE, EINA_TRUE);
 
 		Evas_Object *home_btn = mf_ug_widget_create_button(ugd->ug_MainWindow.ug_pNaviBar,
-								   "naviframe/title_icon",
-								   NULL,
-								   home_ic,
-								   mf_ug_cb_home_button_cb,
-								   ugd,
-								   EINA_FALSE);
+		                        "naviframe/title_icon",
+		                        NULL,
+		                        home_ic,
+		                        mf_ug_cb_home_button_cb,
+		                        ugd,
+		                        EINA_FALSE);
 		evas_object_smart_callback_add(home_btn, "pressed", mf_ug_cb_home_button_pressed_cb, home_ic);
 		evas_object_smart_callback_add(home_btn, "unpressed", mf_ug_cb_home_button_unpressed_cb, home_ic);
 		/*elm_object_item_part_content_set(ugd->ug_MainWindow.ug_pNaviItem, TITLE_LEFT_BTN, home_btn);*/
@@ -399,12 +401,12 @@ void mf_ug_navi_bar_title_set(void *data)
 		elm_image_resizable_set(up_ic, EINA_TRUE, EINA_TRUE);
 
 		Evas_Object *up_btn = mf_ug_widget_create_button(ugd->ug_MainWindow.ug_pNaviBar,
-								   "naviframe/title_icon",
-								   NULL,
-								   up_ic,
-								   mf_ug_cb_upper_click_cb,
-								   ugd,
-								   EINA_FALSE);
+		                      "naviframe/title_icon",
+		                      NULL,
+		                      up_ic,
+		                      mf_ug_cb_upper_click_cb,
+		                      ugd,
+		                      EINA_FALSE);
 
 		evas_object_smart_callback_add(up_btn, "pressed", mf_ug_cb_upper_button_pressed_cb, up_ic);
 		evas_object_smart_callback_add(up_btn, "unpressed", mf_ug_cb_upper_button_unpressed_cb, up_ic);
@@ -419,12 +421,12 @@ void mf_ug_navi_bar_title_set(void *data)
 			elm_image_resizable_set(add_ic, EINA_TRUE, EINA_TRUE);
 
 			Evas_Object *add_btn = mf_ug_widget_create_button(ugd->ug_MainWindow.ug_pNaviBar,
-									   "naviframe/title_icon",
-									   NULL,
-									   add_ic,
-									   mf_ug_music_launch_cb,
-									   ugd,
-									   EINA_FALSE);
+			                       "naviframe/title_icon",
+			                       NULL,
+			                       add_ic,
+			                       mf_ug_music_launch_cb,
+			                       ugd,
+			                       EINA_FALSE);
 			/*elm_object_item_part_content_set(ugd->ug_MainWindow.ug_pNaviItem, TITLE_LEFT_BTN, home_btn);*/
 			elm_object_item_part_content_set(ugd->ug_MainWindow.ug_pNaviItem, TITLE_LEFT_BTN, add_btn);
 
@@ -433,12 +435,12 @@ void mf_ug_navi_bar_title_set(void *data)
 			elm_image_resizable_set(del_ic, EINA_TRUE, EINA_TRUE);
 
 			Evas_Object *del_btn = mf_ug_widget_create_button(ugd->ug_MainWindow.ug_pNaviBar,
-									   "naviframe/title_icon",
-									   NULL,
-									   del_ic,
-									   mf_ug_ringtone_del_cb,
-									   ugd,
-									   EINA_FALSE);
+			                       "naviframe/title_icon",
+			                       NULL,
+			                       del_ic,
+			                       mf_ug_ringtone_del_cb,
+			                       ugd,
+			                       EINA_FALSE);
 			elm_object_item_part_content_set(ugd->ug_MainWindow.ug_pNaviItem, TITLE_RIGHT_BTN, del_btn);
 			/*P131205-01044 by wangyan Dec 13,if 0, or only setted ringtone in db , do not add it in delete genlist to avoid to be deleted,*/
 			int count = mf_ug_navibar_get_ringtone_count(ugd->ug_UiGadget.ug_iSoundMode);
@@ -505,7 +507,7 @@ void mf_ug_navi_add_back_button(void *data)
 }
 
 Evas_Object *mf_naviframe_left_cancel_button_create(Evas_Object *pParent, Elm_Object_Item *pNaviItem,
-	Evas_Smart_Cb pFunc, void *pUserData)
+        Evas_Smart_Cb pFunc, void *pUserData)
 {
 	Evas_Object *btn = elm_button_add(pParent);
 	elm_object_style_set(btn, "naviframe/title_left");
@@ -519,7 +521,7 @@ Evas_Object *mf_naviframe_left_cancel_button_create(Evas_Object *pParent, Elm_Ob
 }
 
 Evas_Object *mf_naviframe_right_save_button_create(Evas_Object *pParent, Elm_Object_Item *pNaviItem,
-	Evas_Smart_Cb pFunc, void *pUserData)
+        Evas_Smart_Cb pFunc, void *pUserData)
 {
 	Evas_Object *btn = elm_button_add(pParent);
 	elm_object_style_set(btn, "naviframe/title_right");
@@ -602,8 +604,9 @@ void mf_ug_navi_bar_set_ctrl_button(void *data)
 
 static void _index_clicked(void *data, Evas_Object *obj, const char *em, const char *src)
 {
-	if (!obj)
+	if (!obj) {
 		return;
+	}
 	elm_object_signal_emit(obj, "elm,state,slide,start", "");
 }
 
@@ -644,7 +647,7 @@ static Eina_Bool __selected_item_show(void *data)
 	Elm_Object_Item *defaultitem = NULL;
 
 	if (!ugd->ug_Status.ug_bNoContentFlag && (ugd->ug_Status.ug_iRadioOn > 1)) {
-		defaultitem  = elm_genlist_nth_item_get(ugd->ug_MainWindow.ug_pNaviGenlist, ugd->ug_Status.ug_iRadioOn-1);
+		defaultitem  = elm_genlist_nth_item_get(ugd->ug_MainWindow.ug_pNaviGenlist, ugd->ug_Status.ug_iRadioOn - 1);
 		if (NULL != defaultitem) {
 			ug_error("ugd->ug_Status.ug_iRadioOn = %d", ugd->ug_Status.ug_iRadioOn);
 			elm_genlist_item_show(defaultitem, ELM_GENLIST_ITEM_SCROLLTO_TOP);
@@ -679,10 +682,10 @@ void mf_ug_navi_bar_create_default_view(void *data)
 
 	ug_error("ugd->ug_UiGadget.ug_iSelectMode = %d", ugd->ug_UiGadget.ug_iSelectMode);
 	if (ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE
-	    || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE
-	    || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE
-	    || ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE
-	    || ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE) {
+	        || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE
+	        || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE
+	        || ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE
+	        || ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE) {
 		if (ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE) {
 			mf_ug_navi_bar_create_group_radio_box(ugd);
 		}
@@ -704,7 +707,7 @@ void mf_ug_navi_bar_create_default_view(void *data)
 
 		/*set content */
 		if (ugd->ug_UiGadget.ug_iSelectMode == SINGLE_ALL_MODE
-		    || ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE) {
+		        || ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE) {
 			mf_ug_navi_bar_create_group_radio_box(ugd);
 		}
 
@@ -736,7 +739,7 @@ void mf_ug_navi_bar_create_default_view(void *data)
 	elm_object_part_content_set(pNaviLayout, "part1", box);
 
 	if (ugd->ug_UiGadget.ug_iSelectMode == SINGLE_ALL_MODE ||
-		ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE) {
+	        ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE) {
 		mf_ug_navi_bar_push_content(ugd, pNaviLayout);
 	} else {
 		if (eina_list_count(ugd->ug_UiGadget.ug_pFilterList) != 0) {
@@ -760,10 +763,10 @@ void mf_ug_navi_bar_create_default_view(void *data)
 	mf_ug_navi_bar_remove_previous_contents(ugd);
 
 	if (ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE
-	    || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE
-	    || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE
-	    || ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE
-	    || ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE) {
+	        || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE
+	        || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE
+	        || ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE
+	        || ugd->ug_UiGadget.ug_iSelectMode == SSM_DOCUMENT_SHARE) {
 		ug_ecore_idler_del(ugd->ug_Status.search_idler);
 		ugd->ug_Status.search_idler = ecore_idler_add(mf_ug_navi_search_idler_cb, ugd);
 	}
@@ -847,20 +850,24 @@ void mf_ug_navi_bar_button_set_disable(void *data, bool disable)
 
 		if (ugd->ug_Status.ug_iViewType == mf_ug_view_ringtone_del) {
 			if (g_strcmp0(button_label, mf_ug_widget_get_text(MF_UG_LABEL_DELETE)) == 0
-			    || g_strcmp0(button_label, MF_UG_LABEL_DELETE) == 0)
+			        || g_strcmp0(button_label, MF_UG_LABEL_DELETE) == 0) {
 				elm_object_item_disabled_set(item, disable);
+			}
 		} else if (mf_ug_util_is_import_mode(ugd->ug_UiGadget.ug_iSelectMode)) {
 			if (g_strcmp0(button_label, mf_ug_widget_get_text(MF_UG_LABEL_DONE)) == 0
-			    || g_strcmp0(button_label, MF_UG_LABEL_DONE) == 0)
+			        || g_strcmp0(button_label, MF_UG_LABEL_DONE) == 0) {
 				elm_object_item_disabled_set(item, disable);
+			}
 		} else if (ugd->ug_UiGadget.ug_iSelectMode == SINGLE_ALL_MODE || ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE) {
 			if (g_strcmp0(button_label, mf_ug_widget_get_text(MF_UG_LABEL_SET)) == 0
-			    || g_strcmp0(button_label, MF_UG_LABEL_SET) == 0)
+			        || g_strcmp0(button_label, MF_UG_LABEL_SET) == 0) {
 				elm_object_item_disabled_set(item, disable);
+			}
 		} else {
 			if (g_strcmp0(button_label, mf_ug_widget_get_text(MF_UG_LABEL_DONE)) == 0
-			    || g_strcmp0(button_label, MF_UG_LABEL_DONE) == 0)
+			        || g_strcmp0(button_label, MF_UG_LABEL_DONE) == 0) {
 				elm_object_item_disabled_set(item, disable);
+			}
 		}
 		button_label = NULL;
 		item = elm_toolbar_item_next_get(item);

@@ -231,7 +231,7 @@ void mf_ug_genlist_show_select_info(void *data)
 
 			/*ug_error("ugd->ug_UiGadget.ug_iSelectMode is [%d]", ugd->ug_UiGadget.ug_iSelectMode);*/
 			if (ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE || ugd->ug_UiGadget.ug_iSelectMode == EXPORT_MODE ||
-					ugd->ug_UiGadget.ug_iSelectMode == MULTI_FILE_MODE || ugd->ug_UiGadget.ug_iSelectMode == MULTI_ALL_MODE) {
+			        ugd->ug_UiGadget.ug_iSelectMode == MULTI_FILE_MODE || ugd->ug_UiGadget.ug_iSelectMode == MULTI_ALL_MODE) {
 				elm_object_item_part_text_set(ugd->ug_MainWindow.ug_pNaviItem, "elm.text.title", mf_file_get(ugd->ug_Status.ug_pPath->str));
 			} else {
 				char *label = NULL;
@@ -303,24 +303,24 @@ static void __mf_ug_genlist_checkbox_cb(void *data, Evas_Object *obj, void *even
 		ugd->selsize = ugd->selsize - stFileInfo.st_size;
 	}
 	if (ugd->ug_Status.ug_iCheckedCount > ugd->ug_UiGadget.ug_iMaxLength) {
-			char *reach_string = mf_ug_widget_get_text(MF_UG_LABEL_REACH_MAX_SHARE_COUNT);
-			char *max_string = g_strdup_printf(reach_string, ugd->ug_UiGadget.ug_iMaxLength);
-			ug_error("max_string is [%s]", max_string);
-			/*UG_SAFE_FREE_CHAR(reach_string);*/
-			mf_ug_popup_indicator_popup(max_string);
-			UG_SAFE_FREE_CHAR(max_string);
-			if (itemData->ug_bChecked == 0) {
-				itemData->ug_bChecked = 1;
-			} else {
-				itemData->ug_bChecked = 0;
-			}
-			if (itemData->ug_bChecked) {
-				ugd->ug_Status.ug_iCheckedCount++;
-			} else {
-				ugd->ug_Status.ug_iCheckedCount--;
-			}
-			elm_check_state_set(itemData->ug_pCheckBox, itemData->ug_bChecked);
-			return;
+		char *reach_string = mf_ug_widget_get_text(MF_UG_LABEL_REACH_MAX_SHARE_COUNT);
+		char *max_string = g_strdup_printf(reach_string, ugd->ug_UiGadget.ug_iMaxLength);
+		ug_error("max_string is [%s]", max_string);
+		/*UG_SAFE_FREE_CHAR(reach_string);*/
+		mf_ug_popup_indicator_popup(max_string);
+		UG_SAFE_FREE_CHAR(max_string);
+		if (itemData->ug_bChecked == 0) {
+			itemData->ug_bChecked = 1;
+		} else {
+			itemData->ug_bChecked = 0;
+		}
+		if (itemData->ug_bChecked) {
+			ugd->ug_Status.ug_iCheckedCount++;
+		} else {
+			ugd->ug_Status.ug_iCheckedCount--;
+		}
+		elm_check_state_set(itemData->ug_pCheckBox, itemData->ug_bChecked);
+		return;
 	}
 	ugd->ug_Status.ug_iTotalCount = eina_list_count(ugd->ug_UiGadget.ug_pFilterList);
 	if (ugd->ug_Status.ug_iTotalCount == ugd->ug_Status.ug_iCheckedCount) {
@@ -487,7 +487,7 @@ static char *__mf_ug_genlist_get_gl_label(void *data, Evas_Object *obj, const ch
 			if (itemData->ug_pData->ug_UiGadget.ug_iSoundMode != mf_ug_sound_mode_none) {
 				if (g_strcmp0(MF_UG_LABEL_DEFAULT_RINGTONE, itemData->ug_pItemName->str) == 0) {
 					if (itemData->ug_pData->ug_UiGadget.domain && 0 == g_strcmp0(itemData->ug_pData->ug_UiGadget.domain, MESSAGE)
-						&& itemData->ug_pData->ug_Status.ug_launch_path && 0 == g_strcmp0(itemData->ug_pData->ug_Status.ug_launch_path, UG_SETTING_MSG_ALERTS_PATH)) {/*just for message-> more -> Notificaion sound*/
+					        && itemData->ug_pData->ug_Status.ug_launch_path && 0 == g_strcmp0(itemData->ug_pData->ug_Status.ug_launch_path, UG_SETTING_MSG_ALERTS_PATH)) {/*just for message-> more -> Notificaion sound*/
 						return g_strdup(mf_ug_widget_get_text(MF_UG_LABEL_DEFAULT_NOTIFICATION_SOUND));
 					} else {
 						return g_strdup(mf_ug_widget_get_text(itemData->ug_pItemName->str));
@@ -518,14 +518,15 @@ static char *__mf_ug_genlist_get_gl_label(void *data, Evas_Object *obj, const ch
 						char *newFileName = g_strdup(filename);
 						char *newFileName1 = newFileName;
 						for (; *newFileName1 != '\0'; newFileName1++) {
-							if (*newFileName1 == '_')
+							if (*newFileName1 == '_') {
 								*newFileName1 = ' ';
-						   }
+							}
+						}
 						char *file_strip_ext = mf_strip_ext(newFileName);
 						if (itemData->ug_bDefaultItem == true && file_strip_ext != NULL && g_str_has_prefix(file_strip_ext, "Alarm ")) {/*Fixed the plm bug(P140620-05330 ).*/
 							int len = strlen(file_strip_ext);
 							char *file_strip_ext1 = (char *)calloc(1, len);
-							
+
 							if (file_strip_ext1 != NULL) {
 								strncpy(file_strip_ext1, &file_strip_ext[6], len);
 								g_free(file_strip_ext);
@@ -765,10 +766,10 @@ static Evas_Object *__mf_ug_genlist_add_radio_box(void *data, Evas_Object *paren
 
 	evas_object_propagate_events_set(radio_box, 0);
 	itemData->ug_pRadioBox = radio_box;
-/*	evas_object_smart_callback_add(radio_box, "changed", __mf_ug_genlist_radio_box_cb, itemData);*/
+	/*	evas_object_smart_callback_add(radio_box, "changed", __mf_ug_genlist_radio_box_cb, itemData);*/
 	elm_object_signal_callback_add(radio_box, "elm,action,radio,toggle", "",
-			_myfile_popup_change_category_radio_toggle_cb,
-						       itemData);
+	                               _myfile_popup_change_category_radio_toggle_cb,
+	                               itemData);
 
 	UG_TRACE_END;
 	return radio_box;
@@ -936,7 +937,7 @@ static Evas_Object *__mf_ug_genlist_delete_get_gl_icon(void *data, Evas_Object *
 	if (!strcmp(part, "elm.icon.2")) {
 		Evas_Object *content = elm_layout_add(obj);
 		elm_layout_theme_set(content, "layout",
-				     "list/C/type.2", "default");
+		                     "list/C/type.2", "default");
 
 		selected_box = __mf_ug_genlist_add_checkbox(listItemData, obj);
 		evas_object_propagate_events_set(selected_box, EINA_FALSE);
@@ -965,7 +966,7 @@ static Evas_Object *__mf_ug_genlist_get_gl_icon(void *data, Evas_Object *obj, co
 		__mf_ug_genlist_get_thumbnail(listItemData);
 		layout = elm_layout_add(obj);
 		elm_layout_theme_set(layout, "layout",
-				     "list/B/type.2", "default");
+		                     "list/B/type.2", "default");
 		thumb = __mf_ug_genlist_create_thumbnail(listItemData, obj);
 		UG_TRACE_END;
 		elm_layout_content_set(layout, "elm.swallow.content", thumb);
@@ -996,13 +997,13 @@ static Evas_Object *__mf_ug_genlist_get_gl_icon(void *data, Evas_Object *obj, co
 		evas_object_propagate_events_set(selected_box, EINA_FALSE);
 		layout = elm_layout_add(obj);
 		elm_layout_theme_set(layout, "layout",
-				     "list/C/type.2", "default");
+		                     "list/C/type.2", "default");
 		elm_layout_content_set(layout, "elm.swallow.content", selected_box);
 		return layout;
-	/* } else if (!strcmp(part, "elm.icon.2")) { */
-	/* 	__mf_ug_genlist_get_thumbnail(listItemData); */
-	/* 	thumb = __mf_ug_genlist_create_thumbnail(listItemData, obj); */
-	/* 	return thumb; */
+		/* } else if (!strcmp(part, "elm.icon.2")) { */
+		/* 	__mf_ug_genlist_get_thumbnail(listItemData); */
+		/* 	thumb = __mf_ug_genlist_create_thumbnail(listItemData, obj); */
+		/* 	return thumb; */
 	} else if (!strcmp(part, "elm.icon.right")) {
 		/*Evas_Object *play_btn = __mf_ug_genlist_play_icon_create(listItemData, obj);
 		return play_btn;*/
@@ -1043,7 +1044,7 @@ static Evas_Object *__mf_ug_genlist_ringtone_get_gl_icon(void *data, Evas_Object
 		evas_object_propagate_events_set(selected_box, EINA_FALSE);
 		Evas_Object *layout = elm_layout_add(obj);
 		elm_layout_theme_set(layout, "layout",
-				     "list/C/type.2", "default");
+		                     "list/C/type.2", "default");
 		elm_layout_content_set(layout, "elm.swallow.content", selected_box);
 		return layout;
 	} else if (!strcmp(part, "elm.icon.right")) {
@@ -1336,7 +1337,7 @@ void mf_ug_genlist_sel(void *data)
 				} else {
 					ugd->ug_Status.ug_bSelectAllChecked = EINA_FALSE;
 				}
-				if(ugd->ug_Status.ug_bSelectAllChecked) {
+				if (ugd->ug_Status.ug_bSelectAllChecked) {
 					elm_check_state_set(ugd->ug_MainWindow.ug_pSelectAllCheckBox, 1);
 				} else {
 					elm_check_state_set(ugd->ug_MainWindow.ug_pSelectAllCheckBox, 0);
@@ -1378,10 +1379,10 @@ void mf_ug_genlist_selected_gl(void *data, Evas_Object *obj, void *event_info)
 
 	Elm_Object_Item *item = (Elm_Object_Item *) event_info;
 	if (item != NULL) {
-	{
-		ug_error();
-		mf_ug_genlist_sel(item);
-	}
+		{
+			ug_error();
+			mf_ug_genlist_sel(item);
+		}
 	}
 	UG_TRACE_END;
 }
@@ -1526,14 +1527,14 @@ Evas_Object *__mf_ug_genlist_create_gl(void *data)
 	ugd->ug_Status.ug_1text2icon_itc.func.state_get = __mf_ug_genlist_get_gl_state;
 	ugd->ug_Status.ug_1text2icon_itc.func.del = __mf_ug_genlist_del_gl;
 	if (ugd->ug_UiGadget.ug_iSelectMode == MULTI_FILE_MODE ||
-	    ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE ||
-	    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE ||
-	    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE ||
-	    ugd->ug_UiGadget.ug_iSelectMode == EXPORT_MODE ||
-	    ugd->ug_UiGadget.ug_iSelectMode == SAVE_MODE ||
-	    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE ||
-	    ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE
-	    ) {
+	        ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE ||
+	        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE ||
+	        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE ||
+	        ugd->ug_UiGadget.ug_iSelectMode == EXPORT_MODE ||
+	        ugd->ug_UiGadget.ug_iSelectMode == SAVE_MODE ||
+	        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE ||
+	        ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE
+	   ) {
 		ugd->ug_Status.ug_1text1icon_itc.item_style = "1line";
 		ugd->ug_Status.ug_1text1icon_itc.func.text_get = __mf_ug_genlist_get_gl_label;
 		ugd->ug_Status.ug_1text1icon_itc.func.content_get = __mf_ug_genlist_get_gl_icon;
@@ -1612,9 +1613,9 @@ static void __mf_ug_genlist_init_item_data(void *data, ugListItemData **itemData
 **
 ******************************/
 Elm_Object_Item *mf_ug_genlist_default_ringtone_item_append(Evas_Object *parent,
-				      void *data,
-				      int groudValue,
-				      Elm_Genlist_Item_Class *itc)
+        void *data,
+        int groudValue,
+        Elm_Genlist_Item_Class *itc)
 {
 	ug_mf_retvm_if(parent == NULL, NULL, "pGenlist is NULL");
 	ug_mf_retvm_if(data == NULL, NULL, "data is NULL");
@@ -1658,9 +1659,9 @@ Elm_Object_Item *mf_ug_genlist_default_ringtone_item_append(Evas_Object *parent,
 }
 
 Elm_Object_Item *mf_ug_genlist_silent_item_append(Evas_Object *parent,
-				      void *data,
-				      int groudValue,
-				      Elm_Genlist_Item_Class *itc)
+        void *data,
+        int groudValue,
+        Elm_Genlist_Item_Class *itc)
 {
 	ug_mf_retvm_if(parent == NULL, NULL, "pGenlist is NULL");
 	ug_mf_retvm_if(data == NULL, NULL, "data is NULL");
@@ -1703,10 +1704,10 @@ Elm_Object_Item *mf_ug_genlist_silent_item_append(Evas_Object *parent,
 }
 
 Elm_Object_Item *mf_ug_genlist_item_append(Evas_Object *parent,
-				      char *real_name,
-				      void *data,
-				      int groudValue,
-				      Elm_Genlist_Item_Class *itc)
+        char *real_name,
+        void *data,
+        int groudValue,
+        Elm_Genlist_Item_Class *itc)
 {
 	ug_mf_retvm_if(parent == NULL, NULL, "pGenlist is NULL");
 	ug_mf_retvm_if(real_name == NULL, NULL, "real_name is NULL");
@@ -1753,10 +1754,10 @@ Elm_Object_Item *mf_ug_genlist_item_append(Evas_Object *parent,
 }
 
 Elm_Object_Item *mf_ug_genlist_item_prepend(Evas_Object *parent,
-				      char *real_name,
-				      void *data,
-				      int groudValue,
-				      Elm_Genlist_Item_Class *itc)
+        char *real_name,
+        void *data,
+        int groudValue,
+        Elm_Genlist_Item_Class *itc)
 {
 	ug_mf_retvm_if(parent == NULL, NULL, "pGenlist is NULL");
 	ug_mf_retvm_if(real_name == NULL, NULL, "real_name is NULL");
@@ -1793,11 +1794,11 @@ Elm_Object_Item *mf_ug_genlist_item_prepend(Evas_Object *parent,
 }
 
 Elm_Object_Item *mf_ug_genlist_item_insert(Evas_Object *parent,
-				      char *real_name,
-				      void *data,
-				      int groudValue,
-				      Elm_Genlist_Item_Class *itc,
-				      Elm_Object_Item *after_item)
+        char *real_name,
+        void *data,
+        int groudValue,
+        Elm_Genlist_Item_Class *itc,
+        Elm_Object_Item *after_item)
 {
 	ug_mf_retvm_if(parent == NULL, NULL, "pGenlist is NULL");
 	ug_mf_retvm_if(real_name == NULL, NULL, "real_name is NULL");
@@ -1898,14 +1899,14 @@ int mf_ug_genlist_ringtone_delete_items_add(void *data, int value)
 		Eina_List *l = NULL;
 		char *filename = NULL;
 		EINA_LIST_FOREACH(ringtone_list, l, filename) {
-				if (filename) {
-					/*P131205-01044 by wangyan , if setted ringtone in db , do not add it in delete genlist to avoid to be deleted*/
-					if (g_strcmp0(filename, ugd->ug_Status.mark_mode) != 0) {
-						mf_ug_genlist_item_append(ugd->ug_MainWindow.ug_pNaviGenlist, filename, ugd, groupValue, &ugd->ug_Status.ug_1text2icon4_itc);
-						groupValue++;
-					}
+			if (filename) {
+				/*P131205-01044 by wangyan , if setted ringtone in db , do not add it in delete genlist to avoid to be deleted*/
+				if (g_strcmp0(filename, ugd->ug_Status.mark_mode) != 0) {
+					mf_ug_genlist_item_append(ugd->ug_MainWindow.ug_pNaviGenlist, filename, ugd, groupValue, &ugd->ug_Status.ug_1text2icon4_itc);
+					groupValue++;
 				}
 			}
+		}
 	}
 	return groupValue;
 }
@@ -1948,8 +1949,8 @@ void mf_ug_genlist_first_item_append(void *data, char *fullpath)
 	int value = mf_ug_radio_max_get();
 	Elm_Object_Item *it = NULL;
 
-	it = mf_ug_genlist_item_prepend(genlist, fullpath, ugd, value+1, &ugd->ug_Status.ug_1text2icon4_itc);
-	mf_ug_radio_max_set(value+1);
+	it = mf_ug_genlist_item_prepend(genlist, fullpath, ugd, value + 1, &ugd->ug_Status.ug_1text2icon4_itc);
+	mf_ug_radio_max_set(value + 1);
 
 	elm_genlist_item_bring_in(it, ELM_GENLIST_ITEM_SCROLLTO_TOP);
 	UG_TRACE_END;
@@ -1965,8 +1966,8 @@ void mf_ug_genlist_first_item_insert(void *data, char *fullpath, Elm_Object_Item
 	int value = mf_ug_radio_max_get();
 	Elm_Object_Item *it = NULL;
 
-	it = mf_ug_genlist_item_insert(genlist, fullpath, ugd, value+1, &ugd->ug_Status.ug_1text2icon4_itc, insert_afer);
-	mf_ug_radio_max_set(value+1);
+	it = mf_ug_genlist_item_insert(genlist, fullpath, ugd, value + 1, &ugd->ug_Status.ug_1text2icon4_itc, insert_afer);
+	mf_ug_radio_max_set(value + 1);
 
 	elm_genlist_item_bring_in(it, ELM_GENLIST_ITEM_SCROLLTO_TOP);
 	UG_TRACE_END;
@@ -2081,13 +2082,13 @@ Evas_Object *mf_ug_genlist_create_content_list_view(void *data)
 
 
 		if (ugd->ug_UiGadget.ug_iSelectMode == MULTI_FILE_MODE ||
-		    ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE ||
-		    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE ||
-		    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE ||
-		    ugd->ug_UiGadget.ug_iSelectMode == EXPORT_MODE ||
-		    ugd->ug_UiGadget.ug_iSelectMode == SAVE_MODE ||
-		    ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE ||
-		    ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE) {
+		        ugd->ug_UiGadget.ug_iSelectMode == SINGLE_FILE_MODE ||
+		        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE ||
+		        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_MODE ||
+		        ugd->ug_UiGadget.ug_iSelectMode == EXPORT_MODE ||
+		        ugd->ug_UiGadget.ug_iSelectMode == SAVE_MODE ||
+		        ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE ||
+		        ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE) {
 			mf_ug_genlist_item_append(genlist, real_name, ugd, 0, &ugd->ug_Status.ug_1text1icon_itc);
 		} else {
 			mf_ug_genlist_item_append(genlist, real_name, ugd, groupValue, &ugd->ug_Status.ug_1text3icon_itc);
@@ -2133,10 +2134,11 @@ Evas_Object *mf_ug_genlist_create_content_list_view(void *data)
 
 static char *__get_title_gl_text(void *data, Evas_Object *obj, const char *part)
 {
-	if (data)
+	if (data) {
 		return g_strdup((char *)data);
-	else
+	} else {
 		return NULL;
+	}
 }
 static void __del_title_gl(void *data, Evas_Object * obj)
 {

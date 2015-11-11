@@ -52,7 +52,7 @@ int mf_ug_media_disconnect(MFDHandle *handle)
 /*1 Shortcut*/
 
 int mf_ug_media_add_shortcut(MFDHandle *mfd_handle, const char *shortcut_path,
-		const char *shortcut_name, int storage_type)
+                             const char *shortcut_name, int storage_type)
 {
 	int ret = MFD_ERROR_NONE;
 
@@ -120,7 +120,7 @@ int mf_ug_media_foreach_shortcut_list(MFDHandle *mfd_handle, mf_shortcut_item_cb
 	ret = mf_ug_foreach_shortcut_list(mfd_handle, callback, user_data);
 	if (ret != MFD_ERROR_NONE && ret != MFD_ERROR_DB_NO_RECORD) {
 		ug_debug
-			("foreach content list fail");
+		("foreach content list fail");
 		return ret;
 	}
 
@@ -139,7 +139,7 @@ int mf_ug_media_get_short_count(MFDHandle *mfd_handle, int *count)
 	ret = mf_ug_get_short_count(mfd_handle, count);
 	if (ret != MFD_ERROR_NONE && ret != MFD_ERROR_DB_NO_RECORD) {
 		ug_debug
-			("foreach content list fail");
+		("foreach content list fail");
 		return ret;
 	}
 
@@ -231,7 +231,7 @@ int mf_ug_media_update_recent_files_thumbnail(MFDHandle *mfd_handle, const char 
 	ret = mf_ug_update_recent_files_thumbnail(mfd_handle, thumbnail, new_thumbnail);
 	if (ret != MFD_ERROR_NONE) {
 		ug_debug
-			("update device icon failed");
+		("update device icon failed");
 		return ret;
 	}
 
@@ -272,7 +272,7 @@ int mf_ug_media_get_recent_files_count(MFDHandle *mfd_handle, int *count)
 	ret = mf_ug_get_recent_files_count(mfd_handle, count);
 	if (ret != MFD_ERROR_NONE && ret != MFD_ERROR_DB_NO_RECORD) {
 		ug_debug
-			("foreach content list fail");
+		("foreach content list fail");
 		return ret;
 	}
 
@@ -305,7 +305,7 @@ int mf_ug_destroy_recent_files_item(MFRitem *ritem)
 
 /*1 Ringtone*/
 int mf_ug_media_add_ringtone(MFDHandle *mfd_handle, const char *ringtone_path,
-		const char *ringtone_name, int storage_type)
+                             const char *ringtone_name, int storage_type)
 {
 	int ret = MFD_ERROR_NONE;
 
@@ -373,7 +373,7 @@ int mf_ug_media_foreach_ringtone_list(MFDHandle *mfd_handle, mf_ringtone_item_cb
 	ret = mf_ug_foreach_ringtone_list(mfd_handle, callback, user_data);
 	if (ret != MFD_ERROR_NONE && ret != MFD_ERROR_DB_NO_RECORD) {
 		ug_debug
-			("foreach content list fail");
+		("foreach content list fail");
 		return ret;
 	}
 
@@ -392,7 +392,7 @@ int mf_ug_media_get_ringtone_count(MFDHandle *mfd_handle, int *count)
 	ret = mf_ug_get_ringtone_count(mfd_handle, count);
 	if (ret != MFD_ERROR_NONE && ret != MFD_ERROR_DB_NO_RECORD) {
 		ug_debug
-			("foreach content list fail");
+		("foreach content list fail");
 		return ret;
 	}
 
@@ -419,7 +419,7 @@ int mf_ug_destroy_ringtone_item(mfRingtone *ritem)
 
 /*1 Alert*/
 int mf_ug_media_add_alert(MFDHandle *mfd_handle, const char *alert_path,
-		const char *alert_name, int storage_type)
+                          const char *alert_name, int storage_type)
 {
 	int ret = MFD_ERROR_NONE;
 
@@ -487,7 +487,7 @@ int mf_ug_media_foreach_alert_list(MFDHandle *mfd_handle, mf_ringtone_item_cb ca
 	ret = mf_ug_foreach_alert_list(mfd_handle, callback, user_data);
 	if (ret != MFD_ERROR_NONE && ret != MFD_ERROR_DB_NO_RECORD) {
 		ug_debug
-			("foreach content list fail");
+		("foreach content list fail");
 		return ret;
 	}
 
@@ -506,7 +506,7 @@ int mf_ug_media_get_alert_count(MFDHandle *mfd_handle, int *count)
 	ret = mf_ug_get_alert_count(mfd_handle, count);
 	if (ret != MFD_ERROR_NONE && ret != MFD_ERROR_DB_NO_RECORD) {
 		ug_debug
-			("foreach content list fail");
+		("foreach content list fail");
 		return ret;
 	}
 

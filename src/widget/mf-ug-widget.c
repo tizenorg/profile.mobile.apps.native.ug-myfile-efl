@@ -42,23 +42,26 @@ char *mf_ug_widget_get_text(const char *ID)
 	 * if got text from sys failed, try to
 	 * get it from UGPACKAGE.
 	 */
-	if (strncmp(ID, str, strlen(ID)) == 0)
+	if (strncmp(ID, str, strlen(ID)) == 0) {
 		str = dgettext(UGPACKAGE, ID);
-	else
+	} else {
 		goto END;
+	}
 
 	/** Fix P140710-04855
 	 * if got text from package failed, try to
 	 * get it from myfile.
 	 */
-	if (strncmp(ID, str, strlen(ID)) == 0)
+	if (strncmp(ID, str, strlen(ID)) == 0) {
 		str = dgettext("myfile", ID);
-	else
+	} else {
 		goto END;
+	}
 
 	/** at worst case, try gettext() */
-	if (strncmp(ID, str, strlen(ID)) == 0)
+	if (strncmp(ID, str, strlen(ID)) == 0) {
 		str = gettext(ID);
+	}
 END:
 	return str;
 }
@@ -70,10 +73,11 @@ void mf_ug_widget_object_text_set(Evas_Object *obj, const char *ID, const char* 
 
 	const char *domain;
 
-	if (strstr(ID, "IDS_COM"))
+	if (strstr(ID, "IDS_COM")) {
 		domain = PKGNAME_SYSTEM;
-	else
-		domain = UGPACKAGE;/*PKGNAME_MYFILE;*/
+	} else {
+		domain = UGPACKAGE;    /*PKGNAME_MYFILE;*/
+	}
 
 	elm_object_domain_translatable_part_text_set(obj, part, domain, ID);
 }
@@ -85,10 +89,11 @@ void mf_ug_widget_object_item_text_set(Elm_Object_Item *item, const char *ID, co
 	ug_mf_retm_if(item == NULL, "item is NULL");
 	const char *domain;
 
-	if (strstr(ID, "IDS_COM"))
+	if (strstr(ID, "IDS_COM")) {
 		domain = PKGNAME_SYSTEM;
-	else
-		domain = UGPACKAGE;/*PKGNAME_MYFILE;*/
+	} else {
+		domain = UGPACKAGE;    /*PKGNAME_MYFILE;*/
+	}
 	elm_object_item_domain_translatable_part_text_set(item, part, domain, ID);
 }
 
@@ -98,10 +103,11 @@ void mf_ug_widget_object_item_translate_set(Elm_Object_Item *item, const char *I
 	ug_mf_retm_if(item == NULL, "item is NULL");
 	const char *domain;
 
-	if (strstr(ID, "IDS_COM"))
+	if (strstr(ID, "IDS_COM")) {
 		domain = PKGNAME_SYSTEM;
-	else
+	} else {
 		domain = UGPACKAGE;
+	}
 
 	SECURE_DEBUG(">>>>>>>>>>>>>>> ID is [%s] domain is [%s]", ID, domain);
 	//elm_object_item_domain_text_translatable_set(item, domain, EINA_TRUE);
@@ -111,8 +117,9 @@ void mf_ug_widget_object_item_translate_set(Elm_Object_Item *item, const char *I
 Evas_Object *mf_ug_widget_create_progressbar(Evas_Object *parent, char *style)
 {
 	UG_TRACE_BEGIN;
-	if (!parent)
+	if (!parent) {
 		return NULL;
+	}
 
 	Evas_Object *progressbar = elm_progressbar_add(parent);
 	if (style) {
@@ -127,14 +134,15 @@ Evas_Object *mf_ug_widget_create_progressbar(Evas_Object *parent, char *style)
 }
 
 Evas_Object *mf_ug_widget_create_button(Evas_Object *parent, const char *style,
-				  const char *caption, Evas_Object *icon,
-				  void (*func) (void *, Evas_Object *, void *),
-				  void *data,
-				  Eina_Bool flag_propagate)
+                                        const char *caption, Evas_Object *icon,
+                                        void (*func)(void *, Evas_Object *, void *),
+                                        void *data,
+                                        Eina_Bool flag_propagate)
 {
 	UG_TRACE_BEGIN;
-	if (!parent)
+	if (!parent) {
 		return NULL;
+	}
 
 	Evas_Object *btn;
 
@@ -148,8 +156,9 @@ Evas_Object *mf_ug_widget_create_button(Evas_Object *parent, const char *style,
 		elm_access_info_set(btn, ELM_ACCESS_INFO, mf_ug_widget_get_text(caption));
 	}
 
-	if (icon)
+	if (icon) {
 		elm_object_content_set(btn, icon);
+	}
 
 	evas_object_propagate_events_set(btn, flag_propagate);
 
@@ -172,10 +181,10 @@ Evas_Object *mf_ug_widget_toolbar_create(Evas_Object *parent)
 }
 
 Elm_Object_Item *mf_ug_widget_item_tabbar_item_append(Evas_Object *obj,
-								const char *icon,
-								const char *label,
-								Evas_Smart_Cb func,
-								const void *data)
+        const char *icon,
+        const char *label,
+        Evas_Smart_Cb func,
+        const void *data)
 {
 	Elm_Object_Item *item = elm_toolbar_item_append(obj, icon, label, func, data);
 
@@ -202,8 +211,9 @@ Evas_Object *mf_ug_tabbar_path_widget_create(Evas_Object *parent)
 	obj = elm_toolbar_add(parent);
 	elm_toolbar_homogeneous_set(obj, EINA_FALSE);
 	elm_toolbar_align_set(obj, 0.0);
-	if (obj == NULL)
+	if (obj == NULL) {
 		return NULL;
+	}
 	elm_object_style_set(obj, "navigationbar");
 	elm_toolbar_shrink_mode_set(obj, ELM_TOOLBAR_SHRINK_SCROLL);
 	elm_toolbar_transverse_expanded_set(obj, EINA_TRUE);
@@ -213,10 +223,10 @@ Evas_Object *mf_ug_tabbar_path_widget_create(Evas_Object *parent)
 }
 
 Elm_Object_Item *mf_ug_tabbar_item_append(Evas_Object *obj,
-								const char *icon,
-								const char *label,
-								Evas_Smart_Cb func,
-								const void *data)
+        const char *icon,
+        const char *label,
+        Evas_Smart_Cb func,
+        const void *data)
 {
 	Elm_Object_Item *item = elm_toolbar_item_append(obj, icon, label, func, data);
 
@@ -301,7 +311,7 @@ Evas_Object *mf_ug_tabbar_create_path_tab(Evas_Object *parent, char *info)
 
 
 void mf_ug_object_create_select_all_layout(Evas_Object *pParent, Evas_Smart_Cb pChangeFunc,
-	Evas_Object_Event_Cb pMouseDownFunc, void *pUserData, Evas_Object **pCheckBox, Evas_Object **pSelectLayout)
+        Evas_Object_Event_Cb pMouseDownFunc, void *pUserData, Evas_Object **pCheckBox, Evas_Object **pSelectLayout)
 {
 	Evas_Object *pSelectAllLayout = elm_layout_add(pParent);
 	elm_layout_file_set(pSelectAllLayout, UG_EDJ_NAVIGATIONBAR, "select.all.layout");

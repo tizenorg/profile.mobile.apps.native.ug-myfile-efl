@@ -215,20 +215,20 @@ bool mf_ug_fm_svc_wapper_is_default_ringtone(void *data, char* selected_file)
 	ug_mf_retvm_if(selected_file == NULL, false, "selected_file is NULL");
 	ug_mf_retvm_if(ugd->ug_UiGadget.ug_pFilterList == NULL, false, "ugd->ug_UiGadget.ug_pFilterList is NULL");
 	EINA_LIST_FOREACH(ugd->ug_UiGadget.ug_pFilterList, l, pNode) {
-			if (pNode) {
-				if (pNode->path && pNode->name) {
-					real_name = g_strconcat(pNode->path, "/", pNode->name, NULL);
-				}
-			} else {
-				continue;
+		if (pNode) {
+			if (pNode->path && pNode->name) {
+				real_name = g_strconcat(pNode->path, "/", pNode->name, NULL);
 			}
-			if (real_name != NULL && strcmp(selected_file, real_name) == 0) {
-				SECURE_DEBUG("real_name=%s", real_name);
-				UG_SAFE_FREE_CHAR(real_name);
-				return true;
-			}
-			UG_SAFE_FREE_CHAR(real_name);
+		} else {
+			continue;
 		}
+		if (real_name != NULL && strcmp(selected_file, real_name) == 0) {
+			SECURE_DEBUG("real_name=%s", real_name);
+			UG_SAFE_FREE_CHAR(real_name);
+			return true;
+		}
+		UG_SAFE_FREE_CHAR(real_name);
+	}
 
 	return false;
 }
@@ -295,8 +295,9 @@ char *mf_ug_fm_svc_wapper_get_root_path_by_tab_label(const char *label)
 		return g_strdup(PHONE_FOLDER);
 	} else if (g_strcmp0(label, MF_UG_LABEL_MMC) == 0) {
 		return g_strdup(MEMORY_FOLDER);
-	} else
+	} else {
 		return NULL;
+	}
 }
 
 /******************************
@@ -353,7 +354,7 @@ char *mf_ug_fm_svc_path_info_retrench(const char *string)
 	ug_mf_retvm_if(string == NULL, g_strdup(MF_UG_PATH_INFO_TRANS_OMIT), "input path is NULL");
 	char *retrench = NULL;
 	char *utf8_string = elm_entry_utf8_to_markup(string);
-	if (utf8_string && strlen (string) > MF_UG_PATH_INFO_LEN_THRESHOLD) {
+	if (utf8_string && strlen(string) > MF_UG_PATH_INFO_LEN_THRESHOLD) {
 		if (g_utf8_strlen(utf8_string, -1) > 2) {
 			retrench = calloc(1, MF_UG_PATH_INFO_RETRENCH);
 			if (retrench) {
@@ -436,17 +437,17 @@ char *mf_ug_fm_svc_path_info_translate(char *path_info, int path_info_max_len)
 	} else {
 		top = count;
 		flag = TRUE;
-		max_len = path_info_max_len - (count-1);
+		max_len = path_info_max_len - (count - 1);
 	}
 
 	for (i = top; i > 1; i--) {
 		ug_pNode *nodeB = calloc(sizeof(ug_pNode), 1);
-	
+
 		if (nodeB != NULL) {
-			nodeB->original = elm_entry_utf8_to_markup(params[count-i]);
+			nodeB->original = elm_entry_utf8_to_markup(params[count - i]);
 			nodeB->len_orig = strlen(params[count - i]);
-			nodeB->transfer = mf_ug_fm_svc_path_info_retrench(params[count-i]);
-			
+			nodeB->transfer = mf_ug_fm_svc_path_info_retrench(params[count - i]);
+
 			if (nodeB->transfer != NULL) {
 				nodeB->len_trans = strlen(nodeB->transfer);
 			}
@@ -466,15 +467,16 @@ char *mf_ug_fm_svc_path_info_translate(char *path_info, int path_info_max_len)
 		if (total_len > max_len) {
 			ug_pNode *data = NULL;
 			data = eina_list_nth(temp_list, i);
-			
+
 			if (data != NULL) {
 				total_len -= (data->len_orig - data->len_trans);
 				data->flag_trans = TRUE;
 			}
 		}
 
-		if (total_len <= max_len)
+		if (total_len <= max_len) {
 			break;
+		}
 	}
 
 
@@ -483,20 +485,21 @@ char *mf_ug_fm_svc_path_info_translate(char *path_info, int path_info_max_len)
 	}
 	char *temp = NULL;
 	char *sep = MF_UG_PATH_INFO_SEP;
-	EINA_LIST_FOREACH(temp_list, l, pnode)
-	{
+	EINA_LIST_FOREACH(temp_list, l, pnode) {
 		ug_pNode *node = (ug_pNode *)pnode;
 		temp = output;
 		if (node->flag_trans == TRUE) {
-			if (output != NULL)
+			if (output != NULL) {
 				output = g_strconcat(output, sep, node->transfer, NULL);
-			else
+			} else {
 				output = g_strdup(node->transfer);
+			}
 		} else {
-			if (output != NULL)
+			if (output != NULL) {
 				output = g_strconcat(output, sep , node->original, NULL);
-			else
+			} else {
 				output = g_strdup(node->original);
+			}
 		}
 		UG_SAFE_FREE_CHAR(temp);
 	}
@@ -551,11 +554,11 @@ char *mf_ug_fm_svc_wrapper_translate_path(char *original_path)
 	int root_len = 0;
 
 	if (mf_ug_fm_svc_wapper_get_location(original_path) == MF_UG_PHONE) {
-			root_len = strlen(PHONE_FOLDER);
-			new_path = g_strconcat(mf_ug_widget_get_text(MF_UG_LABEL_PHONE), original_path + root_len, "/", NULL);
+		root_len = strlen(PHONE_FOLDER);
+		new_path = g_strconcat(mf_ug_widget_get_text(MF_UG_LABEL_PHONE), original_path + root_len, "/", NULL);
 	} else if (mf_ug_fm_svc_wapper_get_location(original_path) == MF_UG_MMC) {
-			root_len = strlen(MEMORY_FOLDER);
-			new_path = g_strconcat(mf_ug_widget_get_text(MF_UG_LABEL_MMC), original_path + root_len, "/", NULL);
+		root_len = strlen(MEMORY_FOLDER);
+		new_path = g_strconcat(mf_ug_widget_get_text(MF_UG_LABEL_MMC), original_path + root_len, "/", NULL);
 	} else {
 		new_path = g_strdup(original_path);
 	}
@@ -750,7 +753,7 @@ static int __mf_ug_fm_svc_wrapper_get_next_number(char *file_name_without_ext, i
 }
 
 static int __mf_ug_fm_svc_wrapper_get_unique_name(const char *default_dir_full_path, char *original_file_name, char **unique_file_name,
-					 int file_name_type, void *data)
+        int file_name_type, void *data)
 {
 	/*mf_debug("%s %d\n", __func__, __LINE__);*/
 	ug_mf_retvm_if(unique_file_name == NULL, MYFILE_ERR_SRC_ARG_INVALID, "unique_file_name is NULL");
@@ -814,19 +817,21 @@ static int __mf_ug_fm_svc_wrapper_get_unique_name(const char *default_dir_full_p
 		}
 
 		if (bExt == 0) {
-			if (file_name_type == FILE_NAME_WITH_BRACKETS)
+			if (file_name_type == FILE_NAME_WITH_BRACKETS) {
 				new_file_name = g_strdup_printf("%s(%d).%s", file_name_without_ext, nCount, file_ext);
-			else
-				new_file_name = g_strdup_printf("%s_%d.%s", file_name_without_ext, nCount, file_ext);
 			} else {
+				new_file_name = g_strdup_printf("%s_%d.%s", file_name_without_ext, nCount, file_ext);
+			}
+		} else {
 
-			if (file_name_type == FILE_NAME_WITH_BRACKETS)
+			if (file_name_type == FILE_NAME_WITH_BRACKETS) {
 				new_file_name = g_strdup_printf("%s(%d)", file_name_without_ext, nCount);
-			else
+			} else {
 				new_file_name = g_strdup_printf("%s_%d", file_name_without_ext, nCount);
+			}
 		}
-				/*mf_debug("new_file_name [%s]", new_file_name);
-				mf_debug("original_file_name [%s]", new_file_name);*/
+		/*mf_debug("new_file_name [%s]", new_file_name);
+		mf_debug("original_file_name [%s]", new_file_name);*/
 		UG_SAFE_FREE_CHAR(file_name_without_ext);
 
 		SECURE_DEBUG("new name is %s\n", new_file_name);
@@ -955,7 +960,7 @@ Eina_List *mf_ug_fm_svc_wrapper_level_path_get(const char *original_path)
 		default:
 			return NULL;
 		}
-		current_path = current_path+strlen(root_path)+1;
+		current_path = current_path + strlen(root_path) + 1;
 		path_list = eina_list_append(path_list, g_strdup(root_path));
 		gchar **result = NULL;
 		gchar **params = NULL;

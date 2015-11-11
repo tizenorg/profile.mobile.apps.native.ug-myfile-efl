@@ -178,7 +178,7 @@ static void __mf_ug_music_recommendation_ringtone_set(void *data, char *path, ch
 
 	ug_error(" file is [%s] time is [%s]", path, time);
 	char *result = NULL;
-	
+
 	app_control_h service = NULL;
 	result = g_strdup(path); /*mf_ug_util_get_send_result(ugd);*/
 
@@ -203,7 +203,7 @@ static void __mf_ug_music_recommendation_ringtone_set(void *data, char *path, ch
 		int ret = 0;
 		ret = app_control_create(&service);
 		if (ret == APP_CONTROL_ERROR_NONE) {
-	
+
 			int count = 0;
 			char **array = mf_ug_util_get_send_result_array(ugd, &count);
 			int i = 0;
@@ -267,7 +267,7 @@ void mf_ug_music_select(void *data)
 	ugData *ugd = (ugData *)data;
 	ui_gadget_h ug = NULL;
 	struct ug_cbs cbs = { 0, };
-	
+
 	app_control_h app_control;
 	int ret = 0;
 	ret = app_control_create(&app_control);
@@ -286,11 +286,13 @@ void mf_ug_music_select(void *data)
 	UG_INIT_EFL(ug_get_window(), UG_OPT_INDICATOR_ENABLE);
 
 	ug = ug_create(NULL, "music-player-efl", UG_MODE_FULLVIEW, app_control, &cbs);
-	if (ug != NULL)
+	if (ug != NULL) {
 		music_ug = ug;
+	}
 LAUNCH_END:
-	if (app_control)
+	if (app_control) {
 		app_control_destroy(app_control);
+	}
 
 	UG_TRACE_END;
 }
