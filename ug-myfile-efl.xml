@@ -110,14 +110,14 @@
 		<label xml:lang="en-ph">My Files</label>
 		<label xml:lang="fr-ca">Mes fichiers</label>
 		<label xml:lang="es-mx">Mis Archivos</label>
-	<application-service>
+	<app-control>
 		<operation name="http://tizen.org/appcontrol/operation/pick"/>
-	</application-service>
-	<application-service>
+	</app-control>
+	<app-control>
 		<operation name="http://tizen.org/appcontrol/operation/pick"/>
 		<mime name="image/*"/>
 		<mime name="video/*"/>
-	</application-service>
+	</app-control>
 
 	</ui-application>
 </manifest>
