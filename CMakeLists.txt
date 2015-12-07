@@ -20,7 +20,7 @@ SET(UG-FS-DIR ${UG-UTILITY-DIR}/file-system)
 SET(UG-WIDGET-DIR ${UG-SRC-DIR}/widget)
 SET(UG-MEDIADB-DIR ${UG-SRC-DIR}/media-db)
 
-SET(PREFIX "/usr/ug")
+SET(PREFIX ${CMAKE_INSTALL_PREFIX})
 SET(LIBDIR "${PREFIX}/lib")
 SET(RESDIR "${PREFIX}/res")
 SET(LOCALEDIR "${RESDIR}/${MFUGNAME}/locale")
@@ -74,14 +74,13 @@ dlog
 capi-media-sound-manager
 capi-media-player
 capi-system-device
-#START_PUBLIC_REMOVED_STRING
-#END_START_PUBLIC_REMOVED_STRING
 notification
 appsvc
 sqlite3
 storage
 capi-content-mime-type
 efl-extension
+libtzplatform-config
 )
 
 FOREACH(flag ${ug_pkgs_CFLAGS})
@@ -104,9 +103,7 @@ ADD_DEFINITIONS("-DUG_OPERATION_SELECT_MODE")
 ADD_LIBRARY(${MFUGNAME} SHARED ${SRCS})
 TARGET_LINK_LIBRARIES(${MFUGNAME} ${ug_pkgs_LDFLAGS} dl)
 
-message("MFUGNAME="${MFUGNAME} "LIBDIR"=${LIBDIR})
 INSTALL(TARGETS ${MFUGNAME} LIBRARY DESTINATION ${LIBDIR})
-
 
 # edje
 ADD_CUSTOM_TARGET(ug_navibar_layout.edj
@@ -136,9 +133,9 @@ INSTALL(FILES ${CMAKE_BINARY_DIR}/ug_edc_image_macro.edj DESTINATION ${EDJDIR})
 
 # Install file
 
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ug-myfile-efl.xml DESTINATION /usr/share/packages)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ug-myfile-efl.xml DESTINATION ${TZ_SYS_RO_PACKAGES})
 # Appcontrl icon
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ug-myfile-efl.png DESTINATION /usr/share/icons/default/small)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/ug-myfile-efl.png DESTINATION ${TZ_SYS_RO_ICONS}/default/small)
 
 # i18n
 ADD_SUBDIRECTORY(res/po)
