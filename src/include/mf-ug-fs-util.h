@@ -77,10 +77,6 @@
 /*	compile option	*/
 #define UG_DEBUG_FOLDER_OPTION
 
-#ifndef UG_ICON_PATH
-#define UG_ICON_PATH "/usr/apps/ug-myfile-efl/res/images/ug-myfile-efl"
-#endif
-
 #ifndef UG_DEFAULT_ICON
 #define UG_DEFAULT_ICON "myfile_icon_etc.png"
 #endif

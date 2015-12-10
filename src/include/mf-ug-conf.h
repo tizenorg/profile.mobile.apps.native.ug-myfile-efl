@@ -31,11 +31,10 @@
 #define UGLOCALEDIR				"/usr/ug/res/locale"
 #define MF_IMAGE_HEAD				"myfile_"
 
-#define UG_EDJ_PATH				"/usr/ug/res/edje/ug-myfile-efl"
-#define UG_ICON_PATH				"/usr/apps/ug-myfile-efl/res/images/ug-myfile-efl"
+#define UG_EDJ_PATH				snprintf("%s","edje/ug-myfile-efl", app_get_resource_path())
 
-#define UG_EDJ_NAVIGATIONBAR			UG_EDJ_PATH"/ug_navibar_layout.edj"
-#define UG_EDJ_IMAGE				UG_EDJ_PATH"/ug_edc_image_macro.edj"
+#define UG_EDJ_NAVIGATIONBAR			snprintf("%s","/ug_navibar_layout.edj", UG_EDJ_PATH)
+#define UG_EDJ_IMAGE				snprintf("%s","/ug_edc_image_macro.edj", UG_EDJ_PATH)
 
 
 #define UG_GRP_LIST				"thumbnail_only"
