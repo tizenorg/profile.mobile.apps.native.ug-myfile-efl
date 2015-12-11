@@ -25,17 +25,23 @@
 
 #include <Elementary.h>
 
+static inline char * edj_full_path(char *string1, char *string2)
+{
+	char path[1024] = {};
+	snprintf(path, 1024,"%s%s", string1, string2);
+	return path;
+}
+
 #define PKGNAME_SYSTEM				"sys_string"
 #define UGPACKAGE				"ug-myfile-efl"
 #define UGPKGNAME_MYFILE			"org.tizen.myfile"
 #define UGLOCALEDIR				"/usr/ug/res/locale"
 #define MF_IMAGE_HEAD				"myfile_"
 
-#define UG_EDJ_PATH				"/usr/ug/res/edje/ug-myfile-efl"
-#define UG_ICON_PATH				"/usr/apps/ug-myfile-efl/res/images/ug-myfile-efl"
+#define UG_EDJ_PATH				edj_full_path(app_get_resource_path(), "edje/ug-myfile-efl")     /* /usr/ug/res/edje/ug-myfile-efl"  */
 
-#define UG_EDJ_NAVIGATIONBAR			UG_EDJ_PATH"/ug_navibar_layout.edj"
-#define UG_EDJ_IMAGE				UG_EDJ_PATH"/ug_edc_image_macro.edj"
+#define UG_EDJ_NAVIGATIONBAR			edj_full_path(UG_EDJ_PATH, "/ug_navibar_layout.edj")
+#define UG_EDJ_IMAGE				edj_full_path(UG_EDJ_PATH, "/ug_edc_image_macro.edj")
 
 
 #define UG_GRP_LIST				"thumbnail_only"
