@@ -83,18 +83,18 @@ static void on_click(void *data, Evas_Object *obj, void *event_info)
 	cbs.layout_cb = ug_layout_callback;
 	cbs.destroy_cb = ug_destroy_callback;
 	cbs.priv = ad;
-	service_h service;
-	int ret = service_create(&service);
+	app_control_h app_control;
+	int ret = app_control_create(&app_control);
 
 	if (ret != SERVICE_ERROR_NONE) {
-		printf("service create failed\n");
+		printf("app_control create failed\n");
 	}
 
-	service_add_extra_data(service, "path", "/");
-	service_add_extra_data(service, "select_type",  elm_object_text_get(obj));
+	app_control_add_extra_data(app_control, "path", "/");
+	app_control_add_extra_data(app_control, "select_type",  elm_object_text_get(obj));
 
 	printf("-----%s\n", __FUNCTION__);
-	ad->ug = ug_create(NULL, "myfile-efl", UG_MODE_FULLVIEW, service, &cbs);
+	ad->ug = ug_create(NULL, "myfile-efl", UG_MODE_FULLVIEW, app_control, &cbs);
 	printf("-----ug addr is %p\n", ad->ug);
 
 }
@@ -251,7 +251,7 @@ static void _resume(void *user_data)
 {
 }
 
-static void _service(service_h service, void *user_data)
+static void _app_control(app_control_h app_control, void *user_data)
 {
 }
 
@@ -284,7 +284,7 @@ void _init_and_run(int argc, char **argv)
 		.terminate = _terminate,
 		.pause = _pause,
 		.resume = _resume,
-		.service = _service,
+		.app_control = _app_control,
 		.low_memory = _low_memory,
 		.low_battery = _low_battery,
 		.device_orientation = _dev_orientation_changed,
