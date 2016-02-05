@@ -24,7 +24,7 @@
 #include <media_content.h>
 #include <Elementary.h>
 #include <system_settings.h>
-
+#include <storage.h>
 #include "mf-ug-main.h"
 #include "mf-ug-fs-util.h"
 #include "mf-ug-util.h"
@@ -1055,6 +1055,8 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h app_cont
 	ugd = priv;
 	ugd->ug = ug;
 	bindtextdomain(UGPACKAGE, UGLOCALEDIR);
+
+
 	elm_theme_extension_add(NULL, UG_EDJ_NAVIGATIONBAR);
 
 	win = (Evas_Object *)ug_get_window();

@@ -42,10 +42,10 @@
 
 
 /*	File system related String definition	*/
-#define PHONE_FOLDER	"/opt/usr/media"
+#define PHONE_FOLDER	"/home/owner/content"
 #define MEMORY_FOLDER	"/opt/storage/sdcard"
-#define PHONE_PARENT	"/opt/usr"
-#define PHONE_NAME		"media"
+#define PHONE_PARENT	"/home/owner"
+#define PHONE_NAME		"content"
 #define STORAGE_PARENT	"/opt/storage"
 #define MMC_NAME		"sdcard"
 
