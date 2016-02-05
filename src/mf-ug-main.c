@@ -24,7 +24,6 @@
 #include <media_content.h>
 #include <Elementary.h>
 #include <system_settings.h>
-
 #include "mf-ug-main.h"
 #include "mf-ug-fs-util.h"
 #include "mf-ug-util.h"

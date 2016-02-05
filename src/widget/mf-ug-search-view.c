@@ -154,11 +154,6 @@ static void __mf_ug_search_view_result_cb(mf_search_result_t *result, void *user
 	Evas_Object *playout = ugd->ug_MainWindow.ug_pNaviLayout;
 	ug_mf_retm_if(playout == NULL, "get conformant failed");
 	Evas_Object *newContent = NULL;
-	Evas_Object *unUsed = elm_object_part_content_unset(playout, "part1");
-	if (unUsed) {
-		evas_object_del(unUsed);
-		unUsed = NULL;
-	}
 	ugd->ug_UiGadget.ug_pSearchFileList = NULL;
 	int total_count = g_list_length(result->dir_list) + g_list_length(result->file_list);
 	if (total_count == 0) {
@@ -167,14 +162,6 @@ static void __mf_ug_search_view_result_cb(mf_search_result_t *result, void *user
 		elm_object_part_content_set(playout, "part1", newContent);
 		mf_ug_navi_bar_button_set_disable(ugd, true);
 	} else {
-
-
-
-		/*newContent = mf_ug_genlist_create_content_list_view(ugd);*/
-		newContent = __mf_ug_genlist_create_gl(ugd);
-		ugd->ug_MainWindow.ug_pNaviGenlist = newContent;
-
-		elm_object_part_content_set(playout, "part1", newContent);
 		if (ugd->ug_UiGadget.ug_iSelectMode == DOCUMENT_SHARE || ugd->ug_UiGadget.ug_iSelectMode == IMPORT_SINGLE) {
 		} else {
 			if (result->file_list != NULL) {

@@ -28,25 +28,44 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <linux/fs.h>
-
+#include <storage.h>
 #include "Eina.h"
 #include "Elementary.h"
 #include "media_content.h"
 #include "mf-ug-dlog.h"
 
+int mf_ug_file_attr_get_parent_path(const char *path, char **parent_path);
+
+static inline char *Get_Root_Path(int storage_id)
+{
+	char *path = NULL;
+	storage_get_root_directory(storage_id, &path) ;
+	return path;
+}
+
+static inline char *Get_Parent_Path(int storage_id)
+{
+	char *path = NULL;
+	char *storage_path = NULL;
+	storage_get_root_directory(storage_id, &path);
+	if (path) {
+		mf_ug_file_attr_get_parent_path(path, &storage_path);
+		free(path);
+	}
+	return storage_path;
+}
 /*	File system related value definition	*/
 #define	FILE_EXT_LEN_MAX			8
 #define MYFILE_DIR_PATH_LEN_MAX		4096
 #define MYFILE_FILE_NAME_LEN_MAX	255
 #define MYFILE_FILE_PATH_LEN_MAX	MYFILE_DIR_PATH_LEN_MAX + MYFILE_FILE_NAME_LEN_MAX
 
-
 /*	File system related String definition	*/
-#define PHONE_FOLDER	"/opt/usr/media"
-#define MEMORY_FOLDER	"/opt/storage/sdcard"
-#define PHONE_PARENT	"/opt/usr"
-#define PHONE_NAME		"media"
-#define STORAGE_PARENT	"/opt/storage"
+#define PHONE_FOLDER    Get_Root_Path(STORAGE_TYPE_INTERNAL)
+#define MEMORY_FOLDER   Get_Root_Path(STORAGE_TYPE_EXTERNAL)
+#define PHONE_PARENT    Get_Parent_Path(STORAGE_TYPE_INTERNAL)
+#define STORAGE_PARENT 	Get_Parent_Path(STORAGE_TYPE_EXTERNAL)
+#define PHONE_NAME		"content"
 #define MMC_NAME		"sdcard"
 
 #define SOUNDS_FOLDER		"/opt/usr/media/Sounds"
