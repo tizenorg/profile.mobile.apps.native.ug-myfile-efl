@@ -676,6 +676,7 @@ void mf_ug_navi_bar_create_default_view(void *data)
 	}
 	ugd->ug_Status.ug_iCheckedCount = 0;
 	box = mf_ug_navi_bar_create_box(ugd->ug_MainWindow.ug_pNaviBar);
+
 	pNaviLayout = mf_ug_navi_bar_create_layout(box, UG_EDJ_NAVIGATIONBAR, UG_GRP_NAVI_VIEW);
 	ugd->ug_MainWindow.ug_pNaviLayout = pNaviLayout;
 

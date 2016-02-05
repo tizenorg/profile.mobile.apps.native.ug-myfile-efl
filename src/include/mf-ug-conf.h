@@ -40,10 +40,10 @@ static inline char * get_path(char *string1, char *string2)
 #define MF_IMAGE_HEAD				"myfile_"
 
 
-#define UG_EDJ_PATH				get_path(tzplatform_getenv(TZ_SYS_RO_UG), "/res/edje/ug-myfile-efl")
+#define UG_EDJ_PATH				PREFIX"/res/edje/ug-myfile-efl"
 
-#define UG_EDJ_NAVIGATIONBAR			get_path(UG_EDJ_PATH, "/ug_navibar_layout.edj")
-#define UG_EDJ_IMAGE				get_path(UG_EDJ_PATH, "/ug_edc_image_macro.edj")
+#define UG_EDJ_NAVIGATIONBAR		UG_EDJ_PATH"/ug_navibar_layout.edj"
+#define UG_EDJ_IMAGE				 UG_EDJ_PATH"/ug_edc_image_macro.edj"
 
 
 #define UG_GRP_LIST				"thumbnail_only"
