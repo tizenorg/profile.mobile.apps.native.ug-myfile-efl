@@ -394,7 +394,6 @@ int __mf_ug_main_get_atoi(const char *number)
 	return (int)val;
 }
 
-#if 0//Tizen3.0 Build error
 static void __mf_ug_main_set_max_len_option(void *data, const char *number)
 {
 	UG_TRACE_BEGIN;
@@ -416,7 +415,7 @@ static void __mf_ug_main_set_max_len_option(void *data, const char *number)
 	}
 	ug_error("ugd->ug_UiGadget.ug_iMaxLength is [%d]", ugd->ug_UiGadget.ug_iMaxLength);
 }
-#endif
+
 
 static int __mf_ug_main_set_path_option(void *data, const char *path)
 {
@@ -897,19 +896,17 @@ static void __mf_ug_main_set_option_status(void *data, app_control_h app_control
 	}
 	__mf_ug_main_set_marked_mode(ugd, marked_mode);
 	ugd->limitsize = -1;
-#if 0//Tizen3.0 Build error
+
 	char *max_size = NULL;
 	app_control_get_extra_data(app_control, APP_CONTROL_DATA_TOTAL_SIZE, &(max_size));
 	if (max_size) {
 		ugd->limitsize = atoi(max_size);
 		UG_SAFE_FREE_CHAR(max_size);
 	}
-#endif
 	char *number = NULL;
-#if 0//Tizen3.0 Build error
 	app_control_get_extra_data(app_control, APP_CONTROL_DATA_TOTAL_COUNT, &number);
 	__mf_ug_main_set_max_len_option(ugd, number);
-#endif
+
 	UG_SAFE_FREE_CHAR(number);
 	UG_SAFE_FREE_CHAR(path);
 	UG_SAFE_FREE_CHAR(select_mode);
