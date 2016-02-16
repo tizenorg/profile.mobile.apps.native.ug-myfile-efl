@@ -20,7 +20,6 @@
 #include <errno.h>
 #include <sys/time.h>
 
-#include <appsvc.h>
 #include <media_content.h>
 #include <Elementary.h>
 #include <system_settings.h>
@@ -887,7 +886,7 @@ static void __mf_ug_main_set_option_status(void *data, app_control_h app_control
 
 #ifdef UG_OPERATION_SELECT_MODE
 		char *operation_select_mode = NULL;
-		app_control_get_extra_data(app_control, APPSVC_DATA_SELECTION_MODE, &operation_select_mode);
+		app_control_get_extra_data(app_control, APP_CONTROL_DATA_SELECTION_MODE, &operation_select_mode);
 		ug_error("operation_select_mode is [%s]", operation_select_mode);
 		__mf_ug_main_set_operation_select_mode(ugd, operation_select_mode);
 		UG_SAFE_FREE_CHAR(operation_select_mode);

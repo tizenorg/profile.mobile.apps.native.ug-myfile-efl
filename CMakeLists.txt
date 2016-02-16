@@ -107,11 +107,11 @@ INSTALL(TARGETS ${MFUGNAME} LIBRARY DESTINATION ${LIBDIR})
 
 # edje
 ADD_CUSTOM_TARGET(ug_navibar_layout.edj
-		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/image
-		${EDJE_CFLAGS} -sd  ${CMAKE_CURRENT_SOURCE_DIR}/sounds
-		${CMAKE_CURRENT_SOURCE_DIR}/ug_navibar_layout.edc
+		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/res/image
+		${EDJE_CFLAGS} -sd  ${CMAKE_CURRENT_SOURCE_DIR}/res/sounds
+		${CMAKE_CURRENT_SOURCE_DIR}/res/edc/ug_navibar_layout.edc
 		${CMAKE_BINARY_DIR}/ug_navibar_layout.edj
-		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/ug_navibar_layout.edc
+		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/res/edc/ug_navibar_layout.edc
 )
 
 ADD_DEPENDENCIES(${PROJECT_NAME} ug_navibar_layout.edj)
@@ -119,10 +119,10 @@ ADD_DEPENDENCIES(${PROJECT_NAME} ug_navibar_layout.edj)
 INSTALL(FILES ${CMAKE_BINARY_DIR}/ug_navibar_layout.edj DESTINATION ${EDJDIR})
 
 ADD_CUSTOM_TARGET(ug_edc_image_macro.edj
-		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/icons -id ${CMAKE_CURRENT_SOURCE_DIR}/image
-		${CMAKE_CURRENT_SOURCE_DIR}/ug_edc_image_macro.edc
+		COMMAND edje_cc -no-save -id ${CMAKE_CURRENT_SOURCE_DIR}/res/icons -id ${CMAKE_CURRENT_SOURCE_DIR}/res/image
+		${CMAKE_CURRENT_SOURCE_DIR}/res/edc/ug_edc_image_macro.edc
 		${CMAKE_BINARY_DIR}/ug_edc_image_macro.edj
-		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/ug_edc_image_macro.edc
+		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/res/edc/ug_edc_image_macro.edc
 )
 
 ADD_DEPENDENCIES(${PROJECT_NAME} ug_edc_image_macro.edj)

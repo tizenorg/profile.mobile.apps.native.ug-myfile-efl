@@ -27,12 +27,12 @@
 #include <app.h>
 #include <Ecore.h>
 #include <Elementary.h>
-#include <Ethumb.h>
+//#include <Ethumb.h>
 #include <player.h>
 #include <ui-gadget-module.h>
 #include <ui-gadget.h>
-#include <device/power.h>
-#include <device/callback.h>
+//#include <device/power.h>
+//#include <device/callback.h>
 #include <media_content.h>
 
 #include "mf-ug-dlog.h"

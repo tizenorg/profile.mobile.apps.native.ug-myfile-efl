@@ -47,7 +47,7 @@ msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "ചെയ്‌തു"
 
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
-msgstr "റദ്ദാക്
+msgstr "റദ്ദാക്"
 
 msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
 msgstr "പരമാവധി ഫയല്‍ വലുപ്പം (%d MB) കവിഞ്ഞു."

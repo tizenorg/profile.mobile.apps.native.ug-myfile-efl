@@ -178,13 +178,14 @@ static char *icon_array[UG_FILE_TYPE_MAX] = {
 int mf_ug_file_attr_media_has_video(const char *filename)
 {
 	UG_TRACE_BEGIN;
+	metadata_extractor_h handle = NULL;
+
 	if (!filename) {
 		goto CATCH_ERROR;
 	}
 	SECURE_DEBUG("filename is [%s]", filename);
 	int ret = 0;
 
-	metadata_extractor_h handle = NULL;
 	ret = metadata_extractor_create(&handle);
 	if (ret != METADATA_EXTRACTOR_ERROR_NONE) {
 		ug_error("metadata_extractor_create().. %d", ret);

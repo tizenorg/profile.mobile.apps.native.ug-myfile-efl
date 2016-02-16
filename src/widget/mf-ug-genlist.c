@@ -956,7 +956,6 @@ static Evas_Object *__mf_ug_genlist_get_gl_icon(void *data, Evas_Object *obj, co
 {
 	UG_TRACE_BEGIN;
 	Evas_Object *thumb = NULL;
-	Evas_Object *layout = NULL;
 	Evas_Object *selected_box = NULL;
 	ugListItemData *listItemData = (ugListItemData *)data;
 	ug_mf_retv_if(listItemData == NULL, NULL);
