@@ -34,6 +34,7 @@
 //#include <device/power.h>
 //#include <device/callback.h>
 #include <media_content.h>
+#include <sound_manager.h>
 
 #include "mf-ug-dlog.h"
 #include "mf-ug-conf.h"
@@ -183,6 +184,7 @@ struct _ugData {
 	ugUiGadget ug_UiGadget;
 	ugListPlay ug_ListPlay;
 	ui_gadget_h ug;
+	sound_stream_info_h stream_info;
 
 	long long int limitsize;
 	long long int selsize;

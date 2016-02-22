@@ -41,6 +41,7 @@ int g_init_volume = -1;
 
 static void __mf_ug_list_play_control_cb(void *data);
 static bool __mf_ug_list_play_play_current_file(void *data);
+static bool __mf_ug_list_play_stop(ugData *data);
 
 static sound_type_e __mf_ug_list_play_sound_type(const char *path)
 {
@@ -348,13 +349,6 @@ static void __mf_player_mgr_callback_pipe_handler(void *data, void *buffer, unsi
 			g_player_cbs->completed_cb(g_player_cbs->user_data[MF_PLAYER_CB_TYPE_COMPLETED]);
 		}
 		break;
-
-	case MF_PLAYER_CB_TYPE_INTURRUPTED:
-		if (g_player_cbs->interrupted_cb) {
-			g_player_cbs->interrupted_cb(extra_data->param.interrupted_code, g_player_cbs->user_data[MF_PLAYER_CB_TYPE_INTURRUPTED]);
-		}
-		break;
-
 	case MF_PLAYER_CB_TYPE_ERROR:
 		if (g_player_cbs->error_cb) {
 			g_player_cbs->error_cb(extra_data->param.error_code, g_player_cbs->user_data[MF_PLAYER_CB_TYPE_ERROR]);
@@ -389,20 +383,6 @@ __mf_ug_list_play_mgr_completed_cb(void *userdata)
 
 	ecore_pipe_write(g_player_pipe, &extra_data, sizeof(mf_player_cb_extra_data));
 }
-
-static void
-__mf_ug_list_play_mgr_interrupted_cb(player_interrupted_code_e code, void *userdata)
-{
-	UG_TRACE_BEGIN;
-	MF_CHECK(g_player_pipe);
-
-	mf_player_cb_extra_data extra_data;
-	extra_data.cb_type = MF_PLAYER_CB_TYPE_INTURRUPTED;
-	extra_data.param.interrupted_code = code;
-
-	ecore_pipe_write(g_player_pipe, &extra_data, sizeof(mf_player_cb_extra_data));
-}
-
 
 static void
 __mf_ug_list_play_mgr_error_cb(int error_code, void *userdata)
@@ -441,13 +421,48 @@ static bool __mf_ug_list_play_set_uri(player_h player, const char *uri)
 
 }
 
-static bool __mf_ug_list_play_set_sound_type(player_h player, sound_type_e type)
+void mf_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focus_change_reason_e reason_for_change, const char *additional_info, void *user_data)
+{
+	ugData *ugd = user_data;
+	bool reacquire_state;
+
+	sound_stream_focus_state_e state_for_playback;
+	sound_stream_focus_state_e state_for_recording;
+	int ret = 0;
+	ret = sound_manager_get_focus_state(ugd->stream_info, &state_for_playback, &state_for_recording);
+	if (ret != SOUND_MANAGER_ERROR_NONE) {
+		ug_error("failed to get focus error[%x]", ret);
+	}
+	if (state_for_playback == SOUND_STREAM_FOCUS_STATE_RELEASED) {
+			__mf_ug_list_play_stop(ugd);
+	}
+}
+
+static bool __mf_ug_list_play_set_sound_type(ugData *ugd)
 {
 	UG_TRACE_BEGIN;
+	player_h player = ugd->ug_ListPlay.ug_Player;
 	ug_mf_retvm_if(player == NULL, false, "player is NULL");
+	int error = SOUND_MANAGER_ERROR_NONE;
+	bool reacquire_state;
 
 	int ret = 0;
-	ret = player_set_sound_type(player, type);
+	error = sound_manager_create_stream_information(SOUND_STREAM_TYPE_MEDIA, mf_player_focus_callback, ugd, &ugd->stream_info);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		ug_error("failed to create sound stream error[%x]", error);
+	}
+	error = sound_manager_get_focus_reacquisition(ugd->stream_info, &reacquire_state);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		ug_error("failed to get focus reacquisition error[%x]", error);
+	}
+	if (reacquire_state == EINA_TRUE) {
+		error = sound_manager_set_focus_reacquisition(ugd->stream_info, EINA_FALSE);
+		if (error != SOUND_MANAGER_ERROR_NONE) {
+			ug_error("failed to set focus reacquisition error[%x]", error);
+		}
+	}
+
+	ret = player_set_audio_policy_info(player, ugd->stream_info);
 	/*player_set_sound_type(ugd->ug_ListPlay.ug_Player, SOUND_TYPE_MEDIA);*/
 	if (ret != PLAYER_ERROR_NONE) {
 		ug_error(">>>>>>>>>>>>>g_err_name : %d\n", ret);
@@ -510,9 +525,10 @@ static bool __mf_ug_list_play_create_player_mgr(void *data, const char *path)
 			}
 
 			sound_type_e sound_type = __mf_ug_list_play_sound_type(ugd->ug_Status.ug_pEntryPath);
-			ret = __mf_ug_list_play_set_sound_type(ugd->ug_ListPlay.ug_Player, sound_type);
+			ret = __mf_ug_list_play_set_sound_type(ugd);
 			if (ret == false) {
 				ug_error("set sound type failed");
+				return ret;
 			} else {
 				ug_error("set sound type success");
 			}
@@ -529,7 +545,6 @@ static bool __mf_ug_list_play_create_player_mgr(void *data, const char *path)
 
 
 			player_set_completed_cb(ugd->ug_ListPlay.ug_Player, __mf_ug_list_play_mgr_completed_cb, NULL);
-			player_set_interrupted_cb(ugd->ug_ListPlay.ug_Player, __mf_ug_list_play_mgr_interrupted_cb, NULL);
 			player_set_error_cb(ugd->ug_ListPlay.ug_Player, __mf_ug_list_play_mgr_error_cb, NULL);
 		} else {
 			ug_debug("player handle is exist");
@@ -622,47 +637,6 @@ static void __mf_ug_list_play_complete_cb(void *data)
 	ugd->ug_ListPlay.play_data = NULL;
 	UG_SAFE_FREE_CHAR(ugd->ug_ListPlay.ug_pPlayFilePath);
 	UG_TRACE_END;
-}
-
-static void __mf_ug_list_play_interrupt_cb(player_interrupted_code_e code, void *data)
-{
-	UG_TRACE_BEGIN;
-	ugListItemData *itemData = data;
-	ug_mf_retm_if(itemData == NULL, "itemData is NULL");
-
-	ugData *ugd = (ugData *)itemData->ug_pData;
-	ug_mf_retm_if(ugd == NULL, "ugd is NULL");
-	switch (code) {
-	case PLAYER_INTERRUPTED_BY_MEDIA:
-		ug_debug("Interrupt :: PLAYER_INTERRUPTED_BY_MEDIA");
-		break;
-	case PLAYER_INTERRUPTED_BY_CALL:
-		ug_debug("Interrupt :: PLAYER_INTERRUPTED_BY_CALL_START");
-		break;
-	case PLAYER_INTERRUPTED_BY_RESOURCE_CONFLICT:
-		ug_debug("Interrupt :: PLAYER_INTERRUPTED_BY_RESOURCE_CONFLICT");
-		break;
-	case PLAYER_INTERRUPTED_BY_ALARM:
-		ug_debug("Interrupt :: PLAYER_INTERRUPTED_BY_ALARM_START");
-		break;
-	case PLAYER_INTERRUPTED_BY_EARJACK_UNPLUG:
-		ug_debug("Interrupt :: PLAYER_INTERRUPTED_BY_EARJACK_UNPLUG");
-		break;
-	case PLAYER_INTERRUPTED_COMPLETED:
-		ug_debug("PLAYER_INTERRUPTED_COMPLETED");
-		/* ready to resume */
-		ug_debug("ugd->ug_ListPlay.ug_iPlayState is [%d]", ugd->ug_ListPlay.ug_iPlayState);
-		if (ugd->ug_ListPlay.ug_iPlayState == PLAY_STATE_PAUSED) {
-			__mf_ug_list_play_control_cb(itemData);
-		}
-		return;
-	default:
-		break;
-	}
-	__mf_ug_list_play_set_play_pause_status(ugd);
-	mf_ug_list_play_update_item_icon(ugd);
-	UG_TRACE_END;
-
 }
 
 static void
@@ -776,15 +750,6 @@ void mf_player_mgr_set_completed_cb(player_completed_cb  callback, void *user_da
 
 	g_player_cbs->completed_cb = callback;
 	g_player_cbs->user_data[MF_PLAYER_CB_TYPE_COMPLETED] = user_data;
-}
-
-void mf_player_mgr_set_interrupted_cb(player_interrupted_cb  callback, void *user_data)
-{
-
-	MF_CHECK(g_player_cbs);
-
-	g_player_cbs->interrupted_cb = callback;
-	g_player_cbs->user_data[MF_PLAYER_CB_TYPE_INTURRUPTED] = user_data;
 }
 
 void mf_player_mgr_set_error_cb(player_error_cb  callback, void *user_data)
@@ -910,7 +875,6 @@ static bool __mf_ug_list_play_ready_new_file_play(void *data)
 		/*mf_player_mgr_set_started_cb(__mf_ug_list_play_start_cb, itemData);
 		mf_player_mgr_set_paused_cb(__mf_ug_list_play_pauset_cb, ugd);*/
 		mf_player_mgr_set_completed_cb(__mf_ug_list_play_complete_cb, ugd);
-		mf_player_mgr_set_interrupted_cb(__mf_ug_list_play_interrupt_cb, itemData);
 		mf_player_mgr_set_prepare_cb(__mf_list_play_control_prepare_cb, itemData);
 		mf_player_mgr_set_error_cb(__mf_play_control_error_cb, itemData);
 		/*mf_player_mgr_set_buffering_cb(_mp_play_control_buffering_cb, ad);*/
@@ -961,8 +925,15 @@ static bool __mf_ug_list_play_play(void *data)
 	}
 
 	int err = 0;
+	int error = 0;
 	int error_code = 0;
 	player_state_e state = PLAYER_STATE_NONE;
+
+	error = sound_manager_acquire_focus(ugd->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+	if (error != SOUND_MANAGER_ERROR_NONE) {
+		ug_error("failed to acquire focus error[%x]", error);
+		return false;
+	}
 
 	if (ugd->ug_ListPlay.ug_Player != 0) {
 		error_code = player_get_state(ugd->ug_ListPlay.ug_Player, &state);
@@ -1023,6 +994,7 @@ static bool __mf_ug_list_play_stop(ugData *data)
 
 	player_state_e state = PLAYER_STATE_NONE;
 	int error_code = 0;
+	int error = 0;
 
 	if (ugd->ug_ListPlay.ug_Player != 0) {
 		error_code = player_get_state(ugd->ug_ListPlay.ug_Player, &state);
@@ -1036,6 +1008,15 @@ static bool __mf_ug_list_play_stop(ugData *data)
 			} else {
 
 				ugd->ug_ListPlay.ug_iPlayState = PLAY_STATE_STOP;
+				error = sound_manager_release_focus(ugd->stream_info, SOUND_STREAM_FOCUS_FOR_PLAYBACK, NULL);
+				if (error != SOUND_MANAGER_ERROR_NONE) {
+					ug_error("failed to release focus error[%x]", error);
+					return false;
+				}
+				error = sound_manager_destroy_stream_information(ugd->stream_info);
+				if (error != SOUND_MANAGER_ERROR_NONE) {
+					ug_error("unable to destroy stream. error code [%x]", error);
+				}
 
 				UG_TRACE_END;
 				return true;
