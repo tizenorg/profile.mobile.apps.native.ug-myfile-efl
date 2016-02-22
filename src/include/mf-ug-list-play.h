@@ -78,5 +78,6 @@ bool mf_ug_is_default_ringtone(void *data, const char *path);
 int mf_ug_list_play_earjack_monitor(void *data);
 void mf_ug_destory_earjack_monitor();
 bool mf_ug_is_silent(void *data, const char *path);
+void mf_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focus_change_reason_e reason_for_change, const char *additional_info, void *user_data);
 
 #endif
