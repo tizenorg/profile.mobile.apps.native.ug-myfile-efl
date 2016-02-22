@@ -49,7 +49,7 @@ struct __mf_player_cbs{
 	/*player_started_cb started_cb;*/
 	/*player_paused_cb paused_cb;*/
 	player_completed_cb completed_cb;
-	player_interrupted_cb interrupted_cb;
+//	player_interrupted_cb interrupted_cb;
 	player_error_cb error_cb;
 	player_buffering_cb buffering_cb;
 	player_prepared_cb prepare_cb;
@@ -78,5 +78,6 @@ bool mf_ug_is_default_ringtone(void *data, const char *path);
 int mf_ug_list_play_earjack_monitor(void *data);
 void mf_ug_destory_earjack_monitor();
 bool mf_ug_is_silent(void *data, const char *path);
+void mf_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focus_change_reason_e reason_for_change, const char *additional_info, void *user_data);
 
 #endif
