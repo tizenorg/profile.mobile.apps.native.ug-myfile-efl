@@ -785,7 +785,7 @@ static void __mf_ug_main_set_operation_select_mode(void *data, const char *selec
 **    Modification : Created function
 **
 ******************************/
-static void __mf_ug_main_set_option_status(void *data, app_control_h app_control)
+  void __mf_ug_main_set_option_status( app_control_h app_control,void *data)
 {
 	UG_TRACE_BEGIN;
 	ugData *ugd = (ugData *)data;
@@ -1038,17 +1038,17 @@ static void __mf_ug_main_start(void *data)
 **    Modification : Created function
 **
 ******************************/
-static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h app_control, void *priv)
+bool *on_create( void *priv)
 {
 	UG_TRACE_BEGIN;
 
 	Evas_Object *win = NULL;
-	ugData *ugd = NULL;
+	ugData *ugd = (ugData*)priv;
 
 	ug_mf_retv_if(NULL == priv, NULL);
 
 	ugd = priv;
-	ugd->ug = ug;
+	//ugd->ug = ug;
 	bindtextdomain(UGPACKAGE, UGLOCALEDIR);
 	elm_theme_extension_add(NULL, UG_EDJ_NAVIGATIONBAR);
 
@@ -1071,7 +1071,7 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h app_cont
 	__mf_ug_get_indicator_state(ugd);
 
 	__mf_ug_main_init_data(ugd);
-	__mf_ug_main_set_option_status(ugd, app_control);
+//	/__mf_ug_main_set_option_status(ugd, app_control);
 	ug_error("b_hide_indicator is [%d]", b_hide_indicator);
 	_mf_ug_indicator_state_set(ugd, b_hide_indicator);
 	int err = media_content_connect();
@@ -1135,7 +1135,7 @@ static void on_start(ui_gadget_h ug, app_control_h app_control, void *priv)
 **    Modification : Created function
 **
 ******************************/
-static void on_pause(ui_gadget_h ug, app_control_h app_control, void *priv)
+void on_pause( void *priv)
 {
 	UG_TRACE_BEGIN;
 	if (!priv) {
@@ -1180,7 +1180,7 @@ inline bool __mf_ug_main_check_exist(const char *path)
 	return false;
 }
 
-static void on_resume(ui_gadget_h ug, app_control_h app_control, void *priv)
+ void on_resume( void *priv)
 {
 	UG_TRACE_BEGIN;
 
@@ -1454,7 +1454,7 @@ static void on_key_event(ui_gadget_h ug, enum ug_key_event event, app_control_h 
 **    Modification : Created function
 **
 ******************************/
-static void on_destroy(ui_gadget_h ug, app_control_h app_control, void *priv)
+ void on_destroy( void *priv)
 {
 	UG_TRACE_BEGIN;
 	ugData *ugd = (ugData *)priv;
@@ -1555,62 +1555,37 @@ static void on_destroy(ui_gadget_h ug, app_control_h app_control, void *priv)
 **    Modification : Created function
 **
 ******************************/
-UG_MODULE_API int UG_MODULE_INIT(struct ug_module_ops *ops)
+int main(int argc, char *argv[])
 {
 	UG_TRACE_BEGIN;
-	ugData *ugd;
-
-	if (!ops) {
-		return -1;
-	}
-
-	ugd = calloc(1, sizeof(ugData));
-	if (!ugd) {
-		return -1;
-	}
-
-	mf_ug_data = ugd;
-	ops->create = on_create;
-	ops->start = on_start;
-	ops->pause = on_pause;
-	ops->resume = on_resume;
-	ops->destroy = on_destroy;
-	ops->message = on_message;
-	ops->event = on_event;
-	ops->key_event = on_key_event;
-	ops->priv = ugd;
-	ops->opt = UG_OPT_INDICATOR_ENABLE;
-	UG_TRACE_END;
-	return 0;
-}
-
-/******************************
-** Prototype    : UG_MODULE_EXIT
-** Description  :
-** Input        : struct ug_module_ops *ops
-** Output       : None
-** Return Value :
-** Calls        :
-** Called By    :
-**
-**  History        :
-**  1.Date         : 2010/12/10
-**    Author       : Samsung
-**    Modification : Created function
-**
-******************************/
-UG_MODULE_API void UG_MODULE_EXIT(struct ug_module_ops *ops)
-{
-	UG_TRACE_BEGIN;
-	ugData *ugd;
-
-	if (!ops || (!ops->priv)) {
-		return;
-	}
-	ugd = ops->priv;
-
-	if (ugd) {
-		free(ugd);
-	}
-	UG_TRACE_END;
+	ug_error("he;;;>>>>>>>>>>>>");
+	//t_start;
+	ui_app_lifecycle_callback_s ops;
+	int ret = APP_ERROR_NONE;
+	struct _ugData ugd;
+//	app_event_handler_h hLanguageChangedHandle;
+	//app_event_handler_h hRegionFormatChangedHandle;
+	memset(&ops, 0x0, sizeof(ui_app_lifecycle_callback_s));
+	memset(&ugd, 0x0, sizeof(struct _ugData));
+	mf_ug_data = &ugd;
+	ug_error("he;;;>>>>>>>>>>>>");
+	ops.create = on_create;
+	ops.terminate = on_destroy;
+	ops.pause = on_pause;
+	ops.resume = on_resume;
+	ops.app_control =__mf_ug_main_set_option_status;
+	ug_error("he;;;>>>>>>>>>>>>");
+//	ret = ui_app_add_event_handler(&hRegionFormatChangedHandle, APP_EVENT_REGION_FORMAT_CHANGED, __ug_language_changed_cb, (void*)&ugd);
+//	if (ret != APP_ERROR_NONE) {
+//		ug_error("APP_EVENT_REGION_FORMAT_CHANGED ui_app_add_event_handler failed : [%d]!!!", ret);
+//		return -1;
+//	}
+//
+//	ret = ui_app_add_event_handler(&hLanguageChangedHandle, APP_EVENT_LANGUAGE_CHANGED, __ug_language_changed_cb, (void*)&ugd);
+//	if (ret != APP_ERROR_NONE) {
+//		ug_error("APP_EVENT_LANGUAGE_CHANGED ui_app_add_event_handler failed : [%d]!!!", ret);
+//		return -1;
+//	}
+	UG_TRACE_END
+	return ui_app_main(argc, argv, &ops, &ugd);
 }
