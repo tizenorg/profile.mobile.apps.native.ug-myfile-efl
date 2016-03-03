@@ -25,13 +25,6 @@
 
 #include <Elementary.h>
 
-static inline char * get_path(char *string1, char *string2)
-{
-	char path[1024] = {0,};
-	snprintf(path, 1024,"%s%s", string1, string2);
-	return path;
-}
-
 #define PKGNAME_SYSTEM				"sys_string"
 #define UGPACKAGE				"ug-myfile-efl"
 #define UGPKGNAME_MYFILE			"org.tizen.myfile"
