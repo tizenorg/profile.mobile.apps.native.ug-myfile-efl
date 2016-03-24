@@ -390,7 +390,7 @@ static GList *__mf_ug_search_do_find(const char *root,
 {
 	DIR *directory = NULL;
 	GList *candidate = NULL;
-
+	struct dirent ent_struct;
 	char *up_needle = NULL;
 	char *up_name = NULL;
 	gboolean multi_ext_flag = FALSE;
@@ -431,7 +431,8 @@ static GList *__mf_ug_search_do_find(const char *root,
 		result->current_dir = g_strdup(root);
 		__mf_ug_search_thread_unlock(handle);
 		multi_ext_flag = __mf_ug_search_NFD_is_multi_ext(needle);
-		while ((entry = readdir(directory)) != NULL) {
+
+		while ((readdir_r(directory, &ent_struct, &entry) == 0) && entry) {
 			if (!(option & MF_SEARCH_OPT_HIDDEN) && (0 == strncmp(entry->d_name, ".", 1))) {
 				SECURE_DEBUG("[%s] is hidden file. Skip it", entry->d_name);
 				continue;
