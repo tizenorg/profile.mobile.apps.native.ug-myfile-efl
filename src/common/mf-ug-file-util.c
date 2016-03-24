@@ -80,6 +80,7 @@ int mf_is_dir_empty(const char *path)
 {
 	struct stat info = {0,};
 	struct dirent *dp = NULL;
+	struct dirent ent_struct;
 	DIR *dirp = NULL;
 
 	dirp = opendir(path);
@@ -87,7 +88,7 @@ int mf_is_dir_empty(const char *path)
 		return -1;
 	}
 
-	while ((dp = readdir(dirp))) {
+	while ((readdir_r(dirp, &ent_struct, &dp) == 0) && dp) {
 		if (stat(dp->d_name, &info) == 0 && (strcmp(dp->d_name, ".")) && (strcmp(dp->d_name, ".."))) {
 			closedir(dirp);
 			return 0;
@@ -201,6 +202,7 @@ Eina_List *mf_file_ls(const char *dir)
 	char *f = NULL;
 	DIR *dirp = NULL;
 	struct dirent *dp = NULL;
+	struct dirent ent_struct;
 	Eina_List *list = NULL;
 
 	dirp = opendir(dir);
@@ -208,7 +210,7 @@ Eina_List *mf_file_ls(const char *dir)
 		return NULL;
 	}
 
-	while ((dp = readdir(dirp))) {
+	while ((readdir_r(dirp, &ent_struct, &dp) == 0) && dp) {
 		if ((strcmp(dp->d_name , ".")) && (strcmp(dp->d_name , ".."))) {
 			f = strdup(dp->d_name);
 			list = eina_list_append(list, f);
@@ -225,6 +227,7 @@ int mf_file_recursive_rm(const char *dir)
 {
 	char buf[PATH_MAX_SIZE] = {0,};
 	struct dirent *dp = NULL;
+	struct dirent ent_struct;
 	DIR *dirp = NULL;
 
 	if (readlink(dir, buf, sizeof(buf)) > 0) {
@@ -236,7 +239,7 @@ int mf_file_recursive_rm(const char *dir)
 		ret = 1;
 		dirp = opendir(dir);
 		if (dirp) {
-			while ((dp = readdir(dirp))) {
+			while ((readdir_r(dirp, &ent_struct, &dp) == 0) && dp) {
 				if ((strcmp(dp->d_name , ".")) && (strcmp(dp->d_name, ".."))) {
 					if (!mf_file_recursive_rm(dp->d_name)) {
 						ret = 0;

@@ -121,6 +121,7 @@ int mf_ug_fs_oper_read_dir(char *path, Eina_List **dir_list, Eina_List **file_li
 	UG_TRACE_BEGIN;
 	DIR *pDir = NULL;
 	struct dirent *ent;
+	struct dirent *ent_struct;
 
 	ug_mf_retvm_if(path == NULL, MYFILE_ERR_INVALID_ARG, "path is null");
 	ug_mf_retvm_if(dir_list == NULL, MYFILE_ERR_INVALID_ARG, "dir_list is null");
@@ -139,8 +140,7 @@ int mf_ug_fs_oper_read_dir(char *path, Eina_List **dir_list, Eina_List **file_li
 	if (pDir == NULL) {
 		return MYFILE_ERR_DIR_OPEN_FAIL;
 	}
-
-	while ((ent = readdir(pDir)) != NULL) {
+	while ((readdir_r(pDir, &ent_struct, &ent) == 0) && ent) {
 		GString *childpath = NULL;
 		ugFsNodeInfo *pNode = NULL;
 
