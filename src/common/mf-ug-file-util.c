@@ -87,7 +87,7 @@ int mf_is_dir_empty(const char *path)
 		return -1;
 	}
 
-	while ((dp = readdir(dirp))) {
+	while ((readdir_r(dirp, &ent_struct, &dp) == 0) && dp) {
 		if (stat(dp->d_name, &info) == 0 && (strcmp(dp->d_name, ".")) && (strcmp(dp->d_name, ".."))) {
 			closedir(dirp);
 			return 0;
@@ -208,7 +208,7 @@ Eina_List *mf_file_ls(const char *dir)
 		return NULL;
 	}
 
-	while ((dp = readdir(dirp))) {
+	while ((readdir_r(dirp, &ent_struct, &dp) == 0) && dp) {
 		if ((strcmp(dp->d_name , ".")) && (strcmp(dp->d_name , ".."))) {
 			f = strdup(dp->d_name);
 			list = eina_list_append(list, f);
@@ -236,7 +236,7 @@ int mf_file_recursive_rm(const char *dir)
 		ret = 1;
 		dirp = opendir(dir);
 		if (dirp) {
-			while ((dp = readdir(dirp))) {
+			while ((readdir_r(dirp, &ent_struct, &dp) == 0) && dp) {
 				if ((strcmp(dp->d_name , ".")) && (strcmp(dp->d_name, ".."))) {
 					if (!mf_file_recursive_rm(dp->d_name)) {
 						ret = 0;
