@@ -424,7 +424,6 @@ static bool __mf_ug_list_play_set_uri(player_h player, const char *uri)
 void mf_player_focus_callback(sound_stream_info_h stream_info, sound_stream_focus_change_reason_e reason_for_change, const char *additional_info, void *user_data)
 {
 	ugData *ugd = user_data;
-	bool reacquire_state;
 
 	sound_stream_focus_state_e state_for_playback;
 	sound_stream_focus_state_e state_for_recording;
@@ -529,6 +528,7 @@ static bool __mf_ug_list_play_create_player_mgr(void *data, const char *path)
 			}
 
 			sound_type_e sound_type = __mf_ug_list_play_sound_type(ugd->ug_Status.ug_pEntryPath);
+			ug_debug("sound type is %d", sound_type);
 			ret = __mf_ug_list_play_set_sound_type(ugd);
 			if (ret == false) {
 				ug_error("set sound type failed");
