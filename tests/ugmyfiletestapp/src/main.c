@@ -18,7 +18,7 @@
 #include <app.h>
 #include <Elementary.h>
 #include <assert.h>
-#include <ui-gadget.h>
+//#include <ui-gadget.h>
 
 #ifdef UNIT_TESTS
 #include "run-tests.h"

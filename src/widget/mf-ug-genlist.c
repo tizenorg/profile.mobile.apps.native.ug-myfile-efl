@@ -1198,7 +1198,7 @@ void mf_ug_genlist_sel(void *data)
 	ugListItemData *selected = (ugListItemData *)elm_object_item_data_get(item);
 	ugData *ugd = (ugData *)selected->ug_pData;
 	ug_mf_retm_if(ugd == NULL, "ugd is NULL");/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
-	ug_mf_retm_if(ugd->ug == NULL, "ugd->ug is NULL");/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
+//	ug_mf_retm_if(ugd->ug == NULL, "ugd->ug is NULL");/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
 
 	{
 		fprintf(stdout, "selected text %s\n", (char *)selected->ug_pItemName->str);
@@ -1214,13 +1214,21 @@ void mf_ug_genlist_sel(void *data)
 				if (ret == APP_CONTROL_ERROR_NONE) {
 					ug_error();
 					app_control_add_extra_data(app_control, "result", result);
-					ug_send_result(ugd->ug, app_control);
+					bool reply_requested = false;
+					app_control_is_reply_requested(app_control, &reply_requested);
+					if (reply_requested) {
+						SECURE_DEBUG("send reply to caller");
+						app_control_h reply = NULL;
+						app_control_create(&reply);
+						app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+						app_control_destroy(reply);
+					}
 					app_control_destroy(app_control);
 				}
 				ug_debug("result is [%s]", result);
 				UG_SAFE_FREE_CHAR(result);
-				ug_destroy_me(ugd->ug);
-				ugd->ug = NULL;
+//				ug_destroy_me(ugd->ug);
+//				ugd->ug = NULL;
 			}
 			return;
 		}
@@ -1408,7 +1416,7 @@ void mf_ug_genlist_delete_sel(void *data)
 	ugListItemData *selected = (ugListItemData *)elm_object_item_data_get(item);
 	ugData *ugd = (ugData *)selected->ug_pData;
 	ug_mf_retm_if(ugd == NULL, "ugd is NULL");/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
-	ug_mf_retm_if(ugd->ug == NULL, "ugd->ug is NULL");/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
+//	ug_mf_retm_if(ugd->ug == NULL, "ugd->ug is NULL");/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
 
 	{
 		fprintf(stdout, "selected text %s\n", (char *)selected->ug_pItemName->str);

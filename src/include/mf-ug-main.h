@@ -29,8 +29,8 @@
 #include <Elementary.h>
 //#include <Ethumb.h>
 #include <player.h>
-#include <ui-gadget-module.h>
-#include <ui-gadget.h>
+//#include <ui-gadget-module.h>
+//#include <ui-gadget.h>
 //#include <device/power.h>
 //#include <device/callback.h>
 #include <media_content.h>
@@ -183,7 +183,7 @@ struct _ugData {
 	ugStatus ug_Status;
 	ugUiGadget ug_UiGadget;
 	ugListPlay ug_ListPlay;
-	ui_gadget_h ug;
+//	ui_gadget_h ug;
 	sound_stream_info_h stream_info;
 
 	long long int limitsize;
@@ -196,6 +196,7 @@ struct _ugData {
 Evas_Object *mf_ug_main_tab_layout_create(Evas_Object *parent);
 Evas_Object *mf_ug_main_create_bg(Evas_Object *win);
 ugData * mf_ug_ugdata();
+bool mf_ug_main_check_exist(const char *path);
 void mf_ug_main_update_ctrl_in_idle(void *data);
 bool mf_ug_main_is_background();
 

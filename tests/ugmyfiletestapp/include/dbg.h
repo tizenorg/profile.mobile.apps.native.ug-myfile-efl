@@ -25,15 +25,15 @@
 #define LOG_TAG "org.tizen.ugmyfiletestapp"
 
 #ifndef _ERR
-#define _ERR(fmt, args...) LOGE("[%s:%d] "fmt"\n", __func__, __LINE__, ##args)
+#define _ERR(fmt, args...) dlog_print("[%s:%d] "fmt"\n", __func__, __LINE__, ##args)
 #endif
 
 #ifndef _DBG
-#define _DBG(fmt, args...) LOGD("[%s:%d] "fmt"\n", __func__, __LINE__, ##args)
+#define _DBG(fmt, args...) dlog_print("[%s:%d] "fmt"\n", __func__, __LINE__, ##args)
 #endif
 
 #ifndef _INFO
-#define _INFO(fmt, args...) LOGI("[%s:%d] "fmt"\n", __func__, __LINE__, ##args)
+#define _INFO(fmt, args...) dlog_print("[%s:%d] "fmt"\n", __func__, __LINE__, ##args)
 #endif
 
 
