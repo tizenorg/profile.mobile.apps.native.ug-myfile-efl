@@ -18,7 +18,7 @@
 
 
 
-#include <ui-gadget.h>
+//#include <ui-gadget.h>
 #include <app.h>
 
 #include "mf-ug-main.h"
@@ -31,24 +31,31 @@
 #include "mf-ug-resource.h"
 #include "mf-ug-cb.h"
 #include "mf-ug-file-util.h"
-
+#if 0 //Chandan
 static ui_gadget_h music_ug = NULL;
-
+#endif
 Eina_Bool mf_ug_is_music_ug_run()
 {
 	UG_TRACE_BEGIN;
+	#if 0 //Chandan
 	if (music_ug) {
+		UG_TRACE_END;
 		return EINA_TRUE;
 	}
+	#endif
+	UG_TRACE_END;
 	return EINA_FALSE;
 }
 void mf_ug_destory_music_ug()
 {
 	UG_TRACE_BEGIN;
+	#if 0 //Chandan
 	if (music_ug) {
 		ug_destroy(music_ug);
 		music_ug = NULL;
 	}
+#endif
+	UG_TRACE_END;
 }
 
 void __mf_ug_music_request_send(void *data, const char *path)
@@ -57,7 +64,7 @@ void __mf_ug_music_request_send(void *data, const char *path)
 	ugData *ugd = (ugData *)data;
 	ug_mf_retm_if(ugd == NULL, "ugData is NULL");
 	ug_mf_retm_if(path == NULL, "path is NULL");
-	ug_mf_retm_if(ugd->ug == NULL, "ugd->ugis NULL");/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
+	//ug_mf_retm_if(ugd->ug == NULL, "ugd->ugis NULL");/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
 
 	SECURE_ERROR("result is [%s]", path);
 	int ret = 0;
@@ -78,10 +85,20 @@ void __mf_ug_music_request_send(void *data, const char *path)
 		}
 		app_control_add_extra_data(app_control, "result", path);
 		app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, path);
-		ug_send_result_full(ugd->ug, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+
+		bool reply_requested = false;
+		app_control_is_reply_requested(app_control, &reply_requested);
+		if (reply_requested) {
+			SECURE_DEBUG("send reply to caller");
+			app_control_h reply = NULL;
+			app_control_create(&reply);
+			app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+			app_control_destroy(reply);
+		}
+//		ug_send_result_full(ugd->ug, app_control, APP_CONTROL_RESULT_SUCCEEDED);
 		app_control_destroy(app_control);
-		ug_destroy_me(ugd->ug);
-		ugd->ug = NULL;
+//		ug_destroy_me(ugd->ug);
+//		ugd->ug = NULL;
 	}
 
 }
@@ -135,7 +152,7 @@ void  __mf_ug_service_reply_cb(app_control_h request, app_control_h reply, app_c
 		}
 	}
 }
-
+#if 0//Chandan
 static void __mf_ug_layout_cb(ui_gadget_h ug, enum ug_mode mode, void *priv)
 {
 	UG_TRACE_BEGIN;
@@ -159,6 +176,7 @@ static void __mf_ug_layout_cb(ui_gadget_h ug, enum ug_mode mode, void *priv)
 	}
 }
 
+
 static void __mf_ug_destory_cb(ui_gadget_h ug, void *priv)
 {
 	UG_TRACE_BEGIN;
@@ -168,13 +186,13 @@ static void __mf_ug_destory_cb(ui_gadget_h ug, void *priv)
 
 	UG_TRACE_END;
 }
-
+#endif
 static void __mf_ug_music_recommendation_ringtone_set(void *data, char *path, char *time)
 {
 	UG_TRACE_BEGIN;
 	ugData *ugd = (ugData *)data;
 	ug_mf_retm_if(ugd == NULL, "ugd is NULL");
-	ug_mf_retm_if(ugd->ug == NULL, "ugd->ug is NULL");	/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
+//	ug_mf_retm_if(ugd->ug == NULL, "ugd->ug is NULL");	/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
 
 	ug_error(" file is [%s] time is [%s]", path, time);
 	char *result = NULL;
@@ -195,7 +213,17 @@ static void __mf_ug_music_recommendation_ringtone_set(void *data, char *path, ch
 				app_control_add_extra_data(service, "result", result);
 				app_control_add_extra_data(service, "position", time);
 				app_control_add_extra_data(service, APP_CONTROL_DATA_SELECTED, result);
-				ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_SUCCEEDED);
+
+				bool reply_requested = false;
+				app_control_is_reply_requested(service, &reply_requested);
+				if (reply_requested) {
+					SECURE_DEBUG("send reply to caller");
+					app_control_h reply = NULL;
+					app_control_create(&reply);
+					app_control_reply_to_launch_request(reply, service, APP_CONTROL_RESULT_SUCCEEDED);
+					app_control_destroy(reply);
+				}
+//				ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_SUCCEEDED);
 				app_control_destroy(service);
 			}
 		}
@@ -218,16 +246,25 @@ static void __mf_ug_music_recommendation_ringtone_set(void *data, char *path, ch
 			app_control_add_extra_data(service, "result", result);
 			app_control_add_extra_data(service, "position", time);
 			app_control_add_extra_data(service, APP_CONTROL_DATA_SELECTED, result);
-			ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_SUCCEEDED);
+			bool reply_requested = false;
+			app_control_is_reply_requested(service, &reply_requested);
+			if (reply_requested) {
+				SECURE_DEBUG("send reply to caller");
+				app_control_h reply = NULL;
+				app_control_create(&reply);
+				app_control_reply_to_launch_request(reply, service, APP_CONTROL_RESULT_SUCCEEDED);
+				app_control_destroy(reply);
+			}
+//			ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_SUCCEEDED);
 			app_control_destroy(service);
 		}
 
 	}
-	ug_destroy_me(ugd->ug);
-	ugd->ug = NULL;
+//	ug_destroy_me(ugd->ug);
+//	ugd->ug = NULL;
 
 }
-
+#if 0//Chandan
 void  __mf_ug_reply_cb(ui_gadget_h ug, app_control_h result, void *priv)
 {
 	UG_TRACE_BEGIN;
@@ -259,7 +296,6 @@ void  __mf_ug_reply_cb(ui_gadget_h ug, app_control_h result, void *priv)
 	}
 	/*mf_ug_destory_music_ug();*/
 }
-
 void mf_ug_music_select(void *data)
 {
 	UG_TRACE_BEGIN;
@@ -296,7 +332,7 @@ LAUNCH_END:
 
 	UG_TRACE_END;
 }
-
+#endif
 void mf_ug_music_launch_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	UG_TRACE_BEGIN;
@@ -312,6 +348,6 @@ void mf_ug_music_launch_cb(void *data, Evas_Object *obj, void *event_info)
 	}
 
 	UG_SAFE_FREE_OBJ(ugd->ug_MainWindow.ug_pContextPopup);
-	mf_ug_music_select(ugd);
+	//mf_ug_music_select(ugd); Chandan
 }
 
