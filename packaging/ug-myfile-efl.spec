@@ -63,6 +63,8 @@ Description: myfile UG
 %prep
 %setup -q
 
+%define PREFIX    %{TZ_SYS_RO_APP}/ug-myfile-efl
+
 %build
 %if 0%{?sec_build_binary_debug_enable}
 export CFLAGS="$CFLAGS -DTIZEN_DEBUG_ENABLE"
@@ -70,7 +72,7 @@ export CXXFLAGS="$CXXFLAGS -DTIZEN_DEBUG_ENABLE"
 export FFLAGS="$FFLAGS -DTIZEN_DEBUG_ENABLE"
 %endif
 
-cmake . -DCMAKE_INSTALL_PREFIX="%{TZ_SYS_RO_UG}" \
+cmake . -DCMAKE_INSTALL_PREFIX="%{PREFIX}" \
 	-DCMAKE_INSTALL_DATA_DIR="%{DATADIR}" \
 	-DTZ_SYS_RO_PACKAGES=%{TZ_SYS_RO_PACKAGES} \
 	-DTZ_SYS_RO_ICONS=%{TZ_SYS_RO_ICONS}
@@ -83,15 +85,14 @@ rm -rf %{buildroot}
 %make_install
 
 %post
-mkdir -p /usr/ug/bin/
-ln -sf /usr/bin/ug-client %{TZ_SYS_RO_UG}/bin/myfile-efl
 
 %postun
 
 %files 
 %manifest ug-myfile-efl.manifest
 %defattr(-,root,root,-)
-%{TZ_SYS_RO_UG}/lib/libug-myfile-efl.so*
-%{TZ_SYS_RO_UG}/res/*
+%{TZ_SYS_RO_APP}/ug-myfile-efl/bin/ug-myfile-efl
+#%{TZ_SYS_RO_APP}/bin/libug-myfile-efl.so*
+%{TZ_SYS_RO_APP}/ug-myfile-efl/res/*
 %{TZ_SYS_RO_PACKAGES}/ug-myfile-efl.xml
 %{TZ_SYS_RO_ICONS}/default/small/ug-myfile-efl.png

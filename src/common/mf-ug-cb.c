@@ -79,7 +79,16 @@ Eina_Bool mf_ug_ringtone_present_del_result(void *data)
 				if (ret == APP_CONTROL_ERROR_NONE) {
 					app_control_add_extra_data(app_control, "result", result);
 					app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, result);
-					ug_send_result_full(ugd->ug, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+					bool reply_requested = false;
+					app_control_is_reply_requested(app_control, &reply_requested);
+					if (reply_requested) {
+						SECURE_DEBUG("send reply to caller");
+						app_control_h reply = NULL;
+						app_control_create(&reply);
+						app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+						app_control_destroy(reply);
+					}
+		//			ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_SUCCEEDED);
 					app_control_destroy(app_control);
 				}
 				SECURE_DEBUG("result is [%s]", result);
@@ -175,12 +184,21 @@ Eina_Bool mf_ug_cb_back_button_cb(void *data, Elm_Object_Item *it)
 				app_control_h service = NULL;
 				int ret = app_control_create(&service);
 				if (ret == APP_CONTROL_ERROR_NONE) {
-					ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_FAILED);
+					bool reply_requested = false;
+					app_control_is_reply_requested(service, &reply_requested);
+					if (reply_requested) {
+						SECURE_DEBUG("send reply to caller");
+						app_control_h reply = NULL;
+						app_control_create(&reply);
+						app_control_reply_to_launch_request(reply, service, APP_CONTROL_RESULT_FAILED);
+						app_control_destroy(reply);
+					}
+		//			ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_FAILED);
 					app_control_destroy(service);
 				}
 			}
-			ug_destroy_me(ugd->ug);
-			ugd->ug = NULL;
+//			ug_destroy_me(ugd->ug);
+//			ugd->ug = NULL;
 		}
 	}
 	UG_TRACE_END;
@@ -219,7 +237,7 @@ static void __mf_ug_cb_ringtone_set(void *data)
 	UG_TRACE_BEGIN;
 	ugData *ugd = (ugData *)data;
 	ug_mf_retm_if(ugd == NULL, "ugd is NULL");
-	ug_mf_retm_if(ugd->ug == NULL, "ugd is NULL");	/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
+	//ug_mf_retm_if(ugd->ug == NULL, "ugd is NULL");	/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
 
 	char *file_path = mf_ug_util_get_send_result(ugd);
 	app_control_h app_control = NULL;
@@ -233,14 +251,32 @@ static void __mf_ug_cb_ringtone_set(void *data)
 			if (ret == APP_CONTROL_ERROR_NONE) {
 				app_control_add_extra_data(app_control, "result", file_path);
 				app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, file_path);
-				ug_send_result_full(ugd->ug, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+				bool reply_requested = false;
+				app_control_is_reply_requested(app_control, &reply_requested);
+				if (reply_requested) {
+					SECURE_DEBUG("send reply to caller");
+					app_control_h reply = NULL;
+					app_control_create(&reply);
+					app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+					app_control_destroy(reply);
+				}
+				reply_requested = false;
+				app_control_is_reply_requested(app_control, &reply_requested);
+				if (reply_requested) {
+					SECURE_DEBUG("send reply to caller");
+					app_control_h reply = NULL;
+					app_control_create(&reply);
+					app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+					app_control_destroy(reply);
+				}
+	//			ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_SUCCEEDED);
 				app_control_destroy(app_control);
 			}
 			SECURE_DEBUG("result is [%s]", file_path);
 			UG_SAFE_FREE_CHAR(file_path);
 		}
-		ug_destroy_me(ugd->ug);
-		ugd->ug = NULL;
+//		ug_destroy_me(ugd->ug);
+//		ugd->ug = NULL;
 
 	}	else if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_alert
 	             || mf_ug_is_default_ringtone(ugd, file_path)
@@ -256,14 +292,23 @@ static void __mf_ug_cb_ringtone_set(void *data)
 			if (ret == APP_CONTROL_ERROR_NONE) {
 				app_control_add_extra_data(app_control, "result", file_path);
 				app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, file_path);
-				ug_send_result_full(ugd->ug, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+				bool reply_requested = false;
+				app_control_is_reply_requested(app_control, &reply_requested);
+				if (reply_requested) {
+					SECURE_DEBUG("send reply to caller");
+					app_control_h reply = NULL;
+					app_control_create(&reply);
+					app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+					app_control_destroy(reply);
+				}
+	//			ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_SUCCEEDED);
 				app_control_destroy(app_control);
 			}
 			SECURE_DEBUG("result is [%s]", file_path);
 			UG_SAFE_FREE_CHAR(file_path);
 		}
-		ug_destroy_me(ugd->ug);
-		ugd->ug = NULL;
+//		ug_destroy_me(ugd->ug);
+//		ugd->ug = NULL;
 	} else {
 		if (mf_ug_ringtone_is_default(ugd->ug_UiGadget.ug_iSoundMode, file_path)) {
 			int ret = 0;
@@ -271,13 +316,22 @@ static void __mf_ug_cb_ringtone_set(void *data)
 			if (ret == APP_CONTROL_ERROR_NONE) {
 				app_control_add_extra_data(app_control, "result", file_path);
 				app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, file_path);
-				ug_send_result_full(ugd->ug, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+				bool reply_requested = false;
+				app_control_is_reply_requested(app_control, &reply_requested);
+				if (reply_requested) {
+					SECURE_DEBUG("send reply to caller");
+					app_control_h reply = NULL;
+					app_control_create(&reply);
+					app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+					app_control_destroy(reply);
+				}
+	//			ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_SUCCEEDED);
 				app_control_destroy(app_control);
 			}
 			SECURE_DEBUG("result is [%s]", file_path);
 			UG_SAFE_FREE_CHAR(file_path);
-			ug_destroy_me(ugd->ug);
-			ugd->ug = NULL;
+//			ug_destroy_me(ugd->ug);
+//			ugd->ug = NULL;
 		}
 	}
 	return;
@@ -288,7 +342,7 @@ static bool __mf_ug_cb_normal_result_send(void *data)
 	UG_TRACE_BEGIN;
 	ugData *ugd = (ugData *)data;
 	ug_mf_retv_if(ugd == NULL, false);
-	ug_mf_retv_if(ugd->ug == NULL, false);	/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
+	//ug_mf_retv_if(ugd->ug == NULL, false);	/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
 
 	bool flag_exit = true;
 	char *result = NULL;
@@ -321,7 +375,16 @@ static bool __mf_ug_cb_normal_result_send(void *data)
 			}
 			app_control_add_extra_data(app_control, "result", result);
 			app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, result);
-			ug_send_result_full(ugd->ug, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+			bool reply_requested = false;
+			app_control_is_reply_requested(app_control, &reply_requested);
+			if (reply_requested) {
+				SECURE_DEBUG("send reply to caller");
+				app_control_h reply = NULL;
+				app_control_create(&reply);
+				app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+				app_control_destroy(reply);
+			}
+//			ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_SUCCEEDED);
 			app_control_destroy(app_control);
 		} else {
 			ug_error("failed to create app control.");
@@ -340,7 +403,7 @@ static bool __mf_ug_selected_mode_result_send(void *data)
 	UG_TRACE_BEGIN;
 	ugData *ugd = (ugData *)data;
 	ug_mf_retv_if(ugd == NULL, false);
-	ug_mf_retv_if(ugd->ug == NULL, false);/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
+//	ug_mf_retv_if(ugd->ug == NULL, false);/*Fixed the P131011-01548 by jian12.li, sometimes, if the ug is extised, we still send the result to other app.*/
 
 	bool flag_exist = true;
 	app_control_h app_control = NULL;
@@ -361,7 +424,16 @@ static bool __mf_ug_selected_mode_result_send(void *data)
 					UG_SAFE_FREE_CHAR(array[i]);
 				}
 				UG_SAFE_FREE_CHAR(array);
-				ug_send_result_full(ugd->ug, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+				bool reply_requested = false;
+				app_control_is_reply_requested(app_control, &reply_requested);
+				if (reply_requested) {
+					SECURE_DEBUG("send reply to caller");
+					app_control_h reply = NULL;
+					app_control_create(&reply);
+					app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
+					app_control_destroy(reply);
+				}
+//				ug_send_result_full(ugd->ug, service, APP_CONTROL_RESULT_SUCCEEDED);
 				app_control_destroy(app_control);
 			} else {
 				ug_error("Invalid selection!!");
@@ -398,13 +470,13 @@ void mf_ug_cb_add_button_cb(void *data, Evas_Object *obj, void *event_info)
 
 #ifdef UG_OPERATION_SELECT_MODE
 	if (__mf_ug_selected_mode_result_send(ugd)) {
-		ug_destroy_me(ugd->ug);
-		ugd->ug = NULL;
+//		ug_destroy_me(ugd->ug);
+//		ugd->ug = NULL;
 	}
 #else
 	if (__mf_ug_cb_normal_result_send(ugd)) {
-		ug_destroy_me(ugd->ug);
-		ugd->ug = NULL;
+//		ug_destroy_me(ugd->ug);
+//		ugd->ug = NULL;
 	}
 #endif
 	UG_TRACE_END;
