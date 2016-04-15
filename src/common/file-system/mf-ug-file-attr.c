@@ -302,6 +302,9 @@ static mf_ug_fs_file_type __mf_ug_file_attr_get_category_by_file_ext(const char 
 		if (strcasecmp("FLAC", &file_ext[i]) == 0) {
 			return UG_FILE_TYPE_MUSIC;
 		}
+		if (strcasecmp("FLV", &file_ext[i]) == 0) {
+			return UG_FILE_TYPE_VIDEO;
+		}
 		break;
 	case 'g':
 	case 'G':
@@ -380,9 +383,9 @@ static mf_ug_fs_file_type __mf_ug_file_attr_get_category_by_file_ext(const char 
 		}
 		if (strcasecmp("MP4", &file_ext[i]) == 0) {
 			if (mf_ug_file_attr_media_has_video(fullpath)) {
-				return UG_FILE_TYPE_MP4_VIDEO;
+				return UG_FILE_TYPE_VIDEO;
 			}
-			return UG_FILE_TYPE_MP4_AUDIO;
+			return UG_FILE_TYPE_SOUND;
 		}
 		if (strcasecmp("MPG", &file_ext[i]) == 0) {
 			return UG_FILE_TYPE_VIDEO;
