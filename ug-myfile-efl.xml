@@ -117,6 +117,7 @@
 		<operation name="http://tizen.org/appcontrol/operation/pick"/>
 		<mime name="image/*"/>
 		<mime name="video/*"/>
+		<mime name="text/vcard"/>
 	</app-control>
 
 	</ui-application>
