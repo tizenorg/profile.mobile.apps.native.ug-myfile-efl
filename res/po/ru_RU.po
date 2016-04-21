@@ -55,3 +55,12 @@ msgstr "Превышен максимальный размер файла (%d М
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Превышен максимальный размер файлов."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Поиск"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Обработка..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Поиск"
+

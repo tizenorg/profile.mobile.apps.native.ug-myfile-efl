@@ -55,3 +55,12 @@ msgstr "උපරිම ඇමුණුම් ප්‍රමාණය (%d MB) �
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "උපරිම ගොනු ප්‍රමාණය ඉක්මවිය."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "සොයන්න"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "සකසමින්..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "සොයමින්"
+

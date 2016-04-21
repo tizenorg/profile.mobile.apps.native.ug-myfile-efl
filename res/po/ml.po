@@ -55,3 +55,12 @@ msgstr "പരമാവധി ഫയല്‍ വലുപ്പം (%d MB) ക�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ഫയലുകളുടെ പരമാവധി വലിപ്പം അതികരിച്ചു."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "തിരയുക"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "പ്രോസസ്സുചെയ്യുന്നു..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "തിരയുന്നു"
+

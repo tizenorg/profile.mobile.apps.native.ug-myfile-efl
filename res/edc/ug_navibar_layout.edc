@@ -506,7 +506,7 @@ group {
 #define DEMO_POPUP_PROCESSINGVIEW1BUTTON_CONTENT_MIN 568 132
 		   styles {
 		      style { name: "popup_processing_text_style";
-			 base: "font=Tizen:style=Bold font_size=36 align=left color=#FFFFFF color_class=T123 wrap=none ellipsis=1.0 text_class=T123";
+			 base: "font=Tizen:style=Bold font_size=26 align=left color=#000000 color_class=T123 wrap=none ellipsis=1.0 text_class=T123";
 			 tag:  "br" "\n";
 			 tag:  "tab" "\t";
 		      }

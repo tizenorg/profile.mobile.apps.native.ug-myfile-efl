@@ -55,3 +55,12 @@ msgstr "Túllépte a maximális fájlméretet (%d MB)."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Túllépte a maximális fájlméretet."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Keresés"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Feldolgozás folyamatban"
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Keresés"
+

@@ -55,3 +55,12 @@ msgstr "Maksimal filstørrelse (%d MB) overskredet."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Den maksimale filstørrelse overskredet."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Søg"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Behandler ..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Søger"
+

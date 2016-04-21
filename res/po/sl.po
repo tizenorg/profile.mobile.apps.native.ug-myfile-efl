@@ -55,3 +55,12 @@ msgstr "Največja dovoljena velikost datoteke (%d MB) je presežena."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Največja dovoljena velikost datotek je presežena."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Iskanje"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Obdelujem..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Iščem"
+

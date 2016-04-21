@@ -55,3 +55,12 @@ msgstr "Ֆայլի առավելագույն չափը (%d ՄԲ) գերազանց�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Ֆայլերի առավելագույն քանակը գերազանցվել է:"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Որոնել"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Ընթացքում է"
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Որոնում"
+

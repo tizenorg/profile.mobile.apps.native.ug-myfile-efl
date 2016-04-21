@@ -55,3 +55,12 @@ msgstr "Fitxategiaren gehieneko neurria (%d MB) gaindituta"
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Fitxategien gehienezko neurria gaindituta"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Bilatu"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Prozesatzen..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Bilatzen"
+
