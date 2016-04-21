@@ -55,3 +55,12 @@ msgstr "Pārsniegts maksimālais faila lielums (%d MB)."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Pārsniegts maksimālais failu lielums."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Meklēt"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Notiek apstrāde..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Meklē"
+

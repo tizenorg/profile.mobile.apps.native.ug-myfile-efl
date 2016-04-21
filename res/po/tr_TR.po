@@ -55,3 +55,12 @@ msgstr "Maksimum dosya boyutu (%d MB) aşıldı."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maksimum dosya boyutu aşıldı."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Ara"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Uygulanıyor..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Aranıyor"
+

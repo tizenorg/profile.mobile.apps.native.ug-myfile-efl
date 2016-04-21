@@ -55,3 +55,12 @@ msgstr "Надвишен е максималният размер на файл�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Максималният размер на файловете е надхвърлен."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Търси"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Обработване..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Търсене"
+

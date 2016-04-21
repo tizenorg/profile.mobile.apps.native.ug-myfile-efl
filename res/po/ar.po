@@ -55,3 +55,12 @@ msgstr "تم تجاوز الحد الأقصى لحجم الملف (%d ميجا�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "تم تجاوز الحد الأقصى لحجم الملفات."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "بحث"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "جاري المعالجة..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "البحث"
+

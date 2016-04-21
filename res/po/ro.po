@@ -55,3 +55,12 @@ msgstr "S-a depăşit dimensiunea maximă a fişierului (%d MO)."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Dimensiune maximă de fişiere depăşită"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Căutare"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Se procesează..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Se caută"
+

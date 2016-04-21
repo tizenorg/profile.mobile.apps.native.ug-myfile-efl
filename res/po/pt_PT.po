@@ -55,3 +55,12 @@ msgstr "Tamanho máximo de ficheiro (%d MB) excedido."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Tamanho máximo dos ficheiros excedido."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Procurar"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "A processar..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "A procurar"
+

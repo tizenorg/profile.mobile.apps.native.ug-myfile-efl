@@ -28,6 +28,8 @@
 #include "mf-ug-music.h"
 #include "mf-ug-db-handle.h"
 
+#define DOMAIN_NAME "ug-myfile-efl"
+#define GET_STR(s) dgettext(DOMAIN_NAME, s);
 #define MF_UG_POPUP_BTN_STYLE	"popup_button/default"
 #define MF_UG_POPUP_STYLE_MIN_MENUSTYLE "min_menustyle"
 #define MF_UG_POPUP_MENUSTYLE_WIDTH (614*elm_config_scale_get())
@@ -136,6 +138,7 @@ Evas_Object *mf_ug_popup_create_search(void *data, Evas_Smart_Cb back_func, void
 	popup = elm_popup_add(ugd->ug_MainWindow.ug_pMainLayout);
 	layout = elm_layout_add(popup);
 	elm_layout_file_set(layout, UG_EDJ_NAVIGATIONBAR, "popup_processingview_1button");
+	evas_object_size_hint_align_set(layout, EVAS_HINT_FILL, EVAS_HINT_FILL);
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
 	/*get the processing object
@@ -143,8 +146,10 @@ Evas_Object *mf_ug_popup_create_search(void *data, Evas_Smart_Cb back_func, void
 	elm_object_part_content_set(layout, "elm.swallow.text", label);
 	ugd->ug_MainWindow.ug_pSearchLabel = label;*/
 
-	mf_ug_widget_object_text_set(popup, MF_UG_LABEL_SEARCH, "title,text");
-	mf_ug_widget_object_text_set(layout, MF_UG_LABEL_PROCESSING, "elm.text");
+	char *search_label = GET_STR(MF_UG_LABEL_SEARCH);
+	char *processing_label = GET_STR(MF_UG_LABEL_PROCESSING);
+	mf_ug_widget_object_text_set(popup, search_label, "title,text");
+	mf_ug_widget_object_text_set(layout, processing_label, "elm.text");
 
 	progressbar = elm_progressbar_add(popup);
 	elm_progressbar_pulse(progressbar, EINA_TRUE);

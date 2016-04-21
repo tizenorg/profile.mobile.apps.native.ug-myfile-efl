@@ -55,3 +55,12 @@ msgstr "Byla překročena maximální velikost souborů (%d MB)."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Byla překročena maximální velikost souborů."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Hledat"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Probíhá zpracování..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Vyhledávání"
+

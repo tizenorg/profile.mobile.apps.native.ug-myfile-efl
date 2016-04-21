@@ -55,3 +55,12 @@ msgstr "Viršytas didžiausias failo dydis (%d MB)."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Viršytas leistinas failų dydis."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Ieškoti"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Apdorojama..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Ieškoma"
+

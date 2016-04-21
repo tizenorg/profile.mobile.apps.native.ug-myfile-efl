@@ -55,3 +55,12 @@ msgstr "Υπέρβαση μέγιστου μεγέθους αρχείων (%d MB
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Υπέρβαση μέγιστου μεγέθους αρχείων."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Αναζήτηση"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Επεξεργασία..."
+
+msgid "IDS_COM_BODY_SEARCHING"
+msgstr "Αναζήτηση"
+
