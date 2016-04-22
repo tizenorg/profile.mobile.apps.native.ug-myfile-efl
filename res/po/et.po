@@ -55,12 +55,3 @@ msgstr "Faili maksimaalne suurus (%d MB) on ületatud."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maksimaalne failide suurus on ületatud."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Otsi"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Töötlemine..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Otsimine"
-

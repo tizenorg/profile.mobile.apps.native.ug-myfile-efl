@@ -32,7 +32,7 @@
 #define MF_IMAGE_HEAD				"myfile_"
 
 
-#define UG_EDJ_PATH				PREFIX"/res/edje/ug-myfile-efl"
+#define UG_EDJ_PATH				PREFIX"/res/edje"
 
 #define UG_EDJ_NAVIGATIONBAR		UG_EDJ_PATH"/ug_navibar_layout.edj"
 #define UG_EDJ_IMAGE				 UG_EDJ_PATH"/ug_edc_image_macro.edj"

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="org.tizen.ug-myfile-efl" version="0.3.42">
+	<label>Homescreen setting</label>
+	<description>UG MyFile AppControl</description>
+	<ui-application appid="org.tizen.ug-myfile-efl" exec="/usr/apps/org.tizen.ug-myfile-efl/bin/ug-myfile-efl" launch_mode="caller" nodisplay="false" multiple="false" type="capp" taskmanage="true" hw-acceleration="use-GL">
+		<icon>/usr/share/icons/default/small/ug-myfile-efl.png</icon>
+		<label>ug-myfile-efl</label>
+	</ui-application>
+</manifest>

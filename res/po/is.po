@@ -55,12 +55,3 @@ msgstr "Hámarksstærð skráar (%d MB) hefur verið náð."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Hámarksstærð skráa er náð."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Leit"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Vinnsla í gangi..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Leita"
-

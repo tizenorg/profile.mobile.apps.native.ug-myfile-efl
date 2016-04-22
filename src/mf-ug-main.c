@@ -785,7 +785,7 @@ static void __mf_ug_main_set_operation_select_mode(void *data, const char *selec
 **    Modification : Created function
 **
 ******************************/
-static void __mf_ug_main_set_option_status(void *data, app_control_h app_control)
+  void __mf_ug_main_set_option_status( app_control_h app_control,void *data)
 {
 	UG_TRACE_BEGIN;
 	ugData *ugd = (ugData *)data;
@@ -1038,24 +1038,35 @@ static void __mf_ug_main_start(void *data)
 **    Modification : Created function
 **
 ******************************/
-static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h app_control, void *priv)
+bool on_create( void *priv)
 {
 	UG_TRACE_BEGIN;
 
 	Evas_Object *win = NULL;
-	ugData *ugd = NULL;
+	ugData *ugd = (ugData*)priv;
 
-	ug_mf_retv_if(NULL == priv, NULL);
+	ug_mf_retv_if(NULL == priv, false);
 
 	ugd = priv;
-	ugd->ug = ug;
 	bindtextdomain(UGPACKAGE, UGLOCALEDIR);
 	elm_theme_extension_add(NULL, UG_EDJ_NAVIGATIONBAR);
 
-	win = (Evas_Object *)ug_get_window();
-	ug_mf_retv_if(NULL == win, NULL);
-	ugd->ug_MainWindow.ug_pConformant = ug_get_conformant();
-	ug_mf_retv_if(NULL == ugd->ug_MainWindow.ug_pConformant, NULL);
+	win = elm_win_util_standard_add(UGPACKAGE, UGPACKAGE);
+
+	ug_mf_retv_if(NULL == win, false);
+
+	elm_win_conformant_set(win, EINA_TRUE);
+	elm_win_autodel_set(win, EINA_TRUE);
+
+	Evas_Object *parent = elm_conformant_add(win);
+	if (!parent)
+		return false;
+	evas_object_size_hint_weight_set(parent, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+//	elm_win_resize_object_add(win, parent);
+	evas_object_show(parent);
+	evas_object_show(win);
+	ugd->ug_MainWindow.ug_pConformant = parent;
+	ug_mf_retv_if(NULL == ugd->ug_MainWindow.ug_pConformant, false);
 
 	ugd->ug_MainWindow.ug_pWindow = win;
 	ugd->ug_Status.ug_bInstallFlag = false;
@@ -1071,7 +1082,6 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h app_cont
 	__mf_ug_get_indicator_state(ugd);
 
 	__mf_ug_main_init_data(ugd);
-	__mf_ug_main_set_option_status(ugd, app_control);
 	ug_error("b_hide_indicator is [%d]", b_hide_indicator);
 	_mf_ug_indicator_state_set(ugd, b_hide_indicator);
 	int err = media_content_connect();
@@ -1091,8 +1101,10 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h app_cont
 	__mf_ug_main_start(ugd);
 	ugd->ug_Status.ug_launch_view = ugd->ug_Status.ug_iViewType;
 
+	elm_win_resize_object_add(win, ugd->ug_MainWindow.ug_pMainLayout);
+
 	UG_TRACE_END;
-	return ugd->ug_MainWindow.ug_pMainLayout;
+	return true;
 }
 
 /******************************
@@ -1112,11 +1124,13 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode, app_control_h app_cont
 **    Modification : Created function
 **
 ******************************/
+
+#if 0
 static void on_start(ui_gadget_h ug, app_control_h app_control, void *priv)
 {
 
 }
-
+#endif
 
 /******************************
 ** Prototype    : on_pause
@@ -1135,7 +1149,7 @@ static void on_start(ui_gadget_h ug, app_control_h app_control, void *priv)
 **    Modification : Created function
 **
 ******************************/
-static void on_pause(ui_gadget_h ug, app_control_h app_control, void *priv)
+void on_pause( void *priv)
 {
 	UG_TRACE_BEGIN;
 	if (!priv) {
@@ -1172,7 +1186,7 @@ static void on_pause(ui_gadget_h ug, app_control_h app_control, void *priv)
 **    Modification : Created function
 **
 ******************************/
-inline bool __mf_ug_main_check_exist(const char *path)
+bool mf_ug_main_check_exist(const char *path)
 {
 	if (path && (access(path, F_OK) == 0)) {
 		return true;
@@ -1180,7 +1194,7 @@ inline bool __mf_ug_main_check_exist(const char *path)
 	return false;
 }
 
-static void on_resume(ui_gadget_h ug, app_control_h app_control, void *priv)
+ void on_resume( void *priv)
 {
 	UG_TRACE_BEGIN;
 
@@ -1209,7 +1223,7 @@ static void on_resume(ui_gadget_h ug, app_control_h app_control, void *priv)
 		mf_ug_ringtone_list_resume(ugd);
 		return;
 	}
-	if (!__mf_ug_main_check_exist(ugd->ug_Status.ug_pPath->str)) {
+	if (!mf_ug_main_check_exist(ugd->ug_Status.ug_pPath->str)) {
 		GString *parent_path = mf_ug_fm_svc_wrapper_get_file_parent_path(ugd->ug_Status.ug_pPath);
 		int storage = mf_ug_fm_svc_wapper_get_location(ugd->ug_Status.ug_pPath->str);
 
@@ -1217,7 +1231,7 @@ static void on_resume(ui_gadget_h ug, app_control_h app_control, void *priv)
 		ugd->ug_Status.ug_pPath = NULL;
 
 		if (parent_path && parent_path->str) {
-			if (__mf_ug_main_check_exist(parent_path->str)) {
+			if (mf_ug_main_check_exist(parent_path->str)) {
 				ugd->ug_Status.ug_pPath = g_string_new(parent_path->str);
 			} else {
 				if (storage == MF_UG_PHONE) {
@@ -1262,10 +1276,11 @@ static void on_resume(ui_gadget_h ug, app_control_h app_control, void *priv)
 **    Modification : Created function
 **
 ******************************/
+#if 0
 static void on_message(ui_gadget_h ug, app_control_h msg, app_control_h app_control, void *priv)
 {
 }
-
+#endif
 void __mf_ug_subtitle_show(void *data)
 {
 	UG_TRACE_BEGIN;
@@ -1351,6 +1366,7 @@ static void __ug_language_changed_cb(void *user_data)
 **    Modification : Created function
 **
 ******************************/
+#if 0
 static void on_event(ui_gadget_h ug, enum ug_event event, app_control_h app_control, void *priv)
 {
 
@@ -1359,7 +1375,6 @@ static void on_event(ui_gadget_h ug, enum ug_event event, app_control_h app_cont
 	ug_mf_retm_if(NULL == priv, "priv is NULL");
 
 	ugd = priv;
-	ugd->ug = ug;
 
 	UG_TRACE_BEGIN;
 	switch (event) {
@@ -1390,7 +1405,7 @@ static void on_event(ui_gadget_h ug, enum ug_event event, app_control_h app_cont
 	}
 	UG_TRACE_END;
 }
-
+#endif
 
 
 /******************************
@@ -1411,7 +1426,7 @@ static void on_event(ui_gadget_h ug, enum ug_event event, app_control_h app_cont
 **    Modification : Created function
 **
 ******************************/
-
+#if 0
 static void on_key_event(ui_gadget_h ug, enum ug_key_event event, app_control_h app_control, void *priv)
 {
 	UG_TRACE_BEGIN;
@@ -1429,14 +1444,13 @@ static void on_key_event(ui_gadget_h ug, enum ug_key_event event, app_control_h 
 			ugd->ug_ListPlay.play_data = NULL;
 			UG_SAFE_FREE_CHAR(ugd->ug_ListPlay.ug_pPlayFilePath);
 		}
-		ug_destroy_me(ug);
 		break;
 	default:
 		break;
 	}
 	UG_TRACE_END;
 }
-
+#endif
 /******************************
 ** Prototype    : on_destroy
 ** Description  :
@@ -1454,7 +1468,7 @@ static void on_key_event(ui_gadget_h ug, enum ug_key_event event, app_control_h 
 **    Modification : Created function
 **
 ******************************/
-static void on_destroy(ui_gadget_h ug, app_control_h app_control, void *priv)
+ void on_destroy( void *priv)
 {
 	UG_TRACE_BEGIN;
 	ugData *ugd = (ugData *)priv;
@@ -1555,62 +1569,33 @@ static void on_destroy(ui_gadget_h ug, app_control_h app_control, void *priv)
 **    Modification : Created function
 **
 ******************************/
-UG_MODULE_API int UG_MODULE_INIT(struct ug_module_ops *ops)
+int main(int argc, char *argv[])
 {
 	UG_TRACE_BEGIN;
-	ugData *ugd;
-
-	if (!ops) {
+	ui_app_lifecycle_callback_s ops;
+	int ret = APP_ERROR_NONE;
+	struct _ugData ugd;
+	app_event_handler_h hLanguageChangedHandle;
+	app_event_handler_h hRegionFormatChangedHandle;
+	memset(&ops, 0x0, sizeof(ui_app_lifecycle_callback_s));
+	memset(&ugd, 0x0, sizeof(struct _ugData));
+	mf_ug_data = &ugd;
+	ops.create = on_create;
+	ops.terminate = on_destroy;
+	ops.pause = on_pause;
+	ops.resume = on_resume;
+	ops.app_control =__mf_ug_main_set_option_status;
+	ret = ui_app_add_event_handler(&hRegionFormatChangedHandle, APP_EVENT_REGION_FORMAT_CHANGED, __ug_language_changed_cb, (void*)&ugd);
+	if (ret != APP_ERROR_NONE) {
+		ug_error("APP_EVENT_REGION_FORMAT_CHANGED ui_app_add_event_handler failed : [%d]!!!", ret);
 		return -1;
 	}
 
-	ugd = calloc(1, sizeof(ugData));
-	if (!ugd) {
+	ret = ui_app_add_event_handler(&hLanguageChangedHandle, APP_EVENT_LANGUAGE_CHANGED, __ug_language_changed_cb, (void*)&ugd);
+	if (ret != APP_ERROR_NONE) {
+		ug_error("APP_EVENT_LANGUAGE_CHANGED ui_app_add_event_handler failed : [%d]!!!", ret);
 		return -1;
 	}
-
-	mf_ug_data = ugd;
-	ops->create = on_create;
-	ops->start = on_start;
-	ops->pause = on_pause;
-	ops->resume = on_resume;
-	ops->destroy = on_destroy;
-	ops->message = on_message;
-	ops->event = on_event;
-	ops->key_event = on_key_event;
-	ops->priv = ugd;
-	ops->opt = UG_OPT_INDICATOR_ENABLE;
-	UG_TRACE_END;
-	return 0;
-}
-
-/******************************
-** Prototype    : UG_MODULE_EXIT
-** Description  :
-** Input        : struct ug_module_ops *ops
-** Output       : None
-** Return Value :
-** Calls        :
-** Called By    :
-**
-**  History        :
-**  1.Date         : 2010/12/10
-**    Author       : Samsung
-**    Modification : Created function
-**
-******************************/
-UG_MODULE_API void UG_MODULE_EXIT(struct ug_module_ops *ops)
-{
-	UG_TRACE_BEGIN;
-	ugData *ugd;
-
-	if (!ops || (!ops->priv)) {
-		return;
-	}
-	ugd = ops->priv;
-
-	if (ugd) {
-		free(ugd);
-	}
-	UG_TRACE_END;
+	UG_TRACE_END
+	return ui_app_main(argc, argv, &ops, &ugd);
 }

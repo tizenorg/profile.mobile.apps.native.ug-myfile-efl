@@ -55,12 +55,3 @@ msgstr "Tiedoston enimmäiskoko (%d Mt) on ylitetty."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Tiedostojen enimmäiskoko on saavutettu."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Etsi"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Käsitellään..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Haetaan"
-

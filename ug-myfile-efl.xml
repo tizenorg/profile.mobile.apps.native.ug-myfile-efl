@@ -55,7 +55,7 @@
 		<label xml:lang="es-mx">My Files Appcontrol</label>
 	<author email="gliang.wang@samsung.com" href="www.samsung.com">Guangliang Wang</author>
 	<description>Myfiles Application</description>
-	<ui-application appid="ug-myfile-efl" exec="/usr/ug/bin/myfile-efl" ui-gadget="true" nodisplay="true" multiple="true" type="capp" taskmanage="false" process-pool="true" launch_mode="caller">
+	<ui-application appid="ug-myfile-efl" exec="/usr/apps/ug-myfile-efl/bin/ug-myfile-efl" ui-gadget="false" nodisplay="true" multiple="true" type="capp" taskmanage="false" process-pool="true" launch_mode="caller">
 		<icon>/usr/share/icons/default/small/ug-myfile-efl.png</icon>
 		<label>My Files</label>
 		<label xml:lang="hy-am">Իմ Ֆայլերը</label>
@@ -121,4 +121,12 @@
 	</app-control>
 
 	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/mediastorage</privilege>
+		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+		<privilege>http://tizen.org/privilege/datasharing</privilege>
+		<privilege>http://tizen.org/privilege/packagemanager.info</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage</privilege>
+		<privilege>http://tizen.org/privilege/content.write</privilege>
+	</privileges>
 </manifest>

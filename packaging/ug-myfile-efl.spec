@@ -1,9 +1,9 @@
 
-Name:       ug-myfile-efl
-Summary:    ug
+Name:       org.tizen.ug-myfile-efl
+Summary:    ug-myfile-efl
 Version:    0.3.42
 Release:    1
-Group:      TO_BE/FILLED_IN
+Group:      Applications/Multimedia Applications
 License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
 
@@ -41,12 +41,10 @@ BuildRequires:  pkgconfig(pkgmgr)
 BuildRequires:  pkgconfig(accounts-svc)
 BuildRequires:  pkgconfig(efl-extension)
 BuildRequires:  pkgconfig(libtzplatform-config)
-
 BuildRequires:  cmake
 BuildRequires:  edje-bin
 BuildRequires:  embryo-bin
 BuildRequires:  gettext-devel
-
 BuildRequires:  boost-devel
 BuildRequires:  boost-thread
 BuildRequires:  boost-system
@@ -60,6 +58,17 @@ Myfile Application v1.0.
 %description
 Description: myfile UG
 
+%define PREFIX    	 %{TZ_SYS_RO_APP}/%{name}
+%define MANIFESTDIR      %{TZ_SYS_RO_PACKAGES}
+%define ICONDIR          %{TZ_SYS_RO_ICONS}/default/small
+
+%define RESDIR           %{PREFIX}/res
+%define EDJDIR           %{RESDIR}/edje
+%define IMGDIR           %{RESDIR}/images
+%define BINDIR           %{PREFIX}/bin
+%define LIBDIR           %{PREFIX}/lib
+%define LOCALEDIR        %{RESDIR}/locale
+
 %prep
 %setup -q
 
@@ -70,28 +79,35 @@ export CXXFLAGS="$CXXFLAGS -DTIZEN_DEBUG_ENABLE"
 export FFLAGS="$FFLAGS -DTIZEN_DEBUG_ENABLE"
 %endif
 
-cmake . -DCMAKE_INSTALL_PREFIX="%{TZ_SYS_RO_UG}" \
-	-DCMAKE_INSTALL_DATA_DIR="%{DATADIR}" \
-	-DTZ_SYS_RO_PACKAGES=%{TZ_SYS_RO_PACKAGES} \
-	-DTZ_SYS_RO_ICONS=%{TZ_SYS_RO_ICONS}
+cmake . \
+    -DPREFIX=%{PREFIX}   \
+    -DPKGDIR=%{name}     \
+    -DIMGDIR=%{IMGDIR}   \
+    -DEDJDIR=%{EDJDIR}   \
+    -DPKGNAME=%{name}    \
+    -DBINDIR=%{BINDIR}   \
+    -DMANIFESTDIR=%{MANIFESTDIR}   \
+    -DEDJIMGDIR=%{EDJIMGDIR}   \
+    -DLIBDIR=%{LIBDIR}   \
+    -DICONDIR=%{ICONDIR}   \
+    -DLOCALEDIR=%{LOCALEDIR}
 
 make %{?jobs:-j%jobs}
 
 %install
 rm -rf %{buildroot}
-
 %make_install
+mkdir -p %{buildroot}/%{LIBDIR}
 
 %post
-mkdir -p /usr/ug/bin/
-ln -sf /usr/bin/ug-client %{TZ_SYS_RO_UG}/bin/myfile-efl
+GOPTION="-g 6514"
 
-%postun
-
-%files 
-%manifest ug-myfile-efl.manifest
+%files
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
-%{TZ_SYS_RO_UG}/lib/libug-myfile-efl.so*
-%{TZ_SYS_RO_UG}/res/*
-%{TZ_SYS_RO_PACKAGES}/ug-myfile-efl.xml
-%{TZ_SYS_RO_ICONS}/default/small/ug-myfile-efl.png
+%dir
+%{LIBDIR}
+%{BINDIR}/*
+%{MANIFESTDIR}/*.xml
+%{ICONDIR}/*
+%{RESDIR}/*

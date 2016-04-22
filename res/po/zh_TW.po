@@ -55,12 +55,3 @@ msgstr "已超過檔案最大上限 (%d MB)。"
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "檔案最大的大小已超過。"
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "搜尋"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "正在處理..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "正在搜尋"
-

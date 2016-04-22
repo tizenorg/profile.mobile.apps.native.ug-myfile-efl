@@ -55,12 +55,3 @@ msgstr "გადაჭარბებულია ფაილის მაქ�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "გადაჭარბებულია ფაილების მაქსიმალური ზომა."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "ძიება"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "მუშავდება..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "იძებნება"
-

@@ -55,12 +55,3 @@ msgstr "अत्‍याधिक फाईलचा आकार (%d MB) ओ�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "फाइलींचा अधिकतम आकार ओलांडला आहे."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "शोध"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "प्रक्रिया सुरू आहे..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "शोधत आहे"
-

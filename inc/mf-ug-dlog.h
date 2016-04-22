@@ -47,26 +47,26 @@
 #define FONT_COLOR_CYAN     "\033[36m"
 #define FONT_COLOR_GRAY     "\033[37m"
 
-#define SECURE_DEBUG(fmt, args...)	SECURE_LOGD(FONT_COLOR_BLUE fmt FONT_COLOR_RESET, ##args)
-#define SECURE_INFO(fmt, args...)	SECURE_LOGI(FONT_COLOR_GREEN fmt FONT_COLOR_RESET, ##args)
-#define SECURE_ERROR(fmt, args...)	SECURE_LOGE(FONT_COLOR_RED fmt FONT_COLOR_RESET, ##args)
+#define SECURE_DEBUG(fmt, args...)	dlog_print(DLOG_DEBUG, LOG_TAG, "[%s][%d] : "fmt"\n", __func__, __LINE__, ##args)
+#define SECURE_INFO(fmt, args...)	dlog_print(DLOG_INFO,LOG_TAG, "[%s][%d] : "fmt"\n", __func__, __LINE__, ##args)
+#define SECURE_ERROR(fmt, args...)	dlog_print(DLOG_ERROR, LOG_TAG, "[%s][%d] : "fmt"\n", __func__, __LINE__, ##args)
 
-#define ug_debug(fmt , args...)        LOGD("[%s][%d]debug message from ug-myfile-efl is : "fmt"\n", __func__, __LINE__, ##args)
-#define ug_myfile_dlog(fmt , args...)        LOGD("[%s][%d]debug message from myfile is : "fmt"\n", __func__, __LINE__, ##args)
+#define ug_debug(fmt , args...)        dlog_print(DLOG_DEBUG, LOG_TAG, "[%s][%d] : "fmt"\n", __func__, __LINE__, ##args)
+#define ug_myfile_dlog(fmt , args...)        dlog_print(DLOG_DEFAULT, LOG_TAG, "[%s][%d] : "fmt"\n", __func__, __LINE__, ##args)
 #define UG_TRACE_BEGIN do {\
 					{\
-						LOGD("\n\033[0;35mENTER FUNCTION: %s. \033[0m\t%s:%d\n", \
+						dlog_print(DLOG_INFO, LOG_TAG, "[ENTER FUNCTION: %s. %s:%d\n", \
 						__FUNCTION__, (char *)(strrchr(__FILE__, '/') + 1), __LINE__);\
 					} \
 				} while (0);
 
 #define UG_TRACE_END  do {\
 					{\
-						LOGD("\n\033[0;35mEXIT FUNCTION: %s. \033[0m\t%s:%d\n", \
+						dlog_print(DLOG_INFO, LOG_TAG, "EXIT FUNCTION: %s. %s:%d\n", \
 						__FUNCTION__, (char *)(strrchr(__FILE__, '/') + 1), __LINE__);\
 					} \
 				} while (0) ;
-#define ug_error(fmt, arg...)	LOGE(LOG_COLOR_RED"[ %s : %d]   "fmt""LOG_COLOR_RESET, __FUNCTION__, __LINE__,##arg)
+#define ug_error(fmt, arg...)	dlog_print(DLOG_ERROR, LOG_TAG, "[ %s : %d]   "fmt"", __FUNCTION__, __LINE__,##arg)
 
 
 #else
@@ -75,7 +75,7 @@
 #define ug_mf_debug(fmt , args...)			do { (void)0; } while (0)
 #define ug_mf_warnig(fmt , args...)			do { (void)0; } while (0)
 #define ug_mf_error(fmt , args...)			do { (void)0; } while (0)
-#define UG_MYFILE_TRACE_ERROR(fmt, arg...)		do { LOGE("[%s][%d] "fmt"\n", strrchr(__FILE__, '/') + 1, __LINE__, ##arg); } while (0)
+#define UG_MYFILE_TRACE_ERROR(fmt, arg...)		do { dlog_print(DLOG_ERROR, LOG_TAG, "[%s][%d] "fmt"\n", strrchr(__FILE__, '/') + 1, __LINE__, ##arg); } while (0)
 
 #define ug_mf_retvm_if(expr, val, fmt, arg...) do { \
 			if (expr) { \

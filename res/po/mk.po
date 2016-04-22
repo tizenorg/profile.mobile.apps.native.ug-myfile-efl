@@ -55,12 +55,3 @@ msgstr "Надмината е максималната големина за ф�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Надмината е максималната големина за фајловите."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Пребарување"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Обработување..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Се пребарува"
-

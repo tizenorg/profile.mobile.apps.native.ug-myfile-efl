@@ -55,12 +55,3 @@ msgstr "Premašena je maksimalna veličina fajla (%d MB)."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Pređena maksimalna veličina fajlova."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Pretraži"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Obrada..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Pretraga"
-

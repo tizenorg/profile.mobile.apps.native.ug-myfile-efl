@@ -55,12 +55,3 @@ msgstr "Uasmhéid an chomhaid (%d MB) sáraithe."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Uasmhéid na gcomhad sáraithe."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Cuardaigh"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Ag próiseáil..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Ag cuardach"
-

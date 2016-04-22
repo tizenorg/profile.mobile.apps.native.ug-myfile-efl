@@ -55,12 +55,3 @@ msgstr "Högsta tillåtna filstorlek (%d MB) har överskridits."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Högsta filstorlek överskreds."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Sök"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Bearbetar..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Söker"
-

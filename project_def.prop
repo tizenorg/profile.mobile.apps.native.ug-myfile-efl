@@ -1,0 +1,74 @@
+
+# Project Name
+APPNAME = ug-myfile-efl
+
+# Project Type
+type = app
+
+# Project Profile
+profile = mobile-3.0
+
+# C Sources
+USER_SRCS = src/media-db/mf-ug-media-db.c src/common/mf-ug-music.c src/widget/mf-ug-navi-bar.c src/widget/mf-ug-genlist.c src/media-db/mf-ug-media.c src/common/file-system/mf-ug-file-attr.c src/common/mf-ug-search-internal.c src/common/mf-ug-file-util.c src/widget/mf-ug-ringtone-view.c src/common/mf-ug-db-handle.c src/common/mf-ug-cb.c src/common/mf-ug-fm-svc-wapper.c src/widget/mf-ug-search-view.c src/common/mf-ug-list-play.c src/common/mf-ug-search.c src/widget/mf-ug-popup.c src/common/file-system/mf-ug-fs-oper.c src/common/mf-ug-inotify-handle.c src/common/mf-ug-util.c src/mf-ug-main.c src/widget/mf-ug-widget.c 
+USER_SRCS_ABS = 
+
+# EDC Sources
+USER_EDCS =  
+
+# PO Sources
+USER_POS = res/po/pt_PT.po res/po/ca.po res/po/sl.po res/po/es_ES.po res/po/sk.po res/po/et.po res/po/eu.po res/po/ta.po res/po/en_US.po res/po/uz.po res/po/ml.po res/po/nb.po res/po/hu.po res/po/uk.po res/po/ro.po res/po/de.po res/po/ko_KR.po res/po/mr.po res/po/en.po res/po/zh_TW.po res/po/ka.po res/po/mk.po res/po/bg.po res/po/zh_CN.po res/po/pt_BR.po res/po/lv.po res/po/fr_CA.po res/po/or.po res/po/hy.po res/po/lt.po res/po/pa.po res/po/en_PH.po res/po/hi.po res/po/kn.po res/po/si.po res/po/kk.po res/po/te.po res/po/ru_RU.po res/po/el_GR.po res/po/hr.po res/po/nl.po res/po/ar.po res/po/az.po res/po/ja_JP.po res/po/fi.po res/po/gl.po res/po/gu.po res/po/es_US.po res/po/bn.po res/po/zh_HK.po res/po/it_IT.po res/po/fr.po res/po/sv.po res/po/pl.po res/po/cs.po res/po/sr.po res/po/tr_TR.po res/po/ga.po res/po/is.po res/po/da.po 
+
+# User Defines
+USER_DEFS = PREFIX='"/home/owner/apps_rw/org.tizen.ug-myfile-efl"' UG_OPERATION_SELECT_MODE 
+USER_CPP_DEFS = 
+
+# User Undefines
+USER_UNDEFS = 
+USER_CPP_UNDEFS = 
+
+# User Libraries
+USER_LIBS = 
+
+# User Objects
+USER_OBJS = 
+USER_OBJS_ABS = 
+
+# User Includes
+## C Compiler
+USER_INC_DIRS = inc 
+USER_INC_DIRS_ABS = 
+USER_INC_FILES = 
+USER_INC_FILES_ABS = 
+## C++ Compiler
+USER_CPP_INC_DIRS = 
+USER_CPP_INC_DIRS_ABS = 
+USER_CPP_INC_FILES = 
+USER_CPP_INC_FILES_ABS = 
+
+# User Library Path
+USER_LIB_DIRS = lib 
+USER_LIB_DIRS_ABS = 
+
+# EDC Resource Path
+USER_EDCS_IMAGE_DIRS = res/edje/icons res/edje/images 
+USER_EDCS_IMAGE_DIRS_ABS = 
+USER_EDCS_SOUND_DIRS = res/edje/sounds 
+USER_EDCS_SOUND_DIRS_ABS = 
+USER_EDCS_FONT_DIRS = edje/fonts 
+USER_EDCS_FONT_DIRS_ABS = 
+
+# EDC Flags
+USER_EXT_EDC_KEYS = EDC0 
+
+USER_EXT_EDC0_EDCS = res/edje/ug_edc_image_macro.edc res/edje/ug_navibar_layout.edc 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS = res/edje/icons res/edje/images 
+USER_EXT_EDC0_EDCS_IMAGE_DIRS_ABS = 
+USER_EXT_EDC0_EDCS_SOUND_DIRS = res/edje/sounds 
+USER_EXT_EDC0_EDCS_SOUND_DIRS_ABS = 
+USER_EXT_EDC0_EDCS_FONT_DIRS = edje/fonts 
+USER_EXT_EDC0_EDCS_FONT_DIRS_ABS = 
+
+# Resource Filter
+USER_RES_INCLUDE = 
+USER_RES_EXCLUDE = 
+

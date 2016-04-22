@@ -55,12 +55,3 @@ msgstr "அதிகபட்ச கோப்பளவு (%d MB) கடந்�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "அதிகபட்ச கோப்புகளின் அளவை தாண்டியது."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "தேடுக"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "செயலில்..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "தேடுகிறது"
-

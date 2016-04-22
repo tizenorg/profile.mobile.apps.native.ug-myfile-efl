@@ -55,12 +55,3 @@ msgstr "Ең үлкен файл өлшемінен (%d МБ) асып кетт�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Файлдардың ең үлкен өлшемінен асып кетті."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Іздеу"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Өңделуде..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Іздеу"
-

@@ -55,12 +55,3 @@ msgstr "Przekroczono maksymalny rozmiar pliku (%d MB)."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Przekroczono maksymalny rozmiar plików."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Szukaj"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Przetwarzanie..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Wyszukiwanie"
-

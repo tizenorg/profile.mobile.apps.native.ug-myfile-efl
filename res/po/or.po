@@ -55,12 +55,3 @@ msgstr "ସର୍ବାଧିକ ଫାଇଲ୍ ଆକାର (%d MB) ଅତି�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ଫାଇଲ୍‌ଗୁଡିକର ସର୍ବାଧିକ ଆକାର ଅତିକ୍ରମ କରିଛି।"
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "ସନ୍ଧାନ"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "ପ୍ରକ୍ରିୟାରତ..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "ସନ୍ଧାନ କରୁଛି"
-

@@ -55,12 +55,3 @@ msgstr "S'ha excedit la mida màxima de fitxer (%d MB)"
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "S'ha excedit la mida màxima de fitxers"
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Cercar"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Processant..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "S'està cercant"
-

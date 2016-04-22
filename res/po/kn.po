@@ -55,12 +55,3 @@ msgstr "ಗರಿಷ್ಠ ಫೈಲ್ ಗಾತ್ರ (%d MB) ಮೀರಿದ�
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ಫೈಲ್‌ಗಳ ಗರಿಷ್ಠ ಗಾತ್ರ ಮೀರಿದೆ."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "ಶೋಧಿಸಿ"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "ಪ್ರಕ್ರಿಯೆಗೊಳ್ಳುತ್ತಿದೆ..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "ಶೋಧಿಸುತ್ತಿದೆ"
-

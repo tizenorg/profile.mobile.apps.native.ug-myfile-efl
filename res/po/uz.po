@@ -55,12 +55,3 @@ msgstr "Fayl o‘lchami maksimal miqdordan (%d Mb) oshib ketdi."
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Fayllar o‘lchami ruxsat etilgan maksimal qiymatdan oshdi."
 
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Qidirish"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Bajarilmoqda..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Qidirilmoqda"
-
