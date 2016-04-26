@@ -64,10 +64,11 @@ Description: myfile UG
 
 %define RESDIR           %{PREFIX}/res
 %define EDJDIR           %{RESDIR}/edje
-%define IMGDIR           %{RESDIR}/images
+%define IMGDIR           %{EDJDIR}/images
 %define BINDIR           %{PREFIX}/bin
 %define LIBDIR           %{PREFIX}/lib
 %define LOCALEDIR        %{RESDIR}/locale
+%define IMGICONDIR       %{EDJDIR}/icons
 
 %prep
 %setup -q
@@ -90,7 +91,9 @@ cmake . \
     -DEDJIMGDIR=%{EDJIMGDIR}   \
     -DLIBDIR=%{LIBDIR}   \
     -DICONDIR=%{ICONDIR}   \
-    -DLOCALEDIR=%{LOCALEDIR}
+    -DLOCALEDIR=%{LOCALEDIR} \
+	-DIMGICONDIR=%{IMGICONDIR}\
+	-DRESDIR=%{RESDIR}
 
 make %{?jobs:-j%jobs}
 
@@ -111,3 +114,5 @@ GOPTION="-g 6514"
 %{MANIFESTDIR}/*.xml
 %{ICONDIR}/*
 %{RESDIR}/*
+%{IMGICONDIR}/*
+%{LOCALEDIR}/*

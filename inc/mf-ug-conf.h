@@ -24,6 +24,19 @@
 #define __DEF_MF_UG_CONF_H_
 
 #include <Elementary.h>
+#include <app_common.h>
+
+static inline char * mf_get_resource_path() {
+	char * path = app_get_resource_path();
+	return path;
+}
+
+static inline char* full_path(char *str1, char *str2) {
+	char path[1024] = {};
+	snprintf(path, 1024, "%s%s", str1, str2);
+	char *full_path = strdup(path);
+	return full_path;
+}
 
 #define PKGNAME_SYSTEM				"sys_string"
 #define UGPACKAGE				"ug-myfile-efl"
@@ -31,11 +44,11 @@
 #define UGLOCALEDIR				"/usr/ug/res/locale"
 #define MF_IMAGE_HEAD				"myfile_"
 
+#define UG_EDJE_RES_PATH 		mf_get_resource_path()
+#define UG_EDJ_PATH				full_path(UG_EDJE_RES_PATH, "edje")
 
-#define UG_EDJ_PATH				PREFIX"/res/edje"
-
-#define UG_EDJ_NAVIGATIONBAR		UG_EDJ_PATH"/ug_navibar_layout.edj"
-#define UG_EDJ_IMAGE				 UG_EDJ_PATH"/ug_edc_image_macro.edj"
+#define UG_EDJ_NAVIGATIONBAR		full_path(UG_EDJ_PATH, "/ug_navibar_layout.edj")
+#define UG_EDJ_IMAGE				 full_path(UG_EDJ_PATH, "/ug_edc_image_macro.edj")
 
 
 #define UG_GRP_LIST				"thumbnail_only"
