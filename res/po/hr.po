@@ -28,6 +28,9 @@ msgstr "Unesen neispravan znak. Pokušajte ponovno"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Bešumno"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d odabrano"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Možete odabrati do %d stavki."
 
@@ -54,13 +57,6 @@ msgstr "Premašena maksimalna veličina datoteke (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maks. veličina datoteke."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Traži"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Procesiranje..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Traženje"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Uvoz"
 

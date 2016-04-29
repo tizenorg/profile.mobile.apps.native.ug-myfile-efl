@@ -17,7 +17,7 @@ msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
 msgstr "No se puede añadir. Algunos elementos no existen."
 
 msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
-msgstr "Sonido notificación predet"
+msgstr "Sonido predeterminado"
 
 msgid "IDS_MF_HEADER_SELECT_ITEMS"
 msgstr "Seleccionar elementos"
@@ -27,6 +27,9 @@ msgstr "Carácter introducido no válido. Vuelva a intentarlo."
 
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Silencio"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d seleccionado(s)"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Puede seleccionar hasta %d elementos"
@@ -54,13 +57,6 @@ msgstr "Tamaño máximo de archivo (%d MB) superado"
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Tamaño máximo de archivos superado"
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Buscar"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Procesando..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Buscando"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importar"
 

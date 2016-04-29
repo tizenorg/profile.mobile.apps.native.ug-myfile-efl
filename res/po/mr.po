@@ -28,6 +28,9 @@ msgstr "अवैध वर्ण प्रविष्ट केले. पु�
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "शांत"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d निवडले."
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "आपण %d आयटम्स पर्यंत निवड करू शकता."
 
@@ -54,13 +57,6 @@ msgstr "अत्‍याधिक फाईलचा आकार (%d MB) ओ�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "फाइलींचा अधिकतम आकार ओलांडला आहे."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "शोध"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "प्रक्रिया सुरू आहे..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "शोधत आहे"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "आयात"
 

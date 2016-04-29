@@ -17,7 +17,7 @@ msgid "IDS_MUSIC_POP_UNABLE_TO_ADD_SOME_ITEMS_DONT_EXIST"
 msgstr "일부 항목이 없어 추가할 수 없습니다."
 
 msgid "IDS_ST_BODY_DEFAULT_NOTIFICATION_SOUND_ABB"
-msgstr "기본 알림음"
+msgstr "기본 알림 소리"
 
 msgid "IDS_MF_HEADER_SELECT_ITEMS"
 msgstr "항목 선택"
@@ -27,6 +27,9 @@ msgstr "입력한 문자가 바르지 않습니다. 다시 시도하세요."
 
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "무음"
+
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d개 선택"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "%d개까지 선택할 수 있습니다."
@@ -38,7 +41,7 @@ msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD 카드"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
-msgstr "디바이스 저장공간"
+msgstr "디바이스 메모리"
 
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "재생할 수 없습니다. 오류가 발생하였습니다."
@@ -54,13 +57,6 @@ msgstr "최대 파일 크기 %dMB를 초과하였습니다."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "최대 파일 크기를 초과하였습니다."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "검색"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "진행 중..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "검색 중..."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "가져오기"
 

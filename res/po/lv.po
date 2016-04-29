@@ -28,6 +28,9 @@ msgstr "Ievadīta nederīga rakstzīme. Mēģiniet vēlreiz"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Klusums"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d izvēlētas"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Varat izvēlēties līdz pat %d objektiem."
 
@@ -54,13 +57,6 @@ msgstr "Pārsniegts maksimālais faila lielums (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Pārsniegts maksimālais failu lielums."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Meklēt"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Notiek apstrāde..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Meklē"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importēt"
 

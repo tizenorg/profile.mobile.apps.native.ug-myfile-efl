@@ -28,6 +28,9 @@ msgstr "Geçersiz karakter girildi. Yeniden deneyin."
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Sessiz"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d seçildi"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "%d öğeye kadar seçebilirsiniz."
 
@@ -54,13 +57,6 @@ msgstr "Maksimum dosya boyutu (%d MB) aşıldı."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maksimum dosya boyutu aşıldı."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Ara"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Uygulanıyor..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Aranıyor"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Dışardan al"
 

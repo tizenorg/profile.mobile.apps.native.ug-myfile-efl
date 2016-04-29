@@ -28,6 +28,9 @@ msgstr "Invalid character entered. Try again."
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Silent"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selected"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "You can select up to %d items."
 
@@ -54,13 +57,6 @@ msgstr "Maximum %d MB file size has been exceeded."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maximum size of files exceeded."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Search"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Processing..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Searching"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Import"
 

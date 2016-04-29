@@ -28,6 +28,9 @@ msgstr "ಅಮಾನ್ಯ ಅಕ್ಷರ ನಮೂದಿಸಲಾಗಿದೆ.
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "ನಿಶ್ಯಬ್ದ"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d ಆರಿಸಿದೆ."
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "%d ಅಂಶಗಳ‌ವರೆಗೆ ನೀವು ಆರಿಸಬಹುದು."
 
@@ -54,13 +57,6 @@ msgstr "ಗರಿಷ್ಠ ಫೈಲ್ ಗಾತ್ರ (%d MB) ಮೀರಿದ�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ಫೈಲ್‌ಗಳ ಗರಿಷ್ಠ ಗಾತ್ರ ಮೀರಿದೆ."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "ಶೋಧಿಸಿ"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "ಪ್ರಕ್ರಿಯೆಗೊಳ್ಳುತ್ತಿದೆ..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "ಶೋಧಿಸುತ್ತಿದೆ"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "ಆಮದು"
 

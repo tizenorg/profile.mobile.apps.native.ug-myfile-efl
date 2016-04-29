@@ -28,6 +28,9 @@ msgstr "Անվավեր նիշ է մուտքագրվել: Նորից փորձեք
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Անձայն"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d ընտրվել է"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Կարող եք ընտրել մինչև %d տարր:"
 
@@ -54,13 +57,6 @@ msgstr "Ֆայլի առավելագույն չափը (%d ՄԲ) գերազանց�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Ֆայլերի առավելագույն քանակը գերազանցվել է:"
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Որոնել"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Ընթացքում է"
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Որոնում"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Ներարկում"
 

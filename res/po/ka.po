@@ -28,6 +28,9 @@ msgstr "აკრეფილია არასწორი სიმბოლ�
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "ჩუმი"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d არჩეულია"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "მაქსიმუმ %d ელემენტის არჩევა შეგიძლიათ."
 
@@ -54,13 +57,6 @@ msgstr "გადაჭარბებულია ფაილის მაქ�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "გადაჭარბებულია ფაილების მაქსიმალური ზომა."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "ძიება"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "მუშავდება..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "იძებნება"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "მიღება"
 

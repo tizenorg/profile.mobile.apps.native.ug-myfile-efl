@@ -28,6 +28,9 @@ msgstr "Érvénytelen karaktert vitt be. Próbálja újra"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Csendes"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d kiválasztva"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Legfeljebb %d tételt jelölhet ki."
 
@@ -54,13 +57,6 @@ msgstr "Túllépte a maximális fájlméretet (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Túllépte a maximális fájlméretet."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Keresés"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Feldolgozás folyamatban"
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Keresés"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importálás"
 

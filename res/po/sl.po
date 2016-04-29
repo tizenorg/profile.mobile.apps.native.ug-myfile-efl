@@ -28,6 +28,9 @@ msgstr "Vnesli ste neveljaven znak. Poskusite znova"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Tiho"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d izbranih"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Izberete lahko do %d elementov."
 
@@ -54,13 +57,6 @@ msgstr "Največja dovoljena velikost datoteke (%d MB) je presežena."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Največja dovoljena velikost datotek je presežena."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Iskanje"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Obdelujem..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Iščem"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Uvoz"
 

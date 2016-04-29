@@ -28,6 +28,9 @@ msgstr "Ungültiges Zeichen eingegeben. Erneut versuchen."
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Stumm"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d ausgewählt"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Sie können bis zu %d Elemente auswählen."
 
@@ -54,13 +57,6 @@ msgstr "Maximale Dateigröße (%d MB) überschritten"
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maximale Dateigröße überschritten"
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Suche"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Verarbeitung läuft ..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Suche"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importieren"
 

@@ -28,6 +28,9 @@ msgstr "Введен недопустимый символ. Повторите �
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Без звука"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "Выбрано: %d"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Можно выбрать до %d элементов."
 
@@ -54,13 +57,6 @@ msgstr "Превышен максимальный размер файла (%d М
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Превышен максимальный размер файлов."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Поиск"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Обработка..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Поиск"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Импорт"
 

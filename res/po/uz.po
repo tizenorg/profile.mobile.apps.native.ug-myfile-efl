@@ -28,6 +28,9 @@ msgstr "Mumkin bo‘lmagan belgi kiritildi. Qayta urinib ko‘ring"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Ovozsiz"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d tanlangan"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Eng ko‘pi bilan %d element tanlashingiz mumkin."
 
@@ -54,13 +57,6 @@ msgstr "Fayl o‘lchami maksimal miqdordan (%d Mb) oshib ketdi."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Fayllar o‘lchami ruxsat etilgan maksimal qiymatdan oshdi."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Qidirish"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Bajarilmoqda..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Qidirilmoqda"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Import qilish"
 

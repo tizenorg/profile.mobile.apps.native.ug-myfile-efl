@@ -28,6 +28,9 @@ msgstr "Ongeldig teken ingevoerd. Probeer het opnieuw."
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Stil"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d geselecteerd"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "U kunt maximaal %d items selecteren."
 
@@ -54,13 +57,6 @@ msgstr "Maximale bestandsgrootte (%d MB) overschreden."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maximumgrootte van bestanden overschreden."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "Zoeken"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "Verwerken..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "Zoeken"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importeren"
 

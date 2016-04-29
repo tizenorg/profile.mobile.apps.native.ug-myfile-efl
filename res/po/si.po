@@ -28,6 +28,9 @@ msgstr "වැරදි අකුරු ඇතුල් කර තිබේ. න
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "නිහඬ"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d ක් තෝරා ඇත."
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "ඔබට %d දක්වා අයිතම තේරිය හැකිය."
 
@@ -54,13 +57,6 @@ msgstr "උපරිම ඇමුණුම් ප්‍රමාණය (%d MB) �
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "උපරිම ගොනු ප්‍රමාණය ඉක්මවිය."
-
-msgid "IDS_COM_BODY_SEARCH"
-msgstr "සොයන්න"
-
-msgid "IDS_COM_POP_PROCESSING"
-msgstr "සකසමින්..."
-
-msgid "IDS_COM_BODY_SEARCHING"
-msgstr "සොයමින්"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "ආයාත කරන්න"
 
