@@ -28,6 +28,9 @@ msgstr "Καταχωρίστηκε μη έγκυρος χαρακτήρας. Δ�
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Αθόρυβο"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d επιλέχθηκαν"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Μπορείτε να επιλέξετε μέχρι και %d στοιχεία."
 
@@ -54,4 +57,6 @@ msgstr "Υπέρβαση μέγιστου μεγέθους αρχείων (%d MB
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Υπέρβαση μέγιστου μεγέθους αρχείων."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Εισαγωγή"
 

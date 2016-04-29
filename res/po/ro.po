@@ -28,6 +28,9 @@ msgstr "Aţi introdus un caracter nevalid. Încercaţi din nou"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Silenţios"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d selectate"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Puteţi selecta maximum %d elemente."
 
@@ -54,4 +57,6 @@ msgstr "S-a depăşit dimensiunea maximă a fişierului (%d MO)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Dimensiune maximă de fişiere depăşită"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importați"
 

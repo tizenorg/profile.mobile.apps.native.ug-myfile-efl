@@ -28,6 +28,9 @@ msgstr "Byl zadán neplatný znak. Opakujte akci"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Tichý"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "Vybráno: %d"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Můžete vybrat až %d položek."
 
@@ -54,4 +57,6 @@ msgstr "Byla překročena maximální velikost souborů (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Byla překročena maximální velikost souborů."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Import"
 

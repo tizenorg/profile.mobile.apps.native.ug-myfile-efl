@@ -28,6 +28,9 @@ msgstr "Introduzidos caracteres inválidos. Tente novamente."
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Silencioso"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d seleccionada(s)"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Pode seleccionar até %d itens."
 
@@ -54,4 +57,6 @@ msgstr "Tamanho máximo de ficheiro (%d MB) excedido."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Tamanho máximo dos ficheiros excedido."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importar"
 

@@ -28,6 +28,9 @@ msgstr "અમાન્ય અક્ષર દાખલ કર્યો છે. 
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "શાંત"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d પસંદ કર્યા"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "તમે %d વસ્તુઓ સુધી પસંદ કરી શકો છો."
 
@@ -54,4 +57,6 @@ msgstr "મહત્તમ ફાઇલ કદ (%d MB) વટાવ્યું.
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ફાઇલ્સની મહત્તમ કદ વટાવાઈ ગઈ."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "આયાત કરો"
 

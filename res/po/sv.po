@@ -28,6 +28,9 @@ msgstr "Ogiltigt tecken har angivits. Försök igen."
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Tyst"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d valda"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Du kan välja upp till %d objekt."
 
@@ -54,4 +57,6 @@ msgstr "Högsta tillåtna filstorlek (%d MB) har överskridits."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Högsta filstorlek överskreds."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importera"
 

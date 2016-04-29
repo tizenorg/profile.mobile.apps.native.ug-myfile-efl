@@ -28,6 +28,9 @@ msgstr "Внесен е неважечки знак. Обидете се пов�
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Нечујно"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "Избрани се %d"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Може да изберете најмногу %d записи."
 
@@ -54,4 +57,6 @@ msgstr "Надмината е максималната големина за ф�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Надмината е максималната големина за фајловите."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Увези"
 
