@@ -28,8 +28,11 @@ msgstr "输入的字符无效。请重试。"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "静音"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d 已选择"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
-msgstr "最多可选择%d个项目。"
+msgstr "最多可选择 %d 个视频。"
 
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "删除？"
@@ -54,4 +57,6 @@ msgstr "已超过最大文件大小（%d MB）。"
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "已达到文件最大尺寸。"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "导入"
 

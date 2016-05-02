@@ -28,6 +28,9 @@ msgstr "Въведен е невалиден знак. Опитайте отно
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Тих"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d избрани"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Можете да изберете до %d елемента."
 
@@ -54,4 +57,6 @@ msgstr "Надвишен е максималният размер на файл�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Максималният размер на файловете е надхвърлен."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Въвеждане"
 

@@ -28,6 +28,9 @@ msgstr "Caractère non valide saisi. Réessayez."
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Discret"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d sélectionné(es)"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Vous pouvez sélectionner jusqu'à %d éléments."
 
@@ -54,4 +57,6 @@ msgstr "Taille maximale de fichiers (%d Mo) dépassée"
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Taille maximale des fichiers dépassée"
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importer"
 

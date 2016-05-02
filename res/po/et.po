@@ -28,6 +28,9 @@ msgstr "Sisestati vale tähemärk. Proovige uuesti"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Vaikne"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d valitud"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Te voite valida kuni %d uksust."
 
@@ -54,4 +57,6 @@ msgstr "Faili maksimaalne suurus (%d MB) on ületatud."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maksimaalne failide suurus on ületatud."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Import"
 

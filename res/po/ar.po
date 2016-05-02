@@ -28,6 +28,9 @@ msgstr "تم إدخال حرف غير صالح. حاول مرة أخرى."
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "صامت"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "تم تحديد %d"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "يمكنك تحديد ما يصل إلى %d عناصر."
 
@@ -54,4 +57,6 @@ msgstr "تم تجاوز الحد الأقصى لحجم الملف (%d ميجا�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "تم تجاوز الحد الأقصى لحجم الملفات."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "استيراد"
 

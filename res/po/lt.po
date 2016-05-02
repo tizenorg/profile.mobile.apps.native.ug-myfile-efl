@@ -28,6 +28,9 @@ msgstr "Įvestas neteisingas simbolis. Bandykite vėl"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Tylusis"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "Pasirinkta: %d"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Galite pasirinkti iki %d elementų."
 
@@ -54,4 +57,6 @@ msgstr "Viršytas didžiausias failo dydis (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Viršytas leistinas failų dydis."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importuoti"
 

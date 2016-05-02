@@ -28,6 +28,9 @@ msgstr "Annettu virheellinen merkki. Yritä uudelleen."
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Äänetön"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "%d valittu"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Voit valita enintään %d kohdetta."
 
@@ -54,4 +57,6 @@ msgstr "Tiedoston enimmäiskoko (%d Mt) on ylitetty."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Tiedostojen enimmäiskoko on saavutettu."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Tuo"
 

@@ -28,6 +28,9 @@ msgstr "Zadali ste neplatný znak. Skúste to znova"
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Tichý"
 
+msgid "IDS_COM_BODY_PD_SELECTED"
+msgstr "Vybraté: %d"
+
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Môžete vybrať maximálne %d položiek."
 
@@ -54,4 +57,6 @@ msgstr "Prekročila sa maximálna veľkosť súboru (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Prekročila sa maximálna veľkosť súborov."
+msgid "IDS_COM_OPT_IMPORT"
+msgstr "Importovať"
 
