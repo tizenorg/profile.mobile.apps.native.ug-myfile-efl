@@ -220,6 +220,7 @@ static void __mf_ug_music_recommendation_ringtone_set(void *data, char *path, ch
 				app_control_destroy(service);
 			}
 		}
+		UG_SAFE_FREE_CHAR(result);
 	} else {
 		int ret = 0;
 		ret = app_control_create(&service);

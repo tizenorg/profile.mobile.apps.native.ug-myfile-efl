@@ -958,6 +958,7 @@ Eina_List *mf_ug_fm_svc_wrapper_level_path_get(const char *original_path)
 			root_path = MEMORY_FOLDER;
 			break;
 		default:
+			UG_SAFE_FREE_CHAR(current_path);
 			return NULL;
 		}
 		current_path = current_path + strlen(root_path) + 1;
