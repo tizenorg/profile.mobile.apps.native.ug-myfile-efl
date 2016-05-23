@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" package="ug-myfile-efl" api-version="2.4" version="0.0.2" install-location="internal-only">
+<manifest xmlns="http://tizen.org/ns/packages" package="ug-myfile-efl" api-version="3.0" version="0.0.2" install-location="internal-only">
 	<label>My Files Appcontrol</label>
 		<label xml:lang="hy-am">My Files Appcontrol</label>
 		<label xml:lang="az-az">My Files Appcontrol</label>
@@ -55,7 +55,7 @@
 		<label xml:lang="es-mx">My Files Appcontrol</label>
 	<author email="gliang.wang@samsung.com" href="www.samsung.com">Guangliang Wang</author>
 	<description>Myfiles Application</description>
-	<ui-application appid="ug-myfile-efl" exec="/usr/apps/ug-myfile-efl/bin/ug-myfile-efl" ui-gadget="false" nodisplay="true" multiple="true" type="capp" taskmanage="false" process-pool="true" launch_mode="caller">
+	<ui-application appid="org.tizen.ug-myfile-efl" exec="/usr/apps/org.tizen.ug-myfile-efl/bin/ug-myfile-efl" ui-gadget="false" nodisplay="true" multiple="true" type="capp" taskmanage="false" process-pool="true" launch_mode="caller">
 		<icon>/usr/share/icons/default/small/ug-myfile-efl.png</icon>
 		<label>My Files</label>
 		<label xml:lang="hy-am">Իմ Ֆայլերը</label>

@@ -41,7 +41,7 @@ static inline char* full_path(char *str1, char *str2) {
 #define PKGNAME_SYSTEM				"sys_string"
 #define UGPACKAGE				"ug-myfile-efl"
 #define UGPKGNAME_MYFILE			"org.tizen.myfile"
-#define UGLOCALEDIR				"/usr/ug/res/locale"
+#define UGLOCALEDIR				full_path(UG_EDJE_RES_PATH,"locale")
 #define MF_IMAGE_HEAD				"myfile_"
 
 #define UG_EDJE_RES_PATH 		mf_get_resource_path()
