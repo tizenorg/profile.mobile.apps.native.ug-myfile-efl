@@ -32,11 +32,7 @@ char *mf_ug_widget_get_text(const char *ID)
 
 	char *str;
 
-	if (strstr(ID, "IDS_COM")) {
-		str = dgettext("sys_string", ID);
-	} else {
-		str = dgettext(UGPACKAGE, ID);
-	}
+	str = dgettext(UGPACKAGE, ID);
 
 	/** Fix P140626-02426
 	 * if got text from sys failed, try to
@@ -73,11 +69,7 @@ void mf_ug_widget_object_text_set(Evas_Object *obj, const char *ID, const char* 
 
 	const char *domain;
 
-	if (strstr(ID, "IDS_COM")) {
-		domain = PKGNAME_SYSTEM;
-	} else {
-		domain = UGPACKAGE;    /*PKGNAME_MYFILE;*/
-	}
+	domain = UGPACKAGE;    /*PKGNAME_MYFILE;*/
 
 	elm_object_domain_translatable_part_text_set(obj, part, domain, ID);
 }
@@ -89,11 +81,8 @@ void mf_ug_widget_object_item_text_set(Elm_Object_Item *item, const char *ID, co
 	ug_mf_retm_if(item == NULL, "item is NULL");
 	const char *domain;
 
-	if (strstr(ID, "IDS_COM")) {
-		domain = PKGNAME_SYSTEM;
-	} else {
-		domain = UGPACKAGE;    /*PKGNAME_MYFILE;*/
-	}
+	domain = UGPACKAGE;    /*PKGNAME_MYFILE;*/
+
 	elm_object_item_domain_translatable_part_text_set(item, part, domain, ID);
 }
 
@@ -103,11 +92,7 @@ void mf_ug_widget_object_item_translate_set(Elm_Object_Item *item, const char *I
 	ug_mf_retm_if(item == NULL, "item is NULL");
 	const char *domain;
 
-	if (strstr(ID, "IDS_COM")) {
-		domain = PKGNAME_SYSTEM;
-	} else {
-		domain = UGPACKAGE;
-	}
+	domain = UGPACKAGE;
 
 	SECURE_DEBUG(">>>>>>>>>>>>>>> ID is [%s] domain is [%s]", ID, domain);
 	//elm_object_item_domain_text_translatable_set(item, domain, EINA_TRUE);
