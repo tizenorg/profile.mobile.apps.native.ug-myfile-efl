@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "O'chirish"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Jild yaratish"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Jild nomini kiriting."
 
@@ -25,11 +31,35 @@ msgstr "Elementlar tanlash"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Mumkin bo‘lmagan belgi kiritildi. Qayta urinib ko‘ring"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Qidirish"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Belgilar soni ruxsat etilgan maksimal miqdorga yetdi."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Bajarilmoqda..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Qo‘shish"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Bekor qilish"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Ovozsiz"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Barchasini tanlash"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d tanlangan"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Qo‘llab-quvvatlanmaydigan fayl turi."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Eng ko‘pi bilan %d element tanlashingiz mumkin."
@@ -37,14 +67,44 @@ msgstr "Eng ko‘pi bilan %d element tanlashingiz mumkin."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "O'chirilsinmi?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Xato."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Bajarildi"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Elementlar yo‘q"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD-karta"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Qurilma xotirasi"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Operatsiya bajarilmadi."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "O‘ynatib bo‘lmaydi. Xato yuz berdi."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Noma’lum"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Ulanib bo‘lmadi."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Orqaga"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Avvaldan mavjud."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Fayllarim"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Xotira yetarli emas."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "BAJARILDI"
@@ -57,6 +117,10 @@ msgstr "Fayl o‘lchami maksimal miqdordan (%d Mb) oshib ketdi."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Fayllar o‘lchami ruxsat etilgan maksimal qiymatdan oshdi."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Import qilish"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Jild"
 

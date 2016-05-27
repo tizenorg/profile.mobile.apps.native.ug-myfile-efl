@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Izbriši"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Ustvari mapo"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Vnesite ime mape."
 
@@ -25,11 +31,35 @@ msgstr "Izberite elemente"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Vnesli ste neveljaven znak. Poskusite znova"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Iskanje"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Doseženo je največje dovoljeno število znakov."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Obdelujem..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Dodaj"
+
+msgid "IDS_COM_SK_OK"
+msgstr "V redu"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Prekliči"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Tiho"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Izberi vse"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d izbranih"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Nepodprta vrsta datoteke."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Izberete lahko do %d elementov."
@@ -37,14 +67,44 @@ msgstr "Izberete lahko do %d elementov."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Izbrišem?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Ni uspelo."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Končano"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Ni predmetov"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "Kartica SD"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Pomnilnik naprave"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Postopek ni uspel."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Ni mogoče predvajati. Prišlo je do napake."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Neznano"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Povezava ni uspela."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Nazaj"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Že obstaja."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Moje datoteke"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Ni dovolj pomnilnika."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "KONČANO"
@@ -57,6 +117,10 @@ msgstr "Največja dovoljena velikost datoteke (%d MB) je presežena."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Največja dovoljena velikost datotek je presežena."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Uvoz"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Mapa"
 

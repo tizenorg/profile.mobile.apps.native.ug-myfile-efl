@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Slet"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Opret mappe"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Angiv mappenavn"
 
@@ -25,11 +31,35 @@ msgstr "Vælg elementer"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Ugyldigt tegn indtastet. Prøv igen."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Søg"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Det maksimale antal tegn er nået."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Behandler ..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Tilføj"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Annuller"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Lydløs"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Vælg alle"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d valgt"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Filtype understøttes ikke."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Du kan vælge op til %d elementer."
@@ -37,14 +67,44 @@ msgstr "Du kan vælge op til %d elementer."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Slet?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Mislykkedes."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Udført"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Ingen elementer"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD-kort"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Telefonens hukommelse"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Handlingen mislykkedes."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Kan ikke afspille. Der opstod en fejl."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Ukendt"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Forbindelsen\nmislykkedes."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Tilbage"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Findes allerede."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Mine filer"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Ikke nok hukommelse."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "UDFØRT"
@@ -57,6 +117,10 @@ msgstr "Maksimal filstørrelse (%d MB) overskredet."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Den maksimale filstørrelse overskredet."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importer"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Mappe"
 

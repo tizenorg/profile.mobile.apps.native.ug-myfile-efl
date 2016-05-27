@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Eyða"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Búa til möppu"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Ritið heiti möppu."
 
@@ -25,11 +31,35 @@ msgstr "Velja hluti"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Ógildur stafur sleginn inn. Reyndu aftur."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Leit"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Hámarksfjölda stafa hefur verið náð."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Vinnsla í gangi..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Bæta við"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Í lagi"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Hætta við"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Án hljóðs"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Velja allt"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d valið"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Óstutt skrársnið."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Hægt er velja allt að %d hluti."
@@ -37,14 +67,44 @@ msgstr "Hægt er velja allt að %d hluti."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Á að eyða?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Mistókst."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Lokið"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Engin atriði"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD-kort"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Innra minni tækis"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Aðgerð mistókst."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Mistókst að spila. Villa kom upp."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Óþekkt"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Tenging brást."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Bakka"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Er þegar til."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Skrárnar mínar"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Ekki er nægt minni."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "LOKIÐ"
@@ -57,6 +117,10 @@ msgstr "Hámarksstærð skráar (%d MB) hefur verið náð."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Hámarksstærð skráa er náð."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Flytja inn"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Mappa"
 

@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "حذف"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "إنشاء مجلد"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "أدخل اسم المجلد."
 
@@ -25,11 +31,35 @@ msgstr "تحديد عناصر"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "تم إدخال حرف غير صالح. حاول مرة أخرى."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "بحث"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "تم الوصول إلى أقصى عدد من الحروف."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "جاري المعالجة..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "إضافة"
+
+msgid "IDS_COM_SK_OK"
+msgstr "موافق"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "إلغاء"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "صامت"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "اختيار الكل"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "تم تحديد %d"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "نوع ملف غير مدعوم."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "يمكنك تحديد ما يصل إلى %d عناصر."
@@ -37,26 +67,60 @@ msgstr "يمكنك تحديد ما يصل إلى %d عناصر."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "مسح؟"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "فشل."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "تمت"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "لا توجد عناصر"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "بطاقة SD"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "ذاكرة الجهاز"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "فشلت العملية."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "تعذر التشغيل. حدث خطأ."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "غير معروف"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "تم"
 
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "فشل التوصيل."
+
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "إلغاء"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "رجوع"
 
 msgid "IDS_CHATON_POP_MAXIMUM_FILE_SIZE_HPD_MB_EXCEEDED"
 msgstr "تم تجاوز الحد الأقصى لحجم الملف (%d ميجابايت)."
 
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "موجود مسبقا."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "ملفاتي"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "الذاكرة لا تكفي."
+
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "تم تجاوز الحد الأقصى لحجم الملفات."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "استيراد"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "المجلد"
 

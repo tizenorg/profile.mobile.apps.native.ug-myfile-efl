@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "මකන්න"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "ෆෝල්ඩරයක් තනන්න"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "ෆෝල්ඩර නාමය ඇතුල් කරන්න."
 
@@ -25,11 +31,35 @@ msgstr "අයිතම තෝරන්න"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "වැරදි අකුරු ඇතුල් කර තිබේ. නැවත උත්සාහ කරන්න."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "සොයන්න"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "උපරිම අක්ෂර ගණනට ලඟා විය."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "සකසමින්..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "එක් කර."
+
+msgid "IDS_COM_SK_OK"
+msgstr "හරි"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "අව. කර."
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "නිහඬ"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "සියල්ල තෝරන්න"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d ක් තෝරා ඇත."
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "සහාය නොලත් ගොනු වර්ගය."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "ඔබට %d දක්වා අයිතම තේරිය හැකිය."
@@ -37,14 +67,44 @@ msgstr "ඔබට %d දක්වා අයිතම තේරිය හැක�
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "මකන්නද?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "අසාර්ථකයි."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "නිමයි"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "අයිතම නැත"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD කාඩ්පත"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "උපාංග මතකය"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "මෙහෙයුම අසාර්ථකයි."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "ධාවනය කල නොහැක. දෝෂයක් හට ගැනිණි."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "නොදන්නා"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "සම්බන්ධතාවය අසමත් විය."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "ආපසු"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "දැනටමත් පවතී."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "මගේ ගොනු"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "ප්‍රමාණවත් මතකයක් නොමැත."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "නිමයි"
@@ -57,6 +117,10 @@ msgstr "උපරිම ඇමුණුම් ප්‍රමාණය (%d MB) �
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "උපරිම ගොනු ප්‍රමාණය ඉක්මවිය."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "ආයාත කරන්න"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "ෆෝල්ඩරය"
 

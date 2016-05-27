@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Избриши"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Направи папка"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Внесете име за папката."
 
@@ -25,11 +31,35 @@ msgstr "Изберете записи"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Внесен е неважечки знак. Обидете се повторно"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Пребарување"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Достигнат е максималниот број знаци."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Обработување..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Додај"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Откажи"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Нечујно"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Избери ги сите"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "Избрани се %d"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Неподдржан тип на фајл."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Може да изберете најмногу %d записи."
@@ -37,14 +67,44 @@ msgstr "Може да изберете најмногу %d записи."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Да се избрише?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Неуспешно."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Готово"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Нема записи"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD-картичка"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Меморија на уредот"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Неуспешна операција."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Не може да се емитува. Дојде до грешка."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Непознато"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Неуспешно поврзување."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Назад"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Веќе постои."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Мои фајлови"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Нема доволно меморија."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "ГОТОВО"
@@ -57,6 +117,10 @@ msgstr "Надмината е максималната големина за ф�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Надмината е максималната големина за фајловите."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Увези"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Папка"
 

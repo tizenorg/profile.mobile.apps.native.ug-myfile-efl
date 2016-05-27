@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Διαγραφή"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Δημ/ργία φακέλου"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Εισαγωγή ονόματος φακέλου."
 
@@ -25,11 +31,35 @@ msgstr "Επιλογή στοιχείων"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Καταχωρίστηκε μη έγκυρος χαρακτήρας. Δοκιμάστε ξανά"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Αναζήτηση"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Ο μέγιστος αριθμός χαρακτήρων συμπληρώθηκε."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Επεξεργασία..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Προσθήκη"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Άκυρο"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Αθόρυβο"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Επιλογή όλων"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d επιλέχθηκαν"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Μη υποστηριζόμενος τύπος αρχείου."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Μπορείτε να επιλέξετε μέχρι και %d στοιχεία."
@@ -37,14 +67,44 @@ msgstr "Μπορείτε να επιλέξετε μέχρι και %d στοιχ
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Διαγραφή;"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Αποτυχία."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Ok"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Κανένα στοιχείο"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "Κάρτα SD"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Μνήμη συσκευής"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Λειτουργία απέτυχε."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Δεν είναι δυνατή η αναπαραγωγή. Προέκυψε σφάλμα."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Άγνωστο"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Αποτυχία σύνδεσης. Επανάληψη;"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Πίσω"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Υπάρχει ήδη."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Τα Αρχεία Μου"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Ανεπαρκής μνήμη."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "ΤΕΛΟΣ"
@@ -57,6 +117,10 @@ msgstr "Υπέρβαση μέγιστου μεγέθους αρχείων (%d MB
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Υπέρβαση μέγιστου μεγέθους αρχείων."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Εισαγωγή"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Φάκελος"
 

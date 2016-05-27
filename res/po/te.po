@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "తొలగించు"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "ఫోల్డర్‌ను రూపొందించు"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "ఫోల్డర్ పేరును నమోదు చేయండి."
 
@@ -25,11 +31,35 @@ msgstr "ఐటమ్‌లను ఎంచుకోండి"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "చెల్లని అక్షరం నమోదు చేయబడింది. మళ్లీ ప్రయత్నించండి."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "వెతుకు"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "అక్షరాల గరిష్ఠ సంఖ్యకు చేరుకున్నారు."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "ప్రాసెస్ చేస్తోంది..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "జోడించు"
+
+msgid "IDS_COM_SK_OK"
+msgstr "సరే"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "రద్దు"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "నిశ్శబ్దం"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "అన్నీ ఎంచుకోండి"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d ఎన్నుకోబడింది."
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "మద్దతులేని ఫైల్ రకం."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "మీరు %d ఐటెమ్ల వరకు ఎంచుకోవచ్చు."
@@ -37,14 +67,44 @@ msgstr "మీరు %d ఐటెమ్ల వరకు ఎంచుకోవచ
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "తొలగించాలా?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "విఫలమైనది."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "పూర్తయింది"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "ఐటమ్‌లు లేవు"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD కార్డ్"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "పరికరం మెమరీ"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "ఆపరేషన్ విఫలమైంది."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "ప్లే చేయడం సాధ్యం కాదు. లోపం ఏర్పడింది."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "తెలియని"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "కనెక్షన్ విఫలమైంది."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "వెనుకకు"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "ఇప్పటికే ఉంది."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "నా ఫైళ్లు"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "తగినంత మెమరీ లేదు."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "పూర్తయింది"
@@ -57,6 +117,10 @@ msgstr "గరిష్ఠ ఫైల్ పరిమాణం (%d MB) మిం�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ఫైళ్ల యొక్క గరిష్ట సంఖ్యను మించిపోయారు."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "దిగుమతి చేయి"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "ఫోల్డర్"
 

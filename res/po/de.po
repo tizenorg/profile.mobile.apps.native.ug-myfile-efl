@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Löschen"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Ordner erstellen"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Ordnernamen eingeben"
 
@@ -25,11 +31,35 @@ msgstr "Elemente auswählen"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Ungültiges Zeichen eingegeben. Erneut versuchen."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Suche"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximal zulässige Zeichenanzahl erreicht."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Verarbeitung läuft ..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Hinzufügen"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Abbrechen"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Stumm"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Alle auswählen"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d ausgewählt"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Nicht unterstützter Dateityp"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Sie können bis zu %d Elemente auswählen."
@@ -37,14 +67,44 @@ msgstr "Sie können bis zu %d Elemente auswählen."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Löschen?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Fehlgeschlagen"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Fertig"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Keine Elemente"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD-Karte"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Gerätespeicher"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Vorgang fehlgeschlagen"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Datei kann nicht wiedergegeben werden. Fehler aufgetreten."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unbekannt"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Verbindung fehlgeschlagen"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Zurück"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Bereits vorhanden"
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Eigene Dateien"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Speicher voll"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "FERTIG"
@@ -57,6 +117,10 @@ msgstr "Maximale Dateigröße (%d MB) überschritten"
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maximale Dateigröße überschritten"
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importieren"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Ordner"
 

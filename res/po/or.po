@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "ବିଲୋପ"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "ଫୋଲ୍ଡର୍ ସୃଷ୍ଟି"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "ଫୋଲ୍ଡର୍ ନାମ ପ୍ରବେଶ କରନ୍ତୁ"
 
@@ -25,11 +31,35 @@ msgstr "ଆଇଟମଗୁଡିକ ଚୟନ"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "ଅବୈଧ କମ୍‍ ପ୍ରବେଶ ହେଲା। ପୁନଃଚେଷ୍ଟା କରନ୍ତୁ।"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "ସନ୍ଧାନ"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "ସର୍ବାଧିକ ସଂଖ୍ୟକ ବର୍ଣ୍ଣରେ ପହଞ୍ଚିଛି।"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "ପ୍ରକ୍ରିୟାରତ..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "ଯୋଡନ୍ତୁ"
+
+msgid "IDS_COM_SK_OK"
+msgstr "ଓକେ"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "ବାତିଲ୍"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "ଶାନ୍ତ"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "ସମସ୍ତ ଚୟନ"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%dଟି ଚୟନିତ"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "ଅସମର୍ଥିତ ଫାଇଲ୍ ପ୍ରକାର"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "ଆପଣ %dଟି ଆଇଟମ୍‌ ପର୍ଯ୍ୟନ୍ତ ଚୟନ କରିପାରିବେ।"
@@ -37,14 +67,44 @@ msgstr "ଆପଣ %dଟି ଆଇଟମ୍‌ ପର୍ଯ୍ୟନ୍ତ ଚୟ
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "ବିଲୋପ କରିବେ?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "ବିଫଳ ହୋଇଛି"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "ସମାପ୍ତ"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "କୌଣସି ଆଇଟମ୍ ନାହିଁ"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD କାର୍ଡ୍"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "ଡିଭାଇସ୍ ମେମୋରୀ"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "ସଞ୍ଚାଳନ ବିଫଳ ହୋଇଛି।"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "ଚାଳନ କରିବାକୁ ଅସମର୍ଥ। ତ୍ରୁଟି ଘଟିଲା।"
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "ଅଜଣା"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "ସଂଯୋଜନ ବିଫଳ ହୋଇଛି।"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "ପଛକୁ"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "ପୂର୍ବରୁ ବିଦ୍ୟମାନ ଅଛି।"
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "ମୋ ଫାଇଲଗୁଡିକ"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "ପର୍ଯ୍ୟାପ୍ତ ମେମୋରୀ ନାହିଁ।"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "ସମାପ୍ତ"
@@ -57,6 +117,10 @@ msgstr "ସର୍ବାଧିକ ଫାଇଲ୍ ଆକାର (%d MB) ଅତି�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ଫାଇଲ୍‌ଗୁଡିକର ସର୍ବାଧିକ ଆକାର ଅତିକ୍ରମ କରିଛି।"
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "ଆମଦାନୀ"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "ଫୋଲ୍ଡର୍"
 

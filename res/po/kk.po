@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Жою"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Қалтаны құру"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Қалта атын енгізңіз."
 
@@ -25,11 +31,35 @@ msgstr "Элементтерді таңдау"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Қате таңба енгізілді. Әрекетті қайталаңыз"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Іздеу"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Таңбалардың ен көп саны артты."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Өңделуде..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Қосу"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Тоқтату"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Дыбыссыз"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Бәрін бөлектеу"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d таңдалды"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Қолдаусыз файл түрі."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "%d элементке дейін таңдауға болады."
@@ -37,14 +67,44 @@ msgstr "%d элементке дейін таңдауға болады."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Өшіресіз бе?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Үзіліп кетті"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Дайын"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Баптар жоқ"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD картасы"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Құрылғы жады"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Әрекет сәтсіз аяқталды."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Ойнату мүмкін емес. Қате пайда болды."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Белгісіз"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Қосылу үзіліп кетті"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Aртқа"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Қолданыста бар."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Менің файлдарым"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Жадында орын аз."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "ДАЙЫН"
@@ -57,6 +117,10 @@ msgstr "Ең үлкен файл өлшемінен (%d МБ) асып кетт�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Файлдардың ең үлкен өлшемінен асып кетті."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Импорт"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Қалта"
 

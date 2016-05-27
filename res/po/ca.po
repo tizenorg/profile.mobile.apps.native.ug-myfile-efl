@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Esborrar"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Crear carpeta"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Introduir nom de carpeta"
 
@@ -25,11 +31,35 @@ msgstr "Seleccionar elements"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Caràcter introduït no vàlid. Torni-ho a intentar."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Cercar"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "S'ha assolit el nombre màxim de caràcters"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Processant..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Afegeix"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Acceptar"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel·lar"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Silenci"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Seleccioni-ho tot"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d seleccionat"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "No s'admet el tipus de fitxer"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Pot seleccionar fins a %d elements"
@@ -37,14 +67,44 @@ msgstr "Pot seleccionar fins a %d elements"
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Esborrar?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Error"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Fet"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "No hi ha elements"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "Targeta SD"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Memòria del dispositiu"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Operació fallida"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "No es pot reproduir. S'ha produït un error."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Desconegut"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Error de connexió"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Enrere"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Ja existeix"
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Els meus fitxers"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "No hi ha prou memòria"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "REALITZAT"
@@ -57,6 +117,10 @@ msgstr "S'ha excedit la mida màxima de fitxer (%d MB)"
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "S'ha excedit la mida màxima de fitxers"
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importar"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Carpeta"
 

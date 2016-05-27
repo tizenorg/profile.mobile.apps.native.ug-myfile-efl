@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "நீக்கு"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "உறை உருவாக்குக"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "கோப்புறை பெயரை உள்ளிடுக."
 
@@ -25,11 +31,35 @@ msgstr "உருப்படிகளை தேர்வுசெய்க"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "தவறான எழுத்து உள்ளிடப்பட்டது. மீண்டும் முயலுக."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "தேடுக"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "அதிகபட்ச எழுத்துக்களின் எண்ணிக்கையை அடைந்தது."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "செயலில்..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "சேர்"
+
+msgid "IDS_COM_SK_OK"
+msgstr "சரி"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "ரத்து"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "அமைதி"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "எல்லாம் தேர்வு"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d தேர்வுசெய்யப்பட்டன"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "ஆதரிக்கப்படாத கோப்பு வகை."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "%d உருப்படிகள் வரை நீங்கள் தேர்வுசெய்யலாம்."
@@ -37,14 +67,44 @@ msgstr "%d உருப்படிகள் வரை நீங்கள் த
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "நீக்கவா?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "தோல்வியுற்றது."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "முடிந்தது"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "உருப்படிகள் இல்லை"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD அட்டை"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "சாதன நினைவகம்"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "செயல்பாடு தோல்வி."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "இயக்க இயலாது. பிழை ஏற்பட்டுள்ளது."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "தெரியாத"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "இணைப்பு தோல்வி."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "பின்"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "முன்பே உள்ளது."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "எனது கோப்புகள்"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "போதிய நினைவகம் இல்லை."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "முடிந்தது"
@@ -57,6 +117,10 @@ msgstr "அதிகபட்ச கோப்பளவு (%d MB) கடந்�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "அதிகபட்ச கோப்புகளின் அளவை தாண்டியது."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "இறக்குக"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "உறை"
 

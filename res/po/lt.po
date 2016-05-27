@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Trinti"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Kurti aplanką"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Įrašyti aplanko pavadinimą."
 
@@ -25,11 +31,35 @@ msgstr "Rinktis elementus"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Įvestas neteisingas simbolis. Bandykite vėl"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Ieškoti"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Pasiektas didžiausias simbolių skaičius."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Apdorojama..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Pridėti"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Gerai"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Atšaukti"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Tylusis"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Pasirinkti visus"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "Pasirinkta: %d"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Nepalaikomas failo tipas."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Galite pasirinkti iki %d elementų."
@@ -37,14 +67,44 @@ msgstr "Galite pasirinkti iki %d elementų."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Ar trinti?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Nepavyko."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Atlikta"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Elementų nėra"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD kortelė"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Įrenginio atmintis"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Veiksmas nepavyko."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Neįmanoma paleisti. Įvyko klaida."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Nežinomas"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Prisijungti nepavyko."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Atgal"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Jau yra."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Mano failai"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Nepakanka atminties."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "ATLIKTA"
@@ -57,6 +117,10 @@ msgstr "Viršytas didžiausias failo dydis (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Viršytas leistinas failų dydis."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importuoti"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Aplankas"
 

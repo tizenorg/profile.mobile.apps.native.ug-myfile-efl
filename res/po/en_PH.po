@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Delete"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Create folder"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Enter folder name."
 
@@ -25,11 +31,35 @@ msgstr "Select items"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Invalid character entered. Try again"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Search"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximum number of characters reached."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Processing..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Add"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancel"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Silent"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Select all"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d selected"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Unsupported file type."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "You can select up to %d items."
@@ -37,14 +67,44 @@ msgstr "You can select up to %d items."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Delete?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Failed"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Done"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "No items"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD card"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Device memory"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Operation failed."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Unable to play. Error occurred"
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Unknown"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Connection failed."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Back"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Already exists."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "My Files"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Not enough memory."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "DONE"
@@ -57,6 +117,10 @@ msgstr "Maximum file size (%d MB) exceeded."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maximum size of files exceeded."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Import"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Folder"
 

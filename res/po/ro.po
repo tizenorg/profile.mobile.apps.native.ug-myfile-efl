@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Ştergere"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Creare director"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Introduceţi numele folderului."
 
@@ -25,11 +31,35 @@ msgstr "Selectare elemente"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Aţi introdus un caracter nevalid. Încercaţi din nou"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Căutare"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Adăugare la marcaje"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Se procesează..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Adaugă"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Anulare"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Silenţios"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Selectare toate"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d selectate"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Tip fişier neacceptat"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Puteţi selecta maximum %d elemente."
@@ -37,14 +67,44 @@ msgstr "Puteţi selecta maximum %d elemente."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Ştergeţi?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Nereuşit"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Gata"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Niciun element"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "Cartelă SD"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Memorie dispozitiv"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Operaţie nereuşită"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Imposibil de redat. A avut loc o eroare."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Necunoscut"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Conexiune nereuşită"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Înapoi"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Există deja."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Fişierele mele"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Memorie plină"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "EFECTUAT"
@@ -57,6 +117,10 @@ msgstr "S-a depăşit dimensiunea maximă a fişierului (%d MO)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Dimensiune maximă de fişiere depăşită"
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importați"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Folder"
 

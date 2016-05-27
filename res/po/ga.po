@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Scrios"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Déan fillteán"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Iontráil ainm an fhillteáin"
 
@@ -25,11 +31,35 @@ msgstr "Roghnaigh míreanna"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Carachtar neamhbhailí iontráilte. Triail arís."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Cuardaigh"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Uaslíon na gcarachtar bainte amach."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Ag próiseáil..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Cuir leis"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cuir ar ceal"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Tostach"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Roghnaigh gach"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d roghnaithe"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Cineál comhaid gan tacú."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Is féidir leat suas le %d mír a roghnú"
@@ -37,14 +67,44 @@ msgstr "Is féidir leat suas le %d mír a roghnú"
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Scrios?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Theip air."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Déanta"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Níl míreanna ann"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "Cárta SD"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Cuimhne an ghléis"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Theip ar oibríocht."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Ní féidir seinm. Tharla earráid."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Anaithnid"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Theip ar nascadh."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Siar"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Ann cheana."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Mo Chomhaid"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Easpa cuimhne."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "DÉANTA"
@@ -57,6 +117,10 @@ msgstr "Uasmhéid an chomhaid (%d MB) sáraithe."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Uasmhéid na gcomhad sáraithe."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Iompórtáil"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Fillteán"
 

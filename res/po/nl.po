@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Verwijderen"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Map maken"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Mapnaam invoeren"
 
@@ -25,11 +31,35 @@ msgstr "Items selecteren"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Ongeldig teken ingevoerd. Probeer het opnieuw."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Zoeken"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximumaantal tekens bereikt."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Verwerken..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Toevoegen"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Annuleren"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Stil"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Alles selecteren"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d geselecteerd"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Niet-ondersteund bestandstype."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "U kunt maximaal %d items selecteren."
@@ -37,14 +67,44 @@ msgstr "U kunt maximaal %d items selecteren."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Verwijderen?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Mislukt."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Gereed"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Geen items"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD-kaart"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Apparaatgeheugen"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Bewerking is mislukt."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Kan niet afspelen. Fout opgetreden."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Onbekend"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Verbinding mislukt."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Terug"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Bestaat al."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Mijn bestanden"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Onvoldoende geheugen."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "GEREED"
@@ -57,6 +117,10 @@ msgstr "Maximale bestandsgrootte (%d MB) overschreden."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Maximumgrootte van bestanden overschreden."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importeren"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Map"
 

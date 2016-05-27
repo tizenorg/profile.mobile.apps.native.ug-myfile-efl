@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "মুছুন"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "ফোল্ডার তৈরি করুন"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "ফোল্ডার নাম লিখুন।"
 
@@ -25,11 +31,35 @@ msgstr "আইটেমগুলি নির্বাচন করুন"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "অবৈধ অক্ষর প্রবেশ করানো হয়েছে৷ আবার চেষ্টা করুন।"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "অনুসন্ধান"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "অক্ষরের সর্বাধিক সংখ্যায় পৌঁছেছে।"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "প্রক্রিয়াকরণ চলছে..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "যোগ করুন"
+
+msgid "IDS_COM_SK_OK"
+msgstr "ওকে"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "বাতিল"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "নীরব"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "সমস্ত নির্বাচন করুন"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%dটি নির্বাচিত।"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "অসমর্থিত ফাইল প্রকার।"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "আপনি %dটি পর্যন্ত আইটেম নির্বাচন করতে পারেন।"
@@ -37,14 +67,44 @@ msgstr "আপনি %dটি পর্যন্ত আইটেম নির্
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "মুছবেন?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "ব্যর্থ হয়েছে।"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "সম্পন্ন"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "কোনও আইটেম নেই"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD কার্ড"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "ডিভাইস মেমোরি"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "অপারেশন ব্যর্থ।"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "প্লে করতে অক্ষম। ত্রুটি ঘটেছে।"
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "অজানা"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "সংযোগ ব্যর্থ।"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "ব্যাক"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "ইতিমধ্যে বিদ্যমান।"
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "আমার ফাইল"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "পর্যাপ্ত মেমোরি নেই।"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "সম্পন্ন"
@@ -57,6 +117,10 @@ msgstr "সর্বাধিক ফাইলের আকার (%d MB) অত�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ফাইলের সর্বাধিক আকারের সীমা অতিক্রান্ত।"
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "আমদানি"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "ফোল্ডার"
 

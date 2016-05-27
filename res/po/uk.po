@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Видалити"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Нова папка"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Введіть назву папки"
 
@@ -25,11 +31,35 @@ msgstr "Вибір об’єктів"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Введено хибний символ. Cпробуйте ще раз"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Пошук"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Досягнуто максимальної кількості символів."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Обробка..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Додати"
+
+msgid "IDS_COM_SK_OK"
+msgstr "ОК"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Скасувати"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Без звуку"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Вибрати всі"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "Вибрано %d"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Формат не підтримується."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Можна вибрати до %d об’єктів."
@@ -37,14 +67,44 @@ msgstr "Можна вибрати до %d об’єктів."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Видалити?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Збій."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Готово"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Немає елементів"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "Карта пам’яті"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Пам’ять пристрою"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Збій операції."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Неможливо відтворити. Сталася помилка."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Невідомо"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Збій з'єднання."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Назад"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Вже існує."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Мої файли"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Недостатньо пам'яті."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "ГОТОВО"
@@ -57,6 +117,10 @@ msgstr "Перевищено максимальний розмір файла (%
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Перевищено максимальний розмір файлів."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Імпортувати"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Папка"
 

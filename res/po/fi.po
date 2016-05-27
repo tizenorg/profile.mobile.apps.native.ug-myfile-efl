@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Poista"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Luo kansio"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Kirjoita kansion nimi."
 
@@ -25,11 +31,35 @@ msgstr "Valitse kohteet"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Annettu virheellinen merkki. Yritä uudelleen."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Etsi"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Merkkien enimmäismäärä saavutettu."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Käsitellään..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Lisää"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Peruuta"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Äänetön"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Valitse kaikki"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d valittu"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Tiedostotyyppiä ei tueta."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Voit valita enintään %d kohdetta."
@@ -37,14 +67,44 @@ msgstr "Voit valita enintään %d kohdetta."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Poistetaanko?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Epäonnistui."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Valmis"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Ei kohteita"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD-kortti"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Laitteen muisti"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Toiminto epäonnistui."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Ei voi toistaa. Tapahtui virhe."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Tuntematon"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Yhdistäminen epäonnistui."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Takaisin"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "On jo olemassa."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Omat tiedostot"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Ei tarpeeksi muistia."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "VALMIS"
@@ -57,6 +117,10 @@ msgstr "Tiedoston enimmäiskoko (%d Mt) on ylitetty."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Tiedostojen enimmäiskoko on saavutettu."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Tuo"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Kansio"
 

@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "刪除"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "建立資料夾"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "輸入資料夾名稱"
 
@@ -25,11 +31,35 @@ msgstr "選擇項目"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "輸入的字元無效。請重試。"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "搜尋"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "已達字元數上限。"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "正在處理..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "新增"
+
+msgid "IDS_COM_SK_OK"
+msgstr "確定"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "取消"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "靜音"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "全選"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d 已選擇"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "不支援的檔案類型。"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "最多可以選擇 %d 個項目。"
@@ -37,14 +67,44 @@ msgstr "最多可以選擇 %d 個項目。"
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "要刪除嗎？"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "失敗"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "完成"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "無項目"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD 卡"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "裝置記憶體"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "操作失敗"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "無法播放。發生錯誤。"
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "未知"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "連線失敗"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "返回"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "已存在。"
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "我的檔案"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "記憶體不足。"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "完成"
@@ -57,6 +117,10 @@ msgstr "已超過檔案最大上限 (%d MB)。"
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "檔案最大的大小已超過。"
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "匯入"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "資料夾"
 

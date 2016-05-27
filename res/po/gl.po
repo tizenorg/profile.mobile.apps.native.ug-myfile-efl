@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Eliminar"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Crear carpeta"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Introducir nome de carpeta"
 
@@ -25,11 +31,35 @@ msgstr "Seleccionar elementos"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Inseriuse un carácter non válido. Téntao de novo."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Buscar"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Número máximo de caracteres alcanzado"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Procesando..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Engadir"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Aceptar"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Cancelar"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Silencioso"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Seleccionar todo"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d seleccionadas"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Tipo de arquivo non admitido"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Podes seleccionar ata %d elementos"
@@ -37,14 +67,44 @@ msgstr "Podes seleccionar ata %d elementos"
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Eliminar?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Erro"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Finalizado"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Sen elementos"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "Tarxeta SD"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Memoria do dispositivo"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Fallo na operación"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Non se pode reproducir. Produciuse un erro."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Descoñecido"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Erro na conexión"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Atrás"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Xa existe"
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Os Meus Arquivos"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Non hai suficiente memoria"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "FEITO"
@@ -57,6 +117,10 @@ msgstr "Superouse o tamaño máximo do arquivo (%d MB)"
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Superouse o tamaño máximo dos arquivos"
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importar"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Carpeta"
 

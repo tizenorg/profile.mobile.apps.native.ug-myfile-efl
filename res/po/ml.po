@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "ഇല്ലാതാക്കുക"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "ഫോള്‍ഡര്‍ സൃഷ്‌ടിക്കുക"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "ഫോൾഡർ പേര് നൽകുക"
 
@@ -25,11 +31,35 @@ msgstr "ഇനങ്ങള്‍ തിരഞ്ഞെടുക്കുക"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "അസാധുവായ അക്ഷരം നല്‍കി. വീണ്ടും ശ്രമിക്കുക"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "തിരയുക"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "അക്ഷരങ്ങളുടെ പരമാവധിയെണ്ണത്തിലെത്തി."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "പ്രോസസ്സുചെയ്യുന്നു..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "ചേര്‍ക്കു."
+
+msgid "IDS_COM_SK_OK"
+msgstr "ശരി"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "റദ്ദാക്കു."
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "നിശബ്‌ദം"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "എല്ലാം തിരഞ്ഞെടുക്കുക"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d തിരഞ്ഞെടുത്തു"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "പിന്തുണയ്ക്കാത്ത ഫയല്‍ തരം."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "%d ഇനങ്ങള്‍ വരെ നിങ്ങള്‍ക്ക് തിരഞ്ഞെടുക്കാം."
@@ -37,14 +67,44 @@ msgstr "%d ഇനങ്ങള്‍ വരെ നിങ്ങള്‍ക്ക�
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "ഇല്ലാതാക്കണോ?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "പരാജയപ്പെട്ടു."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "ചെയ്‌."
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "ഇനങ്ങള്‍  ഒന്നുമില്ല"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD കാര്‍ഡ്"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "ഉപകരണ മെമ്മറി"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "ഓപ്പറേഷന്‍ പരാജയപ്പെട്ടു."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "പ്ലേ ചെയ്യാനാവുന്നില്ല. പിശക് സംഭവിച്ചു."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "അജ്ഞാതം"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "കണക്ഷന്‍ പരാജയപ്പെട്ടു."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "പിന്നോ.."
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "ഇതിനകം നിലവിലുണ്ട്."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "എന്‍റെ ഫയലുകൾ"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "മതിയായ മെമ്മറിയില്ല."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "ചെയ്‌തു"
@@ -57,6 +117,10 @@ msgstr "പരമാവധി ഫയല്‍ വലുപ്പം (%d MB) ക�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ഫയലുകളുടെ പരമാവധി വലിപ്പം അതികരിച്ചു."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "ഇം‌പോര്‍ട്ട്"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "ഫോള്‍ഡര്‍"
 

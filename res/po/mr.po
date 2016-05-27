@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "काढून टाका"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "फोल्डर तयार करा"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "फोल्डरचे नाव प्रविष्ट करा."
 
@@ -25,11 +31,35 @@ msgstr "आयटेम्‍स निवडा"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "अवैध वर्ण प्रविष्ट केले. पुन्हा प्रयत्न करा."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "शोध"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "वर्णांच्या अधिकतम संख्येपर्यंत पोहोचले."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "प्रक्रिया सुरू आहे..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "जोडा"
+
+msgid "IDS_COM_SK_OK"
+msgstr "ठीक"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "रद्द"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "शांत"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "सर्व निवडा"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d निवडले."
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "आधार नसलेली फाईल."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "आपण %d आयटम्स पर्यंत निवड करू शकता."
@@ -37,14 +67,44 @@ msgstr "आपण %d आयटम्स पर्यंत निवड कर�
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "काढून टाकायचे?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "नापास."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "झाले"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "बाबी नाही"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD कार्ड"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "उपकरण मेमरी"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "ऑपरेशन अयशस्वी."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "चालू करण्यास अक्षम. त्रुटी आली."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "अज्ञात"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "जोडणी अयशस्वी."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "मागे"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "आधिपासूनच."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "माझ्या फाईली"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "मेमरी पुरेशी नाही."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "झाले"
@@ -57,6 +117,10 @@ msgstr "अत्‍याधिक फाईलचा आकार (%d MB) ओ�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "फाइलींचा अधिकतम आकार ओलांडला आहे."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "आयात"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "फोल्डर"
 

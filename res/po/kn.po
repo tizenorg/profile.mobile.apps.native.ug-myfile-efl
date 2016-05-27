@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "ಅಳಿಸು"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "ಫೋಲ್ಡರ್ ರಚಿಸಿ"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "ಫೋಲ್ಡರ್ ಹೆಸರನ್ನು ನಮೂದಿಸಿ."
 
@@ -25,11 +31,35 @@ msgstr "ಅಂಶಗಳನ್ನು ಆರಿಸಿ"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "ಅಮಾನ್ಯ ಅಕ್ಷರ ನಮೂದಿಸಲಾಗಿದೆ. ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "ಶೋಧಿಸಿ"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "ಅಕ್ಷರಗಳ ಗರಿಷ್ಠ ಸಂಖ್ಯೆ ತಲುಪಿದೆ."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "ಪ್ರಕ್ರಿಯೆಗೊಳ್ಳುತ್ತಿದೆ..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "ಸೇರಿಸು"
+
+msgid "IDS_COM_SK_OK"
+msgstr "ಸರಿ"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "ರದ್ದು"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "ನಿಶ್ಯಬ್ದ"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "ಎಲ್ಲಾ ಆಯ್ಕೆಮಾಡಿ"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d ಆರಿಸಿದೆ."
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "ಬೆಂಬಲವಿಲ್ಲದ ಸರಕುಗಳು."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "%d ಅಂಶಗಳ‌ವರೆಗೆ ನೀವು ಆರಿಸಬಹುದು."
@@ -37,14 +67,44 @@ msgstr "%d ಅಂಶಗಳ‌ವರೆಗೆ ನೀವು ಆರಿಸಬಹು�
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "ಅಳಿಸಲೇ?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "ವಿಫಲವಾಗಿದೆ."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "ಮುಗಿದಿದೆ"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "ಅಂಶಗಳಿಲ್ಲ"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD ಕಾರ್ಡ್"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "ಸಾಧನ ಸ್ಮರಣೆ"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "ಕಾರ್ಯಾಚರಣೆ ವಿಫಲವಾಗಿದೆ."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "ಪ್ಲೇ ಮಾಡಲು ಅಸಮರ್ಥ. ದೋಷ ಸಂಭವಿಸಿದೆ."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "ತಿಳಿಯದ"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "ಸಂಪರ್ಕ ವಿಫಲಗೊಂಡಿದೆ."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "ಹಿಂದೆ"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "ಈಗಾಗಲೇ ಇದೆ."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "ನನ್ನ ಫೈಲ್‌ಗಳು"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "ಸಾಕಷ್ಟು ಸ್ಮರಣೆ ಇಲ್ಲ."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "ಮುಗಿದಿದೆ"
@@ -57,6 +117,10 @@ msgstr "ಗರಿಷ್ಠ ಫೈಲ್ ಗಾತ್ರ (%d MB) ಮೀರಿದ�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ಫೈಲ್‌ಗಳ ಗರಿಷ್ಠ ಗಾತ್ರ ಮೀರಿದೆ."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "ಆಮದು"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "ಫೋಲ್ಡರ್"
 

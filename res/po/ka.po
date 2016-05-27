@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "წაშლა"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "შექმენი საქაღალდე"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "შეიყვანეთ საქაღალდის სახელი."
 
@@ -25,11 +31,35 @@ msgstr "ელემენტების არჩევა"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "აკრეფილია არასწორი სიმბოლო. კიდევ მოსინჯეთ"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "ძიება"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "მიღწეულია სიმბოლოების მაქსიმალური რაოდენობა."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "მუშავდება..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "დამატება"
+
+msgid "IDS_COM_SK_OK"
+msgstr "კი"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "გაუქმება"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "ჩუმი"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "ყველას არჩევა"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d არჩეულია"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "ფაილის ტიპი გაუთვალისწინებელია."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "მაქსიმუმ %d ელემენტის არჩევა შეგიძლიათ."
@@ -37,14 +67,44 @@ msgstr "მაქსიმუმ %d ელემენტის არჩევ�
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "წაიშალოს?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "ვერ შესრულდა."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "შესრულდა"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "ელემენტები არ არის"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD ბარათი"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "აპარატის მეხსიერება"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "ოპერაცია ვერ შესრულდა."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "ვერ დაუკრავთ. შეცდომა მოხდა."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "უცნობი"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "ვერ დაუკავშირდა."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "უკან"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "უკვე არის."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "ჩემი ფაილები"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "მეხსიერება არ არის საკმარისი."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "მზადაა"
@@ -57,6 +117,10 @@ msgstr "გადაჭარბებულია ფაილის მაქ�
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "გადაჭარბებულია ფაილების მაქსიმალური ზომა."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "მიღება"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "საქაღალდე"
 

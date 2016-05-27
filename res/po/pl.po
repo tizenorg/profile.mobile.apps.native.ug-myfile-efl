@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Usuń"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Utwórz katalog"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Wpisz nazwę katalogu."
 
@@ -25,11 +31,35 @@ msgstr "Wybierz elementy"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Wpisano nieprawidłowy znak. Spróbuj ponownie"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Szukaj"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Osiągnięto maksymalną liczbę znaków."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Przetwarzanie..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Dodaj"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Anuluj"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Cichy"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Zaznacz wszystko"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "Wybrano %d"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Nieobsługiwany typ pliku."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Maksymalna liczba elementów, które można wybrać: %d."
@@ -37,14 +67,44 @@ msgstr "Maksymalna liczba elementów, które można wybrać: %d."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Usunąć?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Błąd"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Gotowe"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Brak elementów"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "Karta pamięci"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Pamięć urządzenia"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Operacja nie powiodła się."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Nie można odtworzyć. Wystąpił błąd."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Nieznane"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Błąd łączenia"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Wstecz"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Już istnieje."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Moje pliki"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Brak pamięci."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "GOTOWE"
@@ -57,6 +117,10 @@ msgstr "Przekroczono maksymalny rozmiar pliku (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Przekroczono maksymalny rozmiar plików."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importuj"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Katalog"
 

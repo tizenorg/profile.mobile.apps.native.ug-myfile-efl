@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Dzēst"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Izveidot mapi"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Ievadiet mapes nosaukumu."
 
@@ -25,11 +31,35 @@ msgstr "Objektu izvēle"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Ievadīta nederīga rakstzīme. Mēģiniet vēlreiz"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Meklēt"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Sasniegts maksimālais rakstzīmju skaits."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Notiek apstrāde..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Pievienot"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Labi"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Atcelt"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Klusums"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Izv. visu"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d izvēlētas"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Neatbalstīts faila veids."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Varat izvēlēties līdz pat %d objektiem."
@@ -37,14 +67,44 @@ msgstr "Varat izvēlēties līdz pat %d objektiem."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Vai dzēst?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Neizdevās."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Gatavs"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Nav vienumu"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD kartē"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Ierīces atmiņa"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Darbība neizdevās."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Nevar atskaņot. Radās kļūda."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Nezināms"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Savienojums neizdevās."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Atpakaļ"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Jau pastāv."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Mani faili"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Atmiņa pilna."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "GATAVS"
@@ -57,6 +117,10 @@ msgstr "Pārsniegts maksimālais faila lielums (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Pārsniegts maksimālais failu lielums."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importēt"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Mape"
 

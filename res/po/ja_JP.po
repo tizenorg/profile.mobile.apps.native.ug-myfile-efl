@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "削除"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "フォルダ作成"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "フォルダ名を入力してください。"
 
@@ -25,11 +31,35 @@ msgstr "アイテムを選択"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "無効な文字が入力されました。再度実行してください。"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "検索"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "最大文字数に達しました。"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "処理中..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "追加"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "キャンセル"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "サイレント"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "全て選択"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d件選択"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "未対応のファイルです。"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "%dアイテムまで選択できます。"
@@ -37,14 +67,44 @@ msgstr "%dアイテムまで選択できます。"
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "削除しますか？"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "失敗しました。"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "完了"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "アイテムがありません"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "外部SDカード"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "システムメモリ(本体)"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "操作に失敗しました。"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "再生できません。エラーが発生しました。"
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "不明"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "接続に失敗しました。"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "戻る"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "既に登録されています。"
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "マイファイル"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "メモリが不足しています。"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "完了"
@@ -57,6 +117,10 @@ msgstr "最大ファイルサイズ(%dMB)を超えました。"
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ファイルの最大サイズを超えました。"
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "インポート"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "フォルダ"
 

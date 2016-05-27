@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Ezabatu"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Karpeta sortu"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Idatzi karpetaren izena."
 
@@ -25,11 +31,35 @@ msgstr "Hautatu elementuak"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Karaktere baliogabea adierazi dituzu. Saiatu berriz."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Bilatu"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Gehienezko karaktere kopurura heldu zara."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Prozesatzen..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Gehitu"
+
+msgid "IDS_COM_SK_OK"
+msgstr "Ados"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Ezeztatu"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Isila"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Hautatu denak"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d aukeratuta"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Fitxategi mota ez bateragarria"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "%d elementu arte aukera ditzakezu"
@@ -37,14 +67,44 @@ msgstr "%d elementu arte aukera ditzakezu"
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Ezabatu?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Huts egin du"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Amaituta"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Elementurik ez"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD txartela"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Gailuaren memoria"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Eragiketak huts egin du"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Ezin da erreproduzitu. Errorea gertatu da."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Ezezaguna"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Konektatzerakoan errorea"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Atzera"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Dagoeneko badago"
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Nire fitxategiak"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Ez dago memoria nahikoa"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "EGINA"
@@ -57,6 +117,10 @@ msgstr "Fitxategiaren gehieneko neurria (%d MB) gaindituta"
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Fitxategien gehienezko neurria gaindituta"
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Inportatu"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Karpeta"
 

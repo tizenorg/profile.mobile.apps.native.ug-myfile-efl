@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Izbriši"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Kreiraj folder"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Unesi ime foldera"
 
@@ -25,11 +31,35 @@ msgstr "Izaberi stavke"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Unet je neispravan karakter. Pokušaj ponovo"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Pretraži"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Dostignut maksimalan broj karaktera."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Obrada..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Dodaj"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Otkaži"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Nečujno"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Izaberi sve"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "Izabrano %d"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Nepodržani tip fajla."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Možete izabrati do %d stavki."
@@ -37,14 +67,44 @@ msgstr "Možete izabrati do %d stavki."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Obriši?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Neuspešno."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Gotovo"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Nema stavki"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD kartica"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Memorija uređaja"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Operacija neuspešna."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Nemoguće reprodukovati. Nastala je greška."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Nepoznato"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Neuspešno povezivanje."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Nazad"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Već postoji."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Moji fajlovi"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Nedovoljna memorija."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "GOTOVO"
@@ -57,6 +117,10 @@ msgstr "Premašena je maksimalna veličina fajla (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Pređena maksimalna veličina fajlova."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Uvezi"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Folder"
 

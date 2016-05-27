@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Ta bort"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Skapa mapp"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Ange mappnamn."
 
@@ -25,11 +31,35 @@ msgstr "Välj objekt"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Ogiltigt tecken har angivits. Försök igen."
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Sök"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maximalt antal tecken har använts."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Bearbetar..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Lägg till"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Avbryt"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Tyst"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Välj alla"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d valda"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Filtypen stöds inte."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Du kan välja upp till %d objekt."
@@ -37,14 +67,44 @@ msgstr "Du kan välja upp till %d objekt."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Radera?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Misslyckades."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Klar"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Inga objekt"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD-kort"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Enhetsminne"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Åtgärden misslyckades."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Det går inte att spela upp. Ett fel inträffade."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Okänd"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Anslutningsfel."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Åter"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Finns redan."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Mina filer"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Minnet fullt."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "KLAR"
@@ -57,6 +117,10 @@ msgstr "Högsta tillåtna filstorlek (%d MB) har överskridits."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Högsta filstorlek överskreds."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importera"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Mapp"
 

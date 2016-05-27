@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "ਮਿਟਾਓ"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "ਫੋਲਡਰ ਬਣਾਉ"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "ਫੋਲਡਰ ਨਾਂ ਦਾਖ਼ਲ ਕਰੋ।"
 
@@ -25,11 +31,35 @@ msgstr "ਆਈਟਮਸ ਚੁਣੋ"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "ਅਵੈਧ ਵਰਣ ਦਾਖ਼ਲ ਹੋਇਆ। ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "ਖੋਜੋ"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "ਵਰਣ ਅਧਿਕਤਮ ਸੰਖਿਆ ਤੇ ਪਹੁੰਚੇ।"
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "ਪ੍ਰਕਿਰਿਆ ਹੋ ਰਹੀ ਹੈ..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "ਜੋੜੋ"
+
+msgid "IDS_COM_SK_OK"
+msgstr "ਓਕੇ"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "ਰੱਦ ਕਰੋ"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "ਸ਼ਾਂਤ"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "ਸਭ ਚੁਣੋ"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d ਚੁਣੇ।"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "ਅਸਮਰਥਿਤ ਫਾਈਲ ਪ੍ਰਕਾਰ।"
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "ਤੁਸੀਂ %d ਤੱਕ ਆਈਟਮਸ ਚੁਣ ਸਕਦੇ ਹੋ।"
@@ -37,14 +67,44 @@ msgstr "ਤੁਸੀਂ %d ਤੱਕ ਆਈਟਮਸ ਚੁਣ ਸਕਦੇ ਹ�
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "ਮਿਟਾਉਣਾ ਹੈ?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "ਅਸਫਲ।"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "ਪੂਰਨ"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "ਕੋਈ ਆਈਟਮਸ ਨਹੀਂ"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD ਕਾਰਡ"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "ਡਿਵਾਈਸ ਮੈਮਰੀ"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "ਕਾਰਵਾਈ ਅਸਫਲ।"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "ਪਲੇ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ। ਤਰੁੱਟੀ ਉਤਪੰਨ ਹੋਈ।"
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "ਅਗਿਆਤ"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "ਕਨੈਕਸ਼ਨ ਅਸਫਲ।"
+
+msgid "IDS_COM_SK_BACK"
+msgstr "ਵਾਪਸ"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "ਪਹਿਲਾਂ ਤੋਂ ਹੀ ਮੌਜ਼ੂਦ ਹੈ।"
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "ਮੇਰੀਆਂ ਫਾਈਲਾਂ"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "ਉਚਿਤ ਮੈਮਰੀ ਨਹੀਂ।"
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "ਪੂਰਨ"
@@ -57,6 +117,10 @@ msgstr "ਅਧਿਕਤਮ ਫਾਈਲ ਆਕਾਰ (%d MB) ਵਧਾਇਆ ਗ
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "ਫਾਇਲਾਂ ਦਾ ਅਧਿਕਤਮ ਆਕਾਰ ਜ਼ਿਆਦਾ ਹੋ ਗਿਆ ਹੈ।"
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "ਆਯਾਤ ਕਰੋ"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "ਫੋਲਡਰ"
 

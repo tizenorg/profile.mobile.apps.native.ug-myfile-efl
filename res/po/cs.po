@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Odstranit"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Vytvořit složku"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Zadejte název složky."
 
@@ -25,11 +31,35 @@ msgstr "Vyberte položky"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Byl zadán neplatný znak. Opakujte akci"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Hledat"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Bylo dosaženo maximálního počtu znaků."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Probíhá zpracování..."
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Přidat"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Zrušit"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Tichý"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Vybrat vše"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "Vybráno: %d"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "Nepodporovaný typ souboru."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Můžete vybrat až %d položek."
@@ -37,14 +67,44 @@ msgstr "Můžete vybrat až %d položek."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Odstranit?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Nezdařilo se."
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Hotovo"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Žádné položky"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD karta"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Paměť zařízení"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Otevření se nezdařilo."
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Nelze přehrát. Došlo k chybě."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Neznámé"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Připojení se nezdařilo."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Zpět"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Již existuje."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Moje soubory"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Nedostatek paměti."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "HOTOVO"
@@ -57,6 +117,10 @@ msgstr "Byla překročena maximální velikost souborů (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Byla překročena maximální velikost souborů."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Import"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Složka"
 

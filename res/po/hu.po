@@ -1,3 +1,9 @@
+msgid "IDS_COM_BODY_DELETE"
+msgstr "Töröl"
+
+msgid "IDS_COM_BODY_CREATE_FOLDER"
+msgstr "Mappa létrehozása"
+
 msgid "IDS_MF_POP_ERR_FOLDER_NAME_EMPTY"
 msgstr "Adja meg a mappa nevét."
 
@@ -25,11 +31,35 @@ msgstr "Tételek kijelölése"
 msgid "IDS_VR_POP_INVALID_CHARACTER_ENTERED_TRY_AGAIN"
 msgstr "Érvénytelen karaktert vitt be. Próbálja újra"
 
+msgid "IDS_COM_BODY_SEARCH"
+msgstr "Keresés"
+
+msgid "IDS_COM_POP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Nincs hely több karakternek."
+
+msgid "IDS_COM_POP_PROCESSING"
+msgstr "Feldolgozás folyamatban"
+
+msgid "IDS_COM_SK_ADD"
+msgstr "Hozzáad"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Mégse"
+
 msgid "IDS_ST_BODY_PHONEPROFILES_SILENT"
 msgstr "Csendes"
 
+msgid "IDS_COM_BODY_SELECT_ALL"
+msgstr "Összes kijelölése"
+
 msgid "IDS_COM_BODY_PD_SELECTED"
 msgstr "%d kiválasztva"
+
+msgid "IDS_COM_BODY_UNSUPPORTED_FILE_TYPE"
+msgstr "A fájltípus\nnem támogatott."
 
 msgid "IDS_IV_POP_YOU_CAN_SELECT_UP_TO_PD_ITEMS"
 msgstr "Legfeljebb %d tételt jelölhet ki."
@@ -37,14 +67,44 @@ msgstr "Legfeljebb %d tételt jelölhet ki."
 msgid "IDS_MF_POP_DELETE_Q"
 msgstr "Törli?"
 
+msgid "IDS_COM_POP_FAILED"
+msgstr "Sikertelen"
+
+msgid "IDS_COM_SK_DONE"
+msgstr "Kész"
+
+msgid "IDS_COM_BODY_NO_ITEMS"
+msgstr "Nincs tétel"
+
 msgid "IDS_MF_BODY_SD_CARD_ABB"
 msgstr "SD-kártya"
 
 msgid "IDS_MF_BODY_DEVICE_MEMORY_ABB"
 msgstr "Eszközmemória"
 
+msgid "IDS_COM_BODY_OPERATION_FAILED"
+msgstr "Sikertelen művelet"
+
 msgid "IDS_MUSIC_POP_UNABLE_TO_PLAY_ERROR_OCCURRED"
 msgstr "Nem játszható le. Hiba történt."
+
+msgid "IDS_COM_BODY_UNKNOWN"
+msgstr "Ismeretlen"
+
+msgid "IDS_COM_POP_CONNECTION_FAILED"
+msgstr "Kapcsolódás sikertelen."
+
+msgid "IDS_COM_SK_BACK"
+msgstr "Vissza"
+
+msgid "IDS_COM_POP_ALREDY_EXISTS"
+msgstr "Már létezik."
+
+msgid "IDS_COM_BODY_MY_FILES"
+msgstr "Saját fájlok"
+
+msgid "IDS_COM_POP_NOT_ENOUGH_MEMORY"
+msgstr "Kevés a memória."
 
 msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
 msgstr "KÉSZ"
@@ -57,6 +117,10 @@ msgstr "Túllépte a maximális fájlméretet (%d MB)."
 
 msgid "IDS_IM_POP_MAXIMUM_SIZE_OF_FILES_EXCEEDED"
 msgstr "Túllépte a maximális fájlméretet."
+
 msgid "IDS_COM_OPT_IMPORT"
 msgstr "Importálás"
+
+msgid "IDS_COM_POP_FOLDER"
+msgstr "Mappa"
 
