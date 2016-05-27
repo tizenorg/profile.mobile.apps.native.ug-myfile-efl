@@ -5,5 +5,22 @@
 	<ui-application appid="org.tizen.ug-myfile-efl" exec="/usr/apps/org.tizen.ug-myfile-efl/bin/ug-myfile-efl" launch_mode="caller" nodisplay="true" multiple="false" type="capp" taskmanage="false" hw-acceleration="use-GL">
 		<icon>/usr/share/icons/default/small/ug-myfile-efl.png</icon>
 		<label>ug-myfile-efl</label>
+        <app-control>
+		<operation name="http://tizen.org/appcontrol/operation/pick"/>
+	</app-control>
+	<app-control>
+		<operation name="http://tizen.org/appcontrol/operation/pick"/>
+		<mime name="image/*"/>
+		<mime name="video/*"/>
+		<mime name="text/vcard"/>
+	</app-control>
 	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/mediastorage</privilege>
+		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+		<privilege>http://tizen.org/privilege/datasharing</privilege>
+		<privilege>http://tizen.org/privilege/packagemanager.info</privilege>
+		<privilege>http://tizen.org/privilege/externalstorage</privilege>
+		<privilege>http://tizen.org/privilege/content.write</privilege>
+	</privileges>
 </manifest>
