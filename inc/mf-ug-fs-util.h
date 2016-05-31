@@ -48,7 +48,12 @@ static inline char *Get_Parent_Path(int storage_id)
 	char *path = NULL;
 	char *storage_path = NULL;
 	storage_get_root_directory(storage_id, &path);
-	if (path) {
+	if (!strcmp(path, "(null)")) {
+		ug_debug("path is null");
+		free(path);
+		return NULL;
+	} else if (path) {
+		ug_debug("path is %s", path);
 		mf_ug_file_attr_get_parent_path(path, &storage_path);
 		free(path);
 	}

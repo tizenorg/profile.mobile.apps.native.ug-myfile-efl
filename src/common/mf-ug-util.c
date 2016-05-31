@@ -934,13 +934,16 @@ int mf_ug_util_generate_root_view_file_list(Eina_List **list, int storage_state)
 		if (pNode == NULL) {
 			return -1;
 		}
-		memset(pNode, 0, sizeof(ugFsNodeInfo));
-		/*set path */
-		pNode->path = g_strdup(STORAGE_PARENT);
-		/*set name */
-		pNode->name = g_strdup(MMC_NAME);
-		pNode->type = UG_FILE_TYPE_DIR;
-		*list = eina_list_append(*list, pNode);
+
+		if (Get_Parent_Path(STORAGE_PARENT) && Get_Parent_Path(MMC_NAME)) {
+			memset(pNode, 0, sizeof(ugFsNodeInfo));
+			/*set path */
+			pNode->path = g_strdup(STORAGE_PARENT);
+			/*set name */
+			pNode->name = g_strdup(MMC_NAME);
+			pNode->type = UG_FILE_TYPE_DIR;
+			*list = eina_list_append(*list, pNode);
+		}
 	}
 
 	return 0;
