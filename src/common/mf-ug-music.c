@@ -66,35 +66,33 @@ void __mf_ug_music_request_send(void *data, const char *path)
 
 	SECURE_ERROR("result is [%s]", path);
 	int ret = 0;
-	app_control_h app_control = NULL;
-	ret = app_control_create(&app_control);
-	if (ret == APP_CONTROL_ERROR_NONE) {
+	bool reply_requested = false;
+	app_control_is_reply_requested(ugd->service, &reply_requested);
+	if (reply_requested) {
+		app_control_h app_control = NULL;
+		ret = app_control_create(&app_control);
+		if (ret == APP_CONTROL_ERROR_NONE) {
 
-		int count = 1;
-		char **array = NULL;
+			int count = 1;
+			char **array = NULL;
 
-		array = calloc(count, sizeof(char *));
-		if (array) {
-			array[0] = g_strdup(path);
-			app_control_add_extra_data_array(app_control, APP_CONTROL_DATA_SELECTED, (const char **)array, count);
-			app_control_add_extra_data_array(app_control, "path", (const char **)array, count);
-			UG_SAFE_FREE_CHAR(array[0]);
-			UG_SAFE_FREE_CHAR(array);
-		}
-		app_control_add_extra_data(app_control, "result", path);
-		app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, path);
+			array = calloc(count, sizeof(char *));
+			if (array) {
+				array[0] = g_strdup(path);
+				app_control_add_extra_data_array(app_control, APP_CONTROL_DATA_SELECTED, (const char **)array, count);
+				app_control_add_extra_data_array(app_control, "path", (const char **)array, count);
+				UG_SAFE_FREE_CHAR(array[0]);
+				UG_SAFE_FREE_CHAR(array);
+			}
+			app_control_add_extra_data(app_control, "result", path);
+			app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, path);
 
-		bool reply_requested = false;
-		app_control_is_reply_requested(app_control, &reply_requested);
-		if (reply_requested) {
 			SECURE_DEBUG("send reply to caller");
-			app_control_h reply = NULL;
-			app_control_create(&reply);
-			app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
-			app_control_destroy(reply);
+			app_control_reply_to_launch_request(app_control, ugd->service, APP_CONTROL_RESULT_SUCCEEDED);
 		}
 		app_control_destroy(app_control);
 	}
+	ui_app_exit();
 
 }
 
@@ -202,56 +200,51 @@ static void __mf_ug_music_recommendation_ringtone_set(void *data, char *path, ch
 		if (result) {
 			SECURE_ERROR("result is [%s]", result);
 			int ret = 0;
-			ret = app_control_create(&service);
-			if (ret == APP_CONTROL_ERROR_NONE) {
-				app_control_add_extra_data(service, "result", result);
-				app_control_add_extra_data(service, "position", time);
-				app_control_add_extra_data(service, APP_CONTROL_DATA_SELECTED, result);
-
-				bool reply_requested = false;
-				app_control_is_reply_requested(service, &reply_requested);
-				if (reply_requested) {
+			bool reply_requested = false;
+			app_control_is_reply_requested(ugd->service, &reply_requested);
+			if (reply_requested) {
+				ret = app_control_create(&service);
+				if (ret == APP_CONTROL_ERROR_NONE) {
+					app_control_add_extra_data(service, "result", result);
+					app_control_add_extra_data(service, "position", time);
+					app_control_add_extra_data(service, APP_CONTROL_DATA_SELECTED, result);
 					SECURE_DEBUG("send reply to caller");
-					app_control_h reply = NULL;
-					app_control_create(&reply);
-					app_control_reply_to_launch_request(reply, service, APP_CONTROL_RESULT_SUCCEEDED);
-					app_control_destroy(reply);
+					app_control_reply_to_launch_request(service, ugd->service, APP_CONTROL_RESULT_SUCCEEDED);
 				}
 				app_control_destroy(service);
 			}
 		}
 		UG_SAFE_FREE_CHAR(result);
+		ui_app_exit();
 	} else {
 		int ret = 0;
-		ret = app_control_create(&service);
-		if (ret == APP_CONTROL_ERROR_NONE) {
+		bool reply_requested = false;
+		app_control_is_reply_requested(ugd->service, &reply_requested);
+		if (reply_requested) {
+			ret = app_control_create(&service);
+			if (ret == APP_CONTROL_ERROR_NONE) {
 
-			int count = 0;
-			char **array = mf_ug_util_get_send_result_array(ugd, &count);
-			int i = 0;
-			if (array) {
-				app_control_add_extra_data_array(service, APP_CONTROL_DATA_SELECTED, (const char **)array, count);
-				app_control_add_extra_data_array(service, "path", (const char **)array, count);
-				for (i = 0; i < count; i++) {
-					UG_SAFE_FREE_CHAR(array[i]);
+				int count = 0;
+				char **array = mf_ug_util_get_send_result_array(ugd, &count);
+				int i = 0;
+				if (array) {
+					app_control_add_extra_data_array(service, APP_CONTROL_DATA_SELECTED, (const char **)array, count);
+					app_control_add_extra_data_array(service, "path", (const char **)array, count);
+					for (i = 0; i < count; i++) {
+						UG_SAFE_FREE_CHAR(array[i]);
+					}
+					UG_SAFE_FREE_CHAR(array);
 				}
-				UG_SAFE_FREE_CHAR(array);
-			}
-			app_control_add_extra_data(service, "result", result);
-			app_control_add_extra_data(service, "position", time);
-			app_control_add_extra_data(service, APP_CONTROL_DATA_SELECTED, result);
-			bool reply_requested = false;
-			app_control_is_reply_requested(service, &reply_requested);
-			if (reply_requested) {
+				app_control_add_extra_data(service, "result", result);
+				app_control_add_extra_data(service, "position", time);
+				app_control_add_extra_data(service, APP_CONTROL_DATA_SELECTED, result);
+
 				SECURE_DEBUG("send reply to caller");
-				app_control_h reply = NULL;
-				app_control_create(&reply);
-				app_control_reply_to_launch_request(reply, service, APP_CONTROL_RESULT_SUCCEEDED);
-				app_control_destroy(reply);
+				app_control_reply_to_launch_request(service, ugd->service,  APP_CONTROL_RESULT_SUCCEEDED);
 			}
 			app_control_destroy(service);
 		}
-
+		ui_app_exit();
 	}
 }
 #if 0

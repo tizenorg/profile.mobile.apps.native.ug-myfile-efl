@@ -81,8 +81,10 @@ bool mf_ug_util_is_genlist_selected(void *data)
 		gli = elm_genlist_first_item_get(genlist);
 
 		while (gli) {
+			ug_debug("into while loop");
 			ugListItemData *itemData = (ugListItemData *)elm_object_item_data_get(gli);
 			ug_mf_retvm_if(itemData == NULL, false, "itemData is NULL");
+
 			if (ugd->ug_Status.ug_iViewType == mf_ug_view_ringtone_del) {
 				if (itemData->ug_bChecked == true) {
 					UG_TRACE_END;
@@ -100,6 +102,7 @@ bool mf_ug_util_is_genlist_selected(void *data)
 				}
 
 			} else {
+				ug_debug("into while in else and value is : %d", itemData->ug_bChecked);
 				if (itemData->ug_bChecked == true) {
 					UG_TRACE_END;
 					return true;
@@ -935,17 +938,18 @@ int mf_ug_util_generate_root_view_file_list(Eina_List **list, int storage_state)
 			return -1;
 		}
 
-		if (Get_Parent_Path(STORAGE_PARENT) && Get_Parent_Path(MMC_NAME)) {
-			memset(pNode, 0, sizeof(ugFsNodeInfo));
-			/*set path */
-			pNode->path = g_strdup(STORAGE_PARENT);
-			/*set name */
-			pNode->name = g_strdup(MMC_NAME);
-			pNode->type = UG_FILE_TYPE_DIR;
-			*list = eina_list_append(*list, pNode);
+		if (!Get_Parent_Path(STORAGE_PARENT)) {
+			ug_debug("SD card not attached returning");
+			return 0;
 		}
+		memset(pNode, 0, sizeof(ugFsNodeInfo));
+		/*set path */
+		pNode->path = g_strdup(STORAGE_PARENT);
+		/*set name */
+		pNode->name = g_strdup(MMC_NAME);
+		pNode->type = UG_FILE_TYPE_DIR;
+		*list = eina_list_append(*list, pNode);
 	}
-
 	return 0;
 }
 

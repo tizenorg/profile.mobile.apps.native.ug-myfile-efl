@@ -130,9 +130,12 @@ void mf_ug_navi_bar_set_ctrl_item_disable(void *data)
 	bool disable = false;
 
 	if (ugd->ug_Status.ug_bNoContentFlag == true) {
+		ug_error("=================================");
 		mf_ug_navi_bar_button_set_disable(ugd, true);
 	} else {
+		ug_error("=====++++++++++++++++++++++++++++++++============================");
 		disable = mf_ug_util_is_genlist_selected(ugd);
+		ug_error("=====+ %d", disable);
 		mf_ug_navi_bar_button_set_disable(ugd, !disable);
 	}
 

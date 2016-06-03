@@ -157,7 +157,7 @@ static void __mf_ug_main_init_data(void *data)
 	ugd->ug_Status.ug_iMore = UG_MORE_DEFAULT;
 	ugd->ug_Status.ug_iViewType = mf_ug_view_root;
 
-	ugd->ug_UiGadget.ug_iSelectMode = SINGLE_FILE_MODE;
+	ugd->ug_UiGadget.ug_iSelectMode = MULTI_FILE_MODE;
 	ugd->ug_UiGadget.ug_iFilterMode = SHOW_ALL_LIST;
 	ugd->ug_UiGadget.ug_pExtension = NULL;
 
@@ -559,10 +559,10 @@ static void __mf_ug_main_set_select_mode(void *data, const char *select_mode)
 		} else if (!strncmp(select_mode, UG_SELECT_MODE_SSM_DOCUMENT_SHARE, strlen(select_mode))) {
 			ugd->ug_UiGadget.ug_iSelectMode = SSM_DOCUMENT_SHARE;
 		} else {
-			ugd->ug_UiGadget.ug_iSelectMode = SINGLE_FILE_MODE;
+			ugd->ug_UiGadget.ug_iSelectMode = MULTI_FILE_MODE;
 		}
 	} else {
-		ugd->ug_UiGadget.ug_iSelectMode = SINGLE_FILE_MODE;
+		ugd->ug_UiGadget.ug_iSelectMode = MULTI_FILE_MODE;
 	}
 	UG_TRACE_END;
 
@@ -760,7 +760,7 @@ static void __mf_ug_main_set_operation_select_mode(void *data, const char *selec
 		} else if (!strcasecmp(select_mode, MF_BUNDLE_SELECTION_MODE_MULTI)) {
 			ugd->ug_UiGadget.ug_iSelectMode = MULTI_FILE_MODE;
 		} else {
-			ugd->ug_UiGadget.ug_iSelectMode = SINGLE_FILE_MODE;
+			ugd->ug_UiGadget.ug_iSelectMode = MULTI_FILE_MODE;
 		}
 		ugd->ug_UiGadget.ug_bOperationSelectFlag = true;
 	}
@@ -805,6 +805,7 @@ static void __mf_ug_main_set_operation_select_mode(void *data, const char *selec
 	                             };
 
 	char *operation = NULL;
+	app_control_clone(&(ugd->service), app_control);
 	app_control_get_operation(app_control, &operation);
 	ug_error("operation is [%s]", operation);
 	app_control_get_extra_data(app_control, key[0], &path);
@@ -1444,6 +1445,7 @@ static void on_key_event(ui_gadget_h ug, enum ug_key_event event, app_control_h 
 			ugd->ug_ListPlay.play_data = NULL;
 			UG_SAFE_FREE_CHAR(ugd->ug_ListPlay.ug_pPlayFilePath);
 		}
+		ui_app_exit();
 		break;
 	default:
 		break;
