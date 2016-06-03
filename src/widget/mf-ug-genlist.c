@@ -1209,23 +1209,22 @@ void mf_ug_genlist_sel(void *data)
 			result = g_strdup(selected->ug_pItemName->str);
 			if (result) {
 				int ret = 0;
-				ret = app_control_create(&app_control);
-				if (ret == APP_CONTROL_ERROR_NONE) {
-					ug_error();
-					app_control_add_extra_data(app_control, "result", result);
-					bool reply_requested = false;
-					app_control_is_reply_requested(app_control, &reply_requested);
-					if (reply_requested) {
+				bool reply_requested = false;
+				app_control_is_reply_requested(ugd->service, &reply_requested);
+				if (reply_requested) {
+					ret = app_control_create(&app_control);
+					if (ret == APP_CONTROL_ERROR_NONE) {
+						ug_error();
+						app_control_add_extra_data(app_control, "result", result);
+
 						SECURE_DEBUG("send reply to caller");
-						app_control_h reply = NULL;
-						app_control_create(&reply);
-						app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
-						app_control_destroy(reply);
+						app_control_reply_to_launch_request(app_control, ugd->service, APP_CONTROL_RESULT_SUCCEEDED);
 					}
 					app_control_destroy(app_control);
 				}
 				ug_debug("result is [%s]", result);
 				UG_SAFE_FREE_CHAR(result);
+				ui_app_exit();
 			}
 			return;
 		}

@@ -70,32 +70,30 @@ Eina_Bool mf_ug_ringtone_present_del_result(void *data)
 	if (ugd->ug_UiGadget.ug_iSoundMode != mf_ug_sound_mode_none && ugd->ug_UiGadget.default_ringtone) {
 		if (mf_ug_popup_present_flag_get()) {
 			char *result = NULL;
-			app_control_h app_control = NULL;
-			result = g_strdup(DEFAULT_RINGTONE_MARK);
-			if (result) {
-				SECURE_ERROR("result is [%s]", result);
-				int ret = 0;
-				ret = app_control_create(&app_control);
-				if (ret == APP_CONTROL_ERROR_NONE) {
-					app_control_add_extra_data(app_control, "result", result);
-					app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, result);
-					bool reply_requested = false;
-					app_control_is_reply_requested(app_control, &reply_requested);
-					if (reply_requested) {
+			bool reply_requested = false;
+			app_control_is_reply_requested(ugd->service, &reply_requested);
+			if (reply_requested) {
+				app_control_h app_control = NULL;
+				result = g_strdup(DEFAULT_RINGTONE_MARK);
+				if (result) {
+					SECURE_ERROR("result is [%s]", result);
+					int ret = 0;
+					ret = app_control_create(&app_control);
+					if (ret == APP_CONTROL_ERROR_NONE) {
+						app_control_add_extra_data(app_control, "result", result);
+						app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, result);
 						SECURE_DEBUG("send reply to caller");
-						app_control_h reply = NULL;
-						app_control_create(&reply);
-						app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
-						app_control_destroy(reply);
+						app_control_reply_to_launch_request(app_control, ugd->service, APP_CONTROL_RESULT_SUCCEEDED);
 					}
 					app_control_destroy(app_control);
+					ui_app_exit();
 				}
-				SECURE_DEBUG("result is [%s]", result);
-				UG_SAFE_FREE_CHAR(result);
-				return EINA_TRUE;
 			}
-
+			SECURE_DEBUG("result is [%s]", result);
+			UG_SAFE_FREE_CHAR(result);
+			return EINA_TRUE;
 		}
+
 	}
 	return EINA_FALSE;
 }
@@ -180,21 +178,19 @@ Eina_Bool mf_ug_cb_back_button_cb(void *data, Elm_Object_Item *it)
 			/*Fix the P130910-01714 problem, when back from the UG, the other app will be crashed. need to communicate with other app, then apply the new code.
 			Fix the P131009-01740, and P130902-01617*/
 			if (!mf_ug_ringtone_present_del_result(ugd)) {
-				app_control_h service = NULL;
-				int ret = app_control_create(&service);
-				if (ret == APP_CONTROL_ERROR_NONE) {
-					bool reply_requested = false;
-					app_control_is_reply_requested(service, &reply_requested);
-					if (reply_requested) {
+				bool reply_requested = false;
+				app_control_is_reply_requested(ugd->service, &reply_requested);
+				if (reply_requested) {
+					app_control_h service = NULL;
+					int ret = app_control_create(&service);
+					if (ret == APP_CONTROL_ERROR_NONE) {
 						SECURE_DEBUG("send reply to caller");
-						app_control_h reply = NULL;
-						app_control_create(&reply);
-						app_control_reply_to_launch_request(reply, service, APP_CONTROL_RESULT_FAILED);
-						app_control_destroy(reply);
+						app_control_reply_to_launch_request(service, ugd->service, APP_CONTROL_RESULT_FAILED);
+						app_control_destroy(service);
 					}
-					app_control_destroy(service);
 				}
 			}
+			ui_app_exit();
 		}
 	}
 	UG_TRACE_END;
@@ -242,33 +238,22 @@ static void __mf_ug_cb_ringtone_set(void *data)
 		if (file_path) {
 			SECURE_DEBUG("result is [%s]", file_path);
 			int ret = 0;
-			ret = app_control_create(&app_control);
-			if (ret == APP_CONTROL_ERROR_NONE) {
-				app_control_add_extra_data(app_control, "result", file_path);
-				app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, file_path);
-				bool reply_requested = false;
-				app_control_is_reply_requested(app_control, &reply_requested);
-				if (reply_requested) {
+			bool reply_requested = false;
+			app_control_is_reply_requested(ugd->service, &reply_requested);
+			if (reply_requested) {
+				ret = app_control_create(&app_control);
+				if (ret == APP_CONTROL_ERROR_NONE) {
+					app_control_add_extra_data(app_control, "result", file_path);
+					app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, file_path);
 					SECURE_DEBUG("send reply to caller");
-					app_control_h reply = NULL;
-					app_control_create(&reply);
-					app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
-					app_control_destroy(reply);
+					app_control_reply_to_launch_request(app_control, ugd->service, APP_CONTROL_RESULT_SUCCEEDED);
+					app_control_destroy(app_control);
 				}
-				reply_requested = false;
-				app_control_is_reply_requested(app_control, &reply_requested);
-				if (reply_requested) {
-					SECURE_DEBUG("send reply to caller");
-					app_control_h reply = NULL;
-					app_control_create(&reply);
-					app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
-					app_control_destroy(reply);
-				}
-				app_control_destroy(app_control);
 			}
 			SECURE_DEBUG("result is [%s]", file_path);
 			UG_SAFE_FREE_CHAR(file_path);
 		}
+		ui_app_exit();
 
 	}	else if (ugd->ug_UiGadget.ug_iSoundMode == mf_ug_sound_mode_alert
 	             || mf_ug_is_default_ringtone(ugd, file_path)
@@ -280,44 +265,40 @@ static void __mf_ug_cb_ringtone_set(void *data)
 				file_path = g_strdup(DEFAULT_RINGTONE_MARK);
 			}
 			int ret = 0;
-			ret = app_control_create(&app_control);
-			if (ret == APP_CONTROL_ERROR_NONE) {
-				app_control_add_extra_data(app_control, "result", file_path);
-				app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, file_path);
-				bool reply_requested = false;
-				app_control_is_reply_requested(app_control, &reply_requested);
-				if (reply_requested) {
+			bool reply_requested = false;
+			app_control_is_reply_requested(ugd->service, &reply_requested);
+			if (reply_requested) {
+				ret = app_control_create(&app_control);
+				if (ret == APP_CONTROL_ERROR_NONE) {
+					app_control_add_extra_data(app_control, "result", file_path);
+					app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, file_path);
 					SECURE_DEBUG("send reply to caller");
-					app_control_h reply = NULL;
-					app_control_create(&reply);
-					app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
-					app_control_destroy(reply);
+					app_control_reply_to_launch_request(app_control, ugd->service, APP_CONTROL_RESULT_SUCCEEDED);
+					app_control_destroy(app_control);
 				}
-				app_control_destroy(app_control);
 			}
 			SECURE_DEBUG("result is [%s]", file_path);
 			UG_SAFE_FREE_CHAR(file_path);
 		}
+		ui_app_exit();
 	} else {
 		if (mf_ug_ringtone_is_default(ugd->ug_UiGadget.ug_iSoundMode, file_path)) {
 			int ret = 0;
-			ret = app_control_create(&app_control);
-			if (ret == APP_CONTROL_ERROR_NONE) {
-				app_control_add_extra_data(app_control, "result", file_path);
-				app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, file_path);
-				bool reply_requested = false;
-				app_control_is_reply_requested(app_control, &reply_requested);
-				if (reply_requested) {
+			bool reply_requested = false;
+			app_control_is_reply_requested(ugd->service, &reply_requested);
+			if (reply_requested) {
+				ret = app_control_create(&app_control);
+				if (ret == APP_CONTROL_ERROR_NONE) {
+					app_control_add_extra_data(app_control, "result", file_path);
+					app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, file_path);
 					SECURE_DEBUG("send reply to caller");
-					app_control_h reply = NULL;
-					app_control_create(&reply);
-					app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
-					app_control_destroy(reply);
+					app_control_reply_to_launch_request(app_control, ugd->service, APP_CONTROL_RESULT_SUCCEEDED);
+					app_control_destroy(app_control);
 				}
-				app_control_destroy(app_control);
 			}
 			SECURE_DEBUG("result is [%s]", file_path);
 			UG_SAFE_FREE_CHAR(file_path);
+			ui_app_exit();
 		}
 	}
 	return;
@@ -342,34 +323,32 @@ static bool __mf_ug_cb_normal_result_send(void *data)
 	if (result) {
 		SECURE_ERROR("result is [%s]", result);
 		int ret = 0;
-		ret = app_control_create(&app_control);
-		if (ret == APP_CONTROL_ERROR_NONE) {
-			int count = 0;
-			char **array = mf_ug_util_get_send_result_array(ugd, &count);
-			int i = 0;
-			if (array) {
-				app_control_add_extra_data_array(app_control, APP_CONTROL_DATA_SELECTED, (const char **)array, count);
-				app_control_add_extra_data_array(app_control, APP_CONTROL_DATA_PATH, (const char **)array, count);
-				app_control_add_extra_data_array(app_control, "path", (const char **)array, count);
-				for (i = 0; i < count; i++) {
-					UG_SAFE_FREE_CHAR(array[i]);
+		bool reply_requested = false;
+		app_control_is_reply_requested(ugd->service, &reply_requested);
+		if (reply_requested) {
+			ret = app_control_create(&app_control);
+			if (ret == APP_CONTROL_ERROR_NONE) {
+				int count = 0;
+				char **array = mf_ug_util_get_send_result_array(ugd, &count);
+				int i = 0;
+				if (array) {
+					app_control_add_extra_data_array(app_control, APP_CONTROL_DATA_SELECTED, (const char **)array, count);
+					app_control_add_extra_data_array(app_control, APP_CONTROL_DATA_PATH, (const char **)array, count);
+					app_control_add_extra_data_array(app_control, "path", (const char **)array, count);
+					for (i = 0; i < count; i++) {
+						UG_SAFE_FREE_CHAR(array[i]);
+					}
+					UG_SAFE_FREE_CHAR(array);
+				} else {
+					ug_error("Invalid selection!!");
 				}
-				UG_SAFE_FREE_CHAR(array);
-			} else {
-				ug_error("Invalid selection!!");
-			}
-			app_control_add_extra_data(app_control, "result", result);
-			app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, result);
-			bool reply_requested = false;
-			app_control_is_reply_requested(app_control, &reply_requested);
-			if (reply_requested) {
+				app_control_add_extra_data(app_control, "result", result);
+				app_control_add_extra_data(app_control, APP_CONTROL_DATA_SELECTED, result);
 				SECURE_DEBUG("send reply to caller");
-				app_control_h reply = NULL;
-				app_control_create(&reply);
-				app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
-				app_control_destroy(reply);
+				app_control_reply_to_launch_request( app_control, ugd->service, APP_CONTROL_RESULT_SUCCEEDED);
+				app_control_destroy(app_control);
 			}
-			app_control_destroy(app_control);
+			ui_app_exit();
 		} else {
 			ug_error("failed to create app control.");
 		}
@@ -394,32 +373,32 @@ static bool __mf_ug_selected_mode_result_send(void *data)
 	if (ugd->ug_UiGadget.ug_bOperationSelectFlag) {
 		ug_error();
 		int ret = 0;
-		ret = app_control_create(&app_control);
-		if (ret == APP_CONTROL_ERROR_NONE) {
-			int count = 0;
-			char **array = mf_ug_util_get_send_result_array(ugd, &count);
-			int i = 0;
-			if (array) {
-				app_control_add_extra_data_array(app_control, APP_CONTROL_DATA_SELECTED, (const char **)array, count);
-				app_control_add_extra_data_array(app_control, APP_CONTROL_DATA_PATH, (const char **)array, count);
+		bool reply_requested = false;
+		app_control_is_reply_requested(ugd->service, &reply_requested);
+		if (reply_requested) {
+			ret = app_control_create(&app_control);
+			if (ret == APP_CONTROL_ERROR_NONE) {
+				int count = 0;
+				char **array = mf_ug_util_get_send_result_array(ugd, &count);
+				int i = 0;
+				if (array) {
+					app_control_add_extra_data_array(app_control, APP_CONTROL_DATA_SELECTED, (const char **)array, count);
+					app_control_add_extra_data_array(app_control, APP_CONTROL_DATA_PATH, (const char **)array, count);
 
-				for (i = 0; i < count; i++) {
-					UG_SAFE_FREE_CHAR(array[i]);
-				}
-				UG_SAFE_FREE_CHAR(array);
-				bool reply_requested = false;
-				app_control_is_reply_requested(app_control, &reply_requested);
-				if (reply_requested) {
+					for (i = 0; i < count; i++) {
+						UG_SAFE_FREE_CHAR(array[i]);
+					}
+					UG_SAFE_FREE_CHAR(array);
+
 					SECURE_DEBUG("send reply to caller");
-					app_control_h reply = NULL;
-					app_control_create(&reply);
-					app_control_reply_to_launch_request(reply, app_control, APP_CONTROL_RESULT_SUCCEEDED);
-					app_control_destroy(reply);
+					app_control_reply_to_launch_request(app_control, ugd->service, APP_CONTROL_RESULT_SUCCEEDED);
+					app_control_destroy(app_control);
 				}
-				app_control_destroy(app_control);
+				ui_app_exit();
 			} else {
 				ug_error("Invalid selection!!");
 				app_control_destroy(app_control);
+				ui_app_exit();
 			}
 		} else {
 			ug_error("failed to create app control.");
@@ -452,10 +431,12 @@ void mf_ug_cb_add_button_cb(void *data, Evas_Object *obj, void *event_info)
 
 #ifdef UG_OPERATION_SELECT_MODE
 	if (__mf_ug_selected_mode_result_send(ugd)) {
+		ui_app_exit();
 		//[ToDo] Destroy it
 	}
 #else
 	if (__mf_ug_cb_normal_result_send(ugd)) {
+		ui_app_exit();
 		//[ToDo] Destroy it
 	}
 #endif

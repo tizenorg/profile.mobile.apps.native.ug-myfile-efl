@@ -191,6 +191,7 @@ struct _ugData {
 
 	Evas_Object *genlist;
 	Ecore_Idler *show;
+	app_control_h service;		/*added for Reply*/
 };
 
 Evas_Object *mf_ug_main_tab_layout_create(Evas_Object *parent);

@@ -805,6 +805,7 @@ static void __mf_ug_main_set_operation_select_mode(void *data, const char *selec
 	                             };
 
 	char *operation = NULL;
+	app_control_clone(&(ugd->service), app_control);
 	app_control_get_operation(app_control, &operation);
 	ug_error("operation is [%s]", operation);
 	app_control_get_extra_data(app_control, key[0], &path);
@@ -1444,6 +1445,7 @@ static void on_key_event(ui_gadget_h ug, enum ug_key_event event, app_control_h 
 			ugd->ug_ListPlay.play_data = NULL;
 			UG_SAFE_FREE_CHAR(ugd->ug_ListPlay.ug_pPlayFilePath);
 		}
+		ui_app_exit();
 		break;
 	default:
 		break;
