@@ -410,6 +410,9 @@ char *mf_ug_fm_svc_path_info_translate(char *path_info, int path_info_max_len)
 	char *output = NULL;
 	void *pnode = NULL;
 	char *omit = MF_UG_PATH_INFO_TRANS_OMIT;
+	if (!omit) {
+		return NULL;
+	}
 
 	if (strlen(path_info) < path_info_max_len) {
 		UG_SAFE_FREE_CHAR(omit);
@@ -486,6 +489,9 @@ char *mf_ug_fm_svc_path_info_translate(char *path_info, int path_info_max_len)
 	char *temp = NULL;
 	char *sep = MF_UG_PATH_INFO_SEP;
 	EINA_LIST_FOREACH(temp_list, l, pnode) {
+		if (!pnode) {
+			continue;
+		}
 		ug_pNode *node = (ug_pNode *)pnode;
 		temp = output;
 		if (node->flag_trans == TRUE) {
@@ -943,6 +949,7 @@ Eina_List *mf_ug_fm_svc_wrapper_level_path_get(const char *original_path)
 	ug_mf_retvm_if(original_path == NULL, NULL, "input path is NULL");
 
 	char *current_path = g_strdup(original_path);
+	char *temp_path = current_path;
 	Eina_List *path_list = NULL;
 	const char *root_path = NULL;
 
@@ -980,6 +987,7 @@ Eina_List *mf_ug_fm_svc_wrapper_level_path_get(const char *original_path)
 		path_list = eina_list_append(path_list, g_strdup(original_path));
 	}
 	UG_TRACE_END;
+	UG_SAFE_FREE_CHAR(temp_path);
 	return path_list;
 }
 
