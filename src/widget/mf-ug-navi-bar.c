@@ -531,6 +531,7 @@ Evas_Object *mf_naviframe_right_save_button_create(Evas_Object *pParent, Elm_Obj
 	mf_ug_widget_object_item_translate_set(btn, MF_UG_LABEL_DONE_CAP);
 	evas_object_smart_callback_add(btn, "clicked", pFunc, pUserData);
 	elm_object_item_part_content_set(pNaviItem, "title_right_btn", btn);
+	elm_object_disabled_set(btn, EINA_TRUE);
 
 	evas_object_show(btn);
 
