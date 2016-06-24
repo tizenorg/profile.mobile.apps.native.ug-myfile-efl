@@ -426,28 +426,33 @@ int mf_ug_connect_db_with_handle(sqlite3 **db_handle)
 	}
 
 	/*Register busy handler*/
-	ret = sqlite3_busy_handler(*db_handle, NULL, NULL);
-	if (SQLITE_OK != ret) {
+	if (*db_handle) {
+		ret = sqlite3_busy_handler(*db_handle, NULL, NULL);
+		if (SQLITE_OK != ret) {
 
-		if (*db_handle) {
-			ug_debug("[error when register busy handler] %s\n", sqlite3_errmsg(*db_handle));
+			if (*db_handle) {
+				ug_debug("[error when register busy handler] %s\n", sqlite3_errmsg(*db_handle));
+			}
+
+			ret = sqlite3_close(*db_handle);
+			*db_handle = NULL;
+
+			return MFD_ERROR_DB_CONNECT;
 		}
 
-		ret = sqlite3_close(*db_handle);
-		*db_handle = NULL;
+		/* set foreign_keys */
+		char *query_string = NULL;
+		query_string =
+				sqlite3_mprintf(MF_PRAGMA_FOREIGN_KEYS_ON);
 
-		return MFD_ERROR_DB_CONNECT;
+		ug_debug("Query : %s", query_string);
+
+		ret = __mf_query_sql(*db_handle, query_string);
+		sqlite3_free(query_string);
+	} else {
+		ug_debug("invalid parameter");
+		return MFD_ERROR_INVALID_PARAMETER;
 	}
-
-	/* set foreign_keys */
-	char *query_string = NULL;
-	query_string =
-	    sqlite3_mprintf(MF_PRAGMA_FOREIGN_KEYS_ON);
-
-	ug_debug("Query : %s", query_string);
-
-	ret = __mf_query_sql(*db_handle, query_string);
-	sqlite3_free(query_string);
 
 	return MFD_ERROR_NONE;
 }
@@ -1736,6 +1741,10 @@ int mf_ug_get_alert_count(MFDHandle *mfd_handle, int *count)
 	    sqlite3_mprintf(MF_SELECT_ALERT_COUNT_TABLE,
 	                    mf_tbl[field_seq].table_name);
 
+	if (query_string  == NULL) {
+		ug_debug("error to get the query string");
+		return MFD_ERROR_DB_INTERNAL;
+	}
 	ug_debug("Query : %s", query_string);
 
 	rc = sqlite3_prepare_v2(mfd_handle, query_string, strlen(query_string), &stmt, NULL);
