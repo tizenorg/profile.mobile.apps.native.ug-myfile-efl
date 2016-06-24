@@ -180,6 +180,7 @@ static void __mf_ug_destory_cb(ui_gadget_h ug, void *priv)
 	UG_TRACE_END;
 }
 #endif
+#if 0
 static void __mf_ug_music_recommendation_ringtone_set(void *data, char *path, char *time)
 {
 	UG_TRACE_BEGIN;
@@ -247,7 +248,7 @@ static void __mf_ug_music_recommendation_ringtone_set(void *data, char *path, ch
 		ui_app_exit();
 	}
 }
-#if 0
+
 void  __mf_ug_reply_cb(ui_gadget_h ug, app_control_h result, void *priv)
 {
 	UG_TRACE_BEGIN;
