@@ -284,7 +284,7 @@ Evas_Object *mf_ug_tabbar_create_path_tab(Evas_Object *parent, char *info)
 		}
 		ug_error();
 		Elm_Object_Item *last_item = elm_toolbar_last_item_get(tab);
-		elm_object_item_disabled_set(last_item, EINA_TRUE);
+		elm_object_item_disabled_set(last_item, EINA_FALSE);
 		elm_toolbar_item_show(last_item, ELM_TOOLBAR_ITEM_SCROLLTO_LAST);
 		ug_error();
 	}
