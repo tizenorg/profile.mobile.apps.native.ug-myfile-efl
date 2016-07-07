@@ -889,7 +889,11 @@ static void __mf_ug_main_set_operation_select_mode(void *data, const char *selec
 		char *operation_select_mode = NULL;
 		app_control_get_extra_data(app_control, APP_CONTROL_DATA_SELECTION_MODE, &operation_select_mode);
 		ug_error("operation_select_mode is [%s]", operation_select_mode);
-		__mf_ug_main_set_operation_select_mode(ugd, operation_select_mode);
+		if (operation_select_mode) {
+			__mf_ug_main_set_operation_select_mode(ugd, operation_select_mode);
+		} else {
+			__mf_ug_main_set_operation_select_mode(ugd, MF_BUNDLE_SELECTION_MODE_SINGLE);
+		}
 		UG_SAFE_FREE_CHAR(operation_select_mode);
 #endif
 
