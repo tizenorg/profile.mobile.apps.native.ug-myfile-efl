@@ -1,6 +1,6 @@
 Name:       org.tizen.ug-myfile-efl
-#VCS_FROM:   profile/mobile/apps/native/ug-myfile-efl#c811c0c83688c7d622cb3c93721acc72ea91f755
-#RS_Ver:    20160703_1 
+#VCS_FROM:   profile/mobile/apps/native/ug-myfile-efl#b33541bcccb012baa69b2827e4702b427ce2d265
+#RS_Ver:    20160707_1 
 Summary:    ug-myfile-efl
 Version:    1.0.0
 Release:    1
@@ -26,7 +26,7 @@ Requires(post):  /usr/bin/tpk-backend
 %endif
 
 %description
-profile/mobile/apps/native/ug-myfile-efl#c811c0c83688c7d622cb3c93721acc72ea91f755
+profile/mobile/apps/native/ug-myfile-efl#b33541bcccb012baa69b2827e4702b427ce2d265
 This is a container package which have preload TPK files
 
 %prep
