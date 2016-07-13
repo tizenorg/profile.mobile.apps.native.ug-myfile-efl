@@ -90,16 +90,18 @@ static gboolean __mf_ug_genlist_is_file_marked(Eina_List *source, GString *path)
 	void *data = NULL;
 
 	EINA_LIST_FOREACH(source, l, data) {
-		char *source_path = strdup(data);
-		if (source_path != NULL) {
-			if (strcmp(source_path, path->str) == 0) {
-				flag = true;
-				free(source_path);
-				source_path = NULL;
-				break;
-			} else {
-				free(source_path);
-				source_path = NULL;
+		if (data) {
+			char *source_path = strdup(data);
+			if (source_path != NULL) {
+				if (strcmp(source_path, path->str) == 0) {
+					flag = true;
+					free(source_path);
+					source_path = NULL;
+					break;
+				} else {
+					free(source_path);
+					source_path = NULL;
+				}
 			}
 		}
 	}
