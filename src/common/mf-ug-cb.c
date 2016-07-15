@@ -123,6 +123,9 @@ bool mf_ug_cb_back_operation(void *data)
 		}   modify by wangyan*/
 		mf_ug_navi_bar_set_ctrl_item_disable(ugd);
 		elm_naviframe_item_title_enabled_set(ugd->ug_MainWindow.ug_pNaviItem, EINA_TRUE, EINA_FALSE);
+		if (ugd->ug_UiGadget.ug_iSelectMode == IMPORT_PATH_SELECT_MODE) {
+			return true;
+		}
 		return false;
 	} else {
 		return true;
