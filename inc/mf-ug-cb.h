@@ -35,10 +35,9 @@ void mf_ug_cb_list_play_cb(ugListItemData *data, Evas_Object *obj, void *event_i
 void mf_ug_cb_select_info_show_cb(void *data, Evas *e, Evas_Object *obj, void *event_info);
 void mf_ug_cb_select_info_hide_cb(void *data, Evas *e, Evas_Object *obj, void *event_info);
 void mf_ug_cb_select_info_timeout_cb(void *data, Evas_Object *obj, void *event_info);
-void mf_ug_cb_mmc_changed_cb(int storage_id, storage_state_e state, void *user_data);
+void mf_ug_cb_mmc_changed_cb(int storage_id, storage_dev_e dev, storage_state_e state, const char *fstype, const char *fsuuid, const char *mountpath, bool primary, int flags, void *user_data);
 void mf_ug_cb_dir_update_cb(mf_ug_inotify_event event, char *name, void *data);
 void mf_ug_cb_dir_pipe_cb(void *data, void *buffer, unsigned int nbyte);
-int mf_ug_cb_set_mass_storage_state_cb(void *data);
 void mf_ug_cb_upper_button_pressed_cb(void *data, Evas_Object * obj, void *event_info);
 void mf_ug_cb_upper_button_unpressed_cb(void *data, Evas_Object * obj, void *event_info);
 void mf_ug_cb_upper_click_cb(void *data, Evas_Object * obj, void *event_info);

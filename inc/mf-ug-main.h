@@ -186,6 +186,8 @@ struct _ugData {
 //	ui_gadget_h ug;
 	sound_stream_info_h stream_info;
 
+	int __ug_internalStorageId;
+	int __ug_externalStorageId;
 	long long int limitsize;
 	long long int selsize;
 

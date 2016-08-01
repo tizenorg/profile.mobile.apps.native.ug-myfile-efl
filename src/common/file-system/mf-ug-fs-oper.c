@@ -138,6 +138,7 @@ int mf_ug_fs_oper_read_dir(char *path, Eina_List **dir_list, Eina_List **file_li
 	pDir = opendir(path);
 
 	if (pDir == NULL) {
+		ug_error("could not open %s", path);
 		return MYFILE_ERR_DIR_OPEN_FAIL;
 	}
 	while ((readdir_r(pDir, &ent_struct, &ent) == 0) && ent) {
@@ -153,9 +154,11 @@ int mf_ug_fs_oper_read_dir(char *path, Eina_List **dir_list, Eina_List **file_li
 		}
 #ifdef	UG_DEBUG_FOLDER_OPTION
 		if ((ent->d_type & DT_DIR) != 0) {
-			if ((strlen(path) == strlen(PHONE_FOLDER)) && (strcmp(path, PHONE_FOLDER) == 0)
-			        && (strlen(ent->d_name) == strlen(DEBUG_FOLDER)) && (strcmp(ent->d_name, DEBUG_FOLDER) == 0)) {
-				continue;
+			if (PHONE_FOLDER != NULL) {
+				if ((strlen(path) == strlen(PHONE_FOLDER)) && (strcmp(path, PHONE_FOLDER) == 0)
+						&& (strlen(ent->d_name) == strlen(DEBUG_FOLDER)) && (strcmp(ent->d_name, DEBUG_FOLDER) == 0)) {
+					continue;
+				}
 			}
 		}
 #endif

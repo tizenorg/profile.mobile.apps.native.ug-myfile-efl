@@ -989,7 +989,6 @@ static Eina_Bool __mf_ug_ctrlbar_state_idler(void *data)
 	mf_ug_navi_bar_set_ctrl_item_disable(ugd);
 
 	return EINA_FALSE;
-
 }
 
 void mf_ug_main_update_ctrl_in_idle(void *data)
@@ -1234,6 +1233,7 @@ bool mf_ug_main_check_exist(const char *path)
 		return;
 	}
 	if (!mf_ug_main_check_exist(ugd->ug_Status.ug_pPath->str)) {
+
 		GString *parent_path = mf_ug_fm_svc_wrapper_get_file_parent_path(ugd->ug_Status.ug_pPath);
 		int storage = mf_ug_fm_svc_wapper_get_location(ugd->ug_Status.ug_pPath->str);
 
@@ -1248,6 +1248,10 @@ bool mf_ug_main_check_exist(const char *path)
 					ugd->ug_Status.ug_pPath = g_string_new(PHONE_FOLDER);
 				} else {
 					ugd->ug_Status.ug_pPath = g_string_new(MEMORY_FOLDER);
+					if (!ugd->ug_Status.ug_iMmcFlag) {
+						g_string_free(ugd->ug_Status.ug_pPath, TRUE);
+						ugd->ug_Status.ug_pPath = NULL;
+					}
 				}
 			}
 		} else {
@@ -1255,6 +1259,10 @@ bool mf_ug_main_check_exist(const char *path)
 				ugd->ug_Status.ug_pPath = g_string_new(PHONE_FOLDER);
 			} else {
 				ugd->ug_Status.ug_pPath = g_string_new(MEMORY_FOLDER);
+				if (!ugd->ug_Status.ug_iMmcFlag) {
+					g_string_free(ugd->ug_Status.ug_pPath, TRUE);
+					ugd->ug_Status.ug_pPath = NULL;
+				}
 			}
 		}
 

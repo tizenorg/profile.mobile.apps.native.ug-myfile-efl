@@ -36,14 +36,13 @@
 #endif
 #define NORMAL_SEPERATOR		"?"
 
-static int __externalStorageId = 0;
-
 bool getSupportedStorages_cb(int storageId, storage_type_e type, storage_state_e state, const char *path, void *userData)
 {
 	UG_TRACE_BEGIN;
+	ugData *ugd = mf_ug_ugdata();
 
 	if (type == STORAGE_TYPE_EXTERNAL) {
-		__externalStorageId = storageId;
+		ugd->__ug_externalStorageId = storageId;
 		UG_TRACE_END;
 		return false;
 	}
@@ -458,20 +457,23 @@ void mf_ug_util_set_current_state(void *data, int state)
 int mf_ug_util_get_mmc_state(int *mmc_card)
 {
 	UG_TRACE_BEGIN;
+	ugData *ugd = mf_ug_ugdata();
 	int error_code = STORAGE_ERROR_NONE;
 
 	ug_mf_retvm_if(mmc_card == NULL, MYFILE_ERR_SRC_ARG_INVALID, "mmc_card is NULL");
 
 	*mmc_card = 0;
 
-	error_code = storage_foreach_device_supported(getSupportedStorages_cb, NULL);
+	ugd->__ug_externalStorageId = -1;
+	error_code = storage_foreach_device_supported(getSupportedStorages_cb, ugd);
 	if (error_code != STORAGE_ERROR_NONE) {
 		UG_TRACE_END;
 		return MYFILE_ERR_GET_CONF_FAIL;
 	}
+	ug_debug("External Storage state is: %d", ugd->__ug_externalStorageId);
 
-	storage_state_e mmc_state;
-	error_code = storage_get_state(__externalStorageId, &mmc_state);
+	storage_state_e mmc_state = STORAGE_STATE_REMOVED;
+	error_code = storage_get_state(ugd->__ug_externalStorageId, &mmc_state);
 	if (error_code != STORAGE_ERROR_NONE) {
 		UG_TRACE_END;
 		return MYFILE_ERR_GET_CONF_FAIL;
@@ -574,9 +576,10 @@ int mf_ug_util_set_mmc_state_cb(void *data)
 	int mmc_state = MMC_OFF;
 	mf_ug_util_get_mmc_state(&mmc_state);
 	ugd->ug_Status.ug_iMmcFlag = mmc_state;
+	ug_debug("External MMC card is: [%d]", mmc_state);
 
 	UG_TRACE_END;
-	return storage_set_state_changed_cb(__externalStorageId, mf_ug_cb_mmc_changed_cb, ugd);
+	return storage_set_changed_cb(STORAGE_TYPE_EXTERNAL, mf_ug_cb_mmc_changed_cb, ugd);
 }
 
 /******************************
@@ -597,7 +600,7 @@ int mf_ug_util_set_mmc_state_cb(void *data)
 void mf_ug_util_destory_mmc_state_cb()
 {
 	UG_TRACE_BEGIN;
-	int error_code = storage_unset_state_changed_cb(__externalStorageId, mf_ug_cb_mmc_changed_cb);
+	int error_code = storage_unset_changed_cb(STORAGE_TYPE_EXTERNAL, mf_ug_cb_mmc_changed_cb);
 	if (error_code != STORAGE_ERROR_NONE) {
 		ug_debug("storage_unset_state_changed_cb() failed!!");
 	}
@@ -676,6 +679,11 @@ void mf_ug_util_storage_insert_action(void *data, char *pItemLabel)
 			pNode->path = g_strdup(STORAGE_PARENT);
 			/*set name */
 			pNode->name = g_strdup(MMC_NAME);
+
+			if (pNode->name == NULL) {
+				ug_error("Real Name is NULL");
+				return;
+			}
 			pNode->type = UG_FILE_TYPE_DIR;
 			ugd->ug_UiGadget.ug_pDirList = eina_list_append(ugd->ug_UiGadget.ug_pDirList, pNode);
 			mf_ug_genlist_item_append(ugd->ug_MainWindow.ug_pNaviGenlist, MEMORY_FOLDER, ugd, 0, &ugd->ug_Status.ug_1text1icon_itc);
@@ -732,6 +740,11 @@ void mf_ug_util_mmc_remove_action(void *data)
 				mf_ug_navi_bar_create_default_view(ugd);
 			}
 			mf_ug_navi_bar_set_ctrl_item_disable(ugd);
+		} else {
+			ugd->ug_Status.ug_iViewType = mf_ug_view_root;
+			UG_SAFE_FREE_GSTRING(ugd->ug_Status.ug_pPath);
+			ugd->ug_Status.ug_pPath = g_string_new(PHONE_FOLDER);
+			mf_ug_navi_bar_create_default_view(ugd);
 		}
 	}
 }
@@ -938,10 +951,10 @@ int mf_ug_util_generate_root_view_file_list(Eina_List **list, int storage_state)
 			return -1;
 		}
 
-		if (!Get_Parent_Path(STORAGE_PARENT)) {
+		/*if (!Get_Parent_Path(STORAGE_PARENT)) {
 			ug_debug("SD card not attached returning");
 			return 0;
-		}
+		}*/
 		memset(pNode, 0, sizeof(ugFsNodeInfo));
 		/*set path */
 		pNode->path = g_strdup(STORAGE_PARENT);

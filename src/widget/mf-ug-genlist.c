@@ -479,6 +479,12 @@ static char *__mf_ug_genlist_get_gl_label(void *data, Evas_Object *obj, const ch
 	UG_TRACE_BEGIN;
 	ugListItemData *itemData = (ugListItemData *)data;
 	ug_mf_retvm_if(itemData == NULL, NULL, "itemData is NULL");
+
+	if (itemData->ug_pItemName->str == NULL) {
+		ug_error("Item Name Invalid... Returning...");
+		return NULL;
+	}
+	ug_debug("Item Name is : [%s]", itemData->ug_pItemName->str);
 	if (strcmp(part, "elm.text") == 0) {
 		UG_TRACE_END;
 		if (g_strcmp0(itemData->ug_pItemName->str, PHONE_FOLDER) == 0) {
@@ -2070,6 +2076,19 @@ Evas_Object *mf_ug_genlist_create_content_list_view(void *data)
 		if (pNode) {
 			if (pNode->path && pNode->name) {
 				real_name = g_strconcat(pNode->path, "/", pNode->name, NULL);
+				if (!strcmp(real_name, "/opt/media/sdcard")) {
+					if (!strcmp(pNode->name, PHONE_NAME)) {
+						real_name = g_strdup(PHONE_FOLDER);
+					} else if (!strcmp(pNode->name, MMC_NAME)) {
+						real_name = g_strdup(MEMORY_FOLDER);
+					}
+				}
+				if (real_name == NULL) {
+					ug_debug("Real Name is NULL... Continuing...");
+					continue;
+				} else {
+					ug_debug("Real Name : %s", real_name);
+				}
 			}
 		} else {
 			continue;

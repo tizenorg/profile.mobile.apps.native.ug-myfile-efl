@@ -651,6 +651,10 @@ int mf_ug_file_attr_get_parent_path(const char *path, char **parent_path)
 
 	const char *name = NULL;
 	name = mf_file_get(path);
+
+	if (name == NULL) {
+		return MYFILE_ERR_INVALID_FILE_PATH;
+	}
 	/*
 	**	input path and parent_path are check in the caller.
 	**	parent_path is full path must be like /opt/media/file.ext
@@ -1337,7 +1341,6 @@ mf_ug_fs_file_type mf_ug_file_attr_get_file_type_by_mime(const char *file_path)
 
 int mf_ug_file_attr_is_duplicated_name(const char *dir, const char *name)
 {
-
 	char *file_path = g_strconcat(dir, "/", name, NULL);
 
 	if (file_path != NULL) {

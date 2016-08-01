@@ -803,9 +803,10 @@ void mf_ug_cb_select_info_timeout_cb(void *data, Evas_Object *obj, void *event_i
 **    Modification : Created function
 **
 ******************************/
-void mf_ug_cb_mmc_changed_cb(int storage_id, storage_state_e state, void *user_data)
+void mf_ug_cb_mmc_changed_cb(int storage_id, storage_dev_e dev, storage_state_e state, const char *fstype, const char *fsuuid, const char *mountpath, bool primary, int flags, void *user_data)
 {
 	UG_TRACE_BEGIN;
+	ug_debug("Storage Changed for memory card");
 	ugData *ugd = (ugData *)user_data;
 	ug_mf_retm_if(ugd == NULL, "ugd is NULL");
 	ug_mf_retm_if(ugd->ug_Status.ug_pPath == NULL || ugd->ug_Status.ug_pPath->str == NULL, "ugd->ug_Status.ug_pPath is NULL");
@@ -813,9 +814,11 @@ void mf_ug_cb_mmc_changed_cb(int storage_id, storage_state_e state, void *user_d
 	int optStorage = MF_UG_NONE;
 
 	if (state == STORAGE_STATE_MOUNTED) {
+		ug_debug("Storage State Mounted");
 		ugd->ug_Status.ug_iMmcFlag = MMC_ON;
 		mf_ug_util_storage_insert_action(ugd, mf_ug_widget_get_text(MF_UG_LABEL_MMC));
 	} else {
+		ug_debug("No external storage detected... [%d]", ugd->ug_Status.ug_iMmcFlag);
 		if (state == STORAGE_STATE_REMOVED || state == STORAGE_STATE_UNMOUNTABLE) {
 			optStorage = MF_UG_MMC;
 			ugd->ug_Status.ug_iMmcFlag = MMC_OFF;
@@ -1501,7 +1504,7 @@ void mf_ug_cb_thumb_created_cb(media_content_error_e error, const char *path, vo
 
 	if (error == MEDIA_CONTENT_ERROR_NONE && mf_file_exists(path)) {
 		ug_debug("Update item with new thumbnail[%s]", path);
-		UG_SAFE_FREE_CHAR(pListData->ug_pThumbPath);
+		UG_SAFE_FREE_GSTRING(pListData->ug_pThumbPath);
 		pListData->ug_pThumbPath = g_strdup(path);
 		pListData->ug_bRealThumbFlag = true;
 		if (pListData->ug_pItem) {

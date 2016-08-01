@@ -56,6 +56,16 @@ typedef struct {
 *********************/
 static int __mf_ug_fm_svc_wapper_COMESFROM(char *fullpath)
 {
+	if (!fullpath) {
+		return MYFILE_ERR_STORAGE_TYPE_ERROR;
+	}
+
+	if (PHONE_FOLDER == NULL) {
+		return MYFILE_ERR_STORAGE_TYPE_ERROR;
+	}
+	if (MEMORY_FOLDER == NULL) {
+		return MYFILE_ERR_STORAGE_TYPE_ERROR;
+	}
 	int len_phone = strlen(PHONE_FOLDER);
 	int len_memory = strlen(MEMORY_FOLDER);
 
